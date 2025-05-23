@@ -44,6 +44,7 @@ const CookieBanner: React.FC = () => {
         console.error('Invalid cookie consent data found:', error);
         localStorage.removeItem('cookieConsent'); // Clean up invalid data
         setShowBanner(true);
+        setConsentState(defaultConsentState); // Reset to default state when error occurs
       }
     } else {
       setShowBanner(true);
