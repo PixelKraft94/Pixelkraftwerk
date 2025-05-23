@@ -37,7 +37,7 @@ const SolutionsSection: React.FC = () => {
               </div>
               <div className="flex items-start">
                 <span className="text-primary-500 mr-3">•</span>
-                <p className="text-light-200">Integration in Ihre bestehende Website oder Facebook-Seite</p>
+                <p className="text-light-200">Integration in Ihre bestehende Website oder Social-Media Seiten</p>
               </div>
               <div className="flex items-start">
                 <span className="text-primary-500 mr-3">•</span>
