@@ -4,7 +4,7 @@ const About: React.FC = () => {
   return (
     <div className="pt-24 bg-dark-500 min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-3xl md:text-4xl font-mono font-bold mb-6 text-primary-500">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-6">
           Über Pixel Kraftwerk
         </h1>
         <h2 className="text-2xl md:text-3xl text-light-100 mb-12">
@@ -19,7 +19,7 @@ const About: React.FC = () => {
           </p>
           
           <div className="mb-12">
-            <h3 className="text-xl font-mono font-bold text-primary-500 mb-4">
+            <h3 className="text-xl font-heading font-bold text-primary-500 mb-4">
               Unser Anspruch
             </h3>
             <p className="text-light-200 mb-6">
@@ -31,7 +31,7 @@ const About: React.FC = () => {
           </div>
           
           <div className="mb-12">
-            <h3 className="text-xl font-mono font-bold text-primary-500 mb-4">
+            <h3 className="text-xl font-heading font-bold text-primary-500 mb-4">
               Unsere Expertise
             </h3>
             <p className="text-light-200 mb-6">
@@ -43,7 +43,7 @@ const About: React.FC = () => {
           </div>
           
           <div className="mb-12">
-            <h3 className="text-xl font-mono font-bold text-primary-500 mb-4">
+            <h3 className="text-xl font-heading font-bold text-primary-500 mb-4">
               Was uns auszeichnet
             </h3>
             <div className="space-y-6">

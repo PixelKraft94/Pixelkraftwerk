@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
   return (
     <div className="pt-24 bg-dark-500 min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-3xl md:text-4xl font-mono font-bold mb-6 text-primary-500">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-6">
           Nehmen Sie Kontakt mit uns auf
         </h1>
         <div className="max-w-3xl mx-auto mb-16">
@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
           </p>
           
           <div className="bg-dark-400 p-8 border border-dark-100 mb-8">
-            <h2 className="text-xl font-mono font-bold text-primary-500 mb-4">
+            <h2 className="text-xl font-heading font-bold text-primary-500 mb-4">
               Kontaktinformationen
             </h2>
             <div className="space-y-4">
