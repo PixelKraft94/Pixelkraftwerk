@@ -15,9 +15,9 @@ const Home: React.FC = () => {
       <HeroSection />
       <EfficiencySection />
       <SolutionsSection />
+      <BenefitsSection />
       <KeyComponentsSection />
       <HowItWorksSection />
-      <BenefitsSection />
       <TestimonialsSection />
       <ProjectSection />
       <ContactForm />
