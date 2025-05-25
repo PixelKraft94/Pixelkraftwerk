@@ -11,6 +11,7 @@ import Terms from './pages/Terms';
 import Agb from './pages/Agb';
 import PrivacySettings from './pages/PrivacySettings';
 import CookieBanner from './components/CookieBanner';
+import ChatbotWidget from './components/ChatbotWidget';
 
 function App() {
   const [currentPath, setCurrentPath] = useState<string>(window.location.pathname);
@@ -80,6 +81,7 @@ function App() {
       </main>
       <Footer />
       <CookieBanner />
+      <ChatbotWidget />
     </div>
   );
 }
