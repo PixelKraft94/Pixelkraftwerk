@@ -27,7 +27,7 @@ const Solution: React.FC = () => {
         <BackgroundPaths />
         
         <div className="container mx-auto px-4 pt-16 z-10">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div 
               className="space-y-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -59,6 +59,7 @@ const Solution: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+              className="text-center"
             >
               <a 
                 href="/contact" 
@@ -221,7 +222,7 @@ const Solution: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-primary-500/10 border border-primary-500 p-8 mb-12">
+            <div className="bg-primary-500/10 border border-primary-500 p-8 mb-12 text-center">
               <h3 className="text-xl font-heading font-bold text-primary-500 mb-4">
                 Und das Beste:
               </h3>
@@ -330,11 +331,11 @@ const Solution: React.FC = () => {
             
             <div className="space-y-16">
               {/* Step 1 */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row items-center">
                 <div className="bg-primary-500 text-dark-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6 flex-shrink-0 font-heading font-bold text-2xl">
                   1
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-primary-500 mb-3">
                     Demo anfordern
                   </h3>
@@ -345,11 +346,11 @@ const Solution: React.FC = () => {
               </div>
               
               {/* Step 2 */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row items-center">
                 <div className="bg-primary-500 text-dark-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6 flex-shrink-0 font-heading font-bold text-2xl">
                   2
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-primary-500 mb-3">
                     Persönliches Vorgespräch
                   </h3>
@@ -360,11 +361,11 @@ const Solution: React.FC = () => {
               </div>
               
               {/* Step 3 */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row items-center">
                 <div className="bg-primary-500 text-dark-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6 flex-shrink-0 font-heading font-bold text-2xl">
                   3
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-primary-500 mb-3">
                     Individuelle Demo erhalten
                   </h3>
@@ -376,11 +377,11 @@ const Solution: React.FC = () => {
               </div>
               
               {/* Step 4 */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row items-center">
                 <div className="bg-primary-500 text-dark-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6 flex-shrink-0 font-heading font-bold text-2xl">
                   4
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-primary-500 mb-3">
                     Entscheidung treffen – oder nicht
                   </h3>
@@ -391,11 +392,11 @@ const Solution: React.FC = () => {
               </div>
               
               {/* Step 5 */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row items-center">
                 <div className="bg-primary-500 text-dark-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6 flex-shrink-0 font-heading font-bold text-2xl">
                   5
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-primary-500 mb-3">
                     Umsetzung durch uns
                   </h3>
@@ -406,11 +407,11 @@ const Solution: React.FC = () => {
               </div>
               
               {/* Step 6 */}
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row items-center">
                 <div className="bg-primary-500 text-dark-500 w-16 h-16 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-6 flex-shrink-0 font-heading font-bold text-2xl">
                   6
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-xl font-heading font-bold text-primary-500 mb-3">
                     System läuft. Kunden kommen.
                   </h3>
