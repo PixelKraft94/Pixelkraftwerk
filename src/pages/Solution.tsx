@@ -61,7 +61,7 @@ const Solution: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
             >
               <a 
-                href="#contact" 
+                href="/contact" 
                 className="inline-block px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
               >
                 Jetzt kostenlose Demo sichern
@@ -478,7 +478,7 @@ const Solution: React.FC = () => {
               </div>
               
               <a 
-                href="#contact" 
+                href="/contact" 
                 className="inline-block px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300 mb-4"
               >
                 Jetzt kostenlose Demo anfordern
