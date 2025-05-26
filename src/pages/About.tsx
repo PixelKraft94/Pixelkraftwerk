@@ -4,10 +4,10 @@ const About: React.FC = () => {
   return (
     <div className="pt-24 bg-dark-500 min-h-screen">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-6">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-6 text-center">
           Über Pixel Kraftwerk
         </h1>
-        <h2 className="text-2xl md:text-3xl text-light-100 mb-12">
+        <h2 className="text-2xl md:text-3xl text-light-100 mb-12 text-center">
           Effizienz neu gedacht.
         </h2>
         
