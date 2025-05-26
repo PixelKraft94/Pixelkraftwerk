@@ -10,6 +10,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Agb from './pages/Agb';
 import PrivacySettings from './pages/PrivacySettings';
+import Solution from './pages/Solution';
 import CookieBanner from './components/CookieBanner';
 
 function App() {
@@ -67,6 +68,8 @@ function App() {
         return <Agb />;
       case '/privacy-settings':
         return <PrivacySettings />;
+      case '/solution':
+        return <Solution />;
       default:
         return <Home />;
     }
