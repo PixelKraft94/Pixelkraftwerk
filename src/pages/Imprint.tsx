@@ -6,7 +6,7 @@ const Imprint: React.FC = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-8">Impressum</h1>
         
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100">
+        <div className="max-w-3xl mx-auto bg-dark-500 p-8 border border-dark-100">
           <h2 className="text-xl font-heading text-primary-500 mb-4">Angaben gemäß § 5 TMG</h2>
           <div className="mb-8">
             <p className="text-light-100 mb-1">Pixel Kraftwerk GbR – Franke & Brause</p>

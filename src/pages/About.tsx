@@ -11,7 +11,7 @@ const About: React.FC = () => {
           Effizienz neu gedacht.
         </h2>
         
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto">
           <p className="text-light-200 mb-8 text-lg">
             Pixel Kraftwerk steht für intelligente Automatisierung und praxisnahe KI-Lösungen. 
             Wir unterstützen Unternehmen dabei, ihre Prozesse zu optimieren, repetitive Aufgaben 
