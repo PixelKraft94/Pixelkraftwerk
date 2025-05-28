@@ -149,7 +149,7 @@ const Features: React.FC = () => {
           {/* Why Pixelkraftwerk Section */}
           <section className="mb-16 bg-dark-400 p-8 border border-dark-100">
             <h2 className="text-2xl font-heading font-bold text-primary-500 mb-6">
-              Warum Pixelkraftwerk AI?
+              Warum Pixel Kraftwerk ?
             </h2>
             <p className="text-light-200 mb-0">
               Wir helfen Ihnen, Ihre Unternehmensprozesse zu automatisieren, Kundenservice zu skalieren und Ihre digitale Sichtbarkeit durch moderne Technologien zu steigern. Unsere Lösungen sind individuell, effizient und sofort einsatzbereit.
