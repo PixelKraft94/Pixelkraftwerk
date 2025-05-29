@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pixelkraftwerk-ai.com/sitemap.xml
