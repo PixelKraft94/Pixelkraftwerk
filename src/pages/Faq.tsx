@@ -48,7 +48,7 @@ const Faq: React.FC = () => {
                 </h3>
               </div>
               <p className="text-light-200 ml-8">
-                Grundsätzlich benötigen wir Zugriff auf bestehende Systeme oder Webseiten, wenn diese integriert werden sollen. Für KI-Telefonagenten empfehlen wir eine stabile Internetverbindung und geeignete Hardware, die wir gemeinsam prüfen.
+                In der Regel sind keine besonderen technischen Voraussetzungen notwendig. Wir gestalten unsere Lösungen so, dass sie sich flexibel an die vorhandene Infrastruktur anpassen. Sollte eine Integration mit bestehenden Systemen oder Webseiten erforderlich sein, klären wir den Zugang dazu im Vorfeld gemeinsam – unkompliziert und lösungsorientiert.
               </p>
             </div>
 
