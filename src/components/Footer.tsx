@@ -8,6 +8,7 @@ const navItems: NavItem[] = [
   { title: 'Über uns', path: '/about' },
   { title: 'Kontakt', path: '/contact' },
   { title: 'Features', path: '/features' },
+  { title: 'FAQ', path: '/faq' },
   { title: 'AGBs', path: '/agb' },
   { title: 'Datenschutzerklärung', path: '/privacy' },
   { title: 'Nutzungsbedingungen', path: '/terms' },

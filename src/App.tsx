@@ -12,6 +12,7 @@ import Agb from './pages/Agb';
 import PrivacySettings from './pages/PrivacySettings';
 import Solution from './pages/Solution';
 import Features from './pages/Features';
+import Faq from './pages/Faq';
 import CookieBanner from './components/CookieBanner';
 
 function App() {
@@ -73,6 +74,8 @@ function App() {
         return <Solution />;
       case '/features':
         return <Features />;
+      case '/faq':
+        return <Faq />;
       default:
         return <Home />;
     }

@@ -7,6 +7,7 @@ const navItems: NavItem[] = [
   { title: 'Startseite', path: '/' },
   { title: 'Über uns', path: '/about' },
   { title: 'Unsere Lösung', path: '/solution' },
+  { title: 'FAQ', path: '/faq' },
   { title: 'Kontakt', path: '/contact' },
   { title: 'Impressum', path: '/imprint' },
 ];

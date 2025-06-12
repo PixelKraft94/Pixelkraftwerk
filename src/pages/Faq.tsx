@@ -1,0 +1,214 @@
+import React from 'react';
+import { HelpCircle } from 'lucide-react';
+
+const Faq: React.FC = () => {
+  return (
+    <div className="pt-24 bg-dark-500 min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-6 text-center">
+          Häufig gestellte Fragen (FAQ)
+        </h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-light-200 mb-12 text-center text-lg">
+            Hier beantworten wir die wichtigsten Fragen rund um unsere KI-Lösungen, Webdesign und Automatisierung. 
+            Falls Ihre Frage nicht dabei ist, kontaktieren Sie uns gern – wir helfen Ihnen persönlich weiter!
+          </p>
+          
+          {/* Regular FAQ Section */}
+          <div className="space-y-8 mb-16">
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Wie individuell sind die KI-Lösungen wirklich?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Wir entwickeln jede Lösung maßgeschneidert genau nach den Bedürfnissen unserer Kunden. Dabei berücksichtigen wir bestehende Systeme, Workflows und Ziele, sodass am Ende eine passgenaue, effiziente Lösung entsteht.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Welche Branchen profitieren besonders von Ihren KI-Lösungen?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Unsere Lösungen sind branchenübergreifend einsetzbar. Besonders profitieren Unternehmen aus Dienstleistung, E-Commerce, Gesundheitswesen, öffentlicher Verwaltung und Handwerk.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Welche technischen Voraussetzungen müssen Kunden mitbringen?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Grundsätzlich benötigen wir Zugriff auf bestehende Systeme oder Webseiten, wenn diese integriert werden sollen. Für KI-Telefonagenten empfehlen wir eine stabile Internetverbindung und geeignete Hardware, die wir gemeinsam prüfen.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Wie läuft die Schulung oder Einarbeitung der Mitarbeiter ab?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Wir bieten bei Bedarf Schulungen an, damit die Nutzer die KI-Lösungen optimal bedienen können. Diese Schulungen sind individuell auf den Kunden zugeschnitten – persönlich, remote oder als Dokumentation.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Was passiert, wenn sich die Anforderungen im Projektverlauf ändern?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Flexibilität ist uns wichtig. Änderungen besprechen wir gemeinsam und passen die Lösung entsprechend an, damit sie immer optimal zum Geschäft passt.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Wie wird die Qualität der Lösungen sichergestellt?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Jede Lösung durchläuft ausführliche Tests mit dem Kunden zusammen in der Demo-Phase. Erst wenn der Kunde voll zufrieden ist, wird das Produkt live geschaltet.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Sind die Lösungen skalierbar?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Ja, unsere Systeme sind so aufgebaut, dass sie mit dem Unternehmen wachsen können. Erweiterungen oder Anpassungen sind jederzeit möglich.
+              </p>
+            </div>
+
+            <div className="bg-dark-400 border border-dark-100 p-6">
+              <div className="flex items-start mb-4">
+                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                <h3 className="text-xl font-heading font-bold text-primary-500">
+                  Wie kann der Kunde Änderungen an der Website vornehmen?
+                </h3>
+              </div>
+              <p className="text-light-200 ml-8">
+                Die Webseiten werden von uns betreut und sind nicht zur Selbstbedienung freigegeben. Änderungen oder Anpassungswünsche kann der Kunde einfach per E-Mail oder kurzem Anruf mitteilen, wir setzen diese schnellstmöglich um.
+              </p>
+            </div>
+          </div>
+
+          {/* Structured FAQ with schema.org */}
+          <div className="bg-dark-400 p-8 border border-dark-100" itemScope itemType="https://schema.org/FAQPage">
+            <h2 className="text-2xl font-heading font-bold text-primary-500 mb-8 text-center">
+              Weitere wichtige Informationen
+            </h2>
+
+            <div className="space-y-6">
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="border-b border-dark-100 pb-6">
+                <h3 itemProp="name" className="text-xl font-heading font-bold text-primary-500 mb-3">
+                  Für wen sind die Lösungen von Pixel Kraftwerk geeignet?
+                </h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text" className="text-light-200">
+                    Unsere Kunden sind vielfältig und kommen deutschlandweit aus unterschiedlichsten Branchen – darunter lokale und regionale Unternehmen, Mittelstand, Online-Shops, Fitnessstudios, Praxen sowie öffentliche Einrichtungen wie Rathäuser.
+                  </p>
+                </div>
+              </div>
+
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="border-b border-dark-100 pb-6">
+                <h3 itemProp="name" className="text-xl font-heading font-bold text-primary-500 mb-3">
+                  Welche besonderen Merkmale haben Ihre Leistungen?
+                </h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text" className="text-light-200">
+                    Unsere Lösungen sind keine Baukasten-Produkte, sondern individuell maßgeschneiderte Systeme. Jeder Kunde wird persönlich durch den gesamten Prozess begleitet – von der Entwicklung über die Implementierung bis zum Support. Um eine hohe Qualität sicherzustellen, nehmen wir nur bis zu drei Neukunden pro Monat an.
+                  </p>
+                </div>
+              </div>
+
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="border-b border-dark-100 pb-6">
+                <h3 itemProp="name" className="text-xl font-heading font-bold text-primary-500 mb-3">
+                  Wie läuft ein typisches Kundenprojekt ab?
+                </h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text" className="text-light-200">
+                    Zunächst führen wir ein Telefonat oder persönliches Treffen, um die Probleme des Kunden zu verstehen und zu prüfen, ob und wie wir diese lösen können. Anschließend erstellen wir eine maßgeschneiderte Demo, die der Kunde testen kann. Erst wenn der Kunde zufrieden ist, erfolgt die vollständige Implementierung. Die Bezahlung erfolgt erst nach erfolgreicher Abnahme.
+                  </p>
+                </div>
+              </div>
+
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="border-b border-dark-100 pb-6">
+                <h3 itemProp="name" className="text-xl font-heading font-bold text-primary-500 mb-3">
+                  Bieten Sie Support und Wartung nach Projektabschluss an?
+                </h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text" className="text-light-200">
+                    Ja, wir bieten maximalen Support und sind persönlich für unsere Kunden da. Änderungswünsche oder Probleme werden in der Regel innerhalb von 24 Stunden bearbeitet, abhängig vom Umfang des Anliegens.
+                  </p>
+                </div>
+              </div>
+
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="border-b border-dark-100 pb-6">
+                <h3 itemProp="name" className="text-xl font-heading font-bold text-primary-500 mb-3">
+                  Wie lange dauert es, bis eine Lösung fertiggestellt ist?
+                </h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text" className="text-light-200">
+                    Die Dauer hängt vom Umfang ab: Websites sind meist innerhalb von 3 Tagen fertig, KI-Chatbots und KI-Telefonagenten benötigen in der Regel 1–2 Wochen. Die Implementierung in CRM-Systeme dauert ähnlich lang. Die genannten Zeiten sind Durchschnittswerte.
+                  </p>
+                </div>
+              </div>
+
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <h3 itemProp="name" className="text-xl font-heading font-bold text-primary-500 mb-3">
+                  Arbeiten Sie deutschlandweit oder regional?
+                </h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text" className="text-light-200">
+                    Wir arbeiten deutschlandweit mit unseren Kunden zusammen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center mt-12">
+            <div className="bg-primary-500/10 border border-primary-500 p-8">
+              <h3 className="text-xl font-heading font-bold text-primary-500 mb-4">
+                Ihre Frage war nicht dabei?
+              </h3>
+              <p className="text-light-200 mb-6">
+                Kein Problem! Kontaktieren Sie uns direkt – wir beantworten gerne alle Ihre Fragen persönlich.
+              </p>
+              <a 
+                href="/contact" 
+                className="inline-block px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+              >
+                Jetzt Kontakt aufnehmen
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Faq;
