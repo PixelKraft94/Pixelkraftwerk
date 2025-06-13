@@ -56,18 +56,6 @@ const Faq: React.FC = () => {
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
                 <h3 className="text-xl font-heading font-bold text-primary-500">
-                  Wie läuft die Schulung oder Einarbeitung der Mitarbeiter ab?
-                </h3>
-              </div>
-              <p className="text-light-200 ml-8">
-                Wir bieten bei Bedarf Schulungen an, damit die Nutzer die KI-Lösungen optimal bedienen können. Diese Schulungen sind individuell auf den Kunden zugeschnitten – persönlich, remote oder als Dokumentation.
-              </p>
-            </div>
-
-            <div className="bg-dark-400 border border-dark-100 p-6">
-              <div className="flex items-start mb-4">
-                <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
                   Was passiert, wenn sich die Anforderungen im Projektverlauf ändern?
                 </h3>
               </div>
