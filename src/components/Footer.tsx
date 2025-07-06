@@ -17,8 +17,8 @@ const navItems: NavItem[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-  { platform: 'Instagram', url: '#', icon: 'instagram' },
-  { platform: 'Facebook', url: '#', icon: 'facebook' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/pixel.kraftwerk/', icon: 'instagram' },
+  { platform: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61571247426093', icon: 'facebook' },
   { platform: 'Telegram', url: '#', icon: 'telegram' },
 ];
 
