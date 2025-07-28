@@ -32,9 +32,10 @@ const Solution: React.FC = () => {
             
             <motion.p 
               className="text-lg md:text-xl text-light-200 mb-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
             >
               Viele Unternehmen verlieren täglich Zeit, Energie und Fokus –<br />
               weil alltägliche Aufgaben noch immer manuell ablaufen.
@@ -110,14 +111,44 @@ const Solution: React.FC = () => {
       <section className="py-24 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               Die Folge?
-            </h2>
+            </motion.h2>
             
-            <div className="space-y-6 text-center text-xl text-light-100">
-              <p>Die Abläufe stocken.</p>
-              <p>Kleine Aufgaben summieren sich.</p>
-              <p>Und Entwicklung wird zur Nebensache, weil der Alltag drückt.</p>
+            <div className="space-y-6 text-center">
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                Die Abläufe stocken.
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                Kleine Aufgaben summieren sich.
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                Und Entwicklung wird zur Nebensache, weil der Alltag drückt.
+              </motion.p>
             </div>
           </div>
         </div>
@@ -127,24 +158,48 @@ const Solution: React.FC = () => {
       <section className="py-24 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               Die Lösung?
-            </h2>
+            </motion.h2>
             
-            <div className="space-y-6 text-center text-lg text-light-200">
-              <p>
+            <div className="space-y-6 text-center">
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
                 Wir entwickeln individuelle Automatisierungslösungen –<br />
                 präzise für Ihre Abläufe, ohne zusätzliche Tools oder IT-Komplexität.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 Ob interne Prozesse, Kundenkommunikation oder Terminverwaltung:<br />
                 Wir helfen Ihnen, wiederkehrende Aufgaben so zu automatisieren,<br />
                 dass sie einfach im Hintergrund laufen.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 Damit Ihr Unternehmen strukturiert arbeiten kann –<br />
                 und der Fokus wieder auf dem Wesentlichen liegt.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
@@ -154,16 +209,36 @@ const Solution: React.FC = () => {
       <section className="py-24 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               Was passiert jetzt?
-            </h2>
+            </motion.h2>
             
-            <div className="space-y-6 text-center text-lg text-light-200">
-              <p>Sie sagen uns, welche Aufgaben in Ihrem Arbeitsalltag gerade bremsen.</p>
-              <p>
+            <div className="space-y-6 text-center">
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                Sie sagen uns, welche Aufgaben in Ihrem Arbeitsalltag gerade bremsen.
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 Wir melden uns mit konkreten Ideen, wie wir diese Abläufe vereinfachen und automatisieren können –<br />
                 schnell, klar und auf Ihre Situation abgestimmt.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
@@ -176,19 +251,55 @@ const Solution: React.FC = () => {
       <section className="py-24 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               Warum das funktioniert:
-            </h2>
+            </motion.h2>
             
-            <div className="space-y-6 text-center text-lg text-light-200">
-              <p>
+            <div className="space-y-6 text-center">
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
                 Wir liefern keine Standard-Software, sondern individuelle Systeme,<br />
                 die sich sauber in Ihre Prozesse einfügen – statt alles auf den Kopf zu stellen.
-              </p>
-              <div className="space-y-4 text-xl text-light-100">
-                <p>Ein fester Ansprechpartner.</p>
-                <p>Strukturierte Umsetzung.</p>
-                <p>Echte Entlastung.</p>
+              </motion.p>
+              <div className="space-y-4">
+                <motion.p 
+                  className="text-xl text-light-100"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  Ein fester Ansprechpartner.
+                </motion.p>
+                <motion.p 
+                  className="text-xl text-light-100"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Strukturierte Umsetzung.
+                </motion.p>
+                <motion.p 
+                  className="text-xl text-light-100"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  Echte Entlastung.
+                </motion.p>
               </div>
             </div>
           </div>
@@ -199,27 +310,57 @@ const Solution: React.FC = () => {
       <section className="py-24 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               Der erste Schritt ist ganz einfach:
-            </h2>
+            </motion.h2>
             
-            <div className="space-y-6 text-lg text-light-200 mb-12">
-              <p>Sie geben uns einen kurzen Einblick –</p>
-              <p>
+            <div className="space-y-6 mb-12">
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                Sie geben uns einen kurzen Einblick –
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 und wir zeigen Ihnen konkret, wie Ihre Prozesse einfacher, effizienter und entlastend laufen können.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p 
+                className="text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 Kein Verkaufsdruck. Kein Technik-Kauderwelsch.<br />
                 Nur Klarheit.
-              </p>
+              </motion.p>
             </div>
             
-            <button 
+            <motion.button 
               onClick={scrollToContactForm}
               className="inline-block px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
             >
               Jetzt Formular ausfüllen und entlastet werden
-            </button>
+            </motion.button>
           </div>
         </div>
       </section>
