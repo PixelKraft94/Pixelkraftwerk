@@ -17,7 +17,7 @@ const Solution: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-dark-500 overflow-hidden">
         <BackgroundPaths />
         
-        <div className="container mx-auto px-4 pt-16 z-10">
+        <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div 
               className="space-y-4 mb-8"
