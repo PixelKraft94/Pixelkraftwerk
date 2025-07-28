@@ -157,6 +157,7 @@ const ContactForm: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    placeholder="0151234567"
                     className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
                   />
                 </div>
@@ -184,12 +185,12 @@ const ContactForm: React.FC = () => {
                   </label>
                   <p className="text-light-300 text-sm mb-2">Falls vorhanden</p>
                   <input
-                    type="url"
+                    type="text"
                     id="website"
                     name="website"
                     value={formData.website}
                     onChange={handleChange}
-                    placeholder="https://"
+                    placeholder="beispiel.de"
                     className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
                   />
                 </div>
@@ -219,7 +220,6 @@ const ContactForm: React.FC = () => {
                 <label htmlFor="timeConsumingTasks" className="block text-light-100 font-heading mb-2">
                   Was raubt Ihrem Unternehmen aktuell am meisten Zeit im Arbeitsalltag? <span className="text-red-500">*</span>
                 </label>
-                <p className="text-light-300 text-sm mb-2">Offenes Textfeld (200–300 Zeichen)</p>
                 <textarea
                   id="timeConsumingTasks"
                   name="timeConsumingTasks"
@@ -240,7 +240,6 @@ const ContactForm: React.FC = () => {
                 <label htmlFor="tasksToAutomate" className="block text-light-100 font-heading mb-2">
                   Welche Aufgaben möchten Sie am liebsten automatisieren? <span className="text-red-500">*</span>
                 </label>
-                <p className="text-light-300 text-sm mb-2">Offenes Textfeld (200–300 Zeichen)</p>
                 <textarea
                   id="tasksToAutomate"
                   name="tasksToAutomate"
