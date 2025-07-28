@@ -1,5 +1,6 @@
 import React from 'react';
 import { HelpCircle } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
 
 const Faq: React.FC = () => {
   return (
@@ -194,6 +195,8 @@ const Faq: React.FC = () => {
             </div>
           </div>
         </div>
+        
+        <ContactForm />
       </div>
     </div>
   );

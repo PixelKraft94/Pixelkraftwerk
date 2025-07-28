@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
-import { CheckSquare, Square } from 'lucide-react';
-import { BusinessType, AutomationInterest, ContactFormData } from '../types';
+import { BusinessType, HowFoundUs, ContactFormData } from '../types';
 
 const businessTypes: BusinessType[] = [
   'E-Commerce',
+  'SaaS / IT',
   'Gastronomie',
-  'SaaS',
   'Gesundheitswesen',
-  'Finanzen',
   'Produktion',
+  'Finanzen',
   'Einzelhandel',
+  'Beratung / Agentur',
   'Sonstiges'
 ];
 
-const automationInterests: AutomationInterest[] = [
-  'KI-Chatbot',
-  'CRM-Integration',
-  'Social Media',
-  'Terminplanung',
-  'Telefon-Agenten',
-  'Website-Entwicklung',
-  'Individuelle Lösung'
+const howFoundUsOptions: HowFoundUs[] = [
+  'Empfehlung',
+  'Google',
+  'LinkedIn',
+  'Instagram',
+  'Facebook',
+  'Sonstiges'
 ];
 
 const ContactForm: React.FC = () => {
@@ -28,35 +27,21 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     phone: '',
-    businessType: 'E-Commerce',
-    automationInterests: [],
+    company: '',
+    website: '',
+    howFoundUs: 'Google',
+    timeConsumingTasks: '',
+    tasksToAutomate: '',
+    industry: 'E-Commerce',
   });
   
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleCheckboxChange = (interest: AutomationInterest) => {
-    setFormData((prev) => {
-      const isSelected = prev.automationInterests.includes(interest);
-      
-      if (isSelected) {
-        return {
-          ...prev,
-          automationInterests: prev.automationInterests.filter(item => item !== interest)
-        };
-      } else {
-        return {
-          ...prev,
-          automationInterests: [...prev.automationInterests, interest]
-        };
-      }
-    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -90,8 +75,12 @@ const ContactForm: React.FC = () => {
         name: '',
         email: '',
         phone: '',
-        businessType: 'E-Commerce',
-        automationInterests: [],
+        company: '',
+        website: '',
+        howFoundUs: 'Google',
+        timeConsumingTasks: '',
+        tasksToAutomate: '',
+        industry: 'E-Commerce',
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -110,7 +99,8 @@ const ContactForm: React.FC = () => {
             Jetzt starten_
           </h2>
           <p className="text-light-200 mb-8">
-            Bereit, Ihr Unternehmen mit KI zu transformieren? Lassen Sie uns besprechen, wie wir helfen können.
+            <strong>Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen gezielt entlasten können.</strong><br />
+            Einfach kurz ausfüllen – wir melden uns zeitnah mit konkreten Vorschlägen.
           </p>
 
           {submitSuccess === true ? (
@@ -124,7 +114,10 @@ const ContactForm: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-light-100 font-heading mb-2">Name</label>
+                  <label htmlFor="name" className="block text-light-100 font-heading mb-2">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <p className="text-light-300 text-sm mb-2">Vor- und Nachname</p>
                   <input
                     type="text"
                     id="name"
@@ -136,7 +129,10 @@ const ContactForm: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-light-100 font-heading mb-2">E-Mail</label>
+                  <label htmlFor="email" className="block text-light-100 font-heading mb-2">
+                    E-Mail <span className="text-red-500">*</span>
+                  </label>
+                  <p className="text-light-300 text-sm mb-2">Für die Kontaktaufnahme</p>
                   <input
                     type="email"
                     id="email"
@@ -151,7 +147,10 @@ const ContactForm: React.FC = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-light-100 font-heading mb-2">Telefon</label>
+                  <label htmlFor="phone" className="block text-light-100 font-heading mb-2">
+                    Telefonnummer (optional)
+                  </label>
+                  <p className="text-light-300 text-sm mb-2">Wenn wir Sie telefonisch erreichen dürfen</p>
                   <input
                     type="tel"
                     id="phone"
@@ -162,52 +161,133 @@ const ContactForm: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="businessType" className="block text-light-100 font-heading mb-2">Unternehmenstyp</label>
-                  <select
-                    id="businessType"
-                    name="businessType"
-                    value={formData.businessType}
+                  <label htmlFor="company" className="block text-light-100 font-heading mb-2">
+                    Unternehmen <span className="text-red-500">*</span>
+                  </label>
+                  <p className="text-light-300 text-sm mb-2">Name Ihres Unternehmens</p>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
                     onChange={handleChange}
+                    required
+                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="website" className="block text-light-100 font-heading mb-2">
+                    Website
+                  </label>
+                  <p className="text-light-300 text-sm mb-2">Falls vorhanden</p>
+                  <input
+                    type="url"
+                    id="website"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    placeholder="https://"
+                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="howFoundUs" className="block text-light-100 font-heading mb-2">
+                    Wie haben Sie uns gefunden? <span className="text-red-500">*</span>
+                  </label>
+                  <p className="text-light-300 text-sm mb-2">Empfehlung, Google, LinkedIn, Instagram, Facebook, Sonstiges</p>
+                  <select
+                    id="howFoundUs"
+                    name="howFoundUs"
+                    value={formData.howFoundUs}
+                    onChange={handleChange}
+                    required
                     className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
                   >
-                    {businessTypes.map((type) => (
-                      <option key={type} value={type}>{type}</option>
+                    {howFoundUsOptions.map((option) => (
+                      <option key={option} value={option}>{option}</option>
                     ))}
                   </select>
                 </div>
               </div>
               
+              <hr className="border-dark-100" />
+              
               <div>
-                <p className="block text-light-100 font-heading mb-3">Automatisierungsinteresse</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {automationInterests.map((interest) => (
-                    <div key={interest} className="flex items-center">
-                      <button
-                        type="button"
-                        onClick={() => handleCheckboxChange(interest)}
-                        className="text-primary-500 hover:text-primary-400 transition-colors duration-200 mr-2 focus:outline-none"
-                      >
-                        {formData.automationInterests.includes(interest) ? (
-                          <CheckSquare size={20} />
-                        ) : (
-                          <Square size={20} />
-                        )}
-                      </button>
-                      <label className="text-light-100">{interest}</label>
-                    </div>
-                  ))}
-                </div>
+                <label htmlFor="timeConsumingTasks" className="block text-light-100 font-heading mb-2">
+                  Was raubt Ihrem Unternehmen aktuell am meisten Zeit im Arbeitsalltag? <span className="text-red-500">*</span>
+                </label>
+                <p className="text-light-300 text-sm mb-2">Offenes Textfeld (200–300 Zeichen)</p>
+                <textarea
+                  id="timeConsumingTasks"
+                  name="timeConsumingTasks"
+                  value={formData.timeConsumingTasks}
+                  onChange={handleChange}
+                  required
+                  maxLength={300}
+                  rows={3}
+                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200 resize-vertical"
+                  placeholder="Beschreiben Sie, welche Aufgaben oder Prozesse besonders zeitaufwändig sind..."
+                />
+                <p className="text-light-300 text-xs mt-1">
+                  {formData.timeConsumingTasks.length}/300 Zeichen
+                </p>
               </div>
+              
+              <div>
+                <label htmlFor="tasksToAutomate" className="block text-light-100 font-heading mb-2">
+                  Welche Aufgaben möchten Sie am liebsten automatisieren? <span className="text-red-500">*</span>
+                </label>
+                <p className="text-light-300 text-sm mb-2">Offenes Textfeld (200–300 Zeichen)</p>
+                <textarea
+                  id="tasksToAutomate"
+                  name="tasksToAutomate"
+                  value={formData.tasksToAutomate}
+                  onChange={handleChange}
+                  required
+                  maxLength={300}
+                  rows={3}
+                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200 resize-vertical"
+                  placeholder="Nennen Sie konkrete Aufgaben oder Bereiche, die Sie gerne automatisieren möchten..."
+                />
+                <p className="text-light-300 text-xs mt-1">
+                  {formData.tasksToAutomate.length}/300 Zeichen
+                </p>
+              </div>
+              
+              <hr className="border-dark-100" />
+              
+              <div>
+                <label htmlFor="industry" className="block text-light-100 font-heading mb-2">
+                  Branche / Unternehmenstyp <span className="text-red-500">*</span>
+                </label>
+                <select
+                  id="industry"
+                  name="industry"
+                  value={formData.industry}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
+                >
+                  {businessTypes.map((type) => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
+              </div>
+              
+              <hr className="border-dark-100" />
               
               <div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-3 px-6 bg-primary-500 text-dark-500 font-heading font-bold transition-colors duration-300 ${
+                  className={`w-full py-4 px-6 bg-primary-500 text-dark-500 font-heading font-bold text-lg transition-colors duration-300 ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-400'
                   }`}
                 >
-                  {isSubmitting ? 'Wird gesendet...' : 'Absenden'}
+                  {isSubmitting ? 'Wird gesendet...' : 'Lösungsmöglichkeiten anfordern'}
                 </button>
               </div>
               

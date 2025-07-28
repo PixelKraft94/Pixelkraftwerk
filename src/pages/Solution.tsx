@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ContactForm from '../components/ContactForm';
 import { 
   Phone, 
   MessageSquare, 
@@ -490,6 +491,11 @@ const Solution: React.FC = () => {
               </p>
             </div>
           </div>
+        </div>
+        
+        {/* Include Contact Form */}
+        <div className="py-0">
+          <ContactForm />
         </div>
       </section>
     </div>
