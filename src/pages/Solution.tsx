@@ -14,7 +14,7 @@ const Solution: React.FC = () => {
   return (
     <div className="bg-dark-500 pt-16">
       {/* HERO SECTION */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-dark-500 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-dark-500 overflow-hidden">
         <BackgroundPaths />
         
         <div className="container mx-auto px-4 pt-16 z-10">
@@ -25,7 +25,7 @@ const Solution: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading">
                 Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
               </h1>
             </motion.div>
@@ -47,13 +47,60 @@ const Solution: React.FC = () => {
       <section className="py-24 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6 mb-12 text-center">
-              <div className="text-xl text-light-100">
-                <p className="mb-4">Daten werden doppelt gepflegt.</p>
-                <p className="mb-4">Kundenanfragen per E-Mail beantwortet.</p>
-                <p className="mb-4">Termine telefonisch abgestimmt.</p>
+            <motion.h2 
+              className="text-2xl md:text-3xl font-heading font-bold mb-12 text-primary-500 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Das kennen Sie bestimmt:
+            </motion.h2>
+            
+            <div className="space-y-6 text-center">
+              <motion.div 
+                className="flex items-center justify-center text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-2xl mr-4">📋</span>
+                <p>Daten werden doppelt gepflegt.</p>
+              </motion.div>
+              
+              <motion.div 
+                className="flex items-center justify-center text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-2xl mr-4">📧</span>
+                <p>Kundenanfragen per E-Mail beantwortet.</p>
+              </motion.div>
+              
+              <motion.div 
+                className="flex items-center justify-center text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-2xl mr-4">📞</span>
+                <p>Termine telefonisch abgestimmt.</p>
+              </motion.div>
+              
+              <motion.div 
+                className="flex items-center justify-center text-xl text-light-100"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-2xl mr-4">⏰</span>
                 <p>Und das Tagesgeschäft frisst Ressourcen – ohne echten Fortschritt.</p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
