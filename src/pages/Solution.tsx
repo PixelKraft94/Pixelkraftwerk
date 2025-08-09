@@ -5,6 +5,17 @@ import ContactForm from '../components/ContactForm';
 import { BackgroundPaths } from '../components/ui/background-paths';
 
 const Solution: React.FC = () => {
+  // Track Facebook Pixel event when component mounts
+  React.useEffect(() => {
+    // Check if fbq is available
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'ViewContent', {
+        content_name: 'Unsere Lösungen',
+        content_category: 'Solution Page'
+      });
+    }
+  }, []);
+
   const scrollToContactForm = () => {
     const contactForm = document.getElementById('contact');
     if (contactForm) {
