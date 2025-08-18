@@ -32,7 +32,7 @@ const Solution: React.FC = () => {
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div 
-              className="space-y-4 mb-8"
+              className="space-y-4 mb-8 -mt-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
