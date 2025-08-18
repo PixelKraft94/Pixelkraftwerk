@@ -156,7 +156,7 @@ const Home: React.FC = () => {
               
               <div className="border-t border-dark-100 pt-6 mt-8">
                 <motion.p 
-                  className="text-center text-xl text-red-300 font-bold"
+                  className="text-center text-xl text-red-500 font-bold"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
