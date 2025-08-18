@@ -35,13 +35,13 @@ const Home: React.FC = () => {
             >
               <div className="space-y-2">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading">
-                  Bessere Abläufe.
+                  Prozesse automatisieren.
                 </h1>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading">
-                  Weniger Stress.
+                  Effizienz steigern.
                 </h1>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading">
-                  Mehr Zeit.
+                  Kosten senken.
                 </h1>
               </div>
             </motion.div>
