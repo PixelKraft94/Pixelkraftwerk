@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Zap, Target, CheckCircle, ArrowRight, Users, Settings, MessageCircle, Calendar } from 'lucide-react';
+import { Clock, Zap, Target, CheckCircle, ArrowRight, ArrowDown, Users, Settings, MessageCircle, Calendar } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import { BackgroundPaths } from '../components/ui/background-paths';
 
@@ -395,7 +395,7 @@ const Solution: React.FC = () => {
                 </div>
                 
                 <div className="flex justify-center">
-                  <ArrowRight className="text-primary-500" size={32} />
+                  <ArrowDown className="text-primary-500" size={32} />
                 </div>
                 
                 <div className="flex items-start space-x-6">
