@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
       <BackgroundPaths />
       
       <div className="container mx-auto px-4 pt-16 z-10 text-center">
-        <div className="flex flex-col items-center justify-center space-y-6">
+        <div className="flex flex-col items-center justify-center space-y-6 -mt-8">
           <motion.div 
             className="space-y-2"
             initial={{ opacity: 0, y: 20 }}
