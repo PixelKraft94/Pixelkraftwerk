@@ -312,21 +312,21 @@ const Solution: React.FC = () => {
                     <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                       <Settings size={28} />
                     </div>
-                    <p className="text-lg text-light-100 font-bold mb-1">⚙️ Interne Prozesse</p>
+                    <p className="text-lg text-light-100 font-bold mb-1">Interne Prozesse</p>
                     <p className="text-sm text-light-300">nahtlos automatisiert</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                       <MessageCircle size={28} />
                     </div>
-                    <p className="text-lg text-light-100 font-bold mb-1">💬 Kundenkommunikation</p>
+                    <p className="text-lg text-light-100 font-bold mb-1">Kundenkommunikation</p>
                     <p className="text-sm text-light-300">rund um die Uhr</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                       <Calendar size={28} />
                     </div>
-                    <p className="text-lg text-light-100 font-bold mb-1">📅 Terminverwaltung</p>
+                    <p className="text-lg text-light-100 font-bold mb-1">Terminverwaltung</p>
                     <p className="text-sm text-light-300">vollautomatisch</p>
                   </div>
                 </motion.div>
