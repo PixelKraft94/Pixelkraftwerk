@@ -162,7 +162,7 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  Das Ergebnis: <span className="text-red-400">Stress, Fehler und Zeitverlust.</span>
+                  Das Ergebnis: <span className="text-red-500">Stress, Fehler und Zeitverlust.</span>
                 </motion.p>
               </div>
             </div>
@@ -291,7 +291,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="space-y-3 mb-4">
                   <p className="text-light-200">
-                    <span className="text-red-400 font-bold">Vorher:</span> Täglicher E-Mail-Marathon, Doppelbuchungen, Chaos.
+                    <span className="text-red-500 font-bold">Vorher:</span> Täglicher E-Mail-Marathon, Doppelbuchungen, Chaos.
                   </p>
                   <p className="text-light-200">
                     <span className="text-primary-500 font-bold">Nachher:</span> Automatische Terminabstimmung + Erinnerungen.
@@ -320,7 +320,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="space-y-3 mb-4">
                   <p className="text-light-200">
-                    <span className="text-red-400 font-bold">Vorher:</span> Immer dieselben Fragen am Empfang.
+                    <span className="text-red-500 font-bold">Vorher:</span> Immer dieselben Fragen am Empfang.
                   </p>
                   <p className="text-light-200">
                     <span className="text-primary-500 font-bold">Nachher:</span> Chatbot beantwortet 80 % aller Anfragen direkt.
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="space-y-3 mb-4">
                   <p className="text-light-200">
-                    <span className="text-red-400 font-bold">Vorher:</span> Jeder Lead musste manuell geprüft werden.
+                    <span className="text-red-500 font-bold">Vorher:</span> Jeder Lead musste manuell geprüft werden.
                   </p>
                   <p className="text-light-200">
                     <span className="text-primary-500 font-bold">Nachher:</span> System filtert automatisch vor.
@@ -378,7 +378,7 @@ const Home: React.FC = () => {
                 </div>
                 <div className="space-y-3 mb-4">
                   <p className="text-light-200">
-                    <span className="text-red-400 font-bold">Vorher:</span> Angebote manuell erfassen, weiterleiten, tippen.
+                    <span className="text-red-500 font-bold">Vorher:</span> Angebote manuell erfassen, weiterleiten, tippen.
                   </p>
                   <p className="text-light-200">
                     <span className="text-primary-500 font-bold">Nachher:</span> Automatisierung übernimmt alles in Minuten.
