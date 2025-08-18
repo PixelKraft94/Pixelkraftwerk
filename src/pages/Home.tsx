@@ -481,7 +481,7 @@ const Home: React.FC = () => {
                   >
                     Neben Automatisierungen entwickeln wir auch <span className="text-primary-500 font-bold">professionelle Websites</span>, die in wenigen Tagen live gehen.<br />
                     Schnell, modern, responsiv – damit Ihr Online-Auftritt zu Ihrem Erfolg passt.
-                  </p>
+                  </motion.p>
                 </div>
               </div>
             </div>
