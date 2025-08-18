@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Zap, Target, CheckCircle, ArrowRight, Users } from 'lucide-react';
+import { Clock, Zap, Target, CheckCircle, ArrowRight, Users, Settings, MessageCircle, Calendar } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import { BackgroundPaths } from '../components/ui/background-paths';
 
@@ -52,11 +52,26 @@ const Solution: React.FC = () => {
               Viele Unternehmen verlieren täglich Zeit, Energie und Fokus –<br />
               weil alltägliche Aufgaben noch immer manuell ablaufen.
             </motion.p>
+            
+            <motion.div 
+              className="mt-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+            >
+              <button 
+                onClick={scrollToContactForm}
+                className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+              >
+                <ArrowRight className="mr-2" size={20} />
+                Jetzt starten
+              </button>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* PROBLEMS SECTION */}
+      {/* PROBLEMAUFBAU SECTION */}
       <section className="py-24 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -71,7 +86,7 @@ const Solution: React.FC = () => {
             </motion.h2>
             
             <div className="bg-dark-300 border border-dark-100 p-8 space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                 <motion.div 
                   className="flex items-start space-x-4"
                   initial={{ opacity: 0, x: -20 }}
@@ -131,26 +146,6 @@ const Solution: React.FC = () => {
                     </p>
                   </div>
                 </motion.div>
-                
-                <motion.div 
-                  className="flex items-start space-x-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="bg-primary-500/20 text-primary-500 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="text-primary-500" size={24} />
-                  </div>
-                  <div>
-                    <p className="text-xl text-light-100 mb-2">
-                      Das <span className="text-primary-500 font-bold">Tagesgeschäft frisst Ressourcen</span>
-                    </p>
-                    <p className="text-light-300 text-sm">
-                      💡 <em>15 Min täglich = 65 Stunden im Jahr verloren</em>
-                    </p>
-                  </div>
-                </motion.div>
               </div>
               
               <div className="border-t border-dark-100 pt-6">
@@ -158,10 +153,11 @@ const Solution: React.FC = () => {
                   className="text-center text-lg text-light-200"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  ➤ <em className="text-primary-400">Das passiert täglich – und kostet bares Geld.</em>
+                  💡 Schon <span className="text-primary-500 font-bold">15 Minuten täglich = 65 Stunden pro Jahr</span> verloren –<br />
+                  Ressourcen, die bares Geld kosten.
                 </motion.p>
               </div>
             </div>
@@ -169,7 +165,7 @@ const Solution: React.FC = () => {
         </div>
       </section>
 
-      {/* DIE FOLGE SECTION */}
+      {/* SCHMERZ VERSTÄRKEN SECTION */}
       <section className="py-24 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -193,7 +189,7 @@ const Solution: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Zap size={24} />
+                    <span className="text-xl">❌</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -202,10 +198,7 @@ const Solution: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-xl text-light-100 mb-1">
-                      Die <span className="text-red-400 font-bold">Abläufe stocken</span>
-                    </p>
-                    <p className="text-light-300 text-sm">
-                      Warteschleifen entstehen, Kunden werden ungeduldig
+                      <span className="text-red-400 font-bold">Die Abläufe stocken</span> – Warteschleifen entstehen, Kunden werden ungeduldig
                     </p>
                   </motion.div>
                 </div>
@@ -220,7 +213,7 @@ const Solution: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <Target size={24} />
+                    <span className="text-xl">❌</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -229,10 +222,7 @@ const Solution: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-xl text-light-100 mb-1">
-                      <span className="text-red-400 font-bold">Kleine Aufgaben summieren sich</span>
-                    </p>
-                    <p className="text-light-300 text-sm">
-                      Aus 5 Minuten werden Stunden – täglich
+                      <span className="text-red-400 font-bold">Kleine Aufgaben summieren sich</span> – aus 5 Minuten werden Stunden
                     </p>
                   </motion.div>
                 </div>
@@ -247,7 +237,7 @@ const Solution: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     viewport={{ once: true }}
                   >
-                    <Users size={24} />
+                    <span className="text-xl">❌</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -256,10 +246,7 @@ const Solution: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-xl text-light-100 mb-1">
-                      <span className="text-red-400 font-bold">Entwicklung wird zur Nebensache</span>
-                    </p>
-                    <p className="text-light-300 text-sm">
-                      Der Alltag drückt – Innovation bleibt auf der Strecke
+                      <span className="text-red-400 font-bold">Entwicklung bleibt auf der Strecke</span> – der Alltag drückt, Innovation stoppt
                     </p>
                   </motion.div>
                 </div>
@@ -281,7 +268,7 @@ const Solution: React.FC = () => {
         </div>
       </section>
 
-      {/* DIE LÖSUNG SECTION */}
+      {/* LÖSUNG ANBIETEN SECTION */}
       <section className="py-24 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -292,7 +279,7 @@ const Solution: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Die Lösung
+              Die Lösung: Individuelle Automatisierungen
             </motion.h2>
             
             <div className="bg-dark-500 border border-primary-500/30 p-8">
@@ -305,10 +292,10 @@ const Solution: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   <p className="text-xl text-light-100 mb-4">
-                    Wir entwickeln <span className="text-primary-500 font-bold">individuelle Automatisierungslösungen</span> –
+                    Wir entwickeln <span className="text-primary-500 font-bold">Automatisierungslösungen</span> –
                   </p>
                   <p className="text-lg text-light-200">
-                    präzise für Ihre Abläufe, ohne zusätzliche Tools oder IT-Komplexität.
+                    <span className="text-primary-500 font-bold">präzise für Ihre Abläufe, ohne zusätzliche Tools oder IT-Komplexität.</span>
                   </p>
                 </motion.div>
                 
@@ -323,24 +310,24 @@ const Solution: React.FC = () => {
                 >
                   <div className="text-center">
                     <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <CheckCircle size={28} />
+                      <Settings size={28} />
                     </div>
-                    <p className="text-lg text-light-100 font-bold mb-1">Interne Prozesse</p>
-                    <p className="text-sm text-light-300">Nahtlos automatisiert</p>
+                    <p className="text-lg text-light-100 font-bold mb-1">⚙️ Interne Prozesse</p>
+                    <p className="text-sm text-light-300">nahtlos automatisiert</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <CheckCircle size={28} />
+                      <MessageCircle size={28} />
                     </div>
-                    <p className="text-lg text-light-100 font-bold mb-1">Kundenkommunikation</p>
-                    <p className="text-sm text-light-300">Rund um die Uhr</p>
+                    <p className="text-lg text-light-100 font-bold mb-1">💬 Kundenkommunikation</p>
+                    <p className="text-sm text-light-300">rund um die Uhr</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <CheckCircle size={28} />
+                      <Calendar size={28} />
                     </div>
-                    <p className="text-lg text-light-100 font-bold mb-1">Terminverwaltung</p>
-                    <p className="text-sm text-light-300">Vollautomatisch</p>
+                    <p className="text-lg text-light-100 font-bold mb-1">📅 Terminverwaltung</p>
+                    <p className="text-sm text-light-300">vollautomatisch</p>
                   </div>
                 </motion.div>
                 
@@ -353,16 +340,10 @@ const Solution: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  <p className="text-xl text-light-100 mb-2">
-                    Wir helfen Ihnen, <span className="text-primary-500 font-bold">wiederkehrende Aufgaben</span> so zu automatisieren,
-                  </p>
-                  <p className="text-lg text-light-200 mb-4">
-                    dass sie einfach <span className="text-primary-500 font-bold">im Hintergrund laufen</span>.
-                  </p>
                   <div className="bg-primary-500/10 border-l-4 border-primary-500 p-4 text-left">
                     <p className="text-lg text-light-100">
-                      ✓ Damit Ihr Unternehmen <span className="text-primary-500 font-bold">strukturiert arbeiten</span> kann –<br />
-                      ✓ und der <span className="text-primary-500 font-bold">Fokus wieder auf dem Wesentlichen</span> liegt.
+                      ✅ Damit Ihr Unternehmen <span className="text-primary-500 font-bold">strukturiert arbeitet</span><br />
+                      ✅ und der <span className="text-primary-500 font-bold">Fokus wieder auf dem Wesentlichen</span> liegt
                     </p>
                   </div>
                 </motion.div>
@@ -372,7 +353,7 @@ const Solution: React.FC = () => {
         </div>
       </section>
 
-      {/* WAS PASSIERT JETZT SECTION */}
+      {/* ABLAUF SECTION */}
       <section className="py-24 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -405,7 +386,7 @@ const Solution: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-xl text-light-100 mb-2">
-                      Sie sagen uns, welche <span className="text-primary-500 font-bold">Aufgaben in Ihrem Arbeitsalltag gerade bremsen</span>.
+                      <span className="text-primary-500 font-bold">Sie schildern Ihre Bremsfaktoren</span>
                     </p>
                     <p className="text-light-300 text-sm">
                       ➤ Einfach im Formular beschreiben – wir verstehen auch komplexe Abläufe
@@ -434,17 +415,22 @@ const Solution: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     <p className="text-xl text-light-100 mb-2">
-                      Wir melden uns mit <span className="text-primary-500 font-bold">konkreten Ideen</span>, wie wir diese Abläufe vereinfachen können –
+                      <span className="text-primary-500 font-bold">Wir liefern konkrete Ideen</span>
                     </p>
-                    <p className="text-lg text-light-200 mb-3">
-                      <span className="text-primary-500 font-bold">schnell, klar und auf Ihre Situation abgestimmt</span>.
+                    <p className="text-light-300 text-sm mb-3">
+                      ➤ Meist binnen 24h mit einer ersten Einschätzung und Lösungsidee
                     </p>
-                    <div className="bg-primary-500/10 border-l-4 border-primary-500 p-3">
-                      <p className="text-light-300 text-sm">
-                        💡 <em>Meist binnen 24h – mit einer ersten Einschätzung und Lösungsidee</em>
-                      </p>
-                    </div>
                   </motion.div>
+                </div>
+
+                <div className="text-center mt-8">
+                  <button 
+                    onClick={scrollToContactForm}
+                    className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+                  >
+                    <ArrowRight className="mr-2" size={20} />
+                    Jetzt starten
+                  </button>
                 </div>
               </div>
             </div>
@@ -452,10 +438,7 @@ const Solution: React.FC = () => {
         </div>
       </section>
 
-      {/* CONTACT FORM */}
-      <ContactForm />
-
-      {/* WARUM DAS FUNKTIONIERT SECTION */}
+      {/* TRUST & SOCIAL PROOF SECTION */}
       <section className="py-24 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -470,23 +453,6 @@ const Solution: React.FC = () => {
             </motion.h2>
             
             <div className="bg-dark-500 border border-primary-500/30 p-8">
-              <motion.div 
-                className="text-center mb-8"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <p className="text-xl text-light-100 mb-4">
-                  Wir liefern <span className="text-primary-500 font-bold">keine Standard-Software</span>, sondern <span className="text-primary-500 font-bold">individuelle Systeme</span>,
-                </p>
-                <p className="text-lg text-light-200">
-                  die sich sauber in Ihre Prozesse einfügen – statt alles auf den Kopf zu stellen.
-                </p>
-              </motion.div>
-              
-              <div className="h-px bg-primary-500/30 mb-8"></div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <motion.div 
                   className="text-center"
@@ -499,10 +465,10 @@ const Solution: React.FC = () => {
                     <Users size={28} />
                   </div>
                   <p className="text-xl text-light-100 font-bold mb-2">
-                    <span className="text-primary-500">Ein fester</span> Ansprechpartner
+                    👤 <span className="text-primary-500">Ein fester</span> Ansprechpartner
                   </p>
                   <p className="text-light-300 text-sm">
-                    Kein Callcenter – persönliche Betreuung von A bis Z
+                    persönliche Betreuung, kein Callcenter
                   </p>
                 </motion.div>
                 
@@ -517,10 +483,10 @@ const Solution: React.FC = () => {
                     <Target size={28} />
                   </div>
                   <p className="text-xl text-light-100 font-bold mb-2">
-                    <span className="text-primary-500">Strukturierte</span> Umsetzung
+                    📋 <span className="text-primary-500">Strukturierte</span> Umsetzung
                   </p>
                   <p className="text-light-300 text-sm">
-                    Klare Schritte, transparente Zeitpläne, messbare Ergebnisse
+                    klare Schritte, transparente Zeitpläne
                   </p>
                 </motion.div>
                 
@@ -532,13 +498,13 @@ const Solution: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   <div className="bg-primary-500/20 text-primary-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle size={28} />
+                    <Clock size={28} />
                   </div>
                   <p className="text-xl text-light-100 font-bold mb-2">
-                    <span className="text-primary-500">Echte</span> Entlastung
+                    ⏳ <span className="text-primary-500">Echte</span> Entlastung
                   </p>
                   <p className="text-light-300 text-sm">
-                    Nicht nur Technik – spürbare Zeitersparnis im Alltag
+                    spürbare Zeitersparnis im Alltag
                   </p>
                 </motion.div>
               </div>
@@ -547,7 +513,7 @@ const Solution: React.FC = () => {
         </div>
       </section>
 
-      {/* ERSTER SCHRITT SECTION */}
+      {/* CALL-TO-ACTION SECTION */}
       <section className="py-24 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -558,7 +524,7 @@ const Solution: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Der erste Schritt ist ganz einfach:
+              Der erste Schritt ist ganz einfach
             </motion.h2>
             
             <div className="bg-dark-400 border border-dark-100 p-8 mb-12">
@@ -575,10 +541,10 @@ const Solution: React.FC = () => {
                   </div>
                   <div className="text-left">
                     <p className="text-xl text-light-100 mb-1">
-                      Sie geben uns einen <span className="text-primary-500 font-bold">kurzen Einblick</span> –
+                      <span className="text-primary-500 font-bold">3 Minuten Formular ausfüllen reicht völlig</span> –
                     </p>
                     <p className="text-light-300 text-sm">
-                      3 Minuten Formular ausfüllen reicht völlig
+                      und wir zeigen Ihnen konkret, wie Ihre Prozesse einfacher und effizienter laufen.
                     </p>
                   </div>
                 </motion.div>
@@ -599,39 +565,10 @@ const Solution: React.FC = () => {
                   </div>
                   <div className="text-left">
                     <p className="text-xl text-light-100 mb-1">
-                      und wir zeigen Ihnen <span className="text-primary-500 font-bold">konkret</span>, wie Ihre Prozesse
-                    </p>
-                    <p className="text-lg text-light-200 mb-1">
-                      <span className="text-primary-500 font-bold">einfacher, effizienter und entlastend</span> laufen können.
-                    </p>
-                    <p className="text-light-300 text-sm">
-                      Maßgeschneiderte Lösungsvorschläge für Ihre Situation
+                      Maßgeschneiderte <span className="text-primary-500 font-bold">Lösungsvorschläge</span> für Ihre Situation
                     </p>
                   </div>
                 </motion.div>
-                
-                <div className="border-t border-dark-100 pt-6">
-                  <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-primary-500" size={20} />
-                      <p className="text-light-100">Kein Verkaufsdruck</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-primary-500" size={20} />
-                      <p className="text-light-100">Kein Technik-Kauderwelsch</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="text-primary-500" size={20} />
-                      <p className="text-light-100 font-bold text-primary-500">Nur Klarheit</p>
-                    </div>
-                  </motion.div>
-                </div>
               </div>
             </div>
             
@@ -643,11 +580,14 @@ const Solution: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Jetzt Formular ausfüllen und entlastet werden
+              Formular jetzt ausfüllen
             </motion.button>
           </div>
         </div>
       </section>
+
+      {/* CONTACT FORM */}
+      <ContactForm />
     </div>
   );
 };
