@@ -159,10 +159,8 @@ const Solution: React.FC = () => {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <>
-                    💡 Schon <span className="text-primary-500 font-bold">15 Minuten täglich = 65 Stunden pro Jahr</span> verloren –<br />
-                    <em className="text-primary-400">Ressourcen, die bares Geld kosten.</em>
-                  </>
+                  💡 Schon <span className="text-primary-500 font-bold">15 Minuten täglich = 65 Stunden pro Jahr</span> verloren –<br />
+                  <em className="text-primary-400">Ressourcen, die bares Geld kosten.</em>
                 </p>
               </div>
             </div>
