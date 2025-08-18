@@ -292,7 +292,7 @@ const Solution: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Die Lösung?
+              Die Lösung
             </motion.h2>
             
             <div className="bg-dark-500 border border-primary-500/30 p-8">
