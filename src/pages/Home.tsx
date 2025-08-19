@@ -72,17 +72,6 @@ const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        
-        <motion.button 
-          onClick={scrollToNextSection}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary-500 hover:text-primary-400 transition-colors duration-300 animate-bounce"
-          aria-label="Scroll down"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
-        >
-          <ChevronDown size={32} />
-        </motion.button>
       </section>
 
       {/* PROBLEMS SECTION */}
