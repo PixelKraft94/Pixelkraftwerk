@@ -1,38 +1,12 @@
 import React, { useState } from 'react';
-import { BusinessType, HowFoundUs, ContactFormData } from '../types';
-
-const businessTypes: BusinessType[] = [
-  'E-Commerce',
-  'SaaS / IT',
-  'Gastronomie',
-  'Gesundheitswesen',
-  'Produktion',
-  'Finanzen',
-  'Einzelhandel',
-  'Beratung / Agentur',
-  'Sonstiges'
-];
-
-const howFoundUsOptions: HowFoundUs[] = [
-  'Empfehlung',
-  'Google',
-  'LinkedIn',
-  'Instagram',
-  'Facebook',
-  'Sonstiges'
-];
+import { ContactFormData } from '../types';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
-    phone: '',
     company: '',
-    website: '',
-    howFoundUs: 'Google',
-    timeConsumingTasks: '',
-    tasksToAutomate: '',
-    industry: 'E-Commerce',
+    tasksToAutomate: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -74,13 +48,8 @@ const ContactForm: React.FC = () => {
       setFormData({
         name: '',
         email: '',
-        phone: '',
         company: '',
-        website: '',
-        howFoundUs: 'Google',
-        timeConsumingTasks: '',
-        tasksToAutomate: '',
-        industry: 'E-Commerce',
+        tasksToAutomate: ''
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -117,7 +86,6 @@ const ContactForm: React.FC = () => {
                   <label htmlFor="name" className="block text-light-100 font-heading mb-2">
                     Name <span className="text-red-500">*</span>
                   </label>
-                  <p className="text-light-300 text-sm mb-2">Vor- und Nachname</p>
                   <input
                     type="text"
                     id="name"
@@ -132,7 +100,6 @@ const ContactForm: React.FC = () => {
                   <label htmlFor="email" className="block text-light-100 font-heading mb-2">
                     E-Mail <span className="text-red-500">*</span>
                   </label>
-                  <p className="text-light-300 text-sm mb-2">Für die Kontaktaufnahme</p>
                   <input
                     type="email"
                     id="email"
@@ -145,94 +112,19 @@ const ContactForm: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-light-100 font-heading mb-2">
-                    Telefonnummer (optional)
-                  </label>
-                  <p className="text-light-300 text-sm mb-2">Wenn wir Sie telefonisch erreichen dürfen</p>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-light-100 font-heading mb-2">
-                    Unternehmen <span className="text-red-500">*</span>
-                  </label>
-                  <p className="text-light-300 text-sm mb-2">Name Ihres Unternehmens</p>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="website" className="block text-light-100 font-heading mb-2">
-                    Website
-                  </label>
-                  <p className="text-light-300 text-sm mb-2">Falls vorhanden</p>
-                  <input
-                    type="text"
-                    id="website"
-                    name="website"
-                    value={formData.website}
-                    onChange={handleChange}
-                    placeholder="beispiel.de"
-                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="howFoundUs" className="block text-light-100 font-heading mb-2">
-                    Wie haben Sie uns gefunden? <span className="text-red-500">*</span>
-                  </label>
-                  <p className="text-light-300 text-sm mb-2">Empfehlung, Google, LinkedIn, Instagram, Facebook, Sonstiges</p>
-                  <select
-                    id="howFoundUs"
-                    name="howFoundUs"
-                    value={formData.howFoundUs}
-                    onChange={handleChange}
-                    required
-                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
-                  >
-                    {howFoundUsOptions.map((option) => (
-                      <option key={option} value={option}>{option}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              
-              <hr className="border-dark-100" />
-              
               <div>
-                <label htmlFor="timeConsumingTasks" className="block text-light-100 font-heading mb-2">
-                  Was raubt Ihrem Unternehmen aktuell am meisten Zeit im Arbeitsalltag? <span className="text-red-500">*</span>
+                <label htmlFor="company" className="block text-light-100 font-heading mb-2">
+                  Unternehmen <span className="text-red-500">*</span>
                 </label>
-                <textarea
-                  id="timeConsumingTasks"
-                  name="timeConsumingTasks"
-                  value={formData.timeConsumingTasks}
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
                   onChange={handleChange}
                   required
-                  maxLength={300}
-                  rows={3}
-                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200 resize-vertical"
-                  placeholder="Beschreiben Sie, welche Aufgaben oder Prozesse besonders zeitaufwändig sind..."
+                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
                 />
-                <p className="text-light-300 text-xs mt-1">
-                  {formData.timeConsumingTasks.length}/300 Zeichen
-                </p>
               </div>
               
               <div>
@@ -254,29 +146,7 @@ const ContactForm: React.FC = () => {
                   {formData.tasksToAutomate.length}/300 Zeichen
                 </p>
               </div>
-              
-              <hr className="border-dark-100" />
-              
-              <div>
-                <label htmlFor="industry" className="block text-light-100 font-heading mb-2">
-                  Branche / Unternehmenstyp <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="industry"
-                  name="industry"
-                  value={formData.industry}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
-                >
-                  {businessTypes.map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-              
-              <hr className="border-dark-100" />
-              
+
               <div>
                 <button
                   type="submit"
