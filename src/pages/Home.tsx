@@ -32,7 +32,7 @@ const Home: React.FC = () => {
                 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
               >
                 Abläufe automatisieren.
               </motion.h1>
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
               >
                 Prozesse vereinfachen.
               </motion.h1>
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
                 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 1.3 }}
               >
                 Zeit gewinnen.
               </motion.h1>
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
               className="text-lg md:text-xl text-light-200 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
               Pixel Kraftwerk automatisiert Ihre Abläufe – damit Sie mehr Zeit fürs Wesentliche haben.
             </motion.p>
