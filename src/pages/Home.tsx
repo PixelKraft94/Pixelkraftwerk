@@ -88,29 +88,29 @@ const Home: React.FC = () => {
       </section>
 
       {/* PROBLEMS SECTION */}
-      <section id="problems-section" className="py-32 bg-dark-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+      <section id="problems-section" className="py-40 bg-dark-500">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              className="text-center mb-20"
+              className="text-center mb-28"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-light-100">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-light-100">
                 Jeden Tag dieselben Aufgaben.<br />
                 Jeden Tag <span className="text-primary-500">verlorene Zeit.</span>
               </h2>
 
-              <p className="text-xl text-light-200 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-light-200 leading-relaxed max-w-2xl mx-auto">
                 Viele Unternehmen verschwenden wertvolle Stunden mit Routinearbeit –
                 E-Mails beantworten, Termine abgleichen, Leads prüfen oder Tabellen pflegen.
               </p>
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20"
+              className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-28"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -122,10 +122,10 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-red-400">
-                  <Clock size={48} />
+                  <Clock size={42} />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-light-100 mb-3">Stress</h3>
-                <p className="text-light-200">Ständige Unterbrechungen und Zeitdruck</p>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-3">Stress</h3>
+                <p className="text-light-200 text-sm">Ständige Unterbrechungen und Zeitdruck</p>
               </motion.div>
 
               <motion.div
@@ -134,10 +134,10 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-red-400">
-                  <Target size={48} />
+                  <Target size={42} />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-light-100 mb-3">Fehler</h3>
-                <p className="text-light-200">Manuelle Prozesse führen zu Problemen</p>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-3">Fehler</h3>
+                <p className="text-light-200 text-sm">Manuelle Prozesse führen zu Problemen</p>
               </motion.div>
 
               <motion.div
@@ -146,10 +146,10 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-red-400">
-                  <TrendingUp size={48} className="rotate-180" />
+                  <TrendingUp size={42} className="rotate-180" />
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-light-100 mb-3">Zeitverlust</h3>
-                <p className="text-light-200">Weniger Fokus auf das Wesentliche</p>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-3">Zeitverlust</h3>
+                <p className="text-light-200 text-sm">Weniger Fokus auf das Wesentliche</p>
               </motion.div>
             </motion.div>
 
@@ -160,10 +160,10 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <p className="text-2xl text-light-100 font-bold mb-4">
+              <p className="text-xl text-light-100 font-bold mb-4">
                 Das Ergebnis?
               </p>
-              <p className="text-xl text-light-200 max-w-2xl mx-auto">
+              <p className="text-lg text-light-200 max-w-xl mx-auto">
                 Weniger Fokus auf das, was Ihr Geschäft wirklich voranbringt.
               </p>
             </motion.div>
@@ -172,35 +172,35 @@ const Home: React.FC = () => {
       </section>
 
       {/* UNSERE LÖSUNGEN SECTION */}
-      <section className="py-32 bg-dark-400">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+      <section className="py-40 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-5xl mx-auto">
             <motion.div
-              className="text-center mb-24"
+              className="text-center mb-32"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-10 text-light-100">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-10 text-light-100">
                 Unsere <span className="text-primary-500">Lösungen</span>
               </h2>
 
-              <div className="space-y-6 max-w-3xl mx-auto">
-                <p className="text-xl text-light-200 leading-relaxed">
+              <div className="space-y-5 max-w-2xl mx-auto">
+                <p className="text-lg text-light-200 leading-relaxed">
                   Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
                 </p>
-                <p className="text-xl text-light-200 leading-relaxed">
+                <p className="text-lg text-light-200 leading-relaxed">
                   Viele Teams verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
                 </p>
-                <p className="text-2xl text-light-100 font-bold mt-8">
+                <p className="text-xl text-light-100 font-bold mt-8">
                   Wir ändern das.
                 </p>
               </div>
             </motion.div>
 
             <motion.h3
-              className="text-3xl md:text-4xl font-heading font-bold mb-16 text-light-100 text-center"
+              className="text-2xl md:text-3xl font-heading font-bold mb-20 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -209,7 +209,7 @@ const Home: React.FC = () => {
               Was wir <span className="text-primary-500">automatisieren</span>
             </motion.h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
               <motion.div
                 className="group"
                 initial={{ opacity: 0, y: 30 }}
@@ -222,35 +222,35 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                    <MessageCircle size={56} strokeWidth={1.5} />
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <MessageCircle size={48} strokeWidth={1.5} />
                   </div>
-                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Kundenkommunikation</h4>
-                  <p className="text-lg text-light-100 mb-4 font-semibold">
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Kundenkommunikation</h4>
+                  <p className="text-base text-light-100 mb-3 font-semibold">
                     Nie wieder dieselben Fragen 20 × beantworten.
                   </p>
-                  <p className="text-light-200 mb-4 leading-relaxed">
+                  <p className="text-sm text-light-200 mb-4 leading-relaxed">
                     Wir richten intelligente Chatbots und Telefonassistenten ein, die:
                   </p>
-                  <ul className="space-y-3 text-light-200 mb-6">
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Kundenanfragen automatisch verstehen und beantworten</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Termine oder Rückrufe direkt buchen</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>E-Mails oder Website-Chats mit Ihrem CRM verbinden</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>bei Bedarf an Ihr Team übergeben</span>
                     </li>
                   </ul>
-                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
                     Ihr Team wird entlastet – Kunden erhalten sofort Antworten, 24/7.
                   </p>
                 </motion.div>
@@ -268,35 +268,35 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                    <Calendar size={56} strokeWidth={1.5} />
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Calendar size={48} strokeWidth={1.5} />
                   </div>
-                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Terminplanung & Buchung</h4>
-                  <p className="text-lg text-light-100 mb-4 font-semibold">
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Terminplanung & Buchung</h4>
+                  <p className="text-base text-light-100 mb-3 font-semibold">
                     Schluss mit E-Mail-Pingpong und Doppelbuchungen.
                   </p>
-                  <p className="text-light-200 mb-4 leading-relaxed">
+                  <p className="text-sm text-light-200 mb-4 leading-relaxed">
                     Wir automatisieren die gesamte Terminvergabe:
                   </p>
-                  <ul className="space-y-3 text-light-200 mb-6">
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Synchronisation mit Google, Outlook oder iCloud-Kalendern</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Automatische Erinnerung per E-Mail oder SMS</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Weiterleitung an das passende Teammitglied</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Stornierungen & Nachfasslogik inklusive</span>
                     </li>
                   </ul>
-                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
                     Bis zu 10 Stunden pro Woche gespart – keine vergessenen Termine mehr.
                   </p>
                 </motion.div>
@@ -314,31 +314,31 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                    <Workflow size={56} strokeWidth={1.5} />
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Workflow size={48} strokeWidth={1.5} />
                   </div>
-                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Interne Prozesse & Workflows</h4>
-                  <p className="text-lg text-light-100 mb-4 font-semibold">
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Interne Prozesse & Workflows</h4>
+                  <p className="text-base text-light-100 mb-3 font-semibold">
                     Täglich wiederkehrende Aufgaben rauben wertvolle Zeit – das muss nicht sein.
                   </p>
-                  <p className="text-light-200 mb-4 leading-relaxed">
+                  <p className="text-sm text-light-200 mb-4 leading-relaxed">
                     Wir automatisieren interne Abläufe so, dass Informationen einmal erfasst und überall genutzt werden können.
                   </p>
-                  <ul className="space-y-3 text-light-200 mb-6">
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Kundenanfragen werden automatisch an die richtige Stelle weitergeleitet</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Wichtige Daten fließen ohne manuelle Eingabe in alle relevanten Systeme</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Mitarbeiter erhalten automatische Benachrichtigungen bei neuen Aufgaben</span>
                     </li>
                   </ul>
-                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
                     Weniger Handarbeit, weniger Fehler – und mehr Zeit für Ihre Kunden.
                   </p>
                 </motion.div>
@@ -356,29 +356,29 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp size={56} strokeWidth={1.5} />
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp size={48} strokeWidth={1.5} />
                   </div>
-                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Lead-Management & Vertrieb</h4>
-                  <ul className="space-y-3 text-light-200 mb-6">
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-4">Lead-Management & Vertrieb</h4>
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Leads automatisch qualifizieren und priorisieren</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>CRM-Einträge automatisch erzeugen</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Vertriebsmitarbeiter werden nur bei echten Interessenten informiert</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Automatisches Nachfassen und Angebote senden</span>
                     </li>
                   </ul>
-                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
                     Ihr Vertrieb konzentriert sich nur auf wertvolle Kontakte.
                   </p>
                 </motion.div>
@@ -396,25 +396,25 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                    <Globe size={56} strokeWidth={1.5} />
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Globe size={48} strokeWidth={1.5} />
                   </div>
-                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Websites mit integrierten Automatisierungen</h4>
-                  <ul className="space-y-3 text-light-200 mb-6">
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-4">Websites mit integrierten Automatisierungen</h4>
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Blitzschnell und modern erstellt</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Integrierte Chatbots, Terminbuchung & CRM-Anbindung</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span>SEO-optimiert und responsive</span>
                     </li>
                   </ul>
-                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
                     Digitaler Auftritt arbeitet aktiv für Sie – nicht umgekehrt.
                   </p>
                 </motion.div>
@@ -425,11 +425,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* SO FUNKTIONIERT AUTOMATISIERUNG IN DER PRAXIS - ACCORDION */}
-      <section className="py-32 bg-dark-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+      <section className="py-40 bg-dark-500">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
             <motion.h2
-              className="text-4xl md:text-5xl font-heading font-bold mb-20 text-light-100 text-center"
+              className="text-3xl md:text-4xl font-heading font-bold mb-24 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -438,7 +438,7 @@ const Home: React.FC = () => {
               So funktioniert <span className="text-primary-500">Automatisierung in der Praxis</span>
             </motion.h2>
 
-            <div className="space-y-4">
+            <div className="space-y-2">
               {[
                 {
                   title: "Termin-Handling",
@@ -487,10 +487,10 @@ const Home: React.FC = () => {
                 >
                   <motion.button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex items-center justify-between py-6 text-left border-b border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                    className="w-full flex items-center justify-between py-5 text-left border-b border-dark-100 hover:border-primary-500/50 transition-all duration-300"
                     whileHover={{ x: 8 }}
                   >
-                    <span className="text-xl font-heading font-bold text-light-100 flex items-center">
+                    <span className="text-lg font-heading font-bold text-light-100 flex items-center">
                       <motion.div
                         animate={{ rotate: openAccordion === index ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
@@ -498,7 +498,7 @@ const Home: React.FC = () => {
                       >
                         <ChevronDown
                           className="text-primary-500"
-                          size={28}
+                          size={24}
                         />
                       </motion.div>
                       {index + 1}. {item.title}
@@ -513,18 +513,18 @@ const Home: React.FC = () => {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <div className="py-8 pl-16 space-y-6">
+                    <div className="py-6 pl-12 space-y-5">
                       <div>
-                        <p className="text-light-100 font-bold mb-2 text-lg">Vorher:</p>
-                        <p className="text-light-200 text-lg">{item.vorher}</p>
+                        <p className="text-light-100 font-bold mb-2 text-base">Vorher:</p>
+                        <p className="text-light-200 text-sm">{item.vorher}</p>
                       </div>
                       <div>
-                        <p className="text-light-100 font-bold mb-2 text-lg">Nachher:</p>
-                        <p className="text-light-200 text-lg">{item.nachher}</p>
+                        <p className="text-light-100 font-bold mb-2 text-base">Nachher:</p>
+                        <p className="text-light-200 text-sm">{item.nachher}</p>
                       </div>
                       <div>
-                        <p className="text-light-100 font-bold mb-2 text-lg">Ergebnis:</p>
-                        <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4 text-lg">{item.ergebnis}</p>
+                        <p className="text-light-100 font-bold mb-2 text-base">Ergebnis:</p>
+                        <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-3 text-sm">{item.ergebnis}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -539,12 +539,12 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <p className="text-lg text-light-200 mb-6">
+              <p className="text-base text-light-200 mb-8">
                 3 Minuten Formular ausfüllen – wir zeigen Ihnen konkret, wie Ihre Abläufe effizienter laufen.
               </p>
               <button
                 onClick={scrollToContactForm}
-                className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+                className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 hover:scale-105 transition-all duration-300"
               >
                 <ArrowRight className="mr-2" size={20} />
                 Jetzt starten
@@ -555,11 +555,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* PROCESS SECTION */}
-      <section className="py-32 bg-dark-400">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+      <section className="py-40 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
             <motion.h2
-              className="text-4xl md:text-5xl font-heading font-bold mb-20 text-light-100 text-center"
+              className="text-3xl md:text-4xl font-heading font-bold mb-24 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -568,7 +568,7 @@ const Home: React.FC = () => {
               In vier Schritten zur eigenen <span className="text-primary-500">KI-Automatisierung</span>
             </motion.h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
               <motion.div
                 className="group"
                 initial={{ opacity: 0, y: 30 }}
@@ -581,14 +581,14 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.3 }}
                   className="h-full"
                 >
-                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-6xl font-heading font-bold mb-2">01</div>
+                  <div className="text-primary-500 mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-5xl font-heading font-bold mb-2">01</div>
                     <div className="h-1 w-16 bg-primary-500"></div>
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
+                  <h3 className="text-xl font-heading font-bold text-light-100 mb-3">
                     Erstgespräch
                   </h3>
-                  <p className="text-light-200 text-lg leading-relaxed">
+                  <p className="text-light-200 text-base leading-relaxed">
                     Wir klären Ihre Ziele und Potenziale.
                   </p>
                 </motion.div>
@@ -606,14 +606,14 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.3 }}
                   className="h-full"
                 >
-                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-6xl font-heading font-bold mb-2">02</div>
+                  <div className="text-primary-500 mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-5xl font-heading font-bold mb-2">02</div>
                     <div className="h-1 w-16 bg-primary-500"></div>
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
+                  <h3 className="text-xl font-heading font-bold text-light-100 mb-3">
                     Planung
                   </h3>
-                  <p className="text-light-200 text-lg leading-relaxed">
+                  <p className="text-light-200 text-base leading-relaxed">
                     Wir entwickeln das passende Konzept.
                   </p>
                 </motion.div>
@@ -631,14 +631,14 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.3 }}
                   className="h-full"
                 >
-                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-6xl font-heading font-bold mb-2">03</div>
+                  <div className="text-primary-500 mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-5xl font-heading font-bold mb-2">03</div>
                     <div className="h-1 w-16 bg-primary-500"></div>
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
+                  <h3 className="text-xl font-heading font-bold text-light-100 mb-3">
                     Umsetzung
                   </h3>
-                  <p className="text-light-200 text-lg leading-relaxed">
+                  <p className="text-light-200 text-base leading-relaxed">
                     Schnelle, saubere Integration.
                   </p>
                 </motion.div>
@@ -656,14 +656,14 @@ const Home: React.FC = () => {
                   transition={{ duration: 0.3 }}
                   className="h-full"
                 >
-                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-6xl font-heading font-bold mb-2">04</div>
+                  <div className="text-primary-500 mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-5xl font-heading font-bold mb-2">04</div>
                     <div className="h-1 w-16 bg-primary-500"></div>
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
+                  <h3 className="text-xl font-heading font-bold text-light-100 mb-3">
                     Support
                   </h3>
-                  <p className="text-light-200 text-lg leading-relaxed">
+                  <p className="text-light-200 text-base leading-relaxed">
                     Wir bleiben an Ihrer Seite, auch nach dem Go-Live.
                   </p>
                 </motion.div>
@@ -674,11 +674,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-32 bg-dark-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+      <section className="py-40 bg-dark-500">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-5xl mx-auto">
             <motion.h2
-              className="text-4xl md:text-5xl font-heading font-bold mb-20 text-light-100 text-center"
+              className="text-3xl md:text-4xl font-heading font-bold mb-24 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -687,7 +687,7 @@ const Home: React.FC = () => {
               <span className="text-primary-500">Kundenstimmen</span>
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               <motion.div
                 className="group"
                 initial={{ opacity: 0, y: 30 }}
@@ -700,7 +700,7 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-light-200 text-lg italic leading-relaxed">
+                  <p className="text-light-200 text-base italic leading-relaxed">
                     „Endlich Schluss mit Doppelbuchungen – das spart jede Woche rund 10 Stunden."
                   </p>
                 </motion.blockquote>
@@ -718,7 +718,7 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-light-200 text-lg italic leading-relaxed">
+                  <p className="text-light-200 text-base italic leading-relaxed">
                     „Seit dem Chatbot haben wir wieder Zeit für die wirklich wichtigen Dinge."
                   </p>
                 </motion.blockquote>
@@ -736,7 +736,7 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-light-200 text-lg italic leading-relaxed">
+                  <p className="text-light-200 text-base italic leading-relaxed">
                     „Unsere Terminplanung läuft jetzt vollautomatisch – kein Stress mehr am Empfang."
                   </p>
                 </motion.blockquote>
@@ -754,7 +754,7 @@ const Home: React.FC = () => {
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-light-200 text-lg italic leading-relaxed">
+                  <p className="text-light-200 text-base italic leading-relaxed">
                     „Die KI beantwortet fast alle Kundenfragen sofort – unsere Mitarbeiter sind spürbar entlastet."
                   </p>
                 </motion.blockquote>
@@ -765,11 +765,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-32 bg-dark-400">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="py-40 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.h2
-              className="text-4xl md:text-5xl font-heading font-bold mb-10 text-light-100"
+              className="text-3xl md:text-4xl font-heading font-bold mb-10 text-light-100"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -779,7 +779,7 @@ const Home: React.FC = () => {
             </motion.h2>
 
             <motion.p
-              className="text-xl text-light-200 mb-12 leading-relaxed"
+              className="text-lg text-light-200 mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
