@@ -63,13 +63,13 @@ const Home: React.FC = () => {
               Pixel Kraftwerk automatisiert Ihre Abläufe – damit Sie mehr Zeit fürs Wesentliche haben.
             </motion.p>
             
-            <motion.div 
+            <motion.div
               className="mt-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              <button 
+              <button
                 onClick={scrollToContactForm}
                 className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
               >
