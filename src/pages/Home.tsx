@@ -88,225 +88,336 @@ const Home: React.FC = () => {
       </section>
 
       {/* PROBLEMS SECTION */}
-      <section id="problems-section" className="py-24 bg-dark-400">
+      <section id="problems-section" className="py-32 bg-dark-500">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
-              initial={{ opacity: 0, y: 20 }}
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              className="text-center mb-20"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              Jeden Tag dieselben Aufgaben. Jeden Tag verlorene Zeit.
-            </motion.h2>
-            
-            <motion.p
-              className="text-light-200 text-lg mb-8 text-center leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Viele Unternehmen verschwenden wertvolle Stunden mit Routinearbeit –<br />
-              E-Mails beantworten, Termine abgleichen, Leads prüfen oder Tabellen pflegen.
-            </motion.p>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-light-100">
+                Jeden Tag dieselben Aufgaben.<br />
+                Jeden Tag <span className="text-primary-500">verlorene Zeit.</span>
+              </h2>
 
-            <div className="bg-dark-500 border border-red-500/30 p-8 rounded-lg">
-              <motion.p
-                className="text-center text-xl text-light-100 font-bold"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
+              <p className="text-xl text-light-200 leading-relaxed max-w-3xl mx-auto">
+                Viele Unternehmen verschwenden wertvolle Stunden mit Routinearbeit –
+                E-Mails beantworten, Termine abgleichen, Leads prüfen oder Tabellen pflegen.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="text-center"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
               >
-                Das Ergebnis: <span className="text-red-500">Stress, Fehler, Zeitverlust.</span><br />
-                <span className="text-light-200 font-normal text-lg mt-2 block">Und weniger Fokus auf das, was Ihr Geschäft wirklich voranbringt.</span>
-              </motion.p>
-            </div>
+                <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-red-400">
+                  <Clock size={48} />
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-light-100 mb-3">Stress</h3>
+                <p className="text-light-200">Ständige Unterbrechungen und Zeitdruck</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-red-400">
+                  <Target size={48} />
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-light-100 mb-3">Fehler</h3>
+                <p className="text-light-200">Manuelle Prozesse führen zu Problemen</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 mb-6 text-red-400">
+                  <TrendingUp size={48} className="rotate-180" />
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-light-100 mb-3">Zeitverlust</h3>
+                <p className="text-light-200">Weniger Fokus auf das Wesentliche</p>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-2xl text-light-100 font-bold mb-4">
+                Das Ergebnis?
+              </p>
+              <p className="text-xl text-light-200 max-w-2xl mx-auto">
+                Weniger Fokus auf das, was Ihr Geschäft wirklich voranbringt.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* UNSERE LÖSUNGEN SECTION */}
-      <section className="py-24 bg-dark-500">
+      <section className="py-32 bg-dark-400">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-8 text-primary-500 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Unsere Lösungen
-            </motion.h2>
-
+          <div className="max-w-6xl mx-auto">
             <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-center mb-24"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-lg text-light-200 mb-4 leading-relaxed">
-                Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
-              </p>
-              <p className="text-lg text-light-200 mb-4 leading-relaxed">
-                Viele Teams verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
-              </p>
-              <p className="text-xl text-primary-500 font-bold">
-                Wir ändern das.
-              </p>
+              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-10 text-light-100">
+                Unsere <span className="text-primary-500">Lösungen</span>
+              </h2>
+
+              <div className="space-y-6 max-w-3xl mx-auto">
+                <p className="text-xl text-light-200 leading-relaxed">
+                  Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
+                </p>
+                <p className="text-xl text-light-200 leading-relaxed">
+                  Viele Teams verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
+                </p>
+                <p className="text-2xl text-light-100 font-bold mt-8">
+                  Wir ändern das.
+                </p>
+              </div>
             </motion.div>
 
             <motion.h3
-              className="text-2xl md:text-3xl font-heading font-bold mb-8 text-light-100 text-center"
+              className="text-3xl md:text-4xl font-heading font-bold mb-16 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Was wir automatisieren
+              Was wir <span className="text-primary-500">automatisieren</span>
             </motion.h3>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
               <motion.div
-                className="bg-dark-400 border border-dark-100 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <MessageCircle className="text-primary-500 mr-3" size={28} />
-                    <h4 className="text-xl font-heading font-bold text-light-100">Kundenkommunikation</h4>
+                <motion.div
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <MessageCircle size={56} strokeWidth={1.5} />
                   </div>
-                  <p className="text-light-200 mb-4 font-bold">
+                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Kundenkommunikation</h4>
+                  <p className="text-lg text-light-100 mb-4 font-semibold">
                     Nie wieder dieselben Fragen 20 × beantworten.
                   </p>
-                  <p className="text-light-200 mb-4">
-                    Wir richten <span className="text-primary-500 font-bold">intelligente Chatbots und Telefonassistenten</span> ein, die:
+                  <p className="text-light-200 mb-4 leading-relaxed">
+                    Wir richten intelligente Chatbots und Telefonassistenten ein, die:
                   </p>
-                  <ul className="list-disc list-inside text-light-200 space-y-2 mb-4 ml-4">
-                    <li>Kundenanfragen automatisch verstehen und beantworten</li>
-                    <li>Termine oder Rückrufe direkt buchen</li>
-                    <li>E-Mails oder Website-Chats mit Ihrem CRM verbinden</li>
-                    <li>bei Bedarf an Ihr Team übergeben</li>
+                  <ul className="space-y-3 text-light-200 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Kundenanfragen automatisch verstehen und beantworten</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Termine oder Rückrufe direkt buchen</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>E-Mails oder Website-Chats mit Ihrem CRM verbinden</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>bei Bedarf an Ihr Team übergeben</span>
+                    </li>
                   </ul>
-                  <p className="text-primary-400 font-bold">
-                    ➡️ Ergebnis: Ihr Team wird entlastet – Kunden erhalten sofort Antworten, 24/7.
+                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                    Ihr Team wird entlastet – Kunden erhalten sofort Antworten, 24/7.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
 
               <motion.div
-                className="bg-dark-400 border border-dark-100 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Calendar className="text-primary-500 mr-3" size={28} />
-                    <h4 className="text-xl font-heading font-bold text-light-100">Terminplanung & Buchung</h4>
+                <motion.div
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Calendar size={56} strokeWidth={1.5} />
                   </div>
-                  <p className="text-light-200 mb-4 font-bold">
+                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Terminplanung & Buchung</h4>
+                  <p className="text-lg text-light-100 mb-4 font-semibold">
                     Schluss mit E-Mail-Pingpong und Doppelbuchungen.
                   </p>
-                  <p className="text-light-200 mb-4">
+                  <p className="text-light-200 mb-4 leading-relaxed">
                     Wir automatisieren die gesamte Terminvergabe:
                   </p>
-                  <ul className="list-disc list-inside text-light-200 space-y-2 mb-4 ml-4">
-                    <li>Synchronisation mit Google, Outlook oder iCloud-Kalendern</li>
-                    <li>Automatische Erinnerung per E-Mail oder SMS</li>
-                    <li>Weiterleitung an das passende Teammitglied</li>
-                    <li>Stornierungen & Nachfasslogik inklusive</li>
+                  <ul className="space-y-3 text-light-200 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Synchronisation mit Google, Outlook oder iCloud-Kalendern</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Automatische Erinnerung per E-Mail oder SMS</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Weiterleitung an das passende Teammitglied</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Stornierungen & Nachfasslogik inklusive</span>
+                    </li>
                   </ul>
-                  <p className="text-primary-400 font-bold">
-                    ➡️ Ergebnis: Bis zu 10 Stunden pro Woche gespart – keine vergessenen Termine mehr.
+                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                    Bis zu 10 Stunden pro Woche gespart – keine vergessenen Termine mehr.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
 
               <motion.div
-                className="bg-dark-400 border border-dark-100 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Workflow className="text-primary-500 mr-3" size={28} />
-                    <h4 className="text-xl font-heading font-bold text-light-100">Interne Prozesse & Workflows</h4>
+                <motion.div
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Workflow size={56} strokeWidth={1.5} />
                   </div>
-                  <p className="text-light-200 mb-4 font-bold">
+                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Interne Prozesse & Workflows</h4>
+                  <p className="text-lg text-light-100 mb-4 font-semibold">
                     Täglich wiederkehrende Aufgaben rauben wertvolle Zeit – das muss nicht sein.
                   </p>
-                  <p className="text-light-200 mb-4">
-                    Wir automatisieren interne Abläufe so, dass Informationen <span className="text-primary-500 font-bold">einmal erfasst</span> und <span className="text-primary-500 font-bold">überall genutzt</span> werden können.
+                  <p className="text-light-200 mb-4 leading-relaxed">
+                    Wir automatisieren interne Abläufe so, dass Informationen einmal erfasst und überall genutzt werden können.
                   </p>
-                  <p className="text-light-200 mb-2 font-semibold">Beispiele:</p>
-                  <ul className="list-disc list-inside text-light-200 space-y-2 mb-4 ml-4">
-                    <li>Kundenanfragen werden automatisch an die richtige Stelle weitergeleitet</li>
-                    <li>Wichtige Daten fließen ohne manuelle Eingabe in alle relevanten Systeme</li>
-                    <li>Mitarbeiter erhalten automatische Benachrichtigungen bei neuen Aufgaben oder Terminen</li>
-                    <li>Interne Status-Updates und Rückmeldungen laufen zentral zusammen</li>
+                  <ul className="space-y-3 text-light-200 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Kundenanfragen werden automatisch an die richtige Stelle weitergeleitet</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Wichtige Daten fließen ohne manuelle Eingabe in alle relevanten Systeme</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Mitarbeiter erhalten automatische Benachrichtigungen bei neuen Aufgaben</span>
+                    </li>
                   </ul>
-                  <p className="text-primary-400 font-bold">
-                    ➡️ Ergebnis: Weniger Handarbeit, weniger Fehler – und mehr Zeit für Ihre Kunden.
+                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                    Weniger Handarbeit, weniger Fehler – und mehr Zeit für Ihre Kunden.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
 
               <motion.div
-                className="bg-dark-400 border border-dark-100 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <TrendingUp className="text-primary-500 mr-3" size={28} />
-                    <h4 className="text-xl font-heading font-bold text-light-100">Lead-Management & Vertrieb</h4>
+                <motion.div
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp size={56} strokeWidth={1.5} />
                   </div>
-                  <ul className="list-disc list-inside text-light-200 space-y-2 mb-4 ml-4">
-                    <li>Leads automatisch qualifizieren und priorisieren</li>
-                    <li>CRM-Einträge automatisch erzeugen</li>
-                    <li>Vertriebsmitarbeiter werden nur bei echten Interessenten informiert</li>
-                    <li>Automatisches Nachfassen und Angebote senden</li>
+                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Lead-Management & Vertrieb</h4>
+                  <ul className="space-y-3 text-light-200 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Leads automatisch qualifizieren und priorisieren</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>CRM-Einträge automatisch erzeugen</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Vertriebsmitarbeiter werden nur bei echten Interessenten informiert</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Automatisches Nachfassen und Angebote senden</span>
+                    </li>
                   </ul>
-                  <p className="text-primary-400 font-bold">
-                    ➡️ Ergebnis: Ihr Vertrieb konzentriert sich nur auf wertvolle Kontakte.
+                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                    Ihr Vertrieb konzentriert sich nur auf wertvolle Kontakte.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
 
               <motion.div
-                className="bg-dark-400 border border-dark-100 rounded-lg overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
+                className="group md:col-span-2"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Globe className="text-primary-500 mr-3" size={28} />
-                    <h4 className="text-xl font-heading font-bold text-light-100">Websites mit integrierten Automatisierungen</h4>
+                <motion.div
+                  className="flex flex-col items-start max-w-xl mx-auto"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mb-6 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Globe size={56} strokeWidth={1.5} />
                   </div>
-                  <ul className="list-disc list-inside text-light-200 space-y-2 mb-4 ml-4">
-                    <li>Blitzschnell und modern erstellt</li>
-                    <li>Integrierte Chatbots, Terminbuchung & CRM-Anbindung</li>
-                    <li>SEO-optimiert und responsive</li>
+                  <h4 className="text-2xl font-heading font-bold text-light-100 mb-4">Websites mit integrierten Automatisierungen</h4>
+                  <ul className="space-y-3 text-light-200 mb-6">
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Blitzschnell und modern erstellt</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Integrierte Chatbots, Terminbuchung & CRM-Anbindung</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={20} className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>SEO-optimiert und responsive</span>
+                    </li>
                   </ul>
-                  <p className="text-primary-400 font-bold">
-                    ➡️ Ergebnis: Digitaler Auftritt arbeitet aktiv für Sie – nicht umgekehrt.
+                  <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4">
+                    Digitaler Auftritt arbeitet aktiv für Sie – nicht umgekehrt.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>
@@ -314,17 +425,17 @@ const Home: React.FC = () => {
       </section>
 
       {/* SO FUNKTIONIERT AUTOMATISIERUNG IN DER PRAXIS - ACCORDION */}
-      <section className="py-24 bg-dark-400">
+      <section className="py-32 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              className="text-4xl md:text-5xl font-heading font-bold mb-20 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              So funktioniert Automatisierung in der Praxis
+              So funktioniert <span className="text-primary-500">Automatisierung in der Praxis</span>
             </motion.h2>
 
             <div className="space-y-4">
@@ -368,44 +479,55 @@ const Home: React.FC = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-dark-500 border border-dark-100 rounded-lg overflow-hidden"
+                  className="group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
                 >
-                  <button
+                  <motion.button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex items-center justify-between p-6 text-left hover:bg-dark-400 transition-colors duration-200"
+                    className="w-full flex items-center justify-between py-6 text-left border-b border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                    whileHover={{ x: 8 }}
                   >
-                    <span className="text-lg font-heading font-bold text-light-100 flex items-center">
-                      <ChevronDown
-                        className={`mr-3 text-primary-500 transition-transform duration-300 ${openAccordion === index ? 'rotate-180' : ''}`}
-                        size={24}
-                      />
+                    <span className="text-xl font-heading font-bold text-light-100 flex items-center">
+                      <motion.div
+                        animate={{ rotate: openAccordion === index ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mr-4"
+                      >
+                        <ChevronDown
+                          className="text-primary-500"
+                          size={28}
+                        />
+                      </motion.div>
                       {index + 1}. {item.title}
                     </span>
-                  </button>
-                  <div
-                    className={`transition-all duration-300 ease-in-out ${
-                      openAccordion === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    } overflow-hidden`}
+                  </motion.button>
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: openAccordion === index ? 'auto' : 0,
+                      opacity: openAccordion === index ? 1 : 0
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
                   >
-                    <div className="p-6 pt-0 space-y-3">
+                    <div className="py-8 pl-16 space-y-6">
                       <div>
-                        <p className="text-light-100 font-semibold mb-1">Vorher:</p>
-                        <p className="text-light-200">{item.vorher}</p>
+                        <p className="text-light-100 font-bold mb-2 text-lg">Vorher:</p>
+                        <p className="text-light-200 text-lg">{item.vorher}</p>
                       </div>
                       <div>
-                        <p className="text-light-100 font-semibold mb-1">Nachher:</p>
-                        <p className="text-light-200">{item.nachher}</p>
+                        <p className="text-light-100 font-bold mb-2 text-lg">Nachher:</p>
+                        <p className="text-light-200 text-lg">{item.nachher}</p>
                       </div>
                       <div>
-                        <p className="text-light-100 font-semibold mb-1">Ergebnis:</p>
-                        <p className="text-primary-400 font-bold">{item.ergebnis}</p>
+                        <p className="text-light-100 font-bold mb-2 text-lg">Ergebnis:</p>
+                        <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-4 text-lg">{item.ergebnis}</p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
@@ -433,98 +555,118 @@ const Home: React.FC = () => {
       </section>
 
       {/* PROCESS SECTION */}
-      <section className="py-24 bg-dark-500">
+      <section className="py-32 bg-dark-400">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              className="text-4xl md:text-5xl font-heading font-bold mb-20 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              In vier Schritten zur eigenen KI-Automatisierung
+              In vier Schritten zur eigenen <span className="text-primary-500">KI-Automatisierung</span>
             </motion.h2>
             
-            <div className="space-y-8">
-              <motion.div 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-primary-500 text-dark-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 font-bold">
-                  1
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-bold text-primary-500 mb-2">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-6xl font-heading font-bold mb-2">01</div>
+                    <div className="h-1 w-16 bg-primary-500"></div>
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
                     Erstgespräch
                   </h3>
-                  <p className="text-light-200">
+                  <p className="text-light-200 text-lg leading-relaxed">
                     Wir klären Ihre Ziele und Potenziale.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
-              
-              <motion.div 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-primary-500 text-dark-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 font-bold">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-bold text-primary-500 mb-2">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-6xl font-heading font-bold mb-2">02</div>
+                    <div className="h-1 w-16 bg-primary-500"></div>
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
                     Planung
                   </h3>
-                  <p className="text-light-200">
+                  <p className="text-light-200 text-lg leading-relaxed">
                     Wir entwickeln das passende Konzept.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
-              
-              <motion.div 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-primary-500 text-dark-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 font-bold">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-bold text-primary-500 mb-2">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-6xl font-heading font-bold mb-2">03</div>
+                    <div className="h-1 w-16 bg-primary-500"></div>
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
                     Umsetzung
                   </h3>
-                  <p className="text-light-200">
+                  <p className="text-light-200 text-lg leading-relaxed">
                     Schnelle, saubere Integration.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
-              
-              <motion.div 
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-primary-500 text-dark-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 font-bold">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-xl font-heading font-bold text-primary-500 mb-2">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-full"
+                >
+                  <div className="text-primary-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-6xl font-heading font-bold mb-2">04</div>
+                    <div className="h-1 w-16 bg-primary-500"></div>
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-light-100 mb-4">
                     Support
                   </h3>
-                  <p className="text-light-200">
+                  <p className="text-light-200 text-lg leading-relaxed">
                     Wir bleiben an Ihrer Seite, auch nach dem Go-Live.
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>
@@ -532,88 +674,112 @@ const Home: React.FC = () => {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-24 bg-dark-400">
+      <section className="py-32 bg-dark-500">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-primary-500 text-center"
+              className="text-4xl md:text-5xl font-heading font-bold mb-20 text-light-100 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Kundenstimmen
+              <span className="text-primary-500">Kundenstimmen</span>
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.blockquote
-                className="bg-dark-400 border-l-4 border-primary-500 p-6 rounded"
-                initial={{ opacity: 0, y: 20 }}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <p className="text-light-200 italic">
-                  „Endlich Schluss mit Doppelbuchungen – das spart jede Woche rund 10 Stunden."
-                </p>
-              </motion.blockquote>
+                <motion.blockquote
+                  className="border-l-4 border-primary-500 pl-6 py-2"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="text-light-200 text-lg italic leading-relaxed">
+                    „Endlich Schluss mit Doppelbuchungen – das spart jede Woche rund 10 Stunden."
+                  </p>
+                </motion.blockquote>
+              </motion.div>
 
-              <motion.blockquote
-                className="bg-dark-400 border-l-4 border-primary-500 p-6 rounded"
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <p className="text-light-200 italic">
-                  „Seit dem Chatbot haben wir wieder Zeit für die wirklich wichtigen Dinge."
-                </p>
-              </motion.blockquote>
+                <motion.blockquote
+                  className="border-l-4 border-primary-500 pl-6 py-2"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="text-light-200 text-lg italic leading-relaxed">
+                    „Seit dem Chatbot haben wir wieder Zeit für die wirklich wichtigen Dinge."
+                  </p>
+                </motion.blockquote>
+              </motion.div>
 
-              <motion.blockquote
-                className="bg-dark-400 border-l-4 border-primary-500 p-6 rounded"
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <p className="text-light-200 italic">
-                  „Unsere Terminplanung läuft jetzt vollautomatisch – kein Stress mehr am Empfang."
-                </p>
-              </motion.blockquote>
+                <motion.blockquote
+                  className="border-l-4 border-primary-500 pl-6 py-2"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="text-light-200 text-lg italic leading-relaxed">
+                    „Unsere Terminplanung läuft jetzt vollautomatisch – kein Stress mehr am Empfang."
+                  </p>
+                </motion.blockquote>
+              </motion.div>
 
-              <motion.blockquote
-                className="bg-dark-400 border-l-4 border-primary-500 p-6 rounded"
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <p className="text-light-200 italic">
-                  „Die KI beantwortet fast alle Kundenfragen sofort – unsere Mitarbeiter sind spürbar entlastet."
-                </p>
-              </motion.blockquote>
+                <motion.blockquote
+                  className="border-l-4 border-primary-500 pl-6 py-2"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="text-light-200 text-lg italic leading-relaxed">
+                    „Die KI beantwortet fast alle Kundenfragen sofort – unsere Mitarbeiter sind spürbar entlastet."
+                  </p>
+                </motion.blockquote>
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-24 bg-dark-500">
+      <section className="py-32 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-8 text-primary-500"
+              className="text-4xl md:text-5xl font-heading font-bold mb-10 text-light-100"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns über Ihre Prozesse sprechen.
+              Lassen Sie uns über Ihre <span className="text-primary-500">Prozesse sprechen.</span>
             </motion.h2>
 
             <motion.p
-              className="text-lg text-light-200 mb-8 leading-relaxed"
+              className="text-xl text-light-200 mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -621,16 +787,17 @@ const Home: React.FC = () => {
             >
               Ein kostenloses Erstgespräch zeigt, wie viel Zeit Sie durch Automatisierung ab morgen sparen können.
             </motion.p>
-            
-            <motion.button 
+
+            <motion.button
               onClick={scrollToContactForm}
-              className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+              className="inline-flex items-center px-10 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 hover:scale-105 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
             >
-              <ArrowRight className="mr-2" size={20} />
+              <ArrowRight className="mr-2" size={24} />
               Kostenloses Erstgespräch sichern
             </motion.button>
           </div>
