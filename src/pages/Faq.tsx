@@ -5,98 +5,98 @@ import ContactForm from '../components/ContactForm';
 const Faq: React.FC = () => {
   return (
     <div className="pt-24 bg-dark-500 min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl text-primary-500 font-heading font-bold mb-6 text-center">
-          Häufig gestellte Fragen (FAQ)
+      <div className="container mx-auto px-6 md:px-12 py-24">
+        <h1 className="text-3xl md:text-4xl text-light-100 font-heading font-bold mb-6 text-center">
+          Häufig gestellte <span className="text-primary-500">Fragen (FAQ)</span>
         </h1>
-        <div className="max-w-4xl mx-auto">
-          <p className="text-light-200 mb-12 text-center text-lg">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-light-200 mb-16 text-center text-base leading-relaxed">
             Hier beantworten wir die wichtigsten Fragen rund um unsere KI-Lösungen, Webdesign und Automatisierung. 
             Falls Ihre Frage nicht dabei ist, kontaktieren Sie uns gern – wir helfen Ihnen persönlich weiter!
           </p>
           
           {/* Regular FAQ Section */}
-          <div className="space-y-8 mb-16">
-            <div className="bg-dark-400 border border-dark-100 p-6">
+          <div className="space-y-6 mb-20">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Wie individuell sind die KI-Lösungen wirklich?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 Wir entwickeln jede Lösung maßgeschneidert genau nach den Bedürfnissen unserer Kunden. Dabei berücksichtigen wir bestehende Systeme, Workflows und Ziele, sodass am Ende eine passgenaue, effiziente Lösung entsteht.
               </p>
             </div>
 
-            <div className="bg-dark-400 border border-dark-100 p-6">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Welche Branchen profitieren besonders von Ihren KI-Lösungen?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 Unsere Lösungen sind branchenübergreifend einsetzbar. Besonders profitieren Unternehmen aus Dienstleistung, E-Commerce, Gesundheitswesen, öffentlicher Verwaltung und Handwerk.
               </p>
             </div>
 
-            <div className="bg-dark-400 border border-dark-100 p-6">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Welche technischen Voraussetzungen müssen Kunden mitbringen?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 In der Regel sind keine besonderen technischen Voraussetzungen notwendig. Wir gestalten unsere Lösungen so, dass sie sich flexibel an die vorhandene Infrastruktur anpassen. Sollte eine Integration mit bestehenden Systemen oder Webseiten erforderlich sein, klären wir den Zugang dazu im Vorfeld gemeinsam – unkompliziert und lösungsorientiert.
               </p>
             </div>
 
-            <div className="bg-dark-400 border border-dark-100 p-6">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Was passiert, wenn sich die Anforderungen im Projektverlauf ändern?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 Flexibilität ist uns wichtig. Änderungen besprechen wir gemeinsam und passen die Lösung entsprechend an, damit sie immer optimal zum Geschäft passt.
               </p>
             </div>
 
-            <div className="bg-dark-400 border border-dark-100 p-6">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Wie wird die Qualität der Lösungen sichergestellt?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 Jede Lösung durchläuft ausführliche Tests mit dem Kunden zusammen in der Demo-Phase. Erst wenn der Kunde voll zufrieden ist, wird das Produkt live geschaltet.
               </p>
             </div>
 
-            <div className="bg-dark-400 border border-dark-100 p-6">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Sind die Lösungen skalierbar?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 Ja, unsere Systeme sind so aufgebaut, dass sie mit dem Unternehmen wachsen können. Erweiterungen oder Anpassungen sind jederzeit möglich.
               </p>
             </div>
 
-            <div className="bg-dark-400 border border-dark-100 p-6">
+            <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
                 <HelpCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
-                <h3 className="text-xl font-heading font-bold text-primary-500">
+                <h3 className="text-lg font-heading font-bold text-light-100">
                   Wie kann der Kunde Änderungen an der Website vornehmen?
                 </h3>
               </div>
-              <p className="text-light-200 ml-8">
+              <p className="text-light-200 text-sm leading-relaxed ml-8">
                 Die Webseiten werden von uns betreut und sind nicht zur Selbstbedienung freigegeben. Änderungen oder Anpassungswünsche kann der Kunde einfach per E-Mail oder kurzem Anruf mitteilen, wir setzen diese schnellstmöglich um.
               </p>
             </div>

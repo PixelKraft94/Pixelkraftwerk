@@ -29,21 +29,21 @@ const Solution: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-dark-500 overflow-hidden">
         <BackgroundPaths />
         
-        <div className="container mx-auto px-4 z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div 
+        <div className="container mx-auto px-6 md:px-12 z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
               className="space-y-4 mb-8 -mt-16 md:mt-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading">
+              <h1 className="text-3xl md:text-4xl text-light-100 font-heading">
                 Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
               </h1>
             </motion.div>
-            
-            <motion.p 
-              className="text-lg md:text-xl text-light-200 mb-8"
+
+            <motion.p
+              className="text-base md:text-lg text-light-200 mb-8"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
