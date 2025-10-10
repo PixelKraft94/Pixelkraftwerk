@@ -27,26 +27,40 @@ const Home: React.FC = () => {
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              className="space-y-4 mb-8 -mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading">
-                Weniger Routine. Mehr Zeit für das Wesentliche.
-              </h1>
+            <motion.div className="space-y-2 mb-8 -mt-8">
+              <motion.h1
+                className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              >
+                Abläufe automatisieren.
+              </motion.h1>
+              <motion.h1
+                className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              >
+                Prozesse vereinfachen.
+              </motion.h1>
+              <motion.h1
+                className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+              >
+                Zeit gewinnen.
+              </motion.h1>
             </motion.div>
 
             <motion.p
               className="text-lg md:text-xl text-light-200 mb-8"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
             >
-              Pixel Kraftwerk automatisiert Kommunikation, Terminplanung und interne Abläufe –<br />
-              damit Ihr Unternehmen reibungslos läuft, während Sie sich auf das konzentrieren, was wirklich zählt.
+              Pixel Kraftwerk automatisiert Ihre Abläufe – damit Sie mehr Zeit fürs Wesentliche haben.
             </motion.p>
             
             <motion.div 
@@ -439,7 +453,7 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <p className="text-light-200 italic">
-                  „Endlich Schluss mit Doppelbuchungen – das spart jede Woche 10 Stunden."
+                  „Endlich Schluss mit Doppelbuchungen – das spart jede Woche rund 10 Stunden."
                 </p>
               </motion.blockquote>
 
@@ -451,7 +465,7 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <p className="text-light-200 italic">
-                  „Seit dem Chatbot haben wir wieder Zeit für die wichtigen Dinge."
+                  „Seit dem Chatbot haben wir wieder Zeit für die wirklich wichtigen Dinge."
                 </p>
               </motion.blockquote>
 
@@ -463,7 +477,19 @@ const Home: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <p className="text-light-200 italic">
-                  „Unsere Angebotsbearbeitung dauert jetzt Minuten statt einer halben Stunde."
+                  „Unsere Terminplanung läuft jetzt vollautomatisch – kein Stress mehr am Empfang."
+                </p>
+              </motion.blockquote>
+
+              <motion.blockquote
+                className="bg-dark-400 border-l-4 border-primary-500 p-6 rounded"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-light-200 italic">
+                  „Die KI beantwortet fast alle Kundenfragen sofort – unsere Mitarbeiter sind spürbar entlastet."
                 </p>
               </motion.blockquote>
             </div>
