@@ -209,25 +209,23 @@ const Home: React.FC = () => {
               Was wir <span className="text-primary-500">automatisieren</span>
             </motion.h3>
 
-            <div className="space-y-24">
-              {/* Top Row - 2 Items */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
                 <motion.div
-                  className="group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <motion.div
-                    className="flex flex-col items-start"
-                    whileHover={{ x: 8 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                      <MessageCircle size={48} strokeWidth={1.5} />
-                    </div>
-                    <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Kundenkommunikation</h4>
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <MessageCircle size={48} strokeWidth={1.5} />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Kundenkommunikation</h4>
                     <p className="text-base text-light-100 mb-3 font-semibold">
                       Nie wieder dieselben Fragen 20 × beantworten.
                     </p>
@@ -303,71 +301,65 @@ const Home: React.FC = () => {
                     </p>
                   </motion.div>
                 </motion.div>
-              </div>
 
-              {/* Middle Row - 1 Item Centered */}
-              <div className="flex justify-center">
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <motion.div
-                  className="group max-w-xl"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <motion.div
-                    className="flex flex-col items-start"
-                    whileHover={{ x: 8 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                      <Workflow size={48} strokeWidth={1.5} />
-                    </div>
-                    <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Interne Prozesse & Workflows</h4>
-                    <p className="text-base text-light-100 mb-3 font-semibold">
-                      Täglich wiederkehrende Aufgaben rauben wertvolle Zeit – das muss nicht sein.
-                    </p>
-                    <p className="text-sm text-light-200 mb-4 leading-relaxed">
-                      Wir automatisieren interne Abläufe so, dass Informationen einmal erfasst und überall genutzt werden können.
-                    </p>
-                    <ul className="space-y-2 text-light-200 mb-5 text-sm">
-                      <li className="flex items-start">
-                        <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>Kundenanfragen werden automatisch an die richtige Stelle weitergeleitet</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>Wichtige Daten fließen ohne manuelle Eingabe in alle relevanten Systeme</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>Mitarbeiter erhalten automatische Benachrichtigungen bei neuen Aufgaben</span>
-                      </li>
-                    </ul>
-                    <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
-                      Weniger Handarbeit, weniger Fehler – und mehr Zeit für Ihre Kunden.
-                    </p>
-                  </motion.div>
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Workflow size={48} strokeWidth={1.5} />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Interne Prozesse & Workflows</h4>
+                  <p className="text-base text-light-100 mb-3 font-semibold">
+                    Täglich wiederkehrende Aufgaben rauben wertvolle Zeit – das muss nicht sein.
+                  </p>
+                  <p className="text-sm text-light-200 mb-4 leading-relaxed">
+                    Wir automatisieren interne Abläufe so, dass Informationen einmal erfasst und überall genutzt werden können.
+                  </p>
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Kundenanfragen werden automatisch an die richtige Stelle weitergeleitet</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Wichtige Daten fließen ohne manuelle Eingabe in alle relevanten Systeme</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Mitarbeiter erhalten automatische Benachrichtigungen bei neuen Aufgaben</span>
+                    </li>
+                  </ul>
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
+                    Weniger Handarbeit, weniger Fehler – und mehr Zeit für Ihre Kunden.
+                  </p>
                 </motion.div>
-              </div>
+              </motion.div>
 
-              {/* Bottom Row - 2 Items */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
                 <motion.div
-                  className="group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <motion.div
-                    className="flex flex-col items-start"
-                    whileHover={{ x: 8 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                      <TrendingUp size={48} strokeWidth={1.5} />
-                    </div>
-                    <h4 className="text-xl font-heading font-bold text-light-100 mb-4">Lead-Management & Vertrieb</h4>
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp size={48} strokeWidth={1.5} />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-4">Lead-Management & Vertrieb</h4>
                     <ul className="space-y-2 text-light-200 mb-5 text-sm">
                       <li className="flex items-start">
                         <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -392,42 +384,87 @@ const Home: React.FC = () => {
                   </motion.div>
                 </motion.div>
 
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <motion.div
-                  className="group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  viewport={{ once: true }}
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <motion.div
-                    className="flex flex-col items-start"
-                    whileHover={{ x: 8 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
-                      <Globe size={48} strokeWidth={1.5} />
-                    </div>
-                    <h4 className="text-xl font-heading font-bold text-light-100 mb-4">Websites mit integrierten Automatisierungen</h4>
-                    <ul className="space-y-2 text-light-200 mb-5 text-sm">
-                      <li className="flex items-start">
-                        <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>Blitzschnell und modern erstellt</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>Integrierte Chatbots, Terminbuchung & CRM-Anbindung</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>SEO-optimiert und responsive</span>
-                      </li>
-                    </ul>
-                    <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
-                      Digitaler Auftritt arbeitet aktiv für Sie – nicht umgekehrt.
-                    </p>
-                  </motion.div>
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Globe size={48} strokeWidth={1.5} />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-4">Websites mit integrierten Automatisierungen</h4>
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Blitzschnell und modern erstellt</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Integrierte Chatbots, Terminbuchung & CRM-Anbindung</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>SEO-optimiert und responsive</span>
+                    </li>
+                  </ul>
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
+                    Digitaler Auftritt arbeitet aktiv für Sie – nicht umgekehrt.
+                  </p>
                 </motion.div>
-              </div>
+              </motion.div>
+
+              <motion.div
+                className="group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <motion.div
+                  className="flex flex-col items-start"
+                  whileHover={{ x: 8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="mb-5 text-primary-500 group-hover:scale-110 transition-transform duration-300">
+                    <Video size={48} strokeWidth={1.5} />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-light-100 mb-3">Content Creation & KI-Videos</h4>
+                  <p className="text-base text-light-100 mb-3 font-semibold">
+                    Content, der Aufmerksamkeit garantiert – erstellt mit modernster KI-Technologie.
+                  </p>
+                  <p className="text-sm text-light-200 mb-4 leading-relaxed">
+                    Wir produzieren automatisiert hochwertige Inhalte für Social Media, Websites und Werbung:
+                  </p>
+                  <ul className="space-y-2 text-light-200 mb-5 text-sm">
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>KI-generierte Videos, Reels & Shorts (auch mit Sprache und Charakteren)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Automatische Themenfindung & Skripterstellung</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Optimierung für Reichweite, Engagement und Branding</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle size={16} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span>Integration in bestehende Marketing-Automationen</span>
+                    </li>
+                  </ul>
+                  <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3">
+                    So entsteht in Minuten, was früher Tage dauerte – kreativer, effizienter und auf Ihre Marke abgestimmt.
+                  </p>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </div>
