@@ -4,9 +4,8 @@ import Logo from './Logo';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
-  { title: 'Startseite', path: '/' },
+  { title: 'Unsere Leistungen', path: '/' },
   { title: 'Über uns', path: '/about' },
-  { title: 'Unsere Lösung', path: '/solution' },
   { title: 'FAQ', path: '/faq' },
   { title: 'Kontakt', path: '/contact' },
   { title: 'Impressum', path: '/imprint' },
