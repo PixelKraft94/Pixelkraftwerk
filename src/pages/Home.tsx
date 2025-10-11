@@ -553,7 +553,6 @@ const Home: React.FC = () => {
                           size={24}
                         />
                       </motion.div>
-                      <span className="mr-2">{item.emoji}</span>
                       {index + 1}. {item.title}
                     </span>
                   </motion.button>
