@@ -6,9 +6,14 @@ import ContactForm from '../components/ContactForm';
 
 const Home: React.FC = () => {
   const [openAccordion, setOpenAccordion] = React.useState<number | null>(null);
+  const [openAutomation, setOpenAutomation] = React.useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index);
+  };
+
+  const toggleAutomation = (index: number) => {
+    setOpenAutomation(openAutomation === index ? null : index);
   };
 
   const scrollToContactForm = () => {
@@ -209,7 +214,151 @@ const Home: React.FC = () => {
               Was wir <span className="text-primary-500">automatisieren</span>
             </motion.h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
+            {/* Mobile Dropdown Version */}
+            <div className="md:hidden space-y-3 mb-16">
+              {[
+                {
+                  icon: <MessageCircle size={32} strokeWidth={1.5} />,
+                  title: "Kundenkommunikation",
+                  subtitle: "Nie wieder dieselben Fragen 20 × beantworten.",
+                  description: "Wir richten intelligente Chatbots und Telefonassistenten ein, die:",
+                  items: [
+                    "Kundenanfragen automatisch verstehen und beantworten",
+                    "Termine oder Rückrufe direkt buchen",
+                    "E-Mails oder Website-Chats mit Ihrem CRM verbinden",
+                    "bei Bedarf an Ihr Team übergeben"
+                  ],
+                  result: "Ihr Team wird entlastet – Kunden erhalten sofort Antworten, 24/7."
+                },
+                {
+                  icon: <Calendar size={32} strokeWidth={1.5} />,
+                  title: "Terminplanung & Buchung",
+                  subtitle: "Schluss mit E-Mail-Pingpong und Doppelbuchungen.",
+                  description: "Wir automatisieren die gesamte Terminvergabe:",
+                  items: [
+                    "Synchronisation mit Google, Outlook oder iCloud-Kalendern",
+                    "Automatische Erinnerung per E-Mail oder SMS",
+                    "Weiterleitung an das passende Teammitglied",
+                    "Stornierungen & Nachfasslogik inklusive"
+                  ],
+                  result: "Bis zu 10 Stunden pro Woche gespart – keine vergessenen Termine mehr."
+                },
+                {
+                  icon: <Workflow size={32} strokeWidth={1.5} />,
+                  title: "Interne Prozesse & Workflows",
+                  subtitle: "Täglich wiederkehrende Aufgaben rauben wertvolle Zeit – das muss nicht sein.",
+                  description: "Wir automatisieren interne Abläufe so, dass Informationen einmal erfasst und überall genutzt werden können.",
+                  items: [
+                    "Kundenanfragen werden automatisch an die richtige Stelle weitergeleitet",
+                    "Wichtige Daten fließen ohne manuelle Eingabe in alle relevanten Systeme",
+                    "Mitarbeiter erhalten automatische Benachrichtigungen bei neuen Aufgaben"
+                  ],
+                  result: "Weniger Handarbeit, weniger Fehler – und mehr Zeit für Ihre Kunden."
+                },
+                {
+                  icon: <TrendingUp size={32} strokeWidth={1.5} />,
+                  title: "Lead-Management & Vertrieb",
+                  subtitle: "",
+                  description: "",
+                  items: [
+                    "Leads automatisch qualifizieren und priorisieren",
+                    "CRM-Einträge automatisch erzeugen",
+                    "Vertriebsmitarbeiter werden nur bei echten Interessenten informiert",
+                    "Automatisches Nachfassen und Angebote senden"
+                  ],
+                  result: "Ihr Vertrieb konzentriert sich nur auf wertvolle Kontakte."
+                },
+                {
+                  icon: <Globe size={32} strokeWidth={1.5} />,
+                  title: "Websites mit integrierten Automatisierungen",
+                  subtitle: "",
+                  description: "",
+                  items: [
+                    "Blitzschnell und modern erstellt",
+                    "Integrierte Chatbots, Terminbuchung & CRM-Anbindung",
+                    "SEO-optimiert und responsive"
+                  ],
+                  result: "Digitaler Auftritt arbeitet aktiv für Sie – nicht umgekehrt."
+                },
+                {
+                  icon: <Video size={32} strokeWidth={1.5} />,
+                  title: "Content Creation & KI-Videos",
+                  subtitle: "Content, der Aufmerksamkeit garantiert – erstellt mit modernster KI-Technologie.",
+                  description: "Wir produzieren automatisiert hochwertige Inhalte für Social Media, Websites und Werbung:",
+                  items: [
+                    "KI-generierte Videos, Reels & Shorts (auch mit Sprache und Charakteren)",
+                    "Automatische Themenfindung & Skripterstellung",
+                    "Optimierung für Reichweite, Engagement und Branding",
+                    "Integration in bestehende Marketing-Automationen"
+                  ],
+                  result: "So entsteht in Minuten, was früher Tage dauerte – kreativer, effizienter und auf Ihre Marke abgestimmt."
+                }
+              ].map((automation, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-dark-500 border border-dark-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <button
+                    onClick={() => toggleAutomation(index)}
+                    className="w-full p-5 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center flex-1 gap-3">
+                      <ChevronDown
+                        size={20}
+                        className={`text-primary-500 flex-shrink-0 transition-transform duration-300 ${openAutomation === index ? 'rotate-180' : ''}`}
+                      />
+                      <div className="text-primary-500 flex-shrink-0">
+                        {automation.icon}
+                      </div>
+                      <h4 className="text-base font-heading font-bold text-light-100">
+                        {automation.title}
+                      </h4>
+                    </div>
+                  </button>
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: openAutomation === index ? 'auto' : 0,
+                      opacity: openAutomation === index ? 1 : 0
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-5 pb-5 space-y-3">
+                      {automation.subtitle && (
+                        <p className="text-sm text-light-100 font-semibold">
+                          {automation.subtitle}
+                        </p>
+                      )}
+                      {automation.description && (
+                        <p className="text-sm text-light-200">
+                          {automation.description}
+                        </p>
+                      )}
+                      <ul className="space-y-2 text-light-200 text-sm">
+                        {automation.items.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
+                            <CheckCircle size={14} className="text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="text-sm text-light-100 font-bold border-l-4 border-primary-500 pl-3 mt-3">
+                        {automation.result}
+                      </p>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Desktop Grid View */}
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
               <motion.div
                 className="group"
                 initial={{ opacity: 0, y: 30 }}
