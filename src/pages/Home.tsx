@@ -487,40 +487,46 @@ const Home: React.FC = () => {
             <div className="space-y-2">
               {[
                 {
+                  emoji: "📅",
                   title: "Termin-Handling",
-                  vorher: "E-Mail-Chaos, Doppelbuchungen, ständiges Hin und Her",
-                  nachher: "Automatische Terminabstimmung mit Erinnerungen",
-                  ergebnis: "10 Stunden pro Woche gespart"
+                  vorher: "E-Mail-Chaos, Doppelbuchungen und ständiges Hin und Her.\nKunden fragten per Mail oder Telefon nach freien Terminen, jemand aus dem Team musste manuell prüfen, bestätigen und Kalender abgleichen. Erinnerungen? Oft vergessen. Zeit, die täglich verloren ging.",
+                  nachher: "Automatische Terminabstimmung in Echtzeit – mit intelligenten Regeln.\nDas System erkennt freie Zeiten, verschickt Bestätigungen und Erinnerungen automatisch per E-Mail oder SMS. Auch Änderungen oder Stornierungen werden selbstständig verarbeitet.",
+                  ergebnis: "Kein Koordinationsstress mehr, keine verpassten Termine.\nIhr Team gewinnt im Schnitt 10 Stunden pro Woche, Kunden erleben reibungslose Planung und schnelle Reaktionen."
                 },
                 {
+                  emoji: "💬",
                   title: "Kundenkommunikation",
-                  vorher: "Immer dieselben Fragen am Empfang oder in Nachrichten",
-                  nachher: "Chatbot beantwortet bis zu 80 % aller Anfragen automatisch",
-                  ergebnis: "Entlastetes Team, zufriedenere Kunden"
+                  vorher: "Immer dieselben Fragen – per Mail, Telefon oder direkt am Empfang.\nÖffnungszeiten, Preise, Leistungen oder einfache Anliegen kosteten täglich wertvolle Zeit und unterbrachen die Arbeit Ihres Teams.",
+                  nachher: "Ein KI-gestützter Chatbot oder Telefonassistent übernimmt bis zu 80 % aller Anfragen automatisch – rund um die Uhr.\nEr beantwortet Fragen, bucht Termine oder leitet nur dann weiter, wenn wirklich menschliche Unterstützung nötig ist.",
+                  ergebnis: "Ihr Team wird spürbar entlastet und kann sich auf komplexe Aufgaben konzentrieren.\nKunden erhalten sofortige, präzise Antworten – 24/7, ohne Wartezeit."
                 },
                 {
+                  emoji: "🚀",
                   title: "Lead-Qualifizierung",
-                  vorher: "Jeder Kontakt musste manuell geprüft werden",
-                  nachher: "System filtert automatisch echte Interessenten heraus",
-                  ergebnis: "Fokus auf wertvolle Leads"
+                  vorher: "Jeder neue Kontakt musste manuell geprüft und bewertet werden.\nOft gingen wertvolle Leads in der Flut an Nachrichten unter oder wurden zu spät bearbeitet.",
+                  nachher: "Das System prüft automatisch, ob es sich um einen echten Interessenten handelt – basierend auf Antwortverhalten, Formularangaben und vorherigen Interaktionen.\nNur qualifizierte Leads landen bei Ihrem Vertriebsteam.",
+                  ergebnis: "Ihr Vertrieb konzentriert sich auf wertvolle Kontakte mit echtem Potenzial.\nMehr Effizienz, weniger Zeitverschwendung – und deutlich höhere Abschlussquoten."
                 },
                 {
+                  emoji: "⚙️",
                   title: "Interne Abläufe",
-                  vorher: "Daten mehrfach eingeben, Informationen manuell weiterleiten",
-                  nachher: "Automatische Synchronisierung zwischen Formularen, Tabellen und CRM-Systemen",
-                  ergebnis: "Weniger Klicks, keine Doppeleingaben, mehr Überblick"
+                  vorher: "Daten mussten mehrfach eingegeben und manuell zwischen Tools oder Abteilungen weitergeleitet werden.\nFehler, Doppelarbeit und Unklarheiten waren an der Tagesordnung.",
+                  nachher: "Alle Systeme sind intelligent miteinander verbunden.\nFormulare, Tabellen und CRM-Systeme synchronisieren sich automatisch.\nInformationen werden einmal erfasst und stehen sofort überall dort zur Verfügung, wo sie gebraucht werden.",
+                  ergebnis: "Weniger Klicks, keine Doppeleingaben, mehr Transparenz.\nIhre Abläufe werden reibungslos, nachvollziehbar und effizient."
                 },
                 {
+                  emoji: "🌐",
                   title: "Website-Erstellung",
-                  vorher: "Lange Wartezeiten, hoher Aufwand",
-                  nachher: "Moderne Website mit integrierten Chatbots und Terminbuchung",
-                  ergebnis: "Schnell online, professioneller Auftritt, mehr Kundenanfragen"
+                  vorher: "Lange Wartezeiten und hoher Abstimmungsaufwand mit Agenturen.\nBis eine moderne Website online war, vergingen Wochen – oft ohne Integration in bestehende Systeme.",
+                  nachher: "Wir erstellen moderne, blitzschnelle Websites mit integrierten Chatbots, Terminbuchung und CRM-Anbindung.\nSEO-optimiert, responsiv und auf Wunsch mit animierten Elementen, die Ihre Marke lebendig machen.",
+                  ergebnis: "Ihre Website ist in kürzester Zeit online – professionell, leistungsstark und direkt verbunden mit Ihren internen Prozessen.\nMehr Sichtbarkeit, mehr Kundenanfragen, weniger Aufwand."
                 },
                 {
+                  emoji: "🎥",
                   title: "KI-Videogenerierung",
-                  vorher: "Teure Videoproduktion, lange Abstimmung",
-                  nachher: "Individuelle KI-Videos automatisch generiert",
-                  ergebnis: "Spart Zeit und Kosten, stärkt Markenauftritt"
+                  vorher: "Aufwändige, teure Videoproduktionen mit langen Abstimmungsphasen.\nVon der Idee bis zum fertigen Clip vergingen oft Wochen, und Änderungen waren kostspielig.",
+                  nachher: "Individuelle KI-Videos werden automatisch erstellt – exakt auf Ihre Marke und Zielgruppe abgestimmt.\nVon Social-Media-Clips über Produktvideos bis hin zu Erklärfilmen: alles in wenigen Minuten generiert.",
+                  ergebnis: "Sie sparen Zeit, Budget und Produktionsaufwand.\nIhre Marke bleibt ständig präsent mit kreativem, aufmerksamkeitsstarkem Content, der Emotionen weckt und Reichweite aufbaut."
                 }
               ].map((item, index) => (
                 <motion.div
@@ -547,6 +553,7 @@ const Home: React.FC = () => {
                           size={24}
                         />
                       </motion.div>
+                      <span className="mr-2">{item.emoji}</span>
                       {index + 1}. {item.title}
                     </span>
                   </motion.button>
@@ -559,18 +566,18 @@ const Home: React.FC = () => {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <div className="py-6 pl-12 space-y-5">
+                    <div className="py-6 pl-12 space-y-6">
                       <div>
-                        <p className="text-light-100 font-bold mb-2 text-base">Vorher:</p>
-                        <p className="text-light-200 text-sm">{item.vorher}</p>
+                        <p className="text-light-100 font-bold mb-3 text-base">Vorher:</p>
+                        <p className="text-light-200 text-sm leading-relaxed whitespace-pre-line">{item.vorher}</p>
                       </div>
                       <div>
-                        <p className="text-light-100 font-bold mb-2 text-base">Nachher:</p>
-                        <p className="text-light-200 text-sm">{item.nachher}</p>
+                        <p className="text-light-100 font-bold mb-3 text-base">Nachher:</p>
+                        <p className="text-light-200 text-sm leading-relaxed whitespace-pre-line">{item.nachher}</p>
                       </div>
                       <div>
-                        <p className="text-light-100 font-bold mb-2 text-base">Ergebnis:</p>
-                        <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-3 text-sm">{item.ergebnis}</p>
+                        <p className="text-light-100 font-bold mb-3 text-base">Ergebnis:</p>
+                        <p className="text-light-100 font-bold border-l-4 border-primary-500 pl-3 text-sm leading-relaxed whitespace-pre-line">{item.ergebnis}</p>
                       </div>
                     </div>
                   </motion.div>
