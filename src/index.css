@@ -42,19 +42,3 @@ input, select, textarea {
 .cursor-blink {
   @apply animate-cursor-blink;
 }
-
-/* Logo sanft "atmen" lassen */
-.logo {
-  animation: breathe 4s ease-in-out infinite;
-  transform-origin: center;
-}
-
-/* Die eigentliche Animation */
-@keyframes breathe {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
-  }
-}
