@@ -79,7 +79,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              Pixel Kraftwerk automatisiert Ihre Abläufe – damit Sie mehr Zeit fürs Wesentliche haben.
+              KI-Automatisierung aus Groitzsch für Unternehmen in Leipzig, Sachsen und ganz Deutschland – damit Sie mehr Zeit fürs Wesentliche haben.
             </motion.p>
             
             <motion.div
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
               </h2>
 
               <p className="text-lg text-light-200 leading-relaxed max-w-2xl mx-auto">
-                Viele Unternehmen verschwenden wertvolle Stunden mit Routinearbeit –
+                Viele Unternehmen in Leipzig und der Region Sachsen verschwenden wertvolle Stunden mit Routinearbeit –
                 E-Mails beantworten, Termine abgleichen, Leads prüfen oder Tabellen pflegen.
               </p>
             </motion.div>
@@ -204,10 +204,10 @@ const Home: React.FC = () => {
                   Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
                 </p>
                 <p className="text-lg text-light-200 leading-relaxed">
-                  Viele Teams verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
+                  Viele Teams in Leipzig, Groitzsch und ganz Sachsen verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
                 </p>
                 <p className="text-xl text-light-100 font-bold mt-8">
-                  Wir ändern das.
+                  Wir ändern das mit intelligenter KI-Automatisierung.
                 </p>
               </div>
             </motion.div>
@@ -893,7 +893,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="text-primary-500">Kundenstimmen</span>
+              <span className="text-primary-500">Das sagen Unternehmen aus der Region</span>
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -994,7 +994,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Ein kostenloses Erstgespräch zeigt, wie viel Zeit Sie durch Automatisierung ab morgen sparen können.
+              Ein kostenloses Erstgespräch zeigt, wie viel Zeit Ihr Unternehmen in Leipzig oder der Region durch KI-Automatisierung ab morgen sparen kann.
             </motion.p>
 
             <motion.button
@@ -1009,6 +1009,65 @@ const Home: React.FC = () => {
               <ArrowRight className="mr-2" size={24} />
               Kostenloses Erstgespräch sichern
             </motion.button>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCATION SECTION */}
+      <section className="py-40 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              className="text-3xl md:text-4xl font-heading font-bold mb-12 text-light-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-primary-500">KI-Automatisierung</span> aus Groitzsch
+            </motion.h2>
+
+            <motion.div
+              className="space-y-6 text-light-200 text-base leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <p>
+                Von unserem Standort in Groitzsch bei Leipzig betreuen wir Unternehmen in ganz Sachsen und darüber hinaus.
+                Als regionaler Partner für digitale Transformation verstehen wir die Herausforderungen mittelständischer
+                Unternehmen und entwickeln maßgeschneiderte Automatisierungslösungen.
+              </p>
+
+              <p className="text-light-100 font-bold">
+                Unsere Serviceregion umfasst:
+              </p>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm pt-4">
+                <div className="bg-dark-500 p-4 border border-dark-100">
+                  <p className="text-primary-500 font-bold mb-1">Groitzsch</p>
+                  <p className="text-light-300">Hauptsitz</p>
+                </div>
+                <div className="bg-dark-500 p-4 border border-dark-100">
+                  <p className="text-primary-500 font-bold mb-1">Leipzig</p>
+                  <p className="text-light-300">Metropolregion</p>
+                </div>
+                <div className="bg-dark-500 p-4 border border-dark-100">
+                  <p className="text-primary-500 font-bold mb-1">Sachsen</p>
+                  <p className="text-light-300">Regional</p>
+                </div>
+                <div className="bg-dark-500 p-4 border border-dark-100">
+                  <p className="text-primary-500 font-bold mb-1">Deutschland</p>
+                  <p className="text-light-300">Bundesweit</p>
+                </div>
+              </div>
+
+              <p className="pt-6">
+                Ob vor Ort in Leipzig oder remote in ganz Deutschland – wir realisieren Ihre Automatisierungsprojekte
+                effizient und zuverlässig. Profitieren Sie von kurzen Wegen und persönlichem Service aus Ihrer Region.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

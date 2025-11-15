@@ -20,7 +20,8 @@ const Contact: React.FC = () => {
         <div className="max-w-2xl mx-auto mb-20">
           <p className="text-light-200 mb-12 text-center text-base leading-relaxed">
             Sie möchten erfahren, wie Ihr Unternehmen von KI-gestützter Automatisierung profitieren kann?
-            Ob allgemeine Fragen, konkrete Projektideen oder Interesse an einer Zusammenarbeit – wir sind gerne für Sie da.
+            Ob aus Leipzig, Groitzsch oder der gesamten Region Sachsen – bei allgemeinen Fragen, konkreten Projektideen
+            oder Interesse an einer Zusammenarbeit sind wir gerne für Sie da.
           </p>
 
           <div className="space-y-6 mb-12">
@@ -31,7 +32,7 @@ const Contact: React.FC = () => {
           </div>
 
           <p className="text-light-200 mb-16 text-center text-sm">
-            Wir melden uns zeitnah zurück – kompetent, unverbindlich und persönlich.
+            Als Ihr Partner für KI-Automatisierung in Groitzsch und Leipzig melden wir uns zeitnah zurück – kompetent, unverbindlich und persönlich.
           </p>
         </div>
         

@@ -22,9 +22,9 @@ const About: React.FC = () => {
 
         <div className="max-w-3xl mx-auto">
           <p className="text-light-200 mb-12 text-base leading-relaxed">
-            Pixel Kraftwerk steht für intelligente Automatisierung und praxisnahe KI-Lösungen.
-            Wir unterstützen Unternehmen dabei, ihre Prozesse zu optimieren, repetitive Aufgaben
-            zu eliminieren und Kundeninteraktionen zu verbessern – messbar, skalierbar, nachhaltig.
+            Pixel Kraftwerk aus Groitzsch steht für intelligente Automatisierung und praxisnahe KI-Lösungen.
+            Wir unterstützen Unternehmen in Leipzig, Sachsen und ganz Deutschland dabei, ihre Prozesse zu optimieren,
+            repetitive Aufgaben zu eliminieren und Kundeninteraktionen zu verbessern – messbar, skalierbar, nachhaltig.
           </p>
 
           <div className="mb-16">
@@ -36,6 +36,7 @@ const About: React.FC = () => {
               Mit maßgeschneiderten Automatisierungskonzepten setzen wir auf den Einsatz
               künstlicher Intelligenz genau dort, wo sie den größten Mehrwert bietet –
               im Kundenservice, bei der Terminplanung, in der CRM-Integration oder auf Ihrer Website.
+              Als regionales Unternehmen aus Groitzsch betreuen wir Kunden in ganz Mitteldeutschland.
             </p>
           </div>
 
@@ -44,10 +45,11 @@ const About: React.FC = () => {
               Unsere <span className="text-primary-500">Expertise</span>
             </h3>
             <p className="text-light-200 text-sm leading-relaxed">
-              Unser Team vereint technologische Tiefe mit unternehmerischem Verständnis.
+              Unser Team aus Sachsen vereint technologische Tiefe mit unternehmerischem Verständnis.
               Experten aus den Bereichen KI-Entwicklung, Softwareintegration und digitales Marketing
               arbeiten Hand in Hand, um Lösungen zu entwickeln, die nicht nur innovativ,
-              sondern sofort einsatzbereit und wartungsarm sind.
+              sondern sofort einsatzbereit und wartungsarm sind. Von Groitzsch aus betreuen wir
+              Unternehmen in Leipzig und der gesamten Region.
             </p>
           </div>
 
