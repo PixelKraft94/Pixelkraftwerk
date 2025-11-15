@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
+import NAPInfo from './NAPInfo';
 import { NavItem, SocialLink } from '../types';
 
 const navItems: NavItem[] = [
@@ -69,16 +70,8 @@ const Footer: React.FC = () => {
           
           <div>
             <h3 className="text-primary-500 font-heading font-bold mb-4">Kontakt</h3>
-            <p className="text-light-300 mb-4">
-              Haben Sie Fragen? Wir sind für Sie da.
-            </p>
-            <a 
-              href="mailto:kontakt@pixelkraftwerk-ai.com"
-              className="text-primary-500 hover:text-primary-400 transition-colors duration-200 block mb-4"
-            >
-              kontakt@pixelkraftwerk-ai.com
-            </a>
-            
+            <NAPInfo variant="minimal" showIcons={false} className="mb-6" />
+
             <div className="flex space-x-4 mt-6">
               {socialLinks.map((link) => (
                 <a

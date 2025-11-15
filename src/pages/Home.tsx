@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Clock, CheckCircle, Users, Globe, ArrowRight, MessageCircle, Calendar, BarChart, Target, Phone, Workflow, TrendingUp, Video } from 'lucide-react';
 import { BackgroundPaths } from '../components/ui/background-paths';
 import ContactForm from '../components/ContactForm';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
+import SEOHead from '../components/SEOHead';
 
 const Home: React.FC = () => {
   const [openAccordion, setOpenAccordion] = React.useState<number | null>(null);
@@ -32,6 +34,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
+      <SEOHead
+        title="Automatisierung für Ihr Geschäft"
+        description="Automatisieren Sie Ihre Geschäftsprozesse mit KI-gestützten Lösungen. Chatbots, Telefonagenten, Terminplanung und mehr."
+        keywords={['KI Automatisierung', 'Chatbot', 'Terminbuchung automatisch', 'Lead Management Leipzig']}
+      />
+      <LocalBusinessSchema pageType="homepage" />
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center bg-dark-500 overflow-hidden">
         <BackgroundPaths />

@@ -1,9 +1,18 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import NAPInfo from '../components/NAPInfo';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
+import SEOHead from '../components/SEOHead';
 
 const Contact: React.FC = () => {
   return (
     <div className="pt-24 bg-dark-500 min-h-screen">
+      <SEOHead
+        title="Kontakt"
+        description="Kontaktieren Sie Pixel Kraftwerk für KI-Automatisierungslösungen. Wir sind in Groitzsch, Leipzig und ganz Sachsen für Sie da."
+        keywords={['Kontakt Pixel Kraftwerk', 'KI Beratung Leipzig', 'Automatisierung Groitzsch']}
+      />
+      <LocalBusinessSchema pageType="contact" />
       <div className="container mx-auto px-6 md:px-12 py-24">
         <h1 className="text-3xl md:text-4xl text-light-100 font-heading font-bold mb-6 text-center">
           Nehmen Sie <span className="text-primary-500">Kontakt</span> mit uns auf
@@ -18,26 +27,7 @@ const Contact: React.FC = () => {
             <h2 className="text-xl font-heading font-bold text-light-100 mb-8 text-center">
               <span className="text-primary-500">Kontaktinformationen</span>
             </h2>
-            <div className="space-y-5">
-              <div className="flex items-center">
-                <span className="text-primary-500 mr-3 text-xl">📧</span>
-                <p className="text-light-200 text-sm">
-                  E-Mail: <a href="mailto:kontakt@pixelkraftwerk-ai.com" className="text-primary-500 hover:text-primary-400 transition-colors">kontakt@pixelkraftwerk-ai.com</a>
-                </p>
-              </div>
-              <div className="flex items-center">
-                <span className="text-primary-500 mr-3 text-xl">📞</span>
-                <p className="text-light-200 text-sm">
-                  Telefon: <a href="tel:+4917858444" className="text-primary-500 hover:text-primary-400 transition-colors">+49 178 5844460</a>
-                </p>
-              </div>
-              <div className="flex items-center">
-                <span className="text-primary-500 mr-3 text-xl">📍</span>
-                <p className="text-light-200 text-sm">
-                  Adresse: Neuer Weg 9a, 04539 Groitzsch, Deutschland
-                </p>
-              </div>
-            </div>
+            <NAPInfo variant="full" showIcons={true} className="text-light-200" />
           </div>
 
           <p className="text-light-200 mb-16 text-center text-sm">
