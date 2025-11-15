@@ -201,10 +201,10 @@ const Home: React.FC = () => {
 
               <div className="space-y-5 max-w-2xl mx-auto">
                 <p className="text-lg text-light-200 leading-relaxed">
-                  Wie viele Aufgaben werden in Ihrem Unternehmen noch per Hand erledigt?
+                  Wie viele Aufgaben werden in Ihrem Team noch per Hand erledigt?
                 </p>
                 <p className="text-lg text-light-200 leading-relaxed">
-                  Viele Teams in Leipzig, Groitzsch und ganz Sachsen verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
+                  Viele Unternehmen aus Groitzsch, Leipzig und ganz Sachsen verschwenden täglich Stunden mit Routinearbeiten – weil Terminbuchung, Kommunikation und interne Abläufe noch manuell laufen.
                 </p>
                 <p className="text-xl text-light-100 font-bold mt-8">
                   Wir ändern das mit intelligenter KI-Automatisierung.
