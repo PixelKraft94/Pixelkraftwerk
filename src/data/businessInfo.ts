@@ -1,7 +1,7 @@
 export const businessInfo = {
   name: "Pixel Kraftwerk",
   legalName: "Pixel Kraftwerk – Franke & Brause GbR",
-  description: "Automatisieren Sie Ihre Geschäftsprozesse mit KI-gestützten Lösungen. Chatbots, Telefonagenten, Terminplanung und moderne Websites.",
+  description: "Die BESTEN KI-Automatisierung, Chatbots oder SEO für Unternehmen in Leipzig, Groitzsch und in meiner Nähe - wenn sie nach SEO Unternehmen in meiner nähe oder KI-Automatisierungen in meiner nähe suchen - Pixel Kraftwerk Franke & Brause GbR aus Leipzig und Groitzsch ist Ihr Partner",
   foundingDate: "2024",
 
   address: {
@@ -50,7 +50,8 @@ export const businessInfo = {
     "Website-Entwicklung",
     "KI-Video-Produktion",
     "Workflow-Automatisierung",
-    "CRM-Integration"
+    "CRM-Integration
+    "SEO-Optimierungen"
   ],
 
   socialMedia: {
@@ -62,24 +63,54 @@ export const businessInfo = {
 
   openingHours: [
     {
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00"
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "20:00"
     }
   ],
 
-  businessType: "ProfessionalService",
+  businessType: "ProfessionalService, SoftwareService, IT-Service, Webdesign",
 
   keywords: [
-    "KI Automatisierung",
-    "Chatbot Entwicklung",
-    "Prozessautomatisierung",
-    "Lead Management",
-    "Terminbuchung automatisch",
-    "KI Telefonagent",
-    "Workflow Automatisierung",
-    "CRM Integration",
-    "Website Entwicklung Leipzig",
-    "KI Lösungen Sachsen"
+  "KI Automatisierung",
+  "Prozessautomatisierung",
+  "Prozessautomatisierung Leipzig",
+  "Unternehmensautomatisierung",
+  "Geschäftsprozesse automatisieren",
+  "Automatisierung Unternehmen",
+  "digitale Prozesse",
+  "Workflow Automatisierung",
+  "Workflow-Optimierung",
+  "KI für Unternehmensprozesse",
+  "KI Chatbot",
+  "Chatbots für Kundenservice",
+  "Chatbot Agentur",
+  "Chatbot Agentur Leipzig",
+  "KI Telefonassistent",
+  "KI Telefonagent",
+  "KI Telefonassistent für Unternehmen",
+  "Automatisierung Leipzig",
+  "KI-Agentur Leipzig",
+  "KI Lösungen Leipzig",
+  "CRM Automatisierung Leipzig",
+  "CRM Automatisierungen Groitzsch",
+  "Terminplanung automatisieren Leipzig",
+  "Content Creation Leipzig",
+  "Video Marketing Leipzig",
+  "Social Media Content Produktion",
+  "Unternehmensvideos Leipzig",
+  "Content Agentur Leipzig",
+  "SEO Optimierung",
+  "SEO Optimierung Leipzig",
+  "SEO Optimierung Groitzsch",
+  "SEO Agentur Leipzig",
+  "SEO Agentur Groitzsch",
+  "Suchmaschinenoptimierung",
+  "Suchmaschinenoptimierung Leipzig",
+  "Suchmaschinenoptimierung Groitzsch",
+  "Pixel Kraftwerk SEO",
+  "Pixel Kraftwerk",
+  "Pixel Kraftwerk KI",
+  "KI Agentur Pixel Kraftwerk"
   ]
 };
