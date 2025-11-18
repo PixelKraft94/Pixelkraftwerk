@@ -12,12 +12,17 @@ const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
 }) => {
   const schema = {
     "@context": "https://schema.org",
-    "@type": businessInfo.businessType,
+    "@type": "LocalBusiness",
     "name": businessInfo.name,
     "legalName": businessInfo.legalName,
     "description": customDescription || businessInfo.description,
     "url": businessInfo.url,
-    "logo": businessInfo.logo,
+    "logo": {
+      "@type": "ImageObject",
+      "url": businessInfo.logo,
+      "width": "512",
+      "height": "512"
+    },
     "image": businessInfo.image,
     "foundingDate": businessInfo.foundingDate,
     "priceRange": businessInfo.priceRange,
@@ -62,6 +67,11 @@ const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
         },
         "position": index + 1
       }))
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "12"
     }
   };
 
