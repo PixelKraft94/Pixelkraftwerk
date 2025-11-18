@@ -46,34 +46,31 @@ const Home: React.FC = () => {
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl text-light-100 font-heading font-bold mb-8 text-center">
-              KI-Automatisierung für Unternehmen in Leipzig, Groitzsch und Umgebung - Pixel Kraftwerk Franke & Brause GbR - Ihr Partner für Chatbots, Prozessoptimierung und digitale Transformation in meiner Nähe
-            </h1>
             <motion.div className="space-y-2 mb-8 -mt-8">
-              <motion.div
+              <motion.h1
                 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
               >
                 Abläufe automatisieren.
-              </motion.div>
-              <motion.div
+              </motion.h1>
+              <motion.h1
                 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
               >
                 Prozesse vereinfachen.
-              </motion.div>
-              <motion.div
+              </motion.h1>
+              <motion.h1
                 className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 1.3 }}
               >
                 Zeit gewinnen.
-              </motion.div>
+              </motion.h1>
             </motion.div>
 
             <motion.p
