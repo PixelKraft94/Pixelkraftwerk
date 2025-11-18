@@ -50,7 +50,7 @@ export const businessInfo = {
     "Website-Entwicklung",
     "KI-Video-Produktion",
     "Workflow-Automatisierung",
-    "CRM-Integration"
+    "CRM-Integration",
     "SEO-Optimierungen"
   ],
 
