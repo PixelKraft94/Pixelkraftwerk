@@ -35,9 +35,9 @@ const Home: React.FC = () => {
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="Die BESTEN KI-Automatisierung, Chatbots oder SEO für Unternehmen in Leipzig, Groitzsch und in meiner Nähe - wenn sie nach SEO Unternehmen in meiner nähe oder KI-Automatisierungen in meiner nähe suchen - Pixel Kraftwerk Franke & Brause GbR aus Leipzig und Groitzsch ist Ihr Partner"
-        description="Pixel Kraftwerk automatisiert Geschäftsprozesse mit KI, Chatbots und Telefonassistenten. Effizienz steigern, Zeit sparen – in Leipzig & Umgebung."
-        keywords={['KI Automatisierung', 'Prozessautomatisierung', 'Prozessautomatisierung Leipzig', 'Unternehmensautomatisierung', 'Geschäftsprozesse automatisieren', 'Automatisierung Unternehmen', 'digitale Prozesse', 'Workflow Automatisierung', 'Workflow-Optimierung', 'KI für Unternehmensprozesse', 'KI Chatbot', 'Chatbots für Kundenservice', 'Chatbot Agentur', 'Chatbot Agentur Leipzig', 'KI Telefonassistent', 'KI Telefonagent', 'KI Telefonassistent für Unternehmen', 'Automatisierung Leipzig', 'KI-Agentur Leipzig', 'KI Lösungen Leipzig', 'CRM Automatisierung Leipzig', 'CRM Automatisierungen Groitzsch', 'Terminplanung automatisieren Leipzig', 'Content Creation Leipzig', 'Video Marketing Leipzig', 'Social Media Content Produktion', 'Unternehmensvideos Leipzig', 'Content Agentur Leipzig', 'SEO Optimierung', 'SEO Optimierung Leipzig', 'SEO Optimierung Groitzsch', 'SEO Agentur Leipzig', 'SEO Agentur Groitzsch', 'Suchmaschinenoptimierung', 'Suchmaschinenoptimierung Leipzig', 'Suchmaschinenoptimierung Groitzsch', 'Pixel Kraftwerk SEO', 'Pixel Kraftwerk', 'Pixel Kraftwerk KI', 'KI Agentur Pixel Kraftwerk']}
+        title="Automatisierung für Ihr Geschäft"
+        description="Automatisieren Sie Ihre Geschäftsprozesse mit KI-gestützten Lösungen. Chatbots, Telefonagenten, Terminplanung und mehr."
+        keywords={['KI Automatisierung', 'Chatbot', 'Terminbuchung automatisch', 'Lead Management Leipzig']}
       />
       <LocalBusinessSchema pageType="homepage" />
       {/* HERO SECTION */}
