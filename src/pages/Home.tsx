@@ -129,7 +129,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit intelligenten KI-Systemen, die Kundenanfragen, Terminplanung und interne Prozesse selbstständig steuern.
+              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit intelligenten KI-Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe spürbar vereinfachen.
             </motion.p>
 
             <motion.div
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
                 className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
               >
                 <ArrowRight className="mr-2" size={20} />
-                Kostenloses Erstgespräch
+                Kostenloses Erstgespräch sichern
               </button>
             </motion.div>
           </div>
