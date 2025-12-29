@@ -124,7 +124,16 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.p
-              className="text-lg md:text-xl text-light-200 mb-8 max-w-3xl mx-auto"
+              className="block md:hidden text-lg text-light-200 mb-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
+            >
+              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit intelligenten KI-Systemen, die Kundenanfragen, Terminplanung und interne Prozesse selbstständig steuern.
+            </motion.p>
+
+            <motion.p
+              className="hidden md:block text-xl text-light-200 mb-8 max-w-3xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
