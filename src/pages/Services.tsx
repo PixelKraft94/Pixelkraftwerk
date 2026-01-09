@@ -46,77 +46,77 @@ const Services: React.FC = () => {
     {
       icon: <Bot size={40} strokeWidth={1.5} />,
       title: "KI-Chatbots & Telefonassistenten",
-      description: "Wir entwickeln digitale Assistenten, die Kundenanfragen automatisch per Website-Chat oder Telefon bearbeiten und dabei Ihr Team dauerhaft entlasten. Die Systeme lernen aus Ihren Inhalten, reagieren zuverlassig und fuhren Gesprache strukturiert und freundlich.",
+      description: "Wir entwickeln digitale Assistenten, die Kundenanfragen automatisch per Website-Chat oder Telefon bearbeiten und dabei Ihr Team dauerhaft entlasten. Die Systeme lernen aus Ihren Inhalten, reagieren zuverlässig und führen Gespräche strukturiert und freundlich.",
       benefits: [
-        "Deutlich weniger Unterbrechungen im Tagesgeschaft",
-        "Sofortige Antworten fur Ihre Kunden - auch ausserhalb der Geschaftszeiten",
-        "Hohere Servicequalitat bei gleichbleibender Arbeitsbelastung"
+        "Deutlich weniger Unterbrechungen im Tagesgeschäft",
+        "Sofortige Antworten für Ihre Kunden – auch außerhalb der Geschäftszeiten",
+        "Höhere Servicequalität bei gleichbleibender Arbeitsbelastung"
       ]
     },
     {
       icon: <Calendar size={40} strokeWidth={1.5} />,
       title: "Terminplanung & Buchungssysteme",
-      description: "Wir erstellen intelligente Buchungssysteme, die Verfugbarkeiten automatisch verwalten, Termine koordinieren und Kunden selbststandig bestatigen sowie erinnern. Ihr Kalender organisiert sich dadurch weitgehend selbst.",
+      description: "Wir erstellen intelligente Buchungssysteme, die Verfügbarkeiten automatisch verwalten, Termine koordinieren und Kunden selbstständig bestätigen sowie erinnern. Ihr Kalender organisiert sich dadurch weitgehend selbst.",
       benefits: [
-        "Keine Doppelbuchungen oder Terminlucken",
+        "Keine Doppelbuchungen oder Terminlücken",
         "Deutlich weniger Verwaltungsaufwand",
-        "Spurbar hohere Termintreue Ihrer Kunden"
+        "Spürbar höhere Termintreue Ihrer Kunden"
       ]
     },
     {
       icon: <Target size={40} strokeWidth={1.5} />,
       title: "Lead-Management & CRM-Automatisierung",
-      description: "Alle eingehenden Anfragen werden automatisch erfasst, strukturiert, bewertet und an die zustandigen Ansprechpartner weitergeleitet. Kein Kontakt geht verloren, kein Interessent bleibt unbeachtet.",
+      description: "Alle eingehenden Anfragen werden automatisch erfasst, strukturiert, bewertet und an die zuständigen Ansprechpartner weitergeleitet. Kein Kontakt geht verloren, kein Interessent bleibt unbeachtet.",
       benefits: [
-        "Klare Ubersicht uber alle Kontakte",
+        "Klare Übersicht über alle Kontakte",
         "Schnellere Reaktionszeiten im Vertrieb",
-        "Hohere Abschlussquote durch bessere Struktur"
+        "Höhere Abschlussquote durch bessere Struktur"
       ]
     },
     {
       icon: <Globe size={40} strokeWidth={1.5} />,
       title: "Website-Entwicklung & SEO",
-      description: "Wir entwickeln moderne, schnelle Websites, die Ihr Unternehmen professionell prasentieren, Vertrauen aufbauen und neue Kunden gewinnen. Auf Wunsch konnen diese Websites gezielt mit Automatisierung, Terminbuchung und digitaler Kundenkommunikation erweitert werden.",
+      description: "Wir entwickeln moderne, schnelle Websites, die Ihr Unternehmen professionell präsentieren, Vertrauen aufbauen und neue Kunden gewinnen. Auf Wunsch können diese Websites gezielt mit Automatisierung, Terminbuchung und digitaler Kundenkommunikation erweitert werden.",
       benefits: [
-        "Starke Aussenwirkung und klare Positionierung",
+        "Starke Außenwirkung und klare Positionierung",
         "Mehr Sichtbarkeit bei Google durch strukturierte Suchmaschinenoptimierung",
-        "Flexible Erweiterbarkeit durch spatere Automatisierung"
+        "Flexible Erweiterbarkeit durch spätere Automatisierung"
       ]
     },
     {
       icon: <Workflow size={40} strokeWidth={1.5} />,
       title: "Workflow-Automatisierung & Systemvernetzung",
-      description: "Wir verbinden Ihre bestehenden Systeme zu einem durchgangigen Prozess. Informationen werden automatisch weitergegeben, Aufgaben sauber verteilt und Ablaufe klar strukturiert. So entstehen stabile, fehlerarme Prozesse.",
+      description: "Wir verbinden Ihre bestehenden Systeme zu einem durchgängigen Prozess. Informationen werden automatisch weitergegeben, Aufgaben sauber verteilt und Abläufe klar strukturiert. So entstehen stabile, fehlerarme Prozesse.",
       benefits: [
         "Keine doppelte Dateneingabe",
-        "Weniger Fehler und Ruckfragen",
-        "Volle Transparenz uber alle Ablaufe"
+        "Weniger Fehler und Rückfragen",
+        "Volle Transparenz über alle Abläufe"
       ]
     },
     {
       icon: <Video size={40} strokeWidth={1.5} />,
       title: "Content-Produktion & KI-Videos",
-      description: "Wir erstellen professionelle Texte, Bilder und Videos mit moderner KI-Technologie - individuell auf Ihre Marke abgestimmt und in kurzester Zeit verfugbar. So bleibt Ihr Unternehmen sichtbar und prasent.",
+      description: "Wir erstellen professionelle Texte, Bilder und Videos mit moderner KI-Technologie – individuell auf Ihre Marke abgestimmt und in kürzester Zeit verfügbar. So bleibt Ihr Unternehmen sichtbar und präsent.",
       benefits: [
-        "Starkere Markenwirkung",
-        "Hohere Reichweite auf allen Kanalen",
+        "Stärkere Markenwirkung",
+        "Höhere Reichweite auf allen Kanälen",
         "Deutlich geringere Produktionskosten"
       ]
     }
   ];
 
   const companyBenefits = [
-    { icon: <Clock size={28} />, text: "Spurbar weniger Verwaltungsaufwand" },
-    { icon: <TrendingUp size={28} />, text: "Effizientere Ablaufe" },
+    { icon: <Clock size={28} />, text: "Spürbar weniger Verwaltungsaufwand" },
+    { icon: <TrendingUp size={28} />, text: "Effizientere Abläufe" },
     { icon: <Users size={28} />, text: "Entlastung Ihres Teams" },
-    { icon: <Heart size={28} />, text: "Hohere Kundenzufriedenheit" },
+    { icon: <Heart size={28} />, text: "Höhere Kundenzufriedenheit" },
     { icon: <DollarSign size={28} />, text: "Mehr Umsatzpotenzial durch bessere Prozesse" },
   ];
 
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="Unsere Leistungen - Digitale Losungen fur Ihr Unternehmen"
+        title="Unsere Leistungen – Digitale Lösungen für Ihr Unternehmen"
         description="KI-Chatbots, Terminplanung, Lead-Management, Websites mit SEO, Workflow-Automatisierung und KI-Videos. Wir entwickeln intelligente Systeme, die Ihr Unternehmen entlasten."
         keywords={['KI-Chatbot', 'Terminbuchung', 'Lead-Management', 'Website SEO', 'Workflow-Automatisierung', 'KI-Videos']}
       />
@@ -136,7 +136,7 @@ const Services: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Unsere Leistungen - <span className="text-primary-500">Digitale Losungen,</span> die Ihr Unternehmen entlasten
+              Unsere Leistungen – <span className="text-primary-500">Digitale Lösungen,</span> die Ihr Unternehmen entlasten
             </motion.h1>
 
             <motion.p
@@ -145,7 +145,7 @@ const Services: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Wir entwickeln intelligente Systeme, die Arbeitsablaufe vereinfachen, Kundenkommunikation automatisieren und messbar Zeit und Kosten sparen.
+              Wir entwickeln intelligente Systeme, die Arbeitsabläufe vereinfachen, Kundenkommunikation automatisieren und messbar Zeit und Kosten sparen.
             </motion.p>
 
             <motion.p
@@ -154,9 +154,9 @@ const Services: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Unsere Losungen helfen Unternehmen dabei, wiederkehrende Aufgaben zu automatisieren, Ablaufe zu strukturieren und Kunden professionell zu betreuen - ohne komplizierte Technik und ohne Fachchinesisch.
+              Unsere Lösungen helfen Unternehmen dabei, wiederkehrende Aufgaben zu automatisieren, Abläufe zu strukturieren und Kunden professionell zu betreuen – ohne komplizierte Technik und ohne Fachchinesisch.
               <br /><br />
-              <strong className="text-light-100">Sie sagen uns, wo es hakt - wir bauen das System, das es lost.</strong>
+              <strong className="text-light-100">Sie sagen uns, wo es hakt – wir bauen das System, das es löst.</strong>
             </motion.p>
 
             <motion.button
@@ -185,10 +185,10 @@ const Services: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-light-100 mb-6">
-                Was wir fur Ihr <span className="text-primary-500">Unternehmen umsetzen</span>
+                Was wir für Ihr <span className="text-primary-500">Unternehmen umsetzen</span>
               </h2>
               <p className="text-lg text-light-200 max-w-3xl mx-auto">
-                Wir kombinieren moderne Websites, intelligente Automatisierung und digitale Assistenzsysteme zu einer ganzheitlichen Losung, die Ihr Unternehmen im Alltag spurbar entlastet und Ihre Prozesse zuverlassig unterstutzt.
+                Wir kombinieren moderne Websites, intelligente Automatisierung und digitale Assistenzsysteme zu einer ganzheitlichen Lösung, die Ihr Unternehmen im Alltag spürbar entlastet und Ihre Prozesse zuverlässig unterstützt.
               </p>
             </motion.div>
 
@@ -255,7 +255,7 @@ const Services: React.FC = () => {
                     </p>
 
                     <div className="bg-dark-400/50 p-6 border-l-4 border-primary-500">
-                      <p className="text-primary-400 font-heading font-bold mb-4">Nutzen fur Sie:</p>
+                      <p className="text-primary-400 font-heading font-bold mb-4">Nutzen für Sie:</p>
                       <ul className="space-y-3">
                         {service.benefits.map((benefit, benefitIndex) => (
                           <li key={benefitIndex} className="flex items-start">
@@ -320,7 +320,7 @@ const Services: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns Ihre Ablaufe <span className="text-primary-500">vereinfachen</span>
+              Lassen Sie uns Ihre Abläufe <span className="text-primary-500">vereinfachen</span>
             </motion.h2>
 
             <motion.p
@@ -330,7 +330,7 @@ const Services: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              In einer kurzen Beratung zeigen wir Ihnen, wie Ihre Prozesse automatisiert und Ihr Unternehmen messbar entlastet werden konnen.
+              In einer kurzen Beratung zeigen wir Ihnen, wie Ihre Prozesse automatisiert und Ihr Unternehmen messbar entlastet werden können.
             </motion.p>
           </div>
         </div>
