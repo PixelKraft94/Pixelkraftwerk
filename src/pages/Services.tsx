@@ -66,7 +66,7 @@ const Services: React.FC = () => {
     {
       icon: <Target size={40} strokeWidth={1.5} />,
       title: "Lead-Management & CRM-Automatisierung",
-      description: "Alle eingehenden Anfragen werden automatisch erfasst, strukturiert, bewertet und an die zuständigen Ansprechpartner weitergeleitet. Kein Kontakt geht verloren, kein Interessent bleibt unbeachtet.",
+      description: "Wir entwickeln individuelle CRM-Systeme und Lead-Management-Lösungen, die eingehende Anfragen automatisch erfassen, strukturieren, bewerten und an die zuständigen Ansprechpartner weiterleiten. So geht kein Kontakt verloren und kein Interessent bleibt unbeachtet.",
       benefits: [
         "Klare Übersicht über alle Kontakte",
         "Schnellere Reaktionszeiten im Vertrieb",
