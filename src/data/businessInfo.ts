@@ -13,7 +13,7 @@ export const businessInfo = {
   },
 
   contact: {
-    telephone: "+49 178 5844460",
+    telephone: "0178 5844460",
     email: "kontakt@pixelkraftwerk-ai.com"
   },
 
