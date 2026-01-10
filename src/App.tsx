@@ -13,6 +13,12 @@ import PrivacySettings from './pages/PrivacySettings';
 import Features from './pages/Features';
 import Faq from './pages/Faq';
 import Services from './pages/Services';
+import KiAssistenten from './pages/services/KiAssistenten';
+import TermineBuchungen from './pages/services/TermineBuchungen';
+import CrmLeadManagement from './pages/services/CrmLeadManagement';
+import WebsiteSeo from './pages/services/WebsiteSeo';
+import Automatisierungen from './pages/services/Automatisierungen';
+import ContentVideo from './pages/services/ContentVideo';
 import CookieBanner from './components/CookieBanner';
 
 function App() {
@@ -76,6 +82,18 @@ function App() {
         return <Faq />;
       case '/services':
         return <Services />;
+      case '/ki-assistenten':
+        return <KiAssistenten />;
+      case '/termine-buchungen':
+        return <TermineBuchungen />;
+      case '/crm-lead-management':
+        return <CrmLeadManagement />;
+      case '/website-seo':
+        return <WebsiteSeo />;
+      case '/automatisierungen':
+        return <Automatisierungen />;
+      case '/content-video':
+        return <ContentVideo />;
       default:
         return <Home />;
     }

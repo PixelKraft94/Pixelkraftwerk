@@ -23,6 +23,7 @@ interface ServiceDetail {
   title: string;
   description: string;
   benefits: string[];
+  slug: string;
 }
 
 const Services: React.FC = () => {
@@ -34,12 +35,12 @@ const Services: React.FC = () => {
   };
 
   const coreServices = [
-    { icon: <Bot size={24} />, title: "KI-Chatbots & Telefonassistenten" },
-    { icon: <Calendar size={24} />, title: "Terminplanung & Buchungssysteme" },
-    { icon: <Target size={24} />, title: "Lead-Management & CRM-Automatisierung" },
-    { icon: <Globe size={24} />, title: "Websites mit integrierter Automatisierung & SEO" },
-    { icon: <Workflow size={24} />, title: "Workflow-Automatisierung & Systemvernetzung" },
-    { icon: <Video size={24} />, title: "Content-Produktion & KI-Videos" },
+    { icon: <Bot size={24} />, title: "KI-Chatbots & Telefonassistenten", slug: "ki-assistenten" },
+    { icon: <Calendar size={24} />, title: "Terminplanung & Buchungssysteme", slug: "termine-buchungen" },
+    { icon: <Target size={24} />, title: "Lead-Management & CRM-Automatisierung", slug: "crm-lead-management" },
+    { icon: <Globe size={24} />, title: "Websites mit integrierter Automatisierung & SEO", slug: "website-seo" },
+    { icon: <Workflow size={24} />, title: "Workflow-Automatisierung & Systemvernetzung", slug: "automatisierungen" },
+    { icon: <Video size={24} />, title: "Content-Produktion & KI-Videos", slug: "content-video" },
   ];
 
   const serviceDetails: ServiceDetail[] = [
@@ -51,7 +52,8 @@ const Services: React.FC = () => {
         "Deutlich weniger Unterbrechungen im Tagesgeschäft",
         "Sofortige Antworten für Ihre Kunden – auch außerhalb der Geschäftszeiten",
         "Höhere Servicequalität bei gleichbleibender Arbeitsbelastung"
-      ]
+      ],
+      slug: "ki-assistenten"
     },
     {
       icon: <Calendar size={40} strokeWidth={1.5} />,
@@ -61,7 +63,8 @@ const Services: React.FC = () => {
         "Keine Doppelbuchungen oder Terminlücken",
         "Deutlich weniger Verwaltungsaufwand",
         "Spürbar höhere Termintreue Ihrer Kunden"
-      ]
+      ],
+      slug: "termine-buchungen"
     },
     {
       icon: <Target size={40} strokeWidth={1.5} />,
@@ -71,7 +74,8 @@ const Services: React.FC = () => {
         "Klare Übersicht über alle Kontakte",
         "Schnellere Reaktionszeiten im Vertrieb",
         "Höhere Abschlussquote durch bessere Struktur"
-      ]
+      ],
+      slug: "crm-lead-management"
     },
     {
       icon: <Globe size={40} strokeWidth={1.5} />,
@@ -81,7 +85,8 @@ const Services: React.FC = () => {
         "Starke Außenwirkung und klare Positionierung",
         "Mehr Sichtbarkeit bei Google durch strukturierte Suchmaschinenoptimierung",
         "Flexible Erweiterbarkeit durch spätere Automatisierung"
-      ]
+      ],
+      slug: "website-seo"
     },
     {
       icon: <Workflow size={40} strokeWidth={1.5} />,
@@ -91,7 +96,8 @@ const Services: React.FC = () => {
         "Keine doppelte Dateneingabe",
         "Weniger Fehler und Rückfragen",
         "Volle Transparenz über alle Abläufe"
-      ]
+      ],
+      slug: "automatisierungen"
     },
     {
       icon: <Video size={40} strokeWidth={1.5} />,
@@ -101,7 +107,8 @@ const Services: React.FC = () => {
         "Stärkere Markenwirkung",
         "Höhere Reichweite auf allen Kanälen",
         "Deutlich geringere Produktionskosten"
-      ]
+      ],
+      slug: "content-video"
     }
   ];
 
@@ -194,9 +201,10 @@ const Services: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {coreServices.map((service, index) => (
-                <motion.div
+                <motion.a
                   key={index}
-                  className="flex items-center bg-dark-500 p-5 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                  href={`/${service.slug}`}
+                  className="flex items-center bg-dark-500 p-5 border border-dark-100 hover:border-primary-500/50 transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -206,8 +214,8 @@ const Services: React.FC = () => {
                   <div className="text-primary-500 mr-4 flex-shrink-0">
                     {service.icon}
                   </div>
-                  <p className="text-light-100 font-heading font-bold text-sm">{service.title}</p>
-                </motion.div>
+                  <p className="text-light-100 font-heading font-bold text-sm group-hover:text-primary-400 transition-colors duration-200">{service.title}</p>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -239,14 +247,16 @@ const Services: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   <div className="lg:w-1/3 flex-shrink-0">
-                    <div className="bg-dark-400 p-8 border border-dark-100 h-full">
-                      <div className="text-primary-500 mb-4">
-                        {service.icon}
+                    <a href={`/${service.slug}`} className="block group">
+                      <div className="bg-dark-400 p-8 border border-dark-100 h-full hover:border-primary-500/50 transition-colors duration-300">
+                        <div className="text-primary-500 mb-4">
+                          {service.icon}
+                        </div>
+                        <h3 className="text-xl font-heading font-bold text-light-100 group-hover:text-primary-400 transition-colors duration-200">
+                          {service.title}
+                        </h3>
                       </div>
-                      <h3 className="text-xl font-heading font-bold text-light-100">
-                        {service.title}
-                      </h3>
-                    </div>
+                    </a>
                   </div>
 
                   <div className="lg:w-2/3">
@@ -254,7 +264,7 @@ const Services: React.FC = () => {
                       {service.description}
                     </p>
 
-                    <div className="bg-dark-400/50 p-6 border-l-4 border-primary-500">
+                    <div className="bg-dark-400/50 p-6 border-l-4 border-primary-500 mb-6">
                       <p className="text-primary-400 font-heading font-bold mb-4">Nutzen für Sie:</p>
                       <ul className="space-y-3">
                         {service.benefits.map((benefit, benefitIndex) => (
@@ -265,6 +275,14 @@ const Services: React.FC = () => {
                         ))}
                       </ul>
                     </div>
+
+                    <a
+                      href={`/${service.slug}`}
+                      className="inline-flex items-center text-primary-500 font-heading font-bold hover:text-primary-400 transition-colors duration-200 group"
+                    >
+                      Mehr erfahren
+                      <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    </a>
                   </div>
                 </motion.div>
               ))}
