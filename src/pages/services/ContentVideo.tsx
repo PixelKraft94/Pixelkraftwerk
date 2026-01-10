@@ -45,7 +45,7 @@ const ContentVideo: React.FC = () => {
     {
       step: '03',
       title: 'KI-gestützte Produktion',
-      description: 'Erstellung von Texten, Bildern und Videos mit modernster KI-Technologie.'
+      description: 'Erstellung von Bildern und Videos mit modernster KI-Technologie.'
     },
     {
       step: '04',
@@ -104,7 +104,6 @@ const ContentVideo: React.FC = () => {
       icon: <Video size={32} className="text-primary-500" />,
       title: 'Videos & Animation',
       items: [
-        'Erklärvideos',
         'Social Media Reels und Shorts',
         'Produktpräsentationen',
         'Testimonial-Videos',
@@ -118,8 +117,8 @@ const ContentVideo: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="Content-Produktion & KI-Videos"
-        description="Professionelle Texte, Bilder und Videos mit KI-Technologie. Schnelle Content-Erstellung für Social Media, Website und Marketing."
-        keywords={['KI Content', 'KI Video', 'Content Produktion', 'Social Media Content', 'KI Texterstellung']}
+        description="Professionelle Texte, Bilder und Videos. Bilder und Videos mit KI-Technologie, Texte von erfahrenen Redakteuren. Schnelle Content-Erstellung für Social Media und Marketing."
+        keywords={['KI Content', 'KI Video', 'Content Produktion', 'Social Media Content', 'Video Produktion']}
       />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
@@ -155,8 +154,8 @@ const ContentVideo: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Professionelle Texte, Bilder und Videos mit moderner KI-Technologie –
-              individuell auf Ihre Marke abgestimmt und in kürzester Zeit verfügbar.
+              Professionelle Texte, Bilder und Videos – Bilder und Videos mit moderner KI-Technologie,
+              Texte von erfahrenen Redakteuren. Individuell auf Ihre Marke abgestimmt.
             </motion.p>
 
             <motion.button

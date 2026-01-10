@@ -83,8 +83,6 @@ const KiChatbots: React.FC = () => {
     'Weiterleitung komplexer Anfragen an Ihr Team',
     'Erfassung von Kontaktdaten und Anliegen',
     'Integration mit Ihrem CRM-System',
-    'Anpassbares Design passend zu Ihrer Marke',
-    'Detaillierte Auswertungen und Chat-Protokolle',
     'Mehrsprachige Unterstützung'
   ];
 

@@ -45,8 +45,8 @@ const Telefonassistenten: React.FC = () => {
     },
     {
       step: '03',
-      title: 'Integration in Ihre Telefonie',
-      description: 'Nahtlose Einbindung in Ihre bestehende Telefonanlage oder als separate Rufnummer.'
+      title: 'Eigene Rufnummer einrichten',
+      description: 'Sie erhalten eine dedizierte Telefonnummer für Ihren Assistenten, die Sie flexibel einsetzen können.'
     },
     {
       step: '04',
@@ -77,15 +77,13 @@ const Telefonassistenten: React.FC = () => {
   ];
 
   const features = [
-    'Anrufannahme rund um die Uhr',
+    'Eingehende Anrufe annehmen',
+    'Ausgehende Anrufe tätigen',
     'Natürliche Sprachverarbeitung und Sprachausgabe',
     'Beantwortung häufiger Fragen',
     'Terminvereinbarung und Kalenderintegration',
-    'Weiterleitung an zuständige Mitarbeiter',
     'Erfassung von Rückrufwünschen',
-    'Priorisierung dringender Anliegen',
     'Mehrsprachige Unterstützung',
-    'Detaillierte Anrufprotokolle',
     'Integration mit Ihrem CRM-System'
   ];
 
@@ -130,7 +128,7 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              KI-Systeme, die Anrufe entgegennehmen, Anliegen verstehen und professionell bearbeiten –
+              KI-Systeme, die Anrufe entgegennehmen und tätigen, Anliegen verstehen und professionell bearbeiten –
               mit natürlicher Sprachausgabe und rund um die Uhr verfügbar.
             </motion.p>
 
@@ -206,8 +204,8 @@ const Telefonassistenten: React.FC = () => {
                 Was Ihr <span className="text-primary-500">Telefonassistent leistet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Telefonassistent ist ein intelligentes System, das natürliche Sprache versteht und
-                Kundenanfragen selbstständig am Telefon beantwortet.
+                Ein KI-Telefonassistent ist ein intelligentes System, das natürliche Sprache versteht,
+                Kundenanfragen selbstständig beantwortet und auch ausgehende Anrufe für Sie tätigt.
               </p>
             </motion.div>
 

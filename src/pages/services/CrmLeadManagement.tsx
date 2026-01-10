@@ -78,14 +78,12 @@ const CrmLeadManagement: React.FC = () => {
   const features = [
     'Automatische Lead-Erfassung aus allen Kanälen',
     'Intelligente Lead-Scoring und Priorisierung',
-    'Visuelle Vertriebs-Pipeline (Kanban)',
+    'Übersichtlicher Vertriebsprozess',
     'Automatische Aufgaben und Erinnerungen',
     'E-Mail-Integration und Tracking',
     'Kontakthistorie und Aktivitätsprotokoll',
     'Team-Zuweisung und Verantwortlichkeiten',
-    'Anpassbare Felder und Kategorien',
-    'Detaillierte Reporting-Dashboards',
-    'Mobile App für Außendienst'
+    'Anpassbare Felder und Kategorien'
   ];
 
   return (
