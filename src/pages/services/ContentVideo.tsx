@@ -407,9 +407,9 @@ const ContentVideo: React.FC = () => {
         </div>
       </section>
 
-      <GoogleMapsSection />
-
       <ContactForm />
+
+      <GoogleMapsSection />
     </div>
   );
 };

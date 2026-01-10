@@ -411,9 +411,9 @@ const KiChatbots: React.FC = () => {
         </div>
       </section>
 
-      <GoogleMapsSection />
-
       <ContactForm />
+
+      <GoogleMapsSection />
     </div>
   );
 };

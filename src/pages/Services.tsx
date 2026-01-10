@@ -357,11 +357,11 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* GOOGLE MAPS */}
-      <GoogleMapsSection />
-
       {/* CONTACT FORM */}
       <ContactForm />
+
+      {/* GOOGLE MAPS */}
+      <GoogleMapsSection />
     </div>
   );
 };

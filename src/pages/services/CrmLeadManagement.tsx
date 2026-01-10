@@ -374,9 +374,9 @@ const CrmLeadManagement: React.FC = () => {
         </div>
       </section>
 
-      <GoogleMapsSection />
-
       <ContactForm />
+
+      <GoogleMapsSection />
     </div>
   );
 };

@@ -376,9 +376,9 @@ const TermineBuchungen: React.FC = () => {
         </div>
       </section>
 
-      <GoogleMapsSection />
-
       <ContactForm />
+
+      <GoogleMapsSection />
     </div>
   );
 };

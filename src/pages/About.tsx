@@ -102,9 +102,9 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <GoogleMapsSection />
-
         <ContactForm />
+
+        <GoogleMapsSection />
       </div>
     </div>
   );

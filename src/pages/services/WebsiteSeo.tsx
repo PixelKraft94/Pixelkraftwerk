@@ -490,9 +490,9 @@ const WebsiteSeo: React.FC = () => {
         </div>
       </section>
 
-      <GoogleMapsSection />
-
       <ContactForm />
+
+      <GoogleMapsSection />
     </div>
   );
 };
