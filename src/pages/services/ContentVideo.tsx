@@ -377,7 +377,7 @@ const ContentVideo: React.FC = () => {
 
       <RelatedServices
         currentSlug="content-video"
-        relatedSlugs={['website-seo', 'ki-assistenten', 'automatisierungen']}
+        relatedSlugs={['website-seo', 'ki-chatbots', 'telefonassistenten']}
       />
 
       <section className="py-20 bg-dark-500">

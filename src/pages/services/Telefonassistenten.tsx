@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Bot,
+  Phone,
   ArrowRight,
   CheckCircle,
-  MessageSquare,
-  Phone,
   Clock,
   Users,
   Zap,
@@ -14,74 +12,90 @@ import {
   Building2,
   Stethoscope,
   ShoppingBag,
-  Briefcase
+  Briefcase,
+  MessageSquare,
+  PhoneCall,
+  PhoneForwarded
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 
-const KiAssistenten: React.FC = () => {
+const Telefonassistenten: React.FC = () => {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const problems = [
-    'Ihr Team wird ständig durch wiederkehrende Kundenanfragen unterbrochen?',
-    'Kunden erreichen Sie außerhalb der Geschäftszeiten nicht und wenden sich an die Konkurrenz?',
-    'Sie verlieren potenzielle Aufträge, weil Anfragen zu spät beantwortet werden?',
-    'Die Qualität der Kundenkommunikation schwankt je nach Auslastung Ihres Teams?'
+    'Verpasste Anrufe kosten Sie regelmaessig potenzielle Auftraege?',
+    'Ihr Team wird staendig durch Telefonanrufe bei der Arbeit unterbrochen?',
+    'Ausserhalb der Geschaeftszeiten sind Sie telefonisch nicht erreichbar?',
+    'Die Qualitaet der Anrufannahme schwankt je nach Auslastung?'
   ];
 
   const processSteps = [
     {
       step: '01',
-      title: 'Analyse Ihrer Kommunikation',
-      description: 'Wir analysieren Ihre häufigsten Kundenanfragen, Ihre Branche und Ihre spezifischen Anforderungen.'
+      title: 'Analyse Ihrer Telefonie',
+      description: 'Wir analysieren Ihre haeufigsten Anrufgruende, Ihre Branche und Ihre spezifischen Anforderungen.'
     },
     {
       step: '02',
-      title: 'Training des KI-Assistenten',
-      description: 'Der Assistent wird mit Ihren Inhalten, FAQs und Unternehmensinfos trainiert und lernt Ihre Sprache.'
+      title: 'Training des Assistenten',
+      description: 'Der Telefonassistent wird mit Ihren Inhalten, FAQs und Unternehmensinfos trainiert.'
     },
     {
       step: '03',
-      title: 'Integration in Ihre Systeme',
-      description: 'Nahtlose Einbindung in Ihre Website, Telefonie oder bestehende Kommunikationskanäle.'
+      title: 'Integration in Ihre Telefonie',
+      description: 'Nahtlose Einbindung in Ihre bestehende Telefonanlage oder als separate Rufnummer.'
     },
     {
       step: '04',
       title: 'Test und Optimierung',
-      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gesprächen.'
+      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gespraechen.'
     },
     {
       step: '05',
       title: 'Dauerhafter Betrieb',
-      description: 'Ihr Assistent arbeitet zuverlässig rund um die Uhr – wir überwachen und optimieren fortlaufend.'
+      description: 'Ihr Telefonassistent arbeitet zuverlaessig rund um die Uhr - wir ueberwachen und optimieren fortlaufend.'
     }
   ];
 
   const benefits = [
-    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit ansprechbar – auch nachts, am Wochenende und an Feiertagen.' },
-    { icon: <Zap size={24} />, title: 'Sofortige Reaktion', text: 'Kunden erhalten innerhalb von Sekunden qualifizierte Antworten auf ihre Fragen.' },
-    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Bis zu 80% weniger Routineanfragen, die Ihr Team beantworten muss.' },
-    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Kunde erhält dieselbe professionelle Betreuung – unabhängig von Tageszeit oder Auslastung.' },
-    { icon: <HeadphonesIcon size={24} />, title: 'Mehrsprachig möglich', text: 'Bedienen Sie internationale Kunden in ihrer Muttersprache ohne zusätzliches Personal.' },
-    { icon: <MessageSquare size={24} />, title: 'Lernfähiges System', text: 'Der Assistent wird mit jeder Interaktion besser und passt sich Ihren Bedürfnissen an.' }
+    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit telefonisch erreichbar - auch nachts, am Wochenende und an Feiertagen.' },
+    { icon: <PhoneCall size={24} />, title: 'Keine verpassten Anrufe', text: 'Jeder Anruf wird angenommen und professionell bearbeitet - kein Kunde hoert mehr das Besetztzeichen.' },
+    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Ihr Team kann konzentriert arbeiten, waehrend der Assistent Routineanrufe bearbeitet.' },
+    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualitaet', text: 'Jeder Anrufer erhaelt dieselbe professionelle Betreuung - unabhaengig von Tageszeit oder Auslastung.' },
+    { icon: <PhoneForwarded size={24} />, title: 'Intelligente Weiterleitung', text: 'Dringende Anrufe werden sofort an die richtige Person weitergeleitet.' },
+    { icon: <HeadphonesIcon size={24} />, title: 'Natuerliche Gespraeche', text: 'Moderne Sprachverarbeitung ermoeglicht natuerliche, fluessige Gespraeche.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Für alle, die viele gleichartige Anfragen erhalten und schnelle Reaktionszeiten benötigen.' },
+    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Fuer alle, die viele gleichartige Anrufe erhalten und schnelle Reaktionszeiten benoetigen.' },
     { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlasten Sie Ihr Empfangsteam und bieten Sie Patienten/Mandanten rund um die Uhr Service.' },
-    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Produktfragen, Lieferstatus und Rückgabeanfragen automatisch.' },
+    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Bestellstatus, Lieferfragen und Reklamationen automatisch.' },
     { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Verpassen Sie keine Anfrage mehr und qualifizieren Sie Leads automatisch vor.' }
+  ];
+
+  const features = [
+    'Anrufannahme rund um die Uhr',
+    'Natuerliche Sprachverarbeitung und Sprachausgabe',
+    'Beantwortung haeufiger Fragen',
+    'Terminvereinbarung und Kalenderintegration',
+    'Weiterleitung an zustaendige Mitarbeiter',
+    'Erfassung von Rueckrufwuenschen',
+    'Priorisierung dringender Anliegen',
+    'Mehrsprachige Unterstuetzung',
+    'Detaillierte Anrufprotokolle',
+    'Integration mit Ihrem CRM-System'
   ];
 
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="KI-Chatbots & Telefonassistenten"
-        description="Intelligente KI-Assistenten für automatische Kundenbetreuung. Chatbots und Telefonassistenten, die Ihr Team entlasten und Kunden 24/7 betreuen."
-        keywords={['KI-Chatbot', 'Telefonassistent', 'Kundenservice Automatisierung', 'Chatbot Unternehmen', 'KI Kundenbetreuung']}
+        title="KI-Telefonassistenten"
+        description="Intelligente Telefonassistenten fuer automatische Anrufannahme. Nie wieder verpasste Anrufe - professioneller Service rund um die Uhr."
+        keywords={['Telefonassistent KI', 'Automatische Anrufannahme', 'KI Telefon', 'Virtuelle Telefonzentrale', 'Telefon Automatisierung']}
       />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
@@ -98,7 +112,7 @@ const KiAssistenten: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Bot size={40} className="text-primary-500" strokeWidth={1.5} />
+              <Phone size={40} className="text-primary-500" strokeWidth={1.5} />
             </motion.div>
 
             <motion.h1
@@ -107,8 +121,8 @@ const KiAssistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              KI-Chatbots & Telefonassistenten
-              <span className="block text-primary-500 mt-2">für automatische Kundenbetreuung</span>
+              KI-Telefonassistenten
+              <span className="block text-primary-500 mt-2">fuer Ihr Unternehmen</span>
             </motion.h1>
 
             <motion.p
@@ -117,8 +131,8 @@ const KiAssistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Digitale Assistenten, die Kundenanfragen automatisch per Chat oder Telefon bearbeiten –
-              professionell, rund um die Uhr und ohne Ihr Team zu belasten.
+              KI-Systeme, die Anrufe entgegennehmen, Anliegen verstehen und professionell bearbeiten -
+              mit natuerlicher Sprachausgabe und rund um die Uhr verfuegbar.
             </motion.p>
 
             <motion.button
@@ -173,7 +187,7 @@ const KiAssistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Assistent genau die richtige Lösung für Sie.</strong>
+              <strong>Dann ist ein KI-Telefonassistent genau die richtige Loesung fuer Sie.</strong>
             </motion.p>
           </div>
         </div>
@@ -190,77 +204,30 @@ const KiAssistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Was ist ein <span className="text-primary-500">KI-Assistent?</span>
+                Was Ihr <span className="text-primary-500">Telefonassistent leistet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Assistent ist ein intelligentes System, das natürliche Sprache versteht und
-                Kundenanfragen selbstständig beantwortet – per Text-Chat auf Ihrer Website oder als
-                Telefonassistent am Telefon.
+                Ein KI-Telefonassistent ist ein intelligentes System, das natuerliche Sprache versteht und
+                Kundenanfragen selbststaendig am Telefon beantwortet.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <motion.div
-                className="bg-dark-400 p-8 border border-dark-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center mb-6">
-                  <MessageSquare size={32} className="text-primary-500 mr-4" />
-                  <h3 className="text-xl font-heading font-bold text-light-100">Website-Chatbot</h3>
-                </div>
-                <p className="text-light-200 mb-6">
-                  Ein digitaler Berater auf Ihrer Website, der Besucher begrüßt, Fragen beantwortet,
-                  Termine vereinbart und Leads qualifiziert – vollautomatisch und in Echtzeit.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Beantwortet FAQs sofort</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Leitet qualifizierte Anfragen weiter</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Kann Termine direkt buchen</span>
-                  </li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                className="bg-dark-400 p-8 border border-dark-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center mb-6">
-                  <Phone size={32} className="text-primary-500 mr-4" />
-                  <h3 className="text-xl font-heading font-bold text-light-100">Telefonassistent</h3>
-                </div>
-                <p className="text-light-200 mb-6">
-                  Ein KI-System, das Anrufe entgegennimmt, Anliegen versteht, Informationen gibt
-                  und bei Bedarf an die richtige Person weiterleitet – mit natürlicher Sprachausgabe.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Nimmt Anrufe 24/7 entgegen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Versteht natürliche Sprache</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Leitet dringende Fälle weiter</span>
-                  </li>
-                </ul>
-              </motion.div>
+            <div className="bg-dark-400 p-8 border border-dark-100">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    viewport={{ once: true }}
+                  >
+                    <CheckCircle className="text-primary-500 mr-3 flex-shrink-0" size={18} />
+                    <span className="text-light-100">{feature}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -277,10 +244,10 @@ const KiAssistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                So entsteht <span className="text-primary-500">Ihr KI-Assistent</span>
+                So entsteht <span className="text-primary-500">Ihr Telefonassistent</span>
               </h2>
               <p className="text-light-200">
-                Von der ersten Analyse bis zum laufenden Betrieb – unser bewährter Prozess.
+                Von der ersten Analyse bis zum laufenden Betrieb - unser bewaehrter Prozess.
               </p>
             </motion.div>
 
@@ -355,7 +322,7 @@ const KiAssistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal für <span className="text-primary-500">diese Branchen</span>
+                Ideal fuer <span className="text-primary-500">diese Branchen</span>
               </h2>
             </motion.div>
 
@@ -381,9 +348,43 @@ const KiAssistenten: React.FC = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-dark-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              className="bg-dark-400 border border-primary-500/30 p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start">
+                <MessageSquare size={24} className="text-primary-500 mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-heading font-bold text-light-100 mb-2">
+                    Sie moechten auch auf Ihrer Website erreichbar sein?
+                  </h3>
+                  <p className="text-light-300 mb-4">
+                    Ergaenzen Sie Ihren Telefonassistenten mit einem KI-Chatbot und bieten Sie
+                    Ihren Kunden auf allen Kanaelen professionellen Service.
+                  </p>
+                  <a
+                    href="/ki-chatbots"
+                    className="inline-flex items-center text-primary-500 font-heading font-bold hover:text-primary-400 transition-colors duration-200"
+                  >
+                    Mehr zu KI-Chatbots
+                    <ArrowRight size={18} className="ml-2" />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <RelatedServices
-        currentSlug="ki-assistenten"
-        relatedSlugs={['termine-buchungen', 'crm-lead-management', 'automatisierungen']}
+        currentSlug="telefonassistenten"
+        relatedSlugs={['ki-chatbots', 'termine-buchungen', 'crm-lead-management']}
       />
 
       <section className="py-20 bg-dark-500">
@@ -396,7 +397,7 @@ const KiAssistenten: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit für <span className="text-primary-500">bessere Kundenbetreuung?</span>
+              Bereit fuer <span className="text-primary-500">professionelle Anrufannahme?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"
@@ -405,7 +406,7 @@ const KiAssistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns gemeinsam herausfinden, wie ein KI-Assistent Ihr Unternehmen entlasten kann.
+              Lassen Sie uns gemeinsam herausfinden, wie ein Telefonassistent Ihr Unternehmen entlasten kann.
             </motion.p>
           </div>
         </div>
@@ -416,4 +417,4 @@ const KiAssistenten: React.FC = () => {
   );
 };
 
-export default KiAssistenten;
+export default Telefonassistenten;

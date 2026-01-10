@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, Bot, Calendar, Target, Globe, Workflow, Video } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Calendar, Target, Globe, Video } from 'lucide-react';
 import Logo from './Logo';
 import { NavItem } from '../types';
 
@@ -10,11 +10,11 @@ interface ServiceLink {
 }
 
 const serviceLinks: ServiceLink[] = [
-  { title: 'KI-Chatbots & Telefonassistenten', path: '/ki-assistenten', icon: <Bot size={18} /> },
+  { title: 'KI-Chatbots', path: '/ki-chatbots', icon: <MessageSquare size={18} /> },
+  { title: 'Telefonassistenten', path: '/telefonassistenten', icon: <Phone size={18} /> },
   { title: 'Terminplanung & Buchungssysteme', path: '/termine-buchungen', icon: <Calendar size={18} /> },
   { title: 'Lead-Management & CRM', path: '/crm-lead-management', icon: <Target size={18} /> },
   { title: 'Websites & SEO', path: '/website-seo', icon: <Globe size={18} /> },
-  { title: 'Workflow-Automatisierung', path: '/automatisierungen', icon: <Workflow size={18} /> },
   { title: 'Content-Produktion & KI-Videos', path: '/content-video', icon: <Video size={18} /> },
 ];
 

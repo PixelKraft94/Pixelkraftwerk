@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Bot, Calendar, Target, Globe, Workflow, Video } from 'lucide-react';
+import { ArrowRight, MessageSquare, Phone, Calendar, Target, Globe, Video } from 'lucide-react';
 
 interface ServiceInfo {
   slug: string;
@@ -11,10 +11,16 @@ interface ServiceInfo {
 
 const allServices: ServiceInfo[] = [
   {
-    slug: 'ki-assistenten',
-    title: 'KI-Chatbots & Telefonassistenten',
-    shortDescription: 'Automatische Kundenbetreuung rund um die Uhr durch intelligente digitale Assistenten.',
-    icon: <Bot size={32} strokeWidth={1.5} />
+    slug: 'ki-chatbots',
+    title: 'KI-Chatbots',
+    shortDescription: 'Intelligente Chatbots für Ihre Website, die Besucher beraten und Leads qualifizieren.',
+    icon: <MessageSquare size={32} strokeWidth={1.5} />
+  },
+  {
+    slug: 'telefonassistenten',
+    title: 'Telefonassistenten',
+    shortDescription: 'KI-Telefonassistenten, die Anrufe entgegennehmen und professionell bearbeiten.',
+    icon: <Phone size={32} strokeWidth={1.5} />
   },
   {
     slug: 'termine-buchungen',
@@ -33,12 +39,6 @@ const allServices: ServiceInfo[] = [
     title: 'Websites & SEO',
     shortDescription: 'Moderne Websites mit Suchmaschinenoptimierung für mehr Sichtbarkeit.',
     icon: <Globe size={32} strokeWidth={1.5} />
-  },
-  {
-    slug: 'automatisierungen',
-    title: 'Workflow-Automatisierung',
-    shortDescription: 'Vernetzte Systeme und automatisierte Arbeitsabläufe ohne Medienbrüche.',
-    icon: <Workflow size={32} strokeWidth={1.5} />
   },
   {
     slug: 'content-video',

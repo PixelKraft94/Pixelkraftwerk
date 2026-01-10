@@ -13,7 +13,10 @@ import {
   Building2,
   Briefcase,
   Store,
-  Stethoscope
+  Stethoscope,
+  Clock,
+  Wrench,
+  HeadphonesIcon
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import SEOHead from '../../components/SEOHead';
@@ -35,7 +38,7 @@ const WebsiteSeo: React.FC = () => {
     {
       step: '01',
       title: 'Analyse & Strategie',
-      description: 'Wir analysieren Ihre Zielgruppe, Wettbewerber und Keywords für eine fundierte SEO-Strategie.'
+      description: 'Wir analysieren Ihre Zielgruppe, Wettbewerber und Keywords für eine fundierte Strategie.'
     },
     {
       step: '02',
@@ -54,8 +57,8 @@ const WebsiteSeo: React.FC = () => {
     },
     {
       step: '05',
-      title: 'Launch & Monitoring',
-      description: 'Go-Live mit Tracking-Setup und kontinuierlicher Überwachung der Rankings und Performance.'
+      title: 'Launch & Betreuung',
+      description: 'Go-Live mit laufender Betreuung, Überwachung und kontinuierlicher Optimierung.'
     }
   ];
 
@@ -65,7 +68,7 @@ const WebsiteSeo: React.FC = () => {
     { icon: <Smartphone size={24} />, title: 'Perfekt auf allen Geräten', text: 'Responsive Design, das auf Desktop, Tablet und Smartphone überzeugt.' },
     { icon: <Palette size={24} />, title: 'Modernes Design', text: 'Professionelle Optik, die Vertrauen schafft und Ihre Marke stärkt.' },
     { icon: <Shield size={24} />, title: 'Sicher & zuverlässig', text: 'SSL-Verschlüsselung, sichere Hosting-Infrastruktur und regelmäßige Updates.' },
-    { icon: <BarChart3 size={24} />, title: 'Messbare Ergebnisse', text: 'Tracking und Analytics zeigen Ihnen genau, wie Ihre Website performt.' }
+    { icon: <BarChart3 size={24} />, title: 'Messbare Ergebnisse', text: 'Verständliche Berichte zeigen Ihnen genau, wie Ihre Website performt.' }
   ];
 
   const targetAudiences = [
@@ -76,16 +79,16 @@ const WebsiteSeo: React.FC = () => {
   ];
 
   const seoFeatures = [
-    'Keyword-Recherche und -Strategie',
-    'On-Page SEO Optimierung',
-    'Meta-Tags und strukturierte Daten',
-    'Lokale SEO für regionale Sichtbarkeit',
-    'Google Business Profile Optimierung',
-    'Technisches SEO (Speed, Core Web Vitals)',
-    'Mobile-First Indexierung',
-    'Content-Strategie und -Optimierung',
-    'Backlink-Analyse und -Aufbau',
-    'Regelmäßiges Reporting und Monitoring'
+    'Analyse der wichtigsten Suchbegriffe, die Ihre Kunden tatsächlich verwenden',
+    'Strukturierung und Optimierung Ihrer Website für bessere Google-Platzierungen',
+    'Optimierung von Texten, Seiteninhalten und Überschriften',
+    'Verbesserung Ihrer lokalen Sichtbarkeit in Ihrer Region',
+    'Professionelle Betreuung und Optimierung Ihres Google Business Profils',
+    'Technische Optimierung für schnelle Ladezeiten und stabile Performance',
+    'Anpassung für optimale Darstellung auf allen Endgeräten',
+    'Kontinuierliche inhaltliche Weiterentwicklung Ihrer Website',
+    'Aufbau einer nachhaltigen Online-Autorität durch externe Verlinkungen',
+    'Regelmäßige Überwachung der Ergebnisse sowie verständliche Berichte über den Fortschritt'
   ];
 
   const websiteFeatures = [
@@ -93,12 +96,16 @@ const WebsiteSeo: React.FC = () => {
     'Responsive für alle Bildschirmgrößen',
     'Schnelle Ladezeiten (unter 3 Sekunden)',
     'Intuitive Navigation und Benutzerführung',
-    'Kontaktformulare mit Spam-Schutz',
     'SSL-Zertifikat und DSGVO-konform',
-    'CMS für einfache Inhaltspflege',
     'Integration von Social Media',
-    'Google Analytics und Search Console',
     'Erweiterbar durch Automatisierungen'
+  ];
+
+  const rentalBenefits = [
+    { icon: <HeadphonesIcon size={24} />, title: 'Full-Service-Betreuung', text: 'Wir kümmern uns um alles – Sie müssen sich um nichts kümmern.' },
+    { icon: <Clock size={24} />, title: 'Änderungen in 48 Stunden', text: 'Alle Ihre Änderungswünsche werden innerhalb von 48 Stunden umgesetzt.' },
+    { icon: <Wrench size={24} />, title: 'Komplette technische Betreuung', text: 'Updates, Sicherheit, Hosting – alles inklusive und in unserer Verantwortung.' },
+    { icon: <Shield size={24} />, title: 'Keine technischen Sorgen', text: 'Sie konzentrieren sich auf Ihr Geschäft, wir auf Ihre Website.' }
   ];
 
   return (
@@ -137,13 +144,22 @@ const WebsiteSeo: React.FC = () => {
             </motion.h1>
 
             <motion.p
-              className="text-xl text-light-200 mb-8 max-w-3xl mx-auto"
+              className="text-xl text-light-200 mb-4 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Moderne, schnelle Websites mit Suchmaschinenoptimierung – damit potenzielle Kunden
               Sie finden und von Ihrem Angebot überzeugt werden.
+            </motion.p>
+
+            <motion.p
+              className="text-light-300 mb-8 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              Beide Leistungen sind auch einzeln buchbar – je nach Ihren Bedürfnissen.
             </motion.p>
 
             <motion.button
@@ -154,7 +170,7 @@ const WebsiteSeo: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <ArrowRight className="mr-2" size={24} />
-              Website-Beratung anfordern
+              Beratung anfordern
             </motion.button>
           </div>
         </div>
@@ -215,13 +231,76 @@ const WebsiteSeo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Unsere <span className="text-primary-500">Website-Leistungen</span>
+                Unser <span className="text-primary-500">Website-Mietmodell</span>
               </h2>
+              <p className="text-light-200 max-w-3xl mx-auto">
+                Bei uns mieten Sie Ihre Website – mit Rundum-Betreuung und ohne technische Sorgen.
+                Sie bekommen eine professionelle Online-Präsenz, wir kümmern uns um alles Weitere.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {rentalBenefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-dark-400 p-6 border border-dark-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start">
+                    <div className="text-primary-500 mr-4 flex-shrink-0">{benefit.icon}</div>
+                    <div>
+                      <h3 className="text-lg font-heading font-bold text-light-100 mb-2">{benefit.title}</h3>
+                      <p className="text-light-300 text-sm">{benefit.text}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              className="bg-dark-400/50 border border-primary-500/30 p-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-100">
+                <strong className="text-primary-400">Keine Übergabe, keine Eigenverantwortung:</strong>
+                <br />
+                <span className="text-light-200">
+                  Ihre Website bleibt in unserer Betreuung. Sie müssen sich nie um technische Details kümmern –
+                  wir halten alles aktuell, sicher und performant.
+                </span>
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                Unsere <span className="text-primary-500">Leistungen</span>
+              </h2>
+              <p className="text-light-200 max-w-3xl mx-auto">
+                Website-Entwicklung und SEO – beide Leistungen auch einzeln buchbar.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <motion.div
-                className="bg-dark-400 p-8 border border-dark-100"
+                className="bg-dark-500 p-8 border border-dark-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -229,7 +308,7 @@ const WebsiteSeo: React.FC = () => {
               >
                 <div className="flex items-center mb-6">
                   <Globe size={32} className="text-primary-500 mr-4" />
-                  <h3 className="text-xl font-heading font-bold text-light-100">Webdesign & Entwicklung</h3>
+                  <h3 className="text-xl font-heading font-bold text-light-100">Website-Entwicklung</h3>
                 </div>
                 <ul className="space-y-3">
                   {websiteFeatures.map((feature, index) => (
@@ -242,7 +321,7 @@ const WebsiteSeo: React.FC = () => {
               </motion.div>
 
               <motion.div
-                className="bg-dark-400 p-8 border border-dark-100"
+                className="bg-dark-500 p-8 border border-dark-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -250,7 +329,7 @@ const WebsiteSeo: React.FC = () => {
               >
                 <div className="flex items-center mb-6">
                   <Search size={32} className="text-primary-500 mr-4" />
-                  <h3 className="text-xl font-heading font-bold text-light-100">SEO & Sichtbarkeit</h3>
+                  <h3 className="text-xl font-heading font-bold text-light-100">Suchmaschinenoptimierung (SEO)</h3>
                 </div>
                 <ul className="space-y-3">
                   {seoFeatures.map((feature, index) => (
@@ -266,7 +345,7 @@ const WebsiteSeo: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-400">
+      <section className="py-20 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -285,7 +364,7 @@ const WebsiteSeo: React.FC = () => {
               {processSteps.map((step, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-start bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-colors duration-300"
+                  className="flex items-start bg-dark-400 p-6 border border-dark-100 hover:border-primary-500/50 transition-colors duration-300"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -305,7 +384,7 @@ const WebsiteSeo: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-500">
+      <section className="py-20 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -324,7 +403,7 @@ const WebsiteSeo: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  className="bg-dark-400 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                  className="bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -341,7 +420,7 @@ const WebsiteSeo: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-400">
+      <section className="py-20 bg-dark-500">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -360,7 +439,7 @@ const WebsiteSeo: React.FC = () => {
               {targetAudiences.map((audience, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-start bg-dark-500 p-6 border border-dark-100"
+                  className="flex items-start bg-dark-400 p-6 border border-dark-100"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -380,7 +459,7 @@ const WebsiteSeo: React.FC = () => {
 
       <RelatedServices
         currentSlug="website-seo"
-        relatedSlugs={['content-video', 'automatisierungen', 'ki-assistenten']}
+        relatedSlugs={['content-video', 'ki-chatbots', 'telefonassistenten']}
       />
 
       <section className="py-20 bg-dark-500">

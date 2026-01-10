@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Bot,
+  MessageSquare,
+  Phone,
   Calendar,
   Target,
   Globe,
-  Workflow,
   Video,
   CheckCircle,
   ArrowRight,
@@ -35,25 +35,36 @@ const Services: React.FC = () => {
   };
 
   const coreServices = [
-    { icon: <Bot size={24} />, title: "KI-Chatbots & Telefonassistenten", slug: "ki-assistenten" },
+    { icon: <MessageSquare size={24} />, title: "KI-Chatbots für Ihre Website", slug: "ki-chatbots" },
+    { icon: <Phone size={24} />, title: "KI-Telefonassistenten", slug: "telefonassistenten" },
     { icon: <Calendar size={24} />, title: "Terminplanung & Buchungssysteme", slug: "termine-buchungen" },
     { icon: <Target size={24} />, title: "Lead-Management & CRM-Automatisierung", slug: "crm-lead-management" },
     { icon: <Globe size={24} />, title: "Websites mit integrierter Automatisierung & SEO", slug: "website-seo" },
-    { icon: <Workflow size={24} />, title: "Workflow-Automatisierung & Systemvernetzung", slug: "automatisierungen" },
     { icon: <Video size={24} />, title: "Content-Produktion & KI-Videos", slug: "content-video" },
   ];
 
   const serviceDetails: ServiceDetail[] = [
     {
-      icon: <Bot size={40} strokeWidth={1.5} />,
-      title: "KI-Chatbots & Telefonassistenten",
-      description: "Wir entwickeln digitale Assistenten, die Kundenanfragen automatisch per Website-Chat oder Telefon bearbeiten und dabei Ihr Team dauerhaft entlasten. Die Systeme lernen aus Ihren Inhalten, reagieren zuverlässig und führen Gespräche strukturiert und freundlich.",
+      icon: <MessageSquare size={40} strokeWidth={1.5} />,
+      title: "KI-Chatbots",
+      description: "Wir entwickeln intelligente Chatbots für Ihre Website, die Besucher begrüßen, Fragen beantworten und Leads qualifizieren. Die Systeme lernen aus Ihren Inhalten und führen Gespräche strukturiert und freundlich.",
       benefits: [
-        "Deutlich weniger Unterbrechungen im Tagesgeschäft",
-        "Sofortige Antworten für Ihre Kunden – auch außerhalb der Geschäftszeiten",
-        "Höhere Servicequalität bei gleichbleibender Arbeitsbelastung"
+        "Deutlich weniger Routineanfragen für Ihr Team",
+        "Sofortige Antworten für Ihre Website-Besucher – rund um die Uhr",
+        "Automatische Qualifizierung von Interessenten"
       ],
-      slug: "ki-assistenten"
+      slug: "ki-chatbots"
+    },
+    {
+      icon: <Phone size={40} strokeWidth={1.5} />,
+      title: "KI-Telefonassistenten",
+      description: "Wir entwickeln KI-Telefonassistenten, die Anrufe entgegennehmen, Anliegen verstehen und professionell bearbeiten. Nie wieder verpasste Anrufe – Ihr Unternehmen ist immer erreichbar.",
+      benefits: [
+        "Keine verpassten Anrufe mehr",
+        "Entlastung Ihres Teams von Routineanrufen",
+        "Professionelle Anrufannahme rund um die Uhr"
+      ],
+      slug: "telefonassistenten"
     },
     {
       icon: <Calendar size={40} strokeWidth={1.5} />,
@@ -80,24 +91,13 @@ const Services: React.FC = () => {
     {
       icon: <Globe size={40} strokeWidth={1.5} />,
       title: "Website-Entwicklung & SEO",
-      description: "Wir entwickeln moderne, schnelle Websites, die Ihr Unternehmen professionell präsentieren, Vertrauen aufbauen und neue Kunden gewinnen. Auf Wunsch können diese Websites gezielt mit Automatisierung, Terminbuchung und digitaler Kundenkommunikation erweitert werden.",
+      description: "Wir entwickeln moderne, schnelle Websites im Mietmodell – mit Rundum-Betreuung und ohne technische Sorgen. Auf Wunsch können diese Websites gezielt mit SEO, Automatisierung und digitaler Kundenkommunikation erweitert werden.",
       benefits: [
         "Starke Außenwirkung und klare Positionierung",
         "Mehr Sichtbarkeit bei Google durch strukturierte Suchmaschinenoptimierung",
-        "Flexible Erweiterbarkeit durch spätere Automatisierung"
+        "Full-Service-Betreuung mit Änderungen in 48 Stunden"
       ],
       slug: "website-seo"
-    },
-    {
-      icon: <Workflow size={40} strokeWidth={1.5} />,
-      title: "Workflow-Automatisierung & Systemvernetzung",
-      description: "Wir verbinden Ihre bestehenden Systeme zu einem durchgängigen Prozess. Informationen werden automatisch weitergegeben, Aufgaben sauber verteilt und Abläufe klar strukturiert. So entstehen stabile, fehlerarme Prozesse.",
-      benefits: [
-        "Keine doppelte Dateneingabe",
-        "Weniger Fehler und Rückfragen",
-        "Volle Transparenz über alle Abläufe"
-      ],
-      slug: "automatisierungen"
     },
     {
       icon: <Video size={40} strokeWidth={1.5} />,

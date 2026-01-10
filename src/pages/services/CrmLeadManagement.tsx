@@ -345,7 +345,7 @@ const CrmLeadManagement: React.FC = () => {
 
       <RelatedServices
         currentSlug="crm-lead-management"
-        relatedSlugs={['ki-assistenten', 'automatisierungen', 'website-seo']}
+        relatedSlugs={['ki-chatbots', 'telefonassistenten', 'termine-buchungen']}
       />
 
       <section className="py-20 bg-dark-500">

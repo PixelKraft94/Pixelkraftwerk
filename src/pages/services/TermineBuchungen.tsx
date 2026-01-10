@@ -345,7 +345,7 @@ const TermineBuchungen: React.FC = () => {
 
       <RelatedServices
         currentSlug="termine-buchungen"
-        relatedSlugs={['ki-assistenten', 'automatisierungen', 'website-seo']}
+        relatedSlugs={['ki-chatbots', 'telefonassistenten', 'crm-lead-management']}
       />
 
       <section className="py-20 bg-dark-500">
