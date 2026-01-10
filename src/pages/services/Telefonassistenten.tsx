@@ -6,7 +6,6 @@ import {
   CheckCircle,
   Clock,
   Users,
-  Zap,
   Shield,
   HeadphonesIcon,
   Building2,
@@ -27,17 +26,17 @@ const Telefonassistenten: React.FC = () => {
   };
 
   const problems = [
-    'Verpasste Anrufe kosten Sie regelmaessig potenzielle Auftraege?',
-    'Ihr Team wird staendig durch Telefonanrufe bei der Arbeit unterbrochen?',
-    'Ausserhalb der Geschaeftszeiten sind Sie telefonisch nicht erreichbar?',
-    'Die Qualitaet der Anrufannahme schwankt je nach Auslastung?'
+    'Verpasste Anrufe kosten Sie regelmäßig potenzielle Aufträge?',
+    'Ihr Team wird ständig durch Telefonanrufe bei der Arbeit unterbrochen?',
+    'Außerhalb der Geschäftszeiten sind Sie telefonisch nicht erreichbar?',
+    'Die Qualität der Anrufannahme schwankt je nach Auslastung?'
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'Analyse Ihrer Telefonie',
-      description: 'Wir analysieren Ihre haeufigsten Anrufgruende, Ihre Branche und Ihre spezifischen Anforderungen.'
+      description: 'Wir analysieren Ihre häufigsten Anrufgründe, Ihre Branche und Ihre spezifischen Anforderungen.'
     },
     {
       step: '02',
@@ -52,26 +51,26 @@ const Telefonassistenten: React.FC = () => {
     {
       step: '04',
       title: 'Test und Optimierung',
-      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gespraechen.'
+      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gesprächen.'
     },
     {
       step: '05',
       title: 'Dauerhafter Betrieb',
-      description: 'Ihr Telefonassistent arbeitet zuverlaessig rund um die Uhr - wir ueberwachen und optimieren fortlaufend.'
+      description: 'Ihr Telefonassistent arbeitet zuverlässig rund um die Uhr – wir überwachen und optimieren fortlaufend.'
     }
   ];
 
   const benefits = [
-    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit telefonisch erreichbar - auch nachts, am Wochenende und an Feiertagen.' },
-    { icon: <PhoneCall size={24} />, title: 'Keine verpassten Anrufe', text: 'Jeder Anruf wird angenommen und professionell bearbeitet - kein Kunde hoert mehr das Besetztzeichen.' },
-    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Ihr Team kann konzentriert arbeiten, waehrend der Assistent Routineanrufe bearbeitet.' },
-    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualitaet', text: 'Jeder Anrufer erhaelt dieselbe professionelle Betreuung - unabhaengig von Tageszeit oder Auslastung.' },
+    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit telefonisch erreichbar – auch nachts, am Wochenende und an Feiertagen.' },
+    { icon: <PhoneCall size={24} />, title: 'Keine verpassten Anrufe', text: 'Jeder Anruf wird angenommen und professionell bearbeitet – kein Kunde hört mehr das Besetztzeichen.' },
+    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Ihr Team kann konzentriert arbeiten, während der Assistent Routineanrufe bearbeitet.' },
+    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Anrufer erhält dieselbe professionelle Betreuung – unabhängig von Tageszeit oder Auslastung.' },
     { icon: <PhoneForwarded size={24} />, title: 'Intelligente Weiterleitung', text: 'Dringende Anrufe werden sofort an die richtige Person weitergeleitet.' },
-    { icon: <HeadphonesIcon size={24} />, title: 'Natuerliche Gespraeche', text: 'Moderne Sprachverarbeitung ermoeglicht natuerliche, fluessige Gespraeche.' }
+    { icon: <HeadphonesIcon size={24} />, title: 'Natürliche Gespräche', text: 'Moderne Sprachverarbeitung ermöglicht natürliche, flüssige Gespräche.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Fuer alle, die viele gleichartige Anrufe erhalten und schnelle Reaktionszeiten benoetigen.' },
+    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Für alle, die viele gleichartige Anrufe erhalten und schnelle Reaktionszeiten benötigen.' },
     { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlasten Sie Ihr Empfangsteam und bieten Sie Patienten/Mandanten rund um die Uhr Service.' },
     { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Bestellstatus, Lieferfragen und Reklamationen automatisch.' },
     { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Verpassen Sie keine Anfrage mehr und qualifizieren Sie Leads automatisch vor.' }
@@ -79,13 +78,13 @@ const Telefonassistenten: React.FC = () => {
 
   const features = [
     'Anrufannahme rund um die Uhr',
-    'Natuerliche Sprachverarbeitung und Sprachausgabe',
-    'Beantwortung haeufiger Fragen',
+    'Natürliche Sprachverarbeitung und Sprachausgabe',
+    'Beantwortung häufiger Fragen',
     'Terminvereinbarung und Kalenderintegration',
-    'Weiterleitung an zustaendige Mitarbeiter',
-    'Erfassung von Rueckrufwuenschen',
+    'Weiterleitung an zuständige Mitarbeiter',
+    'Erfassung von Rückrufwünschen',
     'Priorisierung dringender Anliegen',
-    'Mehrsprachige Unterstuetzung',
+    'Mehrsprachige Unterstützung',
     'Detaillierte Anrufprotokolle',
     'Integration mit Ihrem CRM-System'
   ];
@@ -94,7 +93,7 @@ const Telefonassistenten: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="KI-Telefonassistenten"
-        description="Intelligente Telefonassistenten fuer automatische Anrufannahme. Nie wieder verpasste Anrufe - professioneller Service rund um die Uhr."
+        description="Intelligente Telefonassistenten für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
         keywords={['Telefonassistent KI', 'Automatische Anrufannahme', 'KI Telefon', 'Virtuelle Telefonzentrale', 'Telefon Automatisierung']}
       />
 
@@ -122,7 +121,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               KI-Telefonassistenten
-              <span className="block text-primary-500 mt-2">fuer Ihr Unternehmen</span>
+              <span className="block text-primary-500 mt-2">für Ihr Unternehmen</span>
             </motion.h1>
 
             <motion.p
@@ -131,8 +130,8 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              KI-Systeme, die Anrufe entgegennehmen, Anliegen verstehen und professionell bearbeiten -
-              mit natuerlicher Sprachausgabe und rund um die Uhr verfuegbar.
+              KI-Systeme, die Anrufe entgegennehmen, Anliegen verstehen und professionell bearbeiten –
+              mit natürlicher Sprachausgabe und rund um die Uhr verfügbar.
             </motion.p>
 
             <motion.button
@@ -187,7 +186,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Telefonassistent genau die richtige Loesung fuer Sie.</strong>
+              <strong>Dann ist ein KI-Telefonassistent genau die richtige Lösung für Sie.</strong>
             </motion.p>
           </div>
         </div>
@@ -207,8 +206,8 @@ const Telefonassistenten: React.FC = () => {
                 Was Ihr <span className="text-primary-500">Telefonassistent leistet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Telefonassistent ist ein intelligentes System, das natuerliche Sprache versteht und
-                Kundenanfragen selbststaendig am Telefon beantwortet.
+                Ein KI-Telefonassistent ist ein intelligentes System, das natürliche Sprache versteht und
+                Kundenanfragen selbstständig am Telefon beantwortet.
               </p>
             </motion.div>
 
@@ -247,7 +246,7 @@ const Telefonassistenten: React.FC = () => {
                 So entsteht <span className="text-primary-500">Ihr Telefonassistent</span>
               </h2>
               <p className="text-light-200">
-                Von der ersten Analyse bis zum laufenden Betrieb - unser bewaehrter Prozess.
+                Von der ersten Analyse bis zum laufenden Betrieb – unser bewährter Prozess.
               </p>
             </motion.div>
 
@@ -322,7 +321,7 @@ const Telefonassistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Branchen</span>
+                Ideal für <span className="text-primary-500">diese Branchen</span>
               </h2>
             </motion.div>
 
@@ -362,11 +361,11 @@ const Telefonassistenten: React.FC = () => {
                 <MessageSquare size={24} className="text-primary-500 mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-heading font-bold text-light-100 mb-2">
-                    Sie moechten auch auf Ihrer Website erreichbar sein?
+                    Sie möchten auch auf Ihrer Website erreichbar sein?
                   </h3>
                   <p className="text-light-300 mb-4">
-                    Ergaenzen Sie Ihren Telefonassistenten mit einem KI-Chatbot und bieten Sie
-                    Ihren Kunden auf allen Kanaelen professionellen Service.
+                    Ergänzen Sie Ihren Telefonassistenten mit einem KI-Chatbot und bieten Sie
+                    Ihren Kunden auf allen Kanälen professionellen Service.
                   </p>
                   <a
                     href="/ki-chatbots"
@@ -397,7 +396,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">professionelle Anrufannahme?</span>
+              Bereit für <span className="text-primary-500">professionelle Anrufannahme?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"

@@ -28,14 +28,14 @@ const KiChatbots: React.FC = () => {
     'Website-Besucher verlassen Ihre Seite, ohne Kontakt aufzunehmen?',
     'Ihr Team beantwortet immer wieder dieselben Fragen per E-Mail oder Telefon?',
     'Potenzielle Kunden warten zu lange auf eine Antwort und wenden sich an die Konkurrenz?',
-    'Ausserhalb der Geschaeftszeiten gehen wertvolle Anfragen verloren?'
+    'Außerhalb der Geschäftszeiten gehen wertvolle Anfragen verloren?'
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'Analyse Ihrer Kommunikation',
-      description: 'Wir analysieren Ihre haeufigsten Kundenanfragen, Ihre Branche und Ihre spezifischen Anforderungen.'
+      description: 'Wir analysieren Ihre häufigsten Kundenanfragen, Ihre Branche und Ihre spezifischen Anforderungen.'
     },
     {
       step: '02',
@@ -50,34 +50,34 @@ const KiChatbots: React.FC = () => {
     {
       step: '04',
       title: 'Test und Optimierung',
-      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gespraechen.'
+      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gesprächen.'
     },
     {
       step: '05',
       title: 'Dauerhafter Betrieb',
-      description: 'Ihr Chatbot arbeitet zuverlaessig rund um die Uhr - wir ueberwachen und optimieren fortlaufend.'
+      description: 'Ihr Chatbot arbeitet zuverlässig rund um die Uhr – wir überwachen und optimieren fortlaufend.'
     }
   ];
 
   const benefits = [
-    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Chatbot ist jederzeit ansprechbar - auch nachts, am Wochenende und an Feiertagen.' },
+    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Chatbot ist jederzeit ansprechbar – auch nachts, am Wochenende und an Feiertagen.' },
     { icon: <Zap size={24} />, title: 'Sofortige Reaktion', text: 'Besucher erhalten innerhalb von Sekunden qualifizierte Antworten auf ihre Fragen.' },
     { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Bis zu 80% weniger Routineanfragen, die Ihr Team beantworten muss.' },
-    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualitaet', text: 'Jeder Besucher erhaelt dieselbe professionelle Betreuung - unabhaengig von Tageszeit oder Auslastung.' },
-    { icon: <HeadphonesIcon size={24} />, title: 'Mehrsprachig moeglich', text: 'Bedienen Sie internationale Kunden in ihrer Muttersprache ohne zusaetzliches Personal.' },
-    { icon: <MessageSquare size={24} />, title: 'Lernfaehiges System', text: 'Der Chatbot wird mit jeder Interaktion besser und passt sich Ihren Beduerfnissen an.' }
+    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Besucher erhält dieselbe professionelle Betreuung – unabhängig von Tageszeit oder Auslastung.' },
+    { icon: <HeadphonesIcon size={24} />, title: 'Mehrsprachig möglich', text: 'Bedienen Sie internationale Kunden in ihrer Muttersprache ohne zusätzliches Personal.' },
+    { icon: <MessageSquare size={24} />, title: 'Lernfähiges System', text: 'Der Chatbot wird mit jeder Interaktion besser und passt sich Ihren Bedürfnissen an.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Fuer alle, die viele gleichartige Anfragen erhalten und schnelle Reaktionszeiten benoetigen.' },
+    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Für alle, die viele gleichartige Anfragen erhalten und schnelle Reaktionszeiten benötigen.' },
     { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlasten Sie Ihr Empfangsteam und bieten Sie Patienten/Mandanten rund um die Uhr Service.' },
-    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Produktfragen, Lieferstatus und Rueckgabeanfragen automatisch.' },
+    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Produktfragen, Lieferstatus und Rückgabeanfragen automatisch.' },
     { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Verpassen Sie keine Anfrage mehr und qualifizieren Sie Leads automatisch vor.' }
   ];
 
   const features = [
-    'Automatische Begruessung von Website-Besuchern',
-    'Beantwortung haeufiger Fragen (FAQs)',
+    'Automatische Begrüßung von Website-Besuchern',
+    'Beantwortung häufiger Fragen (FAQs)',
     'Qualifizierung von Leads und Interessenten',
     'Direkte Terminbuchung im Chat',
     'Weiterleitung komplexer Anfragen an Ihr Team',
@@ -85,14 +85,14 @@ const KiChatbots: React.FC = () => {
     'Integration mit Ihrem CRM-System',
     'Anpassbares Design passend zu Ihrer Marke',
     'Detaillierte Auswertungen und Chat-Protokolle',
-    'Mehrsprachige Unterstuetzung'
+    'Mehrsprachige Unterstützung'
   ];
 
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="KI-Chatbots fuer Ihre Website"
-        description="Intelligente Website-Chatbots fuer automatische Kundenbetreuung. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
+        title="KI-Chatbots für Ihre Website"
+        description="Intelligente Website-Chatbots für automatische Kundenbetreuung. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
         keywords={['KI-Chatbot', 'Website Chatbot', 'Chatbot Unternehmen', 'Kundenservice Automatisierung', 'Live Chat KI']}
       />
 
@@ -120,7 +120,7 @@ const KiChatbots: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               KI-Chatbots
-              <span className="block text-primary-500 mt-2">fuer Ihre Website</span>
+              <span className="block text-primary-500 mt-2">für Ihre Website</span>
             </motion.h1>
 
             <motion.p
@@ -129,8 +129,8 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Digitale Assistenten, die Ihre Website-Besucher begruessen, Fragen beantworten
-              und Leads qualifizieren - professionell, rund um die Uhr und ohne Ihr Team zu belasten.
+              Digitale Assistenten, die Ihre Website-Besucher begrüßen, Fragen beantworten
+              und Leads qualifizieren – professionell, rund um die Uhr und ohne Ihr Team zu belasten.
             </motion.p>
 
             <motion.button
@@ -185,7 +185,7 @@ const KiChatbots: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Chatbot genau die richtige Loesung fuer Sie.</strong>
+              <strong>Dann ist ein KI-Chatbot genau die richtige Lösung für Sie.</strong>
             </motion.p>
           </div>
         </div>
@@ -205,8 +205,8 @@ const KiChatbots: React.FC = () => {
                 Was Ihr <span className="text-primary-500">Chatbot leistet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Chatbot ist ein intelligentes System, das natuerliche Sprache versteht und
-                Kundenanfragen selbststaendig beantwortet - direkt auf Ihrer Website.
+                Ein KI-Chatbot ist ein intelligentes System, das natürliche Sprache versteht und
+                Kundenanfragen selbstständig beantwortet – direkt auf Ihrer Website.
               </p>
             </motion.div>
 
@@ -245,7 +245,7 @@ const KiChatbots: React.FC = () => {
                 So entsteht <span className="text-primary-500">Ihr KI-Chatbot</span>
               </h2>
               <p className="text-light-200">
-                Von der ersten Analyse bis zum laufenden Betrieb - unser bewaehrter Prozess.
+                Von der ersten Analyse bis zum laufenden Betrieb – unser bewährter Prozess.
               </p>
             </motion.div>
 
@@ -320,7 +320,7 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Branchen</span>
+                Ideal für <span className="text-primary-500">diese Branchen</span>
               </h2>
             </motion.div>
 
@@ -360,11 +360,11 @@ const KiChatbots: React.FC = () => {
                 <Phone size={24} className="text-primary-500 mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-heading font-bold text-light-100 mb-2">
-                    Sie moechten auch telefonisch erreichbar sein?
+                    Sie möchten auch telefonisch erreichbar sein?
                   </h3>
                   <p className="text-light-300 mb-4">
-                    Ergaenzen Sie Ihren Website-Chatbot mit einem KI-Telefonassistenten und bieten Sie
-                    Ihren Kunden auf allen Kanaelen professionellen Service.
+                    Ergänzen Sie Ihren Website-Chatbot mit einem KI-Telefonassistenten und bieten Sie
+                    Ihren Kunden auf allen Kanälen professionellen Service.
                   </p>
                   <a
                     href="/telefonassistenten"
@@ -395,7 +395,7 @@ const KiChatbots: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">bessere Kundenbetreuung?</span>
+              Bereit für <span className="text-primary-500">bessere Kundenbetreuung?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"
