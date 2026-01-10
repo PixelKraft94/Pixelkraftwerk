@@ -37,9 +37,9 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <GoogleMapsSection />
-
         <ContactForm />
+
+        <GoogleMapsSection />
       </div>
     </div>
   );
