@@ -16,6 +16,7 @@ import {
   DollarSign
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import GoogleMapsSection from '../components/GoogleMapsSection';
 import SEOHead from '../components/SEOHead';
 import ServiceItemListSchema from '../components/ServiceItemListSchema';
 
@@ -355,6 +356,9 @@ const Services: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* GOOGLE MAPS */}
+      <GoogleMapsSection />
 
       {/* CONTACT FORM */}
       <ContactForm />

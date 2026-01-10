@@ -19,6 +19,7 @@ import {
   HeadphonesIcon
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
+import GoogleMapsSection from '../../components/GoogleMapsSection';
 import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
@@ -488,6 +489,8 @@ const WebsiteSeo: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <GoogleMapsSection />
 
       <ContactForm />
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import GoogleMapsSection from '../components/GoogleMapsSection';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import SEOHead from '../components/SEOHead';
 
@@ -100,7 +101,9 @@ const About: React.FC = () => {
             </p>
           </div>
         </div>
-        
+
+        <GoogleMapsSection />
+
         <ContactForm />
       </div>
     </div>

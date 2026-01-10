@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle, ArrowRight, Calendar, MessageCircle, Target, Workflow, Globe, Video } from 'lucide-react';
 import { BackgroundPaths } from '../components/ui/background-paths';
 import ContactForm from '../components/ContactForm';
+import GoogleMapsSection from '../components/GoogleMapsSection';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import WebSiteSchema from '../components/WebSiteSchema';
 import SEOHead from '../components/SEOHead';
@@ -745,6 +746,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* GOOGLE MAPS */}
+      <GoogleMapsSection />
 
       {/* CONTACT FORM */}
       <ContactForm />

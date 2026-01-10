@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelpCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import GoogleMapsSection from '../components/GoogleMapsSection';
 
 const Faq: React.FC = () => {
   return (
@@ -195,7 +196,9 @@ const Faq: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
+        <GoogleMapsSection />
+
         <ContactForm />
       </div>
     </div>

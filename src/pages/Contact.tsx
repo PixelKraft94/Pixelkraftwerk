@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import GoogleMapsSection from '../components/GoogleMapsSection';
 import NAPInfo from '../components/NAPInfo';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import SEOHead from '../components/SEOHead';
@@ -35,7 +36,9 @@ const Contact: React.FC = () => {
             Als Ihr Partner für KI-Automatisierung in Groitzsch und Leipzig melden wir uns zeitnah zurück – kompetent, unverbindlich und persönlich.
           </p>
         </div>
-        
+
+        <GoogleMapsSection />
+
         <ContactForm />
       </div>
     </div>
