@@ -18,8 +18,8 @@ export const businessInfo = {
   },
 
   geo: {
-    latitude: 51.1556,
-    longitude: 12.2889
+    latitude: 51.1571,
+    longitude: 12.2886
   },
 
   url: "https://pixelkraftwerk-ai.com",

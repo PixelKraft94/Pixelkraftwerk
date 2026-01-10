@@ -6,9 +6,8 @@ import { businessInfo } from '../data/businessInfo';
 const GoogleMapsSection: React.FC = () => {
   const address = `${businessInfo.address.streetAddress}, ${businessInfo.address.postalCode} ${businessInfo.address.addressLocality}`;
   const encodedAddress = encodeURIComponent(address);
-  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=&q=${encodedAddress}&zoom=15`;
 
-  const fallbackMapUrl = `https://www.google.com/maps?q=${businessInfo.geo.latitude},${businessInfo.geo.longitude}&hl=de&z=15&output=embed`;
+  const mapUrl = `https://www.google.com/maps?q=${encodedAddress}&hl=de&z=16&output=embed`;
 
   return (
     <section className="py-16 bg-dark-400">
@@ -35,7 +34,7 @@ const GoogleMapsSection: React.FC = () => {
           <div className="relative w-full h-[400px] md:h-[450px] bg-dark-500 border-2 border-dark-100 overflow-hidden">
             <div className="absolute inset-0">
               <iframe
-                src={fallbackMapUrl}
+                src={mapUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%)' }}
@@ -60,7 +59,7 @@ const GoogleMapsSection: React.FC = () => {
                     {businessInfo.address.postalCode} {businessInfo.address.addressLocality}
                   </p>
                   <a
-                    href={`https://www.google.com/maps/dir//${businessInfo.geo.latitude},${businessInfo.geo.longitude}`}
+                    href={`https://www.google.com/maps/dir//${encodedAddress}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-2 text-primary-500 text-sm font-heading font-bold hover:text-primary-400 transition-colors duration-200"
