@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import SEOHead from '../components/SEOHead';
+import ServiceItemListSchema from '../components/ServiceItemListSchema';
 
 interface ServiceDetail {
   icon: React.ReactNode;
@@ -127,6 +128,7 @@ const Services: React.FC = () => {
         description="KI-Chatbots, Terminplanung, Lead-Management, Websites mit SEO, Workflow-Automatisierung und KI-Videos. Wir entwickeln intelligente Systeme, die Ihr Unternehmen entlasten."
         keywords={['KI-Chatbot', 'Terminbuchung', 'Lead-Management', 'Website SEO', 'Workflow-Automatisierung', 'KI-Videos']}
       />
+      <ServiceItemListSchema />
 
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-24 bg-dark-500 overflow-hidden">

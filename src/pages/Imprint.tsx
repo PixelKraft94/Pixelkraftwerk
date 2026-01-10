@@ -22,7 +22,7 @@ const Imprint: React.FC = () => {
           <div>
             <h2 className="text-lg font-heading font-bold text-light-100 mb-4"><span className="text-primary-500">Kontakt</span></h2>
             <div className="space-y-1 text-sm text-light-200">
-              <p>Telefon: 0178 5844460</p>
+              <p>Telefon: 01785844460</p>
               <p>E-Mail: kontakt@pixelkraftwerk-ai.com</p>
             </div>
           </div>

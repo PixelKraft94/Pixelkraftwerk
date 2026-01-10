@@ -38,7 +38,7 @@ const BreadcrumbSchema: React.FC<BreadcrumbSchemaProps> = ({ serviceName, servic
           "@type": "ListItem",
           "position": 3,
           "name": serviceName,
-          "item": `https://pixelkraftwerk-ai.com${serviceUrl}`
+          "item": serviceUrl
         }
       ]
     };

@@ -13,13 +13,13 @@ export const businessInfo = {
   },
 
   contact: {
-    telephone: "0178 5844460",
+    telephone: "01785844460",
     email: "kontakt@pixelkraftwerk-ai.com"
   },
 
   geo: {
-    latitude: "51.1556",
-    longitude: "12.2889"
+    latitude: 51.1556,
+    longitude: 12.2889
   },
 
   url: "https://pixelkraftwerk-ai.com",

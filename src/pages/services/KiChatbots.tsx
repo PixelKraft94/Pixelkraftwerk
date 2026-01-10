@@ -94,7 +94,7 @@ const KiChatbots: React.FC = () => {
         description="Intelligente Website-Chatbots für automatische Kundenbetreuung. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
         keywords={['KI-Chatbot', 'Website Chatbot', 'Chatbot Unternehmen', 'Kundenservice Automatisierung', 'Live Chat KI']}
       />
-      <BreadcrumbSchema serviceName="KI-Chatbots" serviceUrl="/ki-chatbots" />
+      <BreadcrumbSchema serviceName="KI-Chatbots" serviceUrl="https://pixelkraftwerk-ai.com/ki-chatbots" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">

@@ -15,7 +15,7 @@ const Terms: React.FC = () => {
           <div className="mb-4">
             <p className="text-light-100 mb-1">Pixel Kraftwerk - Franke & Brause GbR</p>
             <p className="text-light-100 mb-1">Kontakt: kontakt@pixelkraftwerk-ai.com</p>
-            <p className="text-light-100 mb-1">Telefon: 0178 5844460</p>
+            <p className="text-light-100 mb-1">Telefon: 01785844460</p>
           </div>
         </div>
         

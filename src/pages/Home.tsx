@@ -4,6 +4,7 @@ import { ChevronDown, CheckCircle, ArrowRight, Calendar, MessageCircle, Target, 
 import { BackgroundPaths } from '../components/ui/background-paths';
 import ContactForm from '../components/ContactForm';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
+import WebSiteSchema from '../components/WebSiteSchema';
 import SEOHead from '../components/SEOHead';
 
 const Home: React.FC = () => {
@@ -89,6 +90,7 @@ const Home: React.FC = () => {
         keywords={['KI Automatisierung', 'Prozessautomatisierung Leipzig', 'Chatbot', 'Terminbuchung automatisch', 'Lead Management']}
       />
       <LocalBusinessSchema pageType="homepage" />
+      <WebSiteSchema />
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center bg-dark-500 overflow-hidden">
@@ -168,6 +170,190 @@ const Home: React.FC = () => {
         >
           <ChevronDown size={32} />
         </motion.button>
+      </section>
+
+      {/* SERVICES HUB SECTION */}
+      <section className="py-24 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-light-100 mb-4">
+                Unsere <span className="text-primary-500">Leistungen</span>
+              </h2>
+              <p className="text-lg text-light-200 max-w-3xl mx-auto">
+                Digitale Lösungen, die Ihr Unternehmen entlasten und Ihre Prozesse automatisieren.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <motion.a
+                href="/ki-chatbots"
+                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="text-primary-500 mb-4">
+                  <MessageCircle size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                  KI-Chatbots
+                </h3>
+                <p className="text-light-300 text-sm mb-4">
+                  Intelligente Chatbots für Ihre Website. Automatische Kundenbetreuung rund um die Uhr.
+                </p>
+                <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
+                  Mehr erfahren
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
+              </motion.a>
+
+              <motion.a
+                href="/telefonassistenten"
+                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="text-primary-500 mb-4">
+                  <Workflow size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                  KI-Telefonassistenten
+                </h3>
+                <p className="text-light-300 text-sm mb-4">
+                  Automatische Anrufannahme und professionelle Kundenbetreuung am Telefon.
+                </p>
+                <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
+                  Mehr erfahren
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
+              </motion.a>
+
+              <motion.a
+                href="/termine-buchungen"
+                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="text-primary-500 mb-4">
+                  <Calendar size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                  Terminplanung & Buchungen
+                </h3>
+                <p className="text-light-300 text-sm mb-4">
+                  Online-Terminbuchung mit automatischer Kalenderplanung und Erinnerungen.
+                </p>
+                <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
+                  Mehr erfahren
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
+              </motion.a>
+
+              <motion.a
+                href="/crm-lead-management"
+                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="text-primary-500 mb-4">
+                  <Target size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                  CRM & Lead-Management
+                </h3>
+                <p className="text-light-300 text-sm mb-4">
+                  Strukturierte Kundenverwaltung mit automatischer Lead-Erfassung und Follow-ups.
+                </p>
+                <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
+                  Mehr erfahren
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
+              </motion.a>
+
+              <motion.a
+                href="/website-seo"
+                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="text-primary-500 mb-4">
+                  <Globe size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                  Website & SEO
+                </h3>
+                <p className="text-light-300 text-sm mb-4">
+                  Moderne Websites mit Suchmaschinenoptimierung für mehr Sichtbarkeit.
+                </p>
+                <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
+                  Mehr erfahren
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
+              </motion.a>
+
+              <motion.a
+                href="/content-video"
+                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4 }}
+              >
+                <div className="text-primary-500 mb-4">
+                  <Video size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
+                  Content & KI-Videos
+                </h3>
+                <p className="text-light-300 text-sm mb-4">
+                  Professionelle Content-Produktion mit moderner KI-Technologie.
+                </p>
+                <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
+                  Mehr erfahren
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </div>
+              </motion.a>
+            </div>
+
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-4 bg-dark-500 border-2 border-primary-500 text-primary-500 font-heading font-bold text-lg hover:bg-primary-500 hover:text-dark-500 transition-all duration-300"
+              >
+                Alle Leistungen im Detail
+                <ArrowRight className="ml-2" size={24} />
+              </a>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* PROBLEM SECTION */}

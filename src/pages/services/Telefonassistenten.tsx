@@ -95,7 +95,7 @@ const Telefonassistenten: React.FC = () => {
         description="Intelligente Telefonassistenten für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
         keywords={['Telefonassistent KI', 'Automatische Anrufannahme', 'KI Telefon', 'Virtuelle Telefonzentrale', 'Telefon Automatisierung']}
       />
-      <BreadcrumbSchema serviceName="KI-Telefonassistenten" serviceUrl="/telefonassistenten" />
+      <BreadcrumbSchema serviceName="KI-Telefonassistenten" serviceUrl="https://pixelkraftwerk-ai.com/telefonassistenten" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">

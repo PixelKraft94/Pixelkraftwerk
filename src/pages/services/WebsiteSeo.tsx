@@ -116,7 +116,7 @@ const WebsiteSeo: React.FC = () => {
         description="Moderne Websites mit Suchmaschinenoptimierung. Professionelles Webdesign und SEO für mehr Sichtbarkeit bei Google und mehr Kundenanfragen."
         keywords={['Website erstellen', 'Webdesign', 'SEO Optimierung', 'Suchmaschinenoptimierung', 'Lokale SEO']}
       />
-      <BreadcrumbSchema serviceName="Website-Entwicklung & SEO" serviceUrl="/website-seo" />
+      <BreadcrumbSchema serviceName="Website-Entwicklung & SEO" serviceUrl="https://pixelkraftwerk-ai.com/website-seo" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
