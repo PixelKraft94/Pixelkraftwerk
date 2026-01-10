@@ -23,8 +23,8 @@ export const businessInfo = {
   },
 
   url: "https://pixelkraftwerk-ai.com",
-  logo: "https://pixelkraftwerk-ai.com/Favicon_PK_black_square.png",
-  image: "https://pixelkraftwerk-ai.com/Favicon_PK_black_square.png",
+  logo: "https://pixelkraftwerk-ai.com/pixelkraftwerk-logo-quadrat.png",
+  image: "https://pixelkraftwerk-ai.com/pixelkraftwerk-logo-quadrat.png",
 
   founders: [
     { name: "Lukas Franke" },
