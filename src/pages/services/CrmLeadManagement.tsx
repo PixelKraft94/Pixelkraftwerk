@@ -18,6 +18,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const CrmLeadManagement: React.FC = () => {
   const scrollToContact = () => {
@@ -93,6 +94,7 @@ const CrmLeadManagement: React.FC = () => {
         description="Intelligentes CRM-System für strukturierte Kundenverwaltung. Automatische Lead-Erfassung, Qualifizierung und Follow-ups für mehr Abschlüsse."
         keywords={['CRM System', 'Lead Management', 'Vertriebsautomatisierung', 'Kundenverwaltung', 'Sales Pipeline']}
       />
+      <BreadcrumbSchema serviceName="Lead-Management & CRM-Automatisierung" serviceUrl="/crm-lead-management" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">

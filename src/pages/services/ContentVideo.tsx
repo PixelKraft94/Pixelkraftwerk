@@ -18,6 +18,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const ContentVideo: React.FC = () => {
   const scrollToContact = () => {
@@ -120,6 +121,7 @@ const ContentVideo: React.FC = () => {
         description="Professionelle Texte, Bilder und Videos. Bilder und Videos mit KI-Technologie, Texte von erfahrenen Redakteuren. Schnelle Content-Erstellung für Social Media und Marketing."
         keywords={['KI Content', 'KI Video', 'Content Produktion', 'Social Media Content', 'Video Produktion']}
       />
+      <BreadcrumbSchema serviceName="Content-Produktion & KI-Videos" serviceUrl="/content-video" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">

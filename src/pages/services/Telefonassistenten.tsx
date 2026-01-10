@@ -19,6 +19,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const Telefonassistenten: React.FC = () => {
   const scrollToContact = () => {
@@ -94,6 +95,7 @@ const Telefonassistenten: React.FC = () => {
         description="Intelligente Telefonassistenten für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
         keywords={['Telefonassistent KI', 'Automatische Anrufannahme', 'KI Telefon', 'Virtuelle Telefonzentrale', 'Telefon Automatisierung']}
       />
+      <BreadcrumbSchema serviceName="KI-Telefonassistenten" serviceUrl="/telefonassistenten" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">

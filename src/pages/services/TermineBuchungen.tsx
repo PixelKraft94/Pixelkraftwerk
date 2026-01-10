@@ -18,6 +18,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const TermineBuchungen: React.FC = () => {
   const scrollToContact = () => {
@@ -95,6 +96,7 @@ const TermineBuchungen: React.FC = () => {
         description="Intelligente Online-Terminbuchung für Ihr Unternehmen. Automatische Kalenderplanung, Erinnerungen und Kundenverwaltung – ohne Telefonmarathon."
         keywords={['Online Terminbuchung', 'Buchungssystem', 'Terminplanung Software', 'Kalender Automatisierung', 'Terminverwaltung']}
       />
+      <BreadcrumbSchema serviceName="Terminplanung & Buchungssysteme" serviceUrl="/termine-buchungen" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
