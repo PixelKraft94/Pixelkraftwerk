@@ -25,9 +25,9 @@ const CrmLeadManagement: React.FC = () => {
   };
 
   const problems = [
-    'Anfragen gehen unter oder werden zu spaet bearbeitet?',
-    'Sie haben keinen Ueberblick, welche Leads wie weit im Vertriebsprozess sind?',
-    'Kundendaten sind ueber verschiedene Systeme und Excel-Listen verstreut?',
+    'Anfragen gehen unter oder werden zu spät bearbeitet?',
+    'Sie haben keinen Überblick, welche Leads wie weit im Vertriebsprozess sind?',
+    'Kundendaten sind über verschiedene Systeme und Excel-Listen verstreut?',
     'Follow-ups werden vergessen und potenzielle Kunden verloren?'
   ];
 
@@ -40,7 +40,7 @@ const CrmLeadManagement: React.FC = () => {
     {
       step: '02',
       title: 'CRM-Konzept',
-      description: 'Entwicklung einer massgeschneiderten CRM-Struktur mit passenden Feldern und Workflows.'
+      description: 'Entwicklung einer maßgeschneiderten CRM-Struktur mit passenden Feldern und Workflows.'
     },
     {
       step: '03',
@@ -64,35 +64,35 @@ const CrmLeadManagement: React.FC = () => {
     { icon: <Filter size={24} />, title: 'Automatische Qualifizierung', text: 'Leads werden automatisch bewertet und priorisiert – Sie fokussieren auf die besten Chancen.' },
     { icon: <Zap size={24} />, title: 'Schnellere Reaktion', text: 'Automatische Benachrichtigungen bei neuen Anfragen – keine verpassten Gelegenheiten mehr.' },
     { icon: <Mail size={24} />, title: 'Automatische Follow-ups', text: 'Das System erinnert an Nachfassaktionen und kann E-Mails automatisch versenden.' },
-    { icon: <TrendingUp size={24} />, title: 'Pipeline-Ueberblick', text: 'Sehen Sie auf einen Blick, wo jeder Lead steht und welche Abschluesse bevorstehen.' },
-    { icon: <BarChart3 size={24} />, title: 'Aussagekraeftige Reports', text: 'Detaillierte Auswertungen zu Conversion-Raten, Reaktionszeiten und Umsatzprognosen.' }
+    { icon: <TrendingUp size={24} />, title: 'Pipeline-Überblick', text: 'Sehen Sie auf einen Blick, wo jeder Lead steht und welche Abschlüsse bevorstehen.' },
+    { icon: <BarChart3 size={24} />, title: 'Aussagekräftige Reports', text: 'Detaillierte Auswertungen zu Conversion-Raten, Reaktionszeiten und Umsatzprognosen.' }
   ];
 
   const targetAudiences = [
     { icon: <Building2 size={28} />, title: 'B2B-Dienstleister', description: 'Komplexe Vertriebszyklen strukturiert managen und Opportunities tracken.' },
     { icon: <Home size={28} />, title: 'Immobilien & Makler', description: 'Interessenten systematisch erfassen, qualifizieren und bis zum Abschluss begleiten.' },
     { icon: <Briefcase size={28} />, title: 'Beratung & Agenturen', description: 'Projektanfragen priorisieren und Kundenbeziehungen langfristig pflegen.' },
-    { icon: <ShoppingCart size={28} />, title: 'Vertriebsteams', description: 'Team-Leads zuweisen, Aktivitaeten tracken und Vertriebsziele verfolgen.' }
+    { icon: <ShoppingCart size={28} />, title: 'Vertriebsteams', description: 'Team-Leads zuweisen, Aktivitäten tracken und Vertriebsziele verfolgen.' }
   ];
 
   const features = [
-    'Automatische Lead-Erfassung aus allen Kanaelen',
+    'Automatische Lead-Erfassung aus allen Kanälen',
     'Intelligente Lead-Scoring und Priorisierung',
     'Visuelle Vertriebs-Pipeline (Kanban)',
     'Automatische Aufgaben und Erinnerungen',
     'E-Mail-Integration und Tracking',
-    'Kontakthistorie und Aktivitaetsprotokoll',
+    'Kontakthistorie und Aktivitätsprotokoll',
     'Team-Zuweisung und Verantwortlichkeiten',
     'Anpassbare Felder und Kategorien',
     'Detaillierte Reporting-Dashboards',
-    'Mobile App fuer Aussendienst'
+    'Mobile App für Außendienst'
   ];
 
   return (
     <div className="bg-dark-500">
       <SEOHead
         title="Lead-Management & CRM-Automatisierung"
-        description="Intelligentes CRM-System fuer strukturierte Kundenverwaltung. Automatische Lead-Erfassung, Qualifizierung und Follow-ups fuer mehr Abschluesse."
+        description="Intelligentes CRM-System für strukturierte Kundenverwaltung. Automatische Lead-Erfassung, Qualifizierung und Follow-ups für mehr Abschlüsse."
         keywords={['CRM System', 'Lead Management', 'Vertriebsautomatisierung', 'Kundenverwaltung', 'Sales Pipeline']}
       />
 
@@ -120,7 +120,7 @@ const CrmLeadManagement: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               Lead-Management & CRM
-              <span className="block text-primary-500 mt-2">fuer strukturierten Vertrieb</span>
+              <span className="block text-primary-500 mt-2">für strukturierten Vertrieb</span>
             </motion.h1>
 
             <motion.p
@@ -130,7 +130,7 @@ const CrmLeadManagement: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Individuelle CRM-Systeme, die Anfragen automatisch erfassen, strukturieren, bewerten
-              und an die zustaendigen Ansprechpartner weiterleiten.
+              und an die zuständigen Ansprechpartner weiterleiten.
             </motion.p>
 
             <motion.button
@@ -185,7 +185,7 @@ const CrmLeadManagement: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Ein professionelles CRM-System schafft Ordnung und Ueberblick.</strong>
+              <strong>Ein professionelles CRM-System schafft Ordnung und Überblick.</strong>
             </motion.p>
           </div>
         </div>
@@ -317,7 +317,7 @@ const CrmLeadManagement: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Unternehmen</span>
+                Ideal für <span className="text-primary-500">diese Unternehmen</span>
               </h2>
             </motion.div>
 
@@ -358,7 +358,7 @@ const CrmLeadManagement: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">strukturierten Vertrieb?</span>
+              Bereit für <span className="text-primary-500">strukturierten Vertrieb?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"

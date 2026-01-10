@@ -25,27 +25,27 @@ const TermineBuchungen: React.FC = () => {
   };
 
   const problems = [
-    'Sie verbringen taeglich Stunden mit Terminkoordination am Telefon?',
-    'Doppelbuchungen und Terminueberschneidungen sorgen fuer Chaos?',
+    'Sie verbringen täglich Stunden mit Terminkoordination am Telefon?',
+    'Doppelbuchungen und Terminüberschneidungen sorgen für Chaos?',
     'Kunden vergessen Termine und erscheinen nicht – ohne abzusagen?',
-    'Die Verwaltung mehrerer Kalender kostet unnoetig viel Zeit?'
+    'Die Verwaltung mehrerer Kalender kostet unnötig viel Zeit?'
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'Bedarfsanalyse',
-      description: 'Wir analysieren Ihre Terminarten, Ressourcen, Oeffnungszeiten und besonderen Anforderungen.'
+      description: 'Wir analysieren Ihre Terminarten, Ressourcen, Öffnungszeiten und besonderen Anforderungen.'
     },
     {
       step: '02',
       title: 'Systemkonfiguration',
-      description: 'Einrichtung des Buchungssystems mit Ihren Zeitfenstern, Leistungen und Verfuegbarkeiten.'
+      description: 'Einrichtung des Buchungssystems mit Ihren Zeitfenstern, Leistungen und Verfügbarkeiten.'
     },
     {
       step: '03',
       title: 'Automatisierung einrichten',
-      description: 'Integration von automatischen Bestaetigungen, Erinnerungen und Kalender-Synchronisation.'
+      description: 'Integration von automatischen Bestätigungen, Erinnerungen und Kalender-Synchronisation.'
     },
     {
       step: '04',
@@ -55,7 +55,7 @@ const TermineBuchungen: React.FC = () => {
     {
       step: '05',
       title: 'Schulung und Start',
-      description: 'Kurze Einweisung fuer Ihr Team, dann geht das System live und arbeitet fuer Sie.'
+      description: 'Kurze Einweisung für Ihr Team, dann geht das System live und arbeitet für Sie.'
     }
   ];
 
@@ -63,21 +63,21 @@ const TermineBuchungen: React.FC = () => {
     { icon: <Clock size={24} />, title: '24/7 Buchbarkeit', text: 'Kunden buchen Termine jederzeit selbst – auch um Mitternacht oder am Wochenende.' },
     { icon: <Bell size={24} />, title: 'Automatische Erinnerungen', text: 'SMS oder E-Mail Erinnerungen reduzieren No-Shows um bis zu 70%.' },
     { icon: <RefreshCw size={24} />, title: 'Kalender-Sync', text: 'Automatische Synchronisation mit Google Calendar, Outlook oder Ihrem bestehenden System.' },
-    { icon: <Users size={24} />, title: 'Ressourcenplanung', text: 'Mehrere Mitarbeiter, Raeume oder Geraete – alles intelligent koordiniert.' },
+    { icon: <Users size={24} />, title: 'Ressourcenplanung', text: 'Mehrere Mitarbeiter, Räume oder Geräte – alles intelligent koordiniert.' },
     { icon: <Smartphone size={24} />, title: 'Mobil optimiert', text: 'Kunden buchen bequem vom Smartphone – responsive Design als Standard.' },
     { icon: <CalendarCheck size={24} />, title: 'Keine Doppelbuchungen', text: 'Das System verhindert Konflikte automatisch und zeigt nur freie Zeiten.' }
   ];
 
   const targetAudiences = [
     { icon: <Stethoscope size={28} />, title: 'Arztpraxen & Therapeuten', description: 'Patiententermine automatisch verwalten, Erinnerungen senden, Wartezimmer entlasten.' },
-    { icon: <Scissors size={28} />, title: 'Friseursalons & Beauty', description: 'Online-Terminbuchung fuer verschiedene Dienstleistungen und Mitarbeiter.' },
+    { icon: <Scissors size={28} />, title: 'Friseursalons & Beauty', description: 'Online-Terminbuchung für verschiedene Dienstleistungen und Mitarbeiter.' },
     { icon: <Building2 size={28} />, title: 'Beratung & Coaching', description: 'Beratungstermine automatisch planen mit Vor- und Nachbereitungszeiten.' },
-    { icon: <Car size={28} />, title: 'Werkstaetten & Service', description: 'Servicetermine, Inspektionen und Reparaturzeiten intelligent koordinieren.' }
+    { icon: <Car size={28} />, title: 'Werkstätten & Service', description: 'Servicetermine, Inspektionen und Reparaturzeiten intelligent koordinieren.' }
   ];
 
   const features = [
     'Online-Buchung direkt auf Ihrer Website',
-    'Automatische Terminbestaetigungen per E-Mail',
+    'Automatische Terminbestätigungen per E-Mail',
     'SMS-Erinnerungen vor dem Termin',
     'Einfache Stornierung und Umbuchung durch Kunden',
     'Wartelisten-Funktion bei voller Auslastung',
@@ -92,7 +92,7 @@ const TermineBuchungen: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="Terminplanung & Buchungssysteme"
-        description="Intelligente Online-Terminbuchung fuer Ihr Unternehmen. Automatische Kalenderplanung, Erinnerungen und Kundenverwaltung – ohne Telefonmarathon."
+        description="Intelligente Online-Terminbuchung für Ihr Unternehmen. Automatische Kalenderplanung, Erinnerungen und Kundenverwaltung – ohne Telefonmarathon."
         keywords={['Online Terminbuchung', 'Buchungssystem', 'Terminplanung Software', 'Kalender Automatisierung', 'Terminverwaltung']}
       />
 
@@ -129,8 +129,8 @@ const TermineBuchungen: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Intelligente Buchungssysteme, die Verfuegbarkeiten automatisch verwalten, Termine koordinieren
-              und Kunden selbststaendig bestaetigen sowie erinnern.
+              Intelligente Buchungssysteme, die Verfügbarkeiten automatisch verwalten, Termine koordinieren
+              und Kunden selbstständig bestätigen sowie erinnern.
             </motion.p>
 
             <motion.button
@@ -185,7 +185,7 @@ const TermineBuchungen: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Ein intelligentes Buchungssystem loest all diese Probleme automatisch.</strong>
+              <strong>Ein intelligentes Buchungssystem löst all diese Probleme automatisch.</strong>
             </motion.p>
           </div>
         </div>
@@ -205,8 +205,8 @@ const TermineBuchungen: React.FC = () => {
                 So funktioniert ein <span className="text-primary-500">intelligentes Buchungssystem</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ihre Kunden buchen Termine selbststaendig online – das System kuemmert sich um alles Weitere:
-                Bestaetigungen, Erinnerungen, Kalendereintraege und mehr.
+                Ihre Kunden buchen Termine selbstständig online – das System kümmert sich um alles Weitere:
+                Bestätigungen, Erinnerungen, Kalendereinträge und mehr.
               </p>
             </motion.div>
 
@@ -317,7 +317,7 @@ const TermineBuchungen: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Perfekt fuer <span className="text-primary-500">diese Branchen</span>
+                Perfekt für <span className="text-primary-500">diese Branchen</span>
               </h2>
             </motion.div>
 
@@ -358,7 +358,7 @@ const TermineBuchungen: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">stressfreie Terminplanung?</span>
+              Bereit für <span className="text-primary-500">stressfreie Terminplanung?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"

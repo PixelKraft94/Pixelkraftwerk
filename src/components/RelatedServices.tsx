@@ -31,13 +31,13 @@ const allServices: ServiceInfo[] = [
   {
     slug: 'website-seo',
     title: 'Websites & SEO',
-    shortDescription: 'Moderne Websites mit Suchmaschinenoptimierung fuer mehr Sichtbarkeit.',
+    shortDescription: 'Moderne Websites mit Suchmaschinenoptimierung für mehr Sichtbarkeit.',
     icon: <Globe size={32} strokeWidth={1.5} />
   },
   {
     slug: 'automatisierungen',
     title: 'Workflow-Automatisierung',
-    shortDescription: 'Vernetzte Systeme und automatisierte Arbeitsablaeufe ohne Medienbrueche.',
+    shortDescription: 'Vernetzte Systeme und automatisierte Arbeitsabläufe ohne Medienbrüche.',
     icon: <Workflow size={32} strokeWidth={1.5} />
   },
   {
@@ -72,10 +72,10 @@ const RelatedServices: React.FC<RelatedServicesProps> = ({ currentSlug, relatedS
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-              Das koennte Sie auch <span className="text-primary-500">interessieren</span>
+              Das könnte Sie auch <span className="text-primary-500">interessieren</span>
             </h2>
             <p className="text-light-200">
-              Entdecken Sie weitere Loesungen, die perfekt zu dieser Dienstleistung passen.
+              Entdecken Sie weitere Lösungen, die perfekt zu dieser Dienstleistung passen.
             </p>
           </motion.div>
 

@@ -25,22 +25,22 @@ const WebsiteSeo: React.FC = () => {
   };
 
   const problems = [
-    'Ihre aktuelle Website wirkt veraltet und repraesentiert Ihr Unternehmen nicht mehr?',
+    'Ihre aktuelle Website wirkt veraltet und repräsentiert Ihr Unternehmen nicht mehr?',
     'Potenzielle Kunden finden Sie bei Google nicht oder erst auf Seite 5?',
     'Ihre Website ist langsam und auf dem Smartphone kaum benutzbar?',
-    'Sie moechten online neue Kunden gewinnen, wissen aber nicht wie?'
+    'Sie möchten online neue Kunden gewinnen, wissen aber nicht wie?'
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'Analyse & Strategie',
-      description: 'Wir analysieren Ihre Zielgruppe, Wettbewerber und Keywords fuer eine fundierte SEO-Strategie.'
+      description: 'Wir analysieren Ihre Zielgruppe, Wettbewerber und Keywords für eine fundierte SEO-Strategie.'
     },
     {
       step: '02',
       title: 'Design-Konzept',
-      description: 'Entwicklung eines modernen Designs, das Ihre Marke widerspiegelt und Besucher ueberzeugt.'
+      description: 'Entwicklung eines modernen Designs, das Ihre Marke widerspiegelt und Besucher überzeugt.'
     },
     {
       step: '03',
@@ -50,27 +50,27 @@ const WebsiteSeo: React.FC = () => {
     {
       step: '04',
       title: 'SEO-Optimierung',
-      description: 'On-Page SEO, technische Optimierung und Einrichtung fuer lokale Suchmaschinenoptimierung.'
+      description: 'On-Page SEO, technische Optimierung und Einrichtung für lokale Suchmaschinenoptimierung.'
     },
     {
       step: '05',
       title: 'Launch & Monitoring',
-      description: 'Go-Live mit Tracking-Setup und kontinuierlicher Ueberwachung der Rankings und Performance.'
+      description: 'Go-Live mit Tracking-Setup und kontinuierlicher Überwachung der Rankings und Performance.'
     }
   ];
 
   const benefits = [
-    { icon: <Search size={24} />, title: 'Bessere Google-Rankings', text: 'Strukturierte SEO-Optimierung fuer mehr Sichtbarkeit bei relevanten Suchanfragen.' },
-    { icon: <Zap size={24} />, title: 'Blitzschnelle Ladezeiten', text: 'Optimierte Performance fuer beste Nutzererfahrung und bessere Rankings.' },
-    { icon: <Smartphone size={24} />, title: 'Perfekt auf allen Geraeten', text: 'Responsive Design, das auf Desktop, Tablet und Smartphone ueberzeugt.' },
-    { icon: <Palette size={24} />, title: 'Modernes Design', text: 'Professionelle Optik, die Vertrauen schafft und Ihre Marke staerkt.' },
-    { icon: <Shield size={24} />, title: 'Sicher & zuverlaessig', text: 'SSL-Verschluesselung, sichere Hosting-Infrastruktur und regelmaessige Updates.' },
+    { icon: <Search size={24} />, title: 'Bessere Google-Rankings', text: 'Strukturierte SEO-Optimierung für mehr Sichtbarkeit bei relevanten Suchanfragen.' },
+    { icon: <Zap size={24} />, title: 'Blitzschnelle Ladezeiten', text: 'Optimierte Performance für beste Nutzererfahrung und bessere Rankings.' },
+    { icon: <Smartphone size={24} />, title: 'Perfekt auf allen Geräten', text: 'Responsive Design, das auf Desktop, Tablet und Smartphone überzeugt.' },
+    { icon: <Palette size={24} />, title: 'Modernes Design', text: 'Professionelle Optik, die Vertrauen schafft und Ihre Marke stärkt.' },
+    { icon: <Shield size={24} />, title: 'Sicher & zuverlässig', text: 'SSL-Verschlüsselung, sichere Hosting-Infrastruktur und regelmäßige Updates.' },
     { icon: <BarChart3 size={24} />, title: 'Messbare Ergebnisse', text: 'Tracking und Analytics zeigen Ihnen genau, wie Ihre Website performt.' }
   ];
 
   const targetAudiences = [
     { icon: <Building2 size={28} />, title: 'Lokale Unternehmen', description: 'Sichtbarkeit in der Region steigern und lokale Kunden online erreichen.' },
-    { icon: <Briefcase size={28} />, title: 'Dienstleister & Berater', description: 'Expertise praesentieren und qualifizierte Anfragen generieren.' },
+    { icon: <Briefcase size={28} />, title: 'Dienstleister & Berater', description: 'Expertise präsentieren und qualifizierte Anfragen generieren.' },
     { icon: <Store size={28} />, title: 'Handwerk & Gewerbe', description: 'Online gefunden werden und Vertrauen bei potenziellen Kunden aufbauen.' },
     { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Professioneller Auftritt mit Fokus auf lokale Patienten und Mandanten.' }
   ];
@@ -79,23 +79,23 @@ const WebsiteSeo: React.FC = () => {
     'Keyword-Recherche und -Strategie',
     'On-Page SEO Optimierung',
     'Meta-Tags und strukturierte Daten',
-    'Lokale SEO fuer regionale Sichtbarkeit',
+    'Lokale SEO für regionale Sichtbarkeit',
     'Google Business Profile Optimierung',
     'Technisches SEO (Speed, Core Web Vitals)',
     'Mobile-First Indexierung',
     'Content-Strategie und -Optimierung',
     'Backlink-Analyse und -Aufbau',
-    'Regelmaessiges Reporting und Monitoring'
+    'Regelmäßiges Reporting und Monitoring'
   ];
 
   const websiteFeatures = [
     'Individuelles, markengerechtes Design',
-    'Responsive fuer alle Bildschirmgroessen',
+    'Responsive für alle Bildschirmgrößen',
     'Schnelle Ladezeiten (unter 3 Sekunden)',
     'Intuitive Navigation und Benutzerführung',
     'Kontaktformulare mit Spam-Schutz',
     'SSL-Zertifikat und DSGVO-konform',
-    'CMS fuer einfache Inhaltspflege',
+    'CMS für einfache Inhaltspflege',
     'Integration von Social Media',
     'Google Analytics und Search Console',
     'Erweiterbar durch Automatisierungen'
@@ -105,7 +105,7 @@ const WebsiteSeo: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="Website-Entwicklung & SEO"
-        description="Moderne Websites mit Suchmaschinenoptimierung. Professionelles Webdesign und SEO fuer mehr Sichtbarkeit bei Google und mehr Kundenanfragen."
+        description="Moderne Websites mit Suchmaschinenoptimierung. Professionelles Webdesign und SEO für mehr Sichtbarkeit bei Google und mehr Kundenanfragen."
         keywords={['Website erstellen', 'Webdesign', 'SEO Optimierung', 'Suchmaschinenoptimierung', 'Lokale SEO']}
       />
 
@@ -143,7 +143,7 @@ const WebsiteSeo: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Moderne, schnelle Websites mit Suchmaschinenoptimierung – damit potenzielle Kunden
-              Sie finden und von Ihrem Angebot ueberzeugt werden.
+              Sie finden und von Ihrem Angebot überzeugt werden.
             </motion.p>
 
             <motion.button
@@ -198,7 +198,7 @@ const WebsiteSeo: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Eine professionelle Website mit SEO ist die Loesung.</strong>
+              <strong>Eine professionelle Website mit SEO ist die Lösung.</strong>
             </motion.p>
           </div>
         </div>
@@ -352,7 +352,7 @@ const WebsiteSeo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Branchen</span>
+                Ideal für <span className="text-primary-500">diese Branchen</span>
               </h2>
             </motion.div>
 
@@ -393,7 +393,7 @@ const WebsiteSeo: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">mehr Online-Sichtbarkeit?</span>
+              Bereit für <span className="text-primary-500">mehr Online-Sichtbarkeit?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"

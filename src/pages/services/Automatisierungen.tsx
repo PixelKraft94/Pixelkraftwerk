@@ -25,9 +25,9 @@ const Automatisierungen: React.FC = () => {
   };
 
   const problems = [
-    'Sie uebertragen Daten manuell zwischen verschiedenen Programmen?',
+    'Sie übertragen Daten manuell zwischen verschiedenen Programmen?',
     'Informationen gehen verloren, weil Systeme nicht miteinander kommunizieren?',
-    'Wiederkehrende Aufgaben fressen taeglich wertvolle Arbeitszeit?',
+    'Wiederkehrende Aufgaben fressen täglich wertvolle Arbeitszeit?',
     'Fehler durch manuelle Dateneingabe kosten Sie Geld und Nerven?'
   ];
 
@@ -35,7 +35,7 @@ const Automatisierungen: React.FC = () => {
     {
       step: '01',
       title: 'Prozess-Analyse',
-      description: 'Wir erfassen Ihre aktuellen Ablaeufe, identifizieren Medienbrueche und Automatisierungspotenziale.'
+      description: 'Wir erfassen Ihre aktuellen Abläufe, identifizieren Medienbrüche und Automatisierungspotenziale.'
     },
     {
       step: '02',
@@ -45,34 +45,34 @@ const Automatisierungen: React.FC = () => {
     {
       step: '03',
       title: 'System-Integration',
-      description: 'Technische Verbindung Ihrer bestehenden Tools und Systeme ueber APIs und Schnittstellen.'
+      description: 'Technische Verbindung Ihrer bestehenden Tools und Systeme über APIs und Schnittstellen.'
     },
     {
       step: '04',
       title: 'Workflow-Aufbau',
-      description: 'Einrichtung der automatischen Ablaeufe mit Triggern, Aktionen und Bedingungen.'
+      description: 'Einrichtung der automatischen Abläufe mit Triggern, Aktionen und Bedingungen.'
     },
     {
       step: '05',
       title: 'Test und Optimierung',
-      description: 'Gruendliche Tests aller Automatisierungen und Feinabstimmung fuer zuverlaessigen Betrieb.'
+      description: 'Gründliche Tests aller Automatisierungen und Feinabstimmung für zuverlässigen Betrieb.'
     }
   ];
 
   const benefits = [
-    { icon: <Clock size={24} />, title: 'Zeitersparnis', text: 'Automatisierte Prozesse arbeiten in Sekunden, wofuer Menschen Stunden brauchen.' },
-    { icon: <AlertCircle size={24} />, title: 'Weniger Fehler', text: 'Keine Tippfehler, keine vergessenen Schritte – Automatisierung ist zuverlaessig.' },
+    { icon: <Clock size={24} />, title: 'Zeitersparnis', text: 'Automatisierte Prozesse arbeiten in Sekunden, wofür Menschen Stunden brauchen.' },
+    { icon: <AlertCircle size={24} />, title: 'Weniger Fehler', text: 'Keine Tippfehler, keine vergessenen Schritte – Automatisierung ist zuverlässig.' },
     { icon: <Link2 size={24} />, title: 'Vernetzte Systeme', text: 'Alle Ihre Tools arbeiten zusammen und tauschen Daten automatisch aus.' },
-    { icon: <RefreshCw size={24} />, title: 'Skalierbarkeit', text: 'Automatisierte Prozesse wachsen mit – ohne zusaetzlichen Personalaufwand.' },
-    { icon: <Database size={24} />, title: 'Datenkonsistenz', text: 'Informationen sind ueberall aktuell und identisch – keine Abweichungen mehr.' },
-    { icon: <Zap size={24} />, title: 'Schnellere Reaktion', text: 'Automatische Benachrichtigungen und Aktionen in Echtzeit statt mit Verzoegerung.' }
+    { icon: <RefreshCw size={24} />, title: 'Skalierbarkeit', text: 'Automatisierte Prozesse wachsen mit – ohne zusätzlichen Personalaufwand.' },
+    { icon: <Database size={24} />, title: 'Datenkonsistenz', text: 'Informationen sind überall aktuell und identisch – keine Abweichungen mehr.' },
+    { icon: <Zap size={24} />, title: 'Schnellere Reaktion', text: 'Automatische Benachrichtigungen und Aktionen in Echtzeit statt mit Verzögerung.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Mittelstaendische Unternehmen', description: 'Abteilungsuebergreifende Prozesse verbinden und Datensilos aufbrechen.' },
+    { icon: <Building2 size={28} />, title: 'Mittelständische Unternehmen', description: 'Abteilungsübergreifende Prozesse verbinden und Datensilos aufbrechen.' },
     { icon: <ShoppingCart size={28} />, title: 'E-Commerce & Online-Handel', description: 'Bestellungen, Lager, Versand und Kundenservice automatisch synchronisieren.' },
     { icon: <Briefcase size={28} />, title: 'Dienstleister & Agenturen', description: 'Projektmanagement, Zeiterfassung und Abrechnung automatisch verbinden.' },
-    { icon: <Factory size={28} />, title: 'Produktion & Logistik', description: 'Lieferketten, Bestaende und Auftraege nahtlos koordinieren.' }
+    { icon: <Factory size={28} />, title: 'Produktion & Logistik', description: 'Lieferketten, Bestände und Aufträge nahtlos koordinieren.' }
   ];
 
   const automationExamples = [
@@ -86,7 +86,7 @@ const Automatisierungen: React.FC = () => {
     },
     {
       title: 'Bestandswarnung',
-      description: 'Bei niedrigem Lagerbestand wird automatisch eine Bestellung beim Lieferanten ausgeloest.'
+      description: 'Bei niedrigem Lagerbestand wird automatisch eine Bestellung beim Lieferanten ausgelöst.'
     },
     {
       title: 'Onboarding-Prozess',
@@ -94,11 +94,11 @@ const Automatisierungen: React.FC = () => {
     },
     {
       title: 'Report-Erstellung',
-      description: 'Woechentliche oder monatliche Reports werden automatisch generiert und verteilt.'
+      description: 'Wöchentliche oder monatliche Reports werden automatisch generiert und verteilt.'
     },
     {
-      title: 'Terminbestaetigung',
-      description: 'Gebuchte Termine loesen automatisch Kalendereintraege und Erinnerungen aus.'
+      title: 'Terminbestätigung',
+      description: 'Gebuchte Termine lösen automatisch Kalendereinträge und Erinnerungen aus.'
     }
   ];
 
@@ -112,14 +112,14 @@ const Automatisierungen: React.FC = () => {
     'Zahlungsanbieter (Stripe, PayPal)',
     'Cloud-Speicher (Google Drive, Dropbox)',
     'Terminplanung (Calendly, Google Calendar)',
-    'Und viele weitere ueber APIs'
+    'Und viele weitere über APIs'
   ];
 
   return (
     <div className="bg-dark-500">
       <SEOHead
         title="Workflow-Automatisierung & Systemvernetzung"
-        description="Prozessautomatisierung und Systemintegration fuer effizientere Ablaeufe. Wir verbinden Ihre Tools und automatisieren wiederkehrende Aufgaben."
+        description="Prozessautomatisierung und Systemintegration für effizientere Abläufe. Wir verbinden Ihre Tools und automatisieren wiederkehrende Aufgaben."
         keywords={['Workflow Automatisierung', 'Prozessautomatisierung', 'Systemintegration', 'API Integration', 'Business Automatisierung']}
       />
 
@@ -156,8 +156,8 @@ const Automatisierungen: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Wir verbinden Ihre bestehenden Systeme zu durchgaengigen Prozessen.
-              Informationen fliessen automatisch – ohne manuelle Uebertragung, ohne Fehler.
+              Wir verbinden Ihre bestehenden Systeme zu durchgängigen Prozessen.
+              Informationen fließen automatisch – ohne manuelle Übertragung, ohne Fehler.
             </motion.p>
 
             <motion.button
@@ -212,7 +212,7 @@ const Automatisierungen: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Workflow-Automatisierung loest diese Probleme dauerhaft.</strong>
+              <strong>Workflow-Automatisierung löst diese Probleme dauerhaft.</strong>
             </motion.p>
           </div>
         </div>
@@ -229,10 +229,10 @@ const Automatisierungen: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Beispiele fuer <span className="text-primary-500">Automatisierungen</span>
+                Beispiele für <span className="text-primary-500">Automatisierungen</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Sehen Sie, welche Prozesse wir fuer unsere Kunden automatisiert haben.
+                Sehen Sie, welche Prozesse wir für unsere Kunden automatisiert haben.
               </p>
             </motion.div>
 
@@ -377,7 +377,7 @@ const Automatisierungen: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Unternehmen</span>
+                Ideal für <span className="text-primary-500">diese Unternehmen</span>
               </h2>
             </motion.div>
 
@@ -418,7 +418,7 @@ const Automatisierungen: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">automatisierte Prozesse?</span>
+              Bereit für <span className="text-primary-500">automatisierte Prozesse?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"
@@ -427,7 +427,7 @@ const Automatisierungen: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns gemeinsam herausfinden, welche Prozesse in Ihrem Unternehmen automatisiert werden koennen.
+              Lassen Sie uns gemeinsam herausfinden, welche Prozesse in Ihrem Unternehmen automatisiert werden können.
             </motion.p>
           </div>
         </div>

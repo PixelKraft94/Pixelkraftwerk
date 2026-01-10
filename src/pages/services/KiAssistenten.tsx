@@ -26,17 +26,17 @@ const KiAssistenten: React.FC = () => {
   };
 
   const problems = [
-    'Ihr Team wird staendig durch wiederkehrende Kundenanfragen unterbrochen?',
-    'Kunden erreichen Sie ausserhalb der Geschaeftszeiten nicht und wenden sich an die Konkurrenz?',
-    'Sie verlieren potenzielle Auftraege, weil Anfragen zu spaet beantwortet werden?',
-    'Die Qualitaet der Kundenkommunikation schwankt je nach Auslastung Ihres Teams?'
+    'Ihr Team wird ständig durch wiederkehrende Kundenanfragen unterbrochen?',
+    'Kunden erreichen Sie außerhalb der Geschäftszeiten nicht und wenden sich an die Konkurrenz?',
+    'Sie verlieren potenzielle Aufträge, weil Anfragen zu spät beantwortet werden?',
+    'Die Qualität der Kundenkommunikation schwankt je nach Auslastung Ihres Teams?'
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'Analyse Ihrer Kommunikation',
-      description: 'Wir analysieren Ihre haeufigsten Kundenanfragen, Ihre Branche und Ihre spezifischen Anforderungen.'
+      description: 'Wir analysieren Ihre häufigsten Kundenanfragen, Ihre Branche und Ihre spezifischen Anforderungen.'
     },
     {
       step: '02',
@@ -46,17 +46,17 @@ const KiAssistenten: React.FC = () => {
     {
       step: '03',
       title: 'Integration in Ihre Systeme',
-      description: 'Nahtlose Einbindung in Ihre Website, Telefonie oder bestehende Kommunikationskanaele.'
+      description: 'Nahtlose Einbindung in Ihre Website, Telefonie oder bestehende Kommunikationskanäle.'
     },
     {
       step: '04',
       title: 'Test und Optimierung',
-      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gespraechen.'
+      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gesprächen.'
     },
     {
       step: '05',
       title: 'Dauerhafter Betrieb',
-      description: 'Ihr Assistent arbeitet zuverlaessig rund um die Uhr – wir ueberwachen und optimieren fortlaufend.'
+      description: 'Ihr Assistent arbeitet zuverlässig rund um die Uhr – wir überwachen und optimieren fortlaufend.'
     }
   ];
 
@@ -64,15 +64,15 @@ const KiAssistenten: React.FC = () => {
     { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit ansprechbar – auch nachts, am Wochenende und an Feiertagen.' },
     { icon: <Zap size={24} />, title: 'Sofortige Reaktion', text: 'Kunden erhalten innerhalb von Sekunden qualifizierte Antworten auf ihre Fragen.' },
     { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Bis zu 80% weniger Routineanfragen, die Ihr Team beantworten muss.' },
-    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualitaet', text: 'Jeder Kunde erhaelt dieselbe professionelle Betreuung – unabhaengig von Tageszeit oder Auslastung.' },
-    { icon: <HeadphonesIcon size={24} />, title: 'Mehrsprachig moeglich', text: 'Bedienen Sie internationale Kunden in ihrer Muttersprache ohne zusaetzliches Personal.' },
-    { icon: <MessageSquare size={24} />, title: 'Lernfaehiges System', text: 'Der Assistent wird mit jeder Interaktion besser und passt sich Ihren Beduerfnissen an.' }
+    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Kunde erhält dieselbe professionelle Betreuung – unabhängig von Tageszeit oder Auslastung.' },
+    { icon: <HeadphonesIcon size={24} />, title: 'Mehrsprachig möglich', text: 'Bedienen Sie internationale Kunden in ihrer Muttersprache ohne zusätzliches Personal.' },
+    { icon: <MessageSquare size={24} />, title: 'Lernfähiges System', text: 'Der Assistent wird mit jeder Interaktion besser und passt sich Ihren Bedürfnissen an.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Fuer alle, die viele gleichartige Anfragen erhalten und schnelle Reaktionszeiten benoetigen.' },
+    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Für alle, die viele gleichartige Anfragen erhalten und schnelle Reaktionszeiten benötigen.' },
     { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlasten Sie Ihr Empfangsteam und bieten Sie Patienten/Mandanten rund um die Uhr Service.' },
-    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Produktfragen, Lieferstatus und Rueckgabeanfragen automatisch.' },
+    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Produktfragen, Lieferstatus und Rückgabeanfragen automatisch.' },
     { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Verpassen Sie keine Anfrage mehr und qualifizieren Sie Leads automatisch vor.' }
   ];
 
@@ -80,7 +80,7 @@ const KiAssistenten: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="KI-Chatbots & Telefonassistenten"
-        description="Intelligente KI-Assistenten fuer automatische Kundenbetreuung. Chatbots und Telefonassistenten, die Ihr Team entlasten und Kunden 24/7 betreuen."
+        description="Intelligente KI-Assistenten für automatische Kundenbetreuung. Chatbots und Telefonassistenten, die Ihr Team entlasten und Kunden 24/7 betreuen."
         keywords={['KI-Chatbot', 'Telefonassistent', 'Kundenservice Automatisierung', 'Chatbot Unternehmen', 'KI Kundenbetreuung']}
       />
 
@@ -108,7 +108,7 @@ const KiAssistenten: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               KI-Chatbots & Telefonassistenten
-              <span className="block text-primary-500 mt-2">fuer automatische Kundenbetreuung</span>
+              <span className="block text-primary-500 mt-2">für automatische Kundenbetreuung</span>
             </motion.h1>
 
             <motion.p
@@ -173,7 +173,7 @@ const KiAssistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Assistent genau die richtige Loesung fuer Sie.</strong>
+              <strong>Dann ist ein KI-Assistent genau die richtige Lösung für Sie.</strong>
             </motion.p>
           </div>
         </div>
@@ -193,8 +193,8 @@ const KiAssistenten: React.FC = () => {
                 Was ist ein <span className="text-primary-500">KI-Assistent?</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Assistent ist ein intelligentes System, das natuerliche Sprache versteht und
-                Kundenanfragen selbststaendig beantwortet – per Text-Chat auf Ihrer Website oder als
+                Ein KI-Assistent ist ein intelligentes System, das natürliche Sprache versteht und
+                Kundenanfragen selbstständig beantwortet – per Text-Chat auf Ihrer Website oder als
                 Telefonassistent am Telefon.
               </p>
             </motion.div>
@@ -212,7 +212,7 @@ const KiAssistenten: React.FC = () => {
                   <h3 className="text-xl font-heading font-bold text-light-100">Website-Chatbot</h3>
                 </div>
                 <p className="text-light-200 mb-6">
-                  Ein digitaler Berater auf Ihrer Website, der Besucher begruesst, Fragen beantwortet,
+                  Ein digitaler Berater auf Ihrer Website, der Besucher begrüßt, Fragen beantwortet,
                   Termine vereinbart und Leads qualifiziert – vollautomatisch und in Echtzeit.
                 </p>
                 <ul className="space-y-3">
@@ -244,7 +244,7 @@ const KiAssistenten: React.FC = () => {
                 </div>
                 <p className="text-light-200 mb-6">
                   Ein KI-System, das Anrufe entgegennimmt, Anliegen versteht, Informationen gibt
-                  und bei Bedarf an die richtige Person weiterleitet – mit natuerlicher Sprachausgabe.
+                  und bei Bedarf an die richtige Person weiterleitet – mit natürlicher Sprachausgabe.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -253,11 +253,11 @@ const KiAssistenten: React.FC = () => {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Versteht natuerliche Sprache</span>
+                    <span className="text-light-100">Versteht natürliche Sprache</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={18} />
-                    <span className="text-light-100">Leitet dringende Faelle weiter</span>
+                    <span className="text-light-100">Leitet dringende Fälle weiter</span>
                   </li>
                 </ul>
               </motion.div>
@@ -280,7 +280,7 @@ const KiAssistenten: React.FC = () => {
                 So entsteht <span className="text-primary-500">Ihr KI-Assistent</span>
               </h2>
               <p className="text-light-200">
-                Von der ersten Analyse bis zum laufenden Betrieb – unser bewaehrter Prozess.
+                Von der ersten Analyse bis zum laufenden Betrieb – unser bewährter Prozess.
               </p>
             </motion.div>
 
@@ -355,7 +355,7 @@ const KiAssistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Branchen</span>
+                Ideal für <span className="text-primary-500">diese Branchen</span>
               </h2>
             </motion.div>
 
@@ -396,7 +396,7 @@ const KiAssistenten: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">bessere Kundenbetreuung?</span>
+              Bereit für <span className="text-primary-500">bessere Kundenbetreuung?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"

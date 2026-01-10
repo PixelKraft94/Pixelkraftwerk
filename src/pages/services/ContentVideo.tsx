@@ -25,54 +25,54 @@ const ContentVideo: React.FC = () => {
   };
 
   const problems = [
-    'Sie haben keine Zeit, regelmaessig Content fuer Social Media zu erstellen?',
-    'Professionelle Videos sind zu teuer und aufwaendig?',
+    'Sie haben keine Zeit, regelmäßig Content für Social Media zu erstellen?',
+    'Professionelle Videos sind zu teuer und aufwändig?',
     'Ihre Texte und Bilder wirken nicht so professionell wie die der Konkurrenz?',
-    'Sie moechten mehr Content produzieren, aber die Ressourcen fehlen?'
+    'Sie möchten mehr Content produzieren, aber die Ressourcen fehlen?'
   ];
 
   const processSteps = [
     {
       step: '01',
       title: 'Briefing & Strategie',
-      description: 'Wir besprechen Ihre Marke, Zielgruppe und Content-Ziele fuer eine klare Strategie.'
+      description: 'Wir besprechen Ihre Marke, Zielgruppe und Content-Ziele für eine klare Strategie.'
     },
     {
       step: '02',
       title: 'Konzeptentwicklung',
-      description: 'Entwicklung von Content-Ideen, Skripten und visuellen Konzepten fuer Ihre Kanaele.'
+      description: 'Entwicklung von Content-Ideen, Skripten und visuellen Konzepten für Ihre Kanäle.'
     },
     {
       step: '03',
-      title: 'KI-gestuetzte Produktion',
+      title: 'KI-gestützte Produktion',
       description: 'Erstellung von Texten, Bildern und Videos mit modernster KI-Technologie.'
     },
     {
       step: '04',
       title: 'Feinschliff & Anpassung',
-      description: 'Manuelle Optimierung und Anpassung an Ihre Corporate Identity und Tonalitaet.'
+      description: 'Manuelle Optimierung und Anpassung an Ihre Corporate Identity und Tonalität.'
     },
     {
       step: '05',
       title: 'Auslieferung & Support',
-      description: 'Bereitstellung in allen benoetigten Formaten mit Beratung zur optimalen Nutzung.'
+      description: 'Bereitstellung in allen benötigten Formaten mit Beratung zur optimalen Nutzung.'
     }
   ];
 
   const benefits = [
     { icon: <Clock size={24} />, title: 'Schnelle Produktion', text: 'Content in Tagen statt Wochen – KI beschleunigt die Erstellung dramatisch.' },
-    { icon: <Palette size={24} />, title: 'Konsistente Qualitaet', text: 'Einheitlicher Look and Feel ueber alle Content-Formate und Kanaele.' },
+    { icon: <Palette size={24} />, title: 'Konsistente Qualität', text: 'Einheitlicher Look and Feel über alle Content-Formate und Kanäle.' },
     { icon: <TrendingUp size={24} />, title: 'Mehr Output', text: 'Produzieren Sie mehr Content bei gleichem Budget – skalierbar nach Bedarf.' },
-    { icon: <FileText size={24} />, title: 'SEO-optimiert', text: 'Texte werden fuer Suchmaschinen optimiert und bringen organische Reichweite.' },
-    { icon: <Video size={24} />, title: 'Professionelle Videos', text: 'Hochwertige Videos ohne teures Equipment oder aufwaendige Dreharbeiten.' },
-    { icon: <Mic size={24} />, title: 'Mehrsprachig', text: 'Content in verschiedenen Sprachen – fuer internationale Maerkte und Zielgruppen.' }
+    { icon: <FileText size={24} />, title: 'SEO-optimiert', text: 'Texte werden für Suchmaschinen optimiert und bringen organische Reichweite.' },
+    { icon: <Video size={24} />, title: 'Professionelle Videos', text: 'Hochwertige Videos ohne teures Equipment oder aufwändige Dreharbeiten.' },
+    { icon: <Mic size={24} />, title: 'Mehrsprachig', text: 'Content in verschiedenen Sprachen – für internationale Märkte und Zielgruppen.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Unternehmen & KMUs', description: 'Regelmaessiger Content fuer Website, Blog und Social Media ohne eigene Abteilung.' },
+    { icon: <Building2 size={28} />, title: 'Unternehmen & KMUs', description: 'Regelmäßiger Content für Website, Blog und Social Media ohne eigene Abteilung.' },
     { icon: <ShoppingCart size={28} />, title: 'E-Commerce & Online-Shops', description: 'Produktbeschreibungen, Produktvideos und Social Commerce Content.' },
-    { icon: <Briefcase size={28} />, title: 'Coaches & Berater', description: 'Thought Leadership Content, Erklaervideos und Personal Branding.' },
-    { icon: <Megaphone size={28} />, title: 'Marketing & Agenturen', description: 'Skalierbare Content-Produktion fuer Kunden und Kampagnen.' }
+    { icon: <Briefcase size={28} />, title: 'Coaches & Berater', description: 'Thought Leadership Content, Erklärvideos und Personal Branding.' },
+    { icon: <Megaphone size={28} />, title: 'Marketing & Agenturen', description: 'Skalierbare Content-Produktion für Kunden und Kampagnen.' }
   ];
 
   const contentTypes = [
@@ -97,16 +97,16 @@ const ContentVideo: React.FC = () => {
         'Produktbilder und Mockups',
         'Infografiken',
         'Werbebanner',
-        'Praesentationen'
+        'Präsentationen'
       ]
     },
     {
       icon: <Video size={32} className="text-primary-500" />,
       title: 'Videos & Animation',
       items: [
-        'Erklaervideos',
+        'Erklärvideos',
         'Social Media Reels und Shorts',
-        'Produktpraesentationen',
+        'Produktpräsentationen',
         'Testimonial-Videos',
         'Animierte Logos und Intros',
         'KI-Avatar Videos'
@@ -118,7 +118,7 @@ const ContentVideo: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="Content-Produktion & KI-Videos"
-        description="Professionelle Texte, Bilder und Videos mit KI-Technologie. Schnelle Content-Erstellung fuer Social Media, Website und Marketing."
+        description="Professionelle Texte, Bilder und Videos mit KI-Technologie. Schnelle Content-Erstellung für Social Media, Website und Marketing."
         keywords={['KI Content', 'KI Video', 'Content Produktion', 'Social Media Content', 'KI Texterstellung']}
       />
 
@@ -146,7 +146,7 @@ const ContentVideo: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               Content-Produktion & KI-Videos
-              <span className="block text-primary-500 mt-2">fuer Ihre Markenpraesenz</span>
+              <span className="block text-primary-500 mt-2">für Ihre Markenpräsenz</span>
             </motion.h1>
 
             <motion.p
@@ -156,7 +156,7 @@ const ContentVideo: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Professionelle Texte, Bilder und Videos mit moderner KI-Technologie –
-              individuell auf Ihre Marke abgestimmt und in kuerzester Zeit verfuegbar.
+              individuell auf Ihre Marke abgestimmt und in kürzester Zeit verfügbar.
             </motion.p>
 
             <motion.button
@@ -211,7 +211,7 @@ const ContentVideo: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>KI-gestuetzte Content-Produktion ist die Loesung.</strong>
+              <strong>KI-gestützte Content-Produktion ist die Lösung.</strong>
             </motion.p>
           </div>
         </div>
@@ -231,8 +231,8 @@ const ContentVideo: React.FC = () => {
                 Unsere <span className="text-primary-500">Content-Formate</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Von Texten ueber Bilder bis zu Videos – wir produzieren alle Formate,
-                die Sie fuer Ihre Kommunikation brauchen.
+                Von Texten über Bilder bis zu Videos – wir produzieren alle Formate,
+                die Sie für Ihre Kommunikation brauchen.
               </p>
             </motion.div>
 
@@ -349,7 +349,7 @@ const ContentVideo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal fuer <span className="text-primary-500">diese Zielgruppen</span>
+                Ideal für <span className="text-primary-500">diese Zielgruppen</span>
               </h2>
             </motion.div>
 
@@ -390,7 +390,7 @@ const ContentVideo: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit fuer <span className="text-primary-500">professionellen Content?</span>
+              Bereit für <span className="text-primary-500">professionellen Content?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"
