@@ -13,7 +13,7 @@ export const businessInfo = {
   },
 
   contact: {
-    telephone: "01785844460",
+    telephone: "+491785844460",
     email: "kontakt@pixelkraftwerk-ai.com"
   },
 
