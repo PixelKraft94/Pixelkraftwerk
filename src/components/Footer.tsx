@@ -51,12 +51,12 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-primary-500 font-heading font-bold mb-4">Navigation</h3>
+            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Navigation</h2>
             <nav>
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {navItems.map((item) => (
                   <li key={item.path}>
-                    <a 
+                    <a
                       href={item.path}
                       className="text-light-100 hover:text-primary-400 transition-colors duration-200"
                     >
@@ -67,9 +67,9 @@ const Footer: React.FC = () => {
               </ul>
             </nav>
           </div>
-          
+
           <div>
-            <h3 className="text-primary-500 font-heading font-bold mb-4">Kontakt</h3>
+            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Kontakt</h2>
             <NAPInfo variant="minimal" showIcons={false} className="mb-6" />
 
             <div className="flex space-x-4 mt-6">

@@ -99,32 +99,32 @@ const Home: React.FC = () => {
 
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div className="space-y-2 mb-8 -mt-8">
-              <motion.h1
-                className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+            <h1 className="space-y-2 mb-8 -mt-8">
+              <motion.span
+                className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
               >
                 Mehr Anfragen.
-              </motion.h1>
-              <motion.h1
-                className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+              </motion.span>
+              <motion.span
+                className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
               >
                 Klare Abläufe.
-              </motion.h1>
-              <motion.h1
-                className="text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+              </motion.span>
+              <motion.span
+                className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 1.3 }}
               >
                 Weniger Stress.
-              </motion.h1>
-            </motion.div>
+              </motion.span>
+            </h1>
 
             <motion.p
               className="block md:hidden text-lg text-light-200 mb-8 max-w-3xl mx-auto"
@@ -553,7 +553,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Unsere <span className="text-primary-500">Leistungen</span>
+              Was wir <span className="text-primary-500">konkret umsetzen</span>
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

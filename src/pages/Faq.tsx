@@ -11,12 +11,16 @@ const Faq: React.FC = () => {
           Häufig gestellte <span className="text-primary-500">Fragen (FAQ)</span>
         </h1>
         <div className="max-w-3xl mx-auto">
-          <p className="text-light-200 mb-16 text-center text-base leading-relaxed">
-            Hier beantworten wir die wichtigsten Fragen rund um unsere KI-Lösungen, Webdesign und Automatisierung. 
+          <p className="text-light-200 mb-12 text-center text-base leading-relaxed">
+            Hier beantworten wir die wichtigsten Fragen rund um unsere KI-Lösungen, Webdesign und Automatisierung.
             Falls Ihre Frage nicht dabei ist, kontaktieren Sie uns gern – wir helfen Ihnen persönlich weiter!
           </p>
-          
+
           {/* Regular FAQ Section */}
+          <h2 className="text-2xl font-heading font-bold text-light-100 mb-8">
+            Häufige Fragen zu unseren <span className="text-primary-500">KI-Lösungen</span>
+          </h2>
+
           <div className="space-y-6 mb-20">
             <div className="border-l-4 border-primary-500 pl-6 py-4">
               <div className="flex items-start mb-4">
