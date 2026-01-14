@@ -130,8 +130,7 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Digitale Assistenten, die Ihre Website-Besucher begrüßen, Fragen beantworten
-              und Leads qualifizieren – professionell, rund um die Uhr und ohne Ihr Team zu belasten.
+              Ein KI-Chatbot ist ein intelligentes System, welches mit Hilfe von künstlicher Intelligenz natürliche Sprache versteht, Kundenanfragen selbstständig beantwortet oder aber auch Termine verwalten kann - direkt auf Ihrer Website
             </motion.p>
 
             <motion.button
