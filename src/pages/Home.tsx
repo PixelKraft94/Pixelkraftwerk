@@ -87,7 +87,7 @@ const Home: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="KI-Automatisierung für Unternehmen"
-        description="Wir automatisieren Unternehmen in Groitzsch, Leipzig und ganz Sachsen mit intelligenten KI-Systemen. Mehr Anfragen, klare Abläufe, weniger Stress."
+        description="Wir automatisieren Unternehmen in Groitzsch, Leipzig und ganz Sachsen mit intelligenten KI-Systemen. Klare Abläufe, mehr Anfragen, weniger Stress."
         keywords={['KI Automatisierung', 'Prozessautomatisierung Leipzig', 'Chatbot', 'Terminbuchung automatisch', 'Lead Management']}
       />
       <LocalBusinessSchema pageType="homepage" />
@@ -106,7 +106,7 @@ const Home: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
               >
-                Mehr Anfragen.
+                Klare Abläufe.
               </motion.span>
               <motion.span
                 className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
               >
-                Klare Abläufe.
+                Mehr Anfragen.
               </motion.span>
               <motion.span
                 className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
