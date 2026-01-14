@@ -1,94 +1,327 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { FileText, CheckCircle, Briefcase, DollarSign, Clock, Users, ClipboardCheck, Key, ShieldAlert, Database, Scale, FileCheck } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Agb: React.FC = () => {
-  return (
-    <div className="pt-24 pb-16 bg-dark-400 min-h-screen">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-mono font-bold mb-8 text-primary-500">AGB – Allgemeine Geschäftsbedingungen</h1>
-        <p className="text-light-300 mb-8">Zuletzt geändert am: 10.03.2025</p>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">1. Geltungsbereich</h2>
-          <p className="text-light-100 mb-4">
-            Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge und Leistungen, die von Pixel Kraftwerk (nachfolgend „wir", „uns", „Pixel Kraftwerk") mit Kunden abgeschlossen werden. Der Kunde erkennt mit der Nutzung unserer Dienstleistungen diese AGB an. Sie gelten für alle aktuellen und zukünftigen Geschäftsbeziehungen zwischen Pixel Kraftwerk und dem Kunden.
+  const sections = [
+    {
+      id: 'geltungsbereich',
+      icon: <FileText size={28} strokeWidth={1.5} />,
+      title: '1. Geltungsbereich',
+      content: (
+        <>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Diese AGB gelten ausschließlich für Unternehmer im Sinne des § 14 BGB.
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">2. Vertragsabschluss</h2>
-          <p className="text-light-100 mb-4">
-            Ein Vertrag zwischen Pixel Kraftwerk und dem Kunden kommt zustande, wenn der Kunde über die Website von Pixel Kraftwerk eine Anfrage stellt, ein Angebot annimmt oder auf andere Weise mit uns in Kontakt tritt und wir dies bestätigen. Unsere Angebote sind freibleibend und unverbindlich, es sei denn, sie sind ausdrücklich als verbindlich bezeichnet. Der Vertrag wird durch die Annahme eines Angebots oder eine ausdrückliche Bestätigung durch Pixel Kraftwerk wirksam.
+          <p className="text-light-200 leading-relaxed">
+            Verträge mit Verbrauchern werden nicht geschlossen.
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">3. Preise und Zahlung</h2>
-          <p className="text-light-100 mb-4">
-            Die Preise für unsere Dienstleistungen richten sich nach dem jeweils gültigen Angebot. Alle Preise sind netto und verstehen sich zuzüglich der gesetzlichen Mehrwertsteuer. Die vereinbarten Zahlungen sind gemäß der im Vertrag festgelegten Zahlungsfrist zu leisten. Sofern nicht anders vereinbart, sind Zahlungen innerhalb von 14 Tagen nach Rechnungserhalt fällig. Bei Zahlungsverzug behalten wir uns vor, Mahngebühren zu erheben und Verzugszinsen gemäß den gesetzlichen Bestimmungen zu verlangen.
+        </>
+      )
+    },
+    {
+      id: 'vertragsabschluss',
+      icon: <CheckCircle size={28} strokeWidth={1.5} />,
+      title: '2. Vertragsabschluss',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Ein Vertrag kommt ausschließlich durch schriftliche Unterzeichnung vor Ort zustande.
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">4. Leistungen von Pixel Kraftwerk</h2>
-          <p className="text-light-100 mb-4">
-            Pixel Kraftwerk bietet eine Vielzahl von KI-gestützten Lösungen in den Bereichen Automatisierung, Kundenservice und Digitalisierung an. Zu unseren Dienstleistungen gehören unter anderem:
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Elektronische Vertragsschlüsse, Online-Verträge oder mündliche Nebenabreden sind ausgeschlossen.
           </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li className="text-light-100 mb-2">Automatisierte Kundenbetreuung</li>
-            <li className="text-light-100 mb-2">CRM-Integration</li>
-            <li className="text-light-100 mb-2">Automatisierung der Terminvereinbarung</li>
-            <li className="text-light-100 mb-2">KI-basierte Sprachbots und Telefon-Agenten</li>
+          <p className="text-light-200 leading-relaxed">
+            Angebote sind freibleibend, sofern nicht ausdrücklich als verbindlich bezeichnet.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'leistungsumfang',
+      icon: <Briefcase size={28} strokeWidth={1.5} />,
+      title: '3. Leistungsumfang',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Pixel Kraftwerk erbringt Dienstleistungen in den Bereichen KI-Systeme, Automatisierung, digitale Kundenkommunikation, Content- und Videoerstellung, Webentwicklung sowie Prozessdigitalisierung.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Der konkrete Leistungsumfang ergibt sich ausschließlich aus dem Einzelvertrag.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'verguetung',
+      icon: <DollarSign size={28} strokeWidth={1.5} />,
+      title: '4. Vergütung und Zahlungsbedingungen',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Alle Preise verstehen sich netto zuzüglich gesetzlicher Umsatzsteuer.
+          </p>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Die Vergütung ist vollständig im Voraus zu leisten.
+            Monatliche Entgelte sind jeweils zu Beginn des Abrechnungszeitraums fällig.
+          </p>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Bei Zahlungsverzug gelten folgende Maßnahmen:
+          </p>
+          <ul className="space-y-2">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Mahnung mit Mahngebühren</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Vorübergehender Leistungsstopp</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Fristsetzung</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Fristlose Kündigung durch Pixel Kraftwerk</span>
+            </li>
           </ul>
-          <p className="text-light-100 mb-4">
-            Die genauen Details zu den einzelnen Dienstleistungen sind auf unserer Website beschrieben und Bestandteil des jeweiligen Vertrags.
+        </>
+      )
+    },
+    {
+      id: 'vertragslaufzeit',
+      icon: <Clock size={28} strokeWidth={1.5} />,
+      title: '5. Vertragslaufzeit und Kündigung',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Die Mindestlaufzeit beträgt sechs Monate, sofern nichts Abweichendes vereinbart ist.
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">5. Rechte und Pflichten der Parteien</h2>
-          <p className="text-light-100 mb-4">
-            Der Kunde verpflichtet sich, alle für die Leistungserbringung erforderlichen Informationen rechtzeitig und vollständig zur Verfügung zu stellen. Pixel Kraftwerk verpflichtet sich, die vereinbarten Dienstleistungen gemäß den vertraglichen Bestimmungen und innerhalb des vereinbarten Zeitrahmens zu erbringen. Verzögerungen aufgrund unvollständiger oder verspäteter Angaben des Kunden oder höherer Gewalt sind von uns nicht zu vertreten und führen zu einer angemessenen Verlängerung der Leistungserbringung.
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Die Kündigungsfrist beträgt drei Monate zum Monatsende.
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">6. Haftung</h2>
-          <p className="text-light-100 mb-4">
-            Pixel Kraftwerk übernimmt keine Haftung für Schäden, die durch die Nutzung der Website oder der angebotenen Dienstleistungen entstehen, es sei denn, diese sind auf grobe Fahrlässigkeit oder Vorsatz von Pixel Kraftwerk zurückzuführen. Insbesondere übernehmen wir keine Haftung für die Richtigkeit, Vollständigkeit oder Aktualität der bereitgestellten Informationen.
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Die Kündigung bedarf der Schriftform und kann erfolgen:
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">7. Streitbeilegung</h2>
-          <p className="text-light-100 mb-4">
-            Pixel Kraftwerk ist nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Im Falle von Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist der Gerichtsstand Leipzig, Deutschland. Die Streitbeilegung kann auch über die europäische Plattform für Online-Streitbeilegung erfolgen:
+          <ul className="space-y-2 mb-4">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>per eingeschriebenem Brief oder</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>per E-Mail an <a href="mailto:kontakt@pixelkraftwerk-ai.com" className="text-primary-500 hover:text-primary-400 transition-colors font-bold">kontakt@pixelkraftwerk-ai.com</a></span>
+            </li>
+          </ul>
+          <p className="text-light-200 leading-relaxed">
+            Maßgeblich ist der Zugang der Kündigung bei Pixel Kraftwerk.
           </p>
-          <p className="text-light-100 mb-4">
-            <a 
-              href="https://ec.europa.eu/consumers/odr"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-500 hover:text-primary-400 transition-colors"
+        </>
+      )
+    },
+    {
+      id: 'mitwirkungspflichten',
+      icon: <Users size={28} strokeWidth={1.5} />,
+      title: '6. Mitwirkungspflichten des Kunden',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Der Kunde stellt alle zur Leistungserbringung notwendigen Informationen, Inhalte, Zugänge und Freigaben rechtzeitig bereit.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Unterbleibt eine Mitwirkung, verlängern sich alle Fristen entsprechend.
+            Mehrkosten durch fehlende Mitwirkung trägt der Kunde.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'projektabnahme',
+      icon: <ClipboardCheck size={28} strokeWidth={1.5} />,
+      title: '7. Projektabnahme',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Nach Fertigstellung erfolgt eine gemeinsame Endabnahme.
+            Mit der Abnahme gilt die Leistung als vertragsgemäß erbracht.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Unterbleibt die Abnahme trotz Aufforderung, gilt die Leistung nach 7 Kalendertagen als abgenommen.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'nutzungsrechte',
+      icon: <Key size={28} strokeWidth={1.5} />,
+      title: '8. Nutzungsrechte',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Pixel Kraftwerk räumt dem Kunden ein einfaches, nicht übertragbares Nutzungsrecht für die Vertragslaufzeit ein.
+          </p>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Quellcodes, Systemzugänge und Konfigurationsrechte verbleiben bei Pixel Kraftwerk.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Mit Vertragsende erlischt jedes Nutzungsrecht vollständig.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'haftung',
+      icon: <ShieldAlert size={28} strokeWidth={1.5} />,
+      title: '9. Haftung',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Pixel Kraftwerk haftet nur bei Vorsatz und grober Fahrlässigkeit.
+          </p>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Bei einfacher Fahrlässigkeit ist die Haftung auf den Auftragswert der letzten drei Monate begrenzt.
+          </p>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Eine Haftung für mittelbare Schäden, entgangenen Gewinn oder Folgeschäden ist ausgeschlossen.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Pixel Kraftwerk haftet nicht für Störungen durch Drittanbieter, Internet- und Telekommunikationsnetze sowie KI-Systeme.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'datenschutz',
+      icon: <Database size={28} strokeWidth={1.5} />,
+      title: '10. Datenschutz und Auftragsverarbeitung',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Pixel Kraftwerk verarbeitet personenbezogene Daten gemäß DSGVO.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Im Rahmen von Kundenprojekten handelt Pixel Kraftwerk als Auftragsverarbeiter im Sinne von Art. 28 DSGVO.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'gerichtsstand',
+      icon: <Scale size={28} strokeWidth={1.5} />,
+      title: '11. Gerichtsstand und Recht',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Gerichtsstand ist Leipzig.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Es gilt ausschließlich deutsches Recht unter Ausschluss des UN-Kaufrechts.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'schlussbestimmungen',
+      icon: <FileCheck size={28} strokeWidth={1.5} />,
+      title: '12. Schlussbestimmungen',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Nebenabreden bestehen nicht. Änderungen bedürfen der Schriftform.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Sollte eine Bestimmung unwirksam sein, bleibt der Vertrag im Übrigen wirksam.
+          </p>
+        </>
+      )
+    }
+  ];
+
+  return (
+    <div className="bg-dark-500 min-h-screen">
+      <SEOHead
+        title="AGB – Allgemeine Geschäftsbedingungen"
+        description="Allgemeine Geschäftsbedingungen von Pixel Kraftwerk – Franke & Brause GbR. Vertragsbedingungen für unsere KI-Dienstleistungen."
+        keywords={['AGB', 'Geschäftsbedingungen', 'Vertragsbedingungen', 'Terms and Conditions']}
+      />
+
+      {/* HEADER */}
+      <section className="pt-32 pb-16 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              https://ec.europa.eu/consumers/odr
-            </a>
-          </p>
+              <h1 className="text-4xl md:text-5xl font-heading font-bold text-light-100 mb-4">
+                AGB – Allgemeine <span className="text-primary-500">Geschäftsbedingungen</span>
+              </h1>
+              <p className="text-light-100 text-xl mb-2">Pixel Kraftwerk – Franke & Brause GbR</p>
+              <p className="text-light-300 text-lg">
+                Stand: <span className="text-primary-500 font-bold">Januar 2026</span>
+              </p>
+            </motion.div>
+          </div>
         </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">8. Datenschutz</h2>
-          <p className="text-light-100 mb-4">
-            Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir erheben, verarbeiten und nutzen Ihre personenbezogenen Daten ausschließlich gemäß unserer Datenschutzerklärung, die auf unserer Website eingesehen werden kann. Mit der Nutzung unserer Dienstleistungen erklärt sich der Kunde mit der Verarbeitung seiner Daten gemäß der Datenschutzerklärung einverstanden.
-          </p>
+      </section>
+
+      {/* CONTENT SECTIONS */}
+      <section className="py-16 bg-dark-500">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {sections.map((section, index) => (
+              <motion.div
+                key={section.id}
+                className="bg-dark-400 border border-dark-100 p-8 hover:border-primary-500/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                <div className="flex items-start mb-6">
+                  <div className="text-primary-500 mr-4 flex-shrink-0 mt-1">
+                    {section.icon}
+                  </div>
+                  <h2 className="text-2xl font-heading font-bold text-light-100">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="pl-0 md:pl-12">
+                  {section.content}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">9. Schlussbestimmungen</h2>
-          <p className="text-light-100 mb-4">
-            Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des internationalen Privatrechts und des UN-Kaufrechts. Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt der Vertrag im Übrigen wirksam. Die unwirksame Bestimmung wird durch eine wirksame ersetzt, die dem wirtschaftlichen Zweck der unwirksamen am nächsten kommt. Alle Änderungen oder Ergänzungen dieser AGB bedürfen der Schriftform.
-          </p>
+      </section>
+
+      {/* FOOTER NOTE */}
+      <section className="py-16 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-200 text-lg mb-6 leading-relaxed">
+                Bei Fragen zu unseren Geschäftsbedingungen stehen wir Ihnen gerne zur Verfügung.
+              </p>
+              <a
+                href="mailto:kontakt@pixelkraftwerk-ai.com"
+                className="inline-flex items-center px-8 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 transition-colors duration-300"
+              >
+                <FileText className="mr-2" size={20} />
+                Kontakt aufnehmen
+              </a>
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
