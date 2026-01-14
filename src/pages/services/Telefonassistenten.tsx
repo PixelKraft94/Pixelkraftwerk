@@ -131,7 +131,7 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              KI-Systeme, die Anrufe entgegennehmen und tätigen, Anliegen verstehen und professionell bearbeiten – Dank künstlicher Intelligenz mit natürlicher Sprachausgabe und rund um die Uhr verfügbar.
+              KI-Systeme, die Anrufe entgegennehmen und tätigen, Anliegen verstehen und professionell bearbeiten – dank künstlicher Intelligenz mit natürlicher Sprachausgabe und rund um die Uhr verfügbar.
             </motion.p>
 
             <motion.button
