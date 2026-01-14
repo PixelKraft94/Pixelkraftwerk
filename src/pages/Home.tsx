@@ -233,7 +233,7 @@ const Home: React.FC = () => {
                   KI-Telefonassistenten
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Automatische Anrufannahme und professionelle Kundenbetreuung am Telefon.
+                  Dank künstlicher Intelligenz mit natürlicher Sprachausgabe und rund um die Uhr verfügbar. Automatische Anrufannahme und professionelle Kundenbetreuung am Telefon.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
