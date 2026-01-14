@@ -1,188 +1,344 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, FileText, Users, Calendar, AlertCircle, Mail } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const Privacy: React.FC = () => {
-  return (
-    <div className="pt-24 pb-16 bg-dark-400 min-h-screen">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-mono font-bold mb-8 text-primary-500">Datenschutzerklärung</h1>
-        <p className="text-light-300 mb-8">Stand: 23. Mai 2025</p>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Allgemeine Hinweise</h2>
-          <p className="text-light-100 mb-4">
-            Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+  const sections = [
+    {
+      id: 'verantwortlicher',
+      icon: <Users size={28} strokeWidth={1.5} />,
+      title: '1. Verantwortlicher',
+      content: (
+        <>
+          <p className="text-light-100 font-bold mb-2">Pixel Kraftwerk – Franke & Brause GbR</p>
+          <p className="text-light-200 mb-1">Neuer Weg 9a</p>
+          <p className="text-light-200 mb-1">04539 Groitzsch</p>
+          <p className="text-light-200 mb-1">Telefon: 0178 5844460</p>
+          <p className="text-light-200">
+            E-Mail: <a href="mailto:kontakt@pixelkraftwerk-ai.com" className="text-primary-500 hover:text-primary-400 transition-colors">kontakt@pixelkraftwerk-ai.com</a>
           </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Verantwortliche Stelle</h2>
-          <div className="mb-4">
-            <p className="text-light-100 mb-1">Pixelkraftwerk GbR – Franke & Brause</p>
-            <p className="text-light-100 mb-1">Neuer Weg 9a</p>
-            <p className="text-light-100 mb-1">04539 Groitzsch</p>
-            <p className="text-light-100 mb-1">Telefon: 01785844460</p>
-            <p className="text-light-100 mb-1">E-Mail: kontakt@pixelkraftwerk-ai.com</p>
+        </>
+      )
+    },
+    {
+      id: 'allgemeine-hinweise',
+      icon: <Shield size={28} strokeWidth={1.5} />,
+      title: '2. Allgemeine Hinweise',
+      content: (
+        <p className="text-light-200 leading-relaxed">
+          Der Schutz Ihrer personenbezogenen Daten ist uns ein besonderes Anliegen. Wir verarbeiten personenbezogene Daten ausschließlich im Rahmen der geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO) sowie des Bundesdatenschutzgesetzes (BDSG).
+        </p>
+      )
+    },
+    {
+      id: 'zugriffsdaten',
+      icon: <Eye size={28} strokeWidth={1.5} />,
+      title: '3. Zugriffsdaten und Hosting',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Beim Aufruf unserer Website werden durch den Hosting-Provider automatisch folgende Daten erfasst:
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>IP-Adresse</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Datum und Uhrzeit des Zugriffs</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>aufgerufene Seite</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Browsertyp und Betriebssystem</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Referrer-URL</span>
+            </li>
+          </ul>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Die Verarbeitung erfolgt zur technischen Bereitstellung der Website, zur Systemsicherheit und zur Missbrauchsprävention.
+          </p>
+          <p className="text-light-100 font-bold text-sm">
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'kontaktaufnahme',
+      icon: <Mail size={28} strokeWidth={1.5} />,
+      title: '4. Kontaktaufnahme',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Bei Kontaktaufnahme über unsere Website oder per E-Mail verarbeiten wir insbesondere:
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Name</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>E-Mail-Adresse</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Unternehmensname</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Kommunikationsinhalte</span>
+            </li>
+          </ul>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Die Verarbeitung erfolgt zur Bearbeitung Ihrer Anfrage und zur Durchführung vorvertraglicher Maßnahmen.
+          </p>
+          <p className="text-light-100 font-bold text-sm">
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'chatbot',
+      icon: <FileText size={28} strokeWidth={1.5} />,
+      title: '5. KI-gestützter Website-Chatbot',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Auf unserer Website ist ein KI-gestützter Kommunikationsdienst integriert, über den Nutzer freiwillig mit uns in Kontakt treten können.
+          </p>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Hierbei können insbesondere folgende Daten verarbeitet werden:
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>übermittelte Texte und Inhalte</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Kontaktdaten, sofern vom Nutzer angegeben</span>
+            </li>
+          </ul>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Die Verarbeitung dient der Kommunikation, der Bearbeitung von Anfragen sowie der Verbesserung unseres Serviceangebots.
+          </p>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Eine automatisierte Entscheidungsfindung mit rechtlicher Wirkung findet nicht statt.
+          </p>
+          <p className="text-light-100 font-bold text-sm">
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, Art. 6 Abs. 1 lit. f DSGVO
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'cookies',
+      icon: <Lock size={28} strokeWidth={1.5} />,
+      title: '6. Cookies',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Unsere Website verwendet technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Eine weitergehende Analyse des Nutzerverhaltens oder Marketing-Tracking findet nicht statt.
+          </p>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Sie können die Speicherung von Cookies jederzeit über die Einstellungen Ihres Browsers oder über unser Cookie-Einstellungsmenü anpassen.
+          </p>
+          <p className="text-light-100 font-bold text-sm">
+            Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO, § 25 Abs. 2 TTDSG
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'dienstleister',
+      icon: <Users size={28} strokeWidth={1.5} />,
+      title: '7. Einsatz externer Dienstleister',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Zur technischen Bereitstellung unserer Leistungen setzen wir sorgfältig ausgewählte externe Dienstleister ein, die personenbezogene Daten in unserem Auftrag verarbeiten. Diese Dienstleister sind vertraglich auf die Einhaltung der datenschutzrechtlichen Vorgaben verpflichtet.
+          </p>
+          <p className="text-light-200 leading-relaxed">
+            Eine Übermittlung in Drittstaaten erfolgt nur, sofern geeignete Garantien gemäß Art. 44 ff. DSGVO bestehen.
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'kundenprojekte',
+      icon: <FileText size={28} strokeWidth={1.5} />,
+      title: '8. Verarbeitung im Rahmen von Kundenprojekten',
+      content: (
+        <p className="text-light-200 leading-relaxed">
+          Im Rahmen unserer Dienstleistungen verarbeiten wir personenbezogene Daten regelmäßig im Auftrag unserer Kunden. In diesen Fällen handeln wir als <span className="font-bold text-light-100">Auftragsverarbeiter</span> im Sinne von Art. 28 DSGVO. Die datenschutzrechtliche Verantwortung liegt beim jeweiligen Auftraggeber.
+        </p>
+      )
+    },
+    {
+      id: 'speicherdauer',
+      icon: <Calendar size={28} strokeWidth={1.5} />,
+      title: '9. Speicherdauer',
+      content: (
+        <p className="text-light-200 leading-relaxed">
+          Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweiligen Verarbeitungszwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+        </p>
+      )
+    },
+    {
+      id: 'rechte',
+      icon: <Shield size={28} strokeWidth={1.5} />,
+      title: '10. Rechte der betroffenen Personen',
+      content: (
+        <>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Sie haben jederzeit das Recht auf:
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Auskunft (Art. 15 DSGVO)</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Berichtigung (Art. 16 DSGVO)</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Löschung (Art. 17 DSGVO)</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Einschränkung der Verarbeitung (Art. 18 DSGVO)</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Datenübertragbarkeit (Art. 20 DSGVO)</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</span>
+            </li>
+          </ul>
+          <p className="text-light-200">
+            Anfragen richten Sie bitte an: <a href="mailto:kontakt@pixelkraftwerk-ai.com" className="text-primary-500 hover:text-primary-400 transition-colors font-bold">kontakt@pixelkraftwerk-ai.com</a>
+          </p>
+        </>
+      )
+    },
+    {
+      id: 'beschwerderecht',
+      icon: <AlertCircle size={28} strokeWidth={1.5} />,
+      title: '11. Beschwerderecht',
+      content: (
+        <p className="text-light-200 leading-relaxed">
+          Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.
+        </p>
+      )
+    },
+    {
+      id: 'aenderungen',
+      icon: <FileText size={28} strokeWidth={1.5} />,
+      title: '12. Änderungen dieser Datenschutzerklärung',
+      content: (
+        <p className="text-light-200 leading-relaxed">
+          Wir behalten uns vor, diese Datenschutzerklärung bei rechtlichen oder technischen Änderungen anzupassen.
+        </p>
+      )
+    }
+  ];
+
+  return (
+    <div className="bg-dark-500 min-h-screen">
+      <SEOHead
+        title="Datenschutzerklärung"
+        description="Datenschutzerklärung von Pixel Kraftwerk – Franke & Brause GbR. Informationen zum Schutz Ihrer personenbezogenen Daten gemäß DSGVO."
+        keywords={['Datenschutz', 'DSGVO', 'Datenschutzerklärung', 'Privacy Policy']}
+      />
+
+      {/* HEADER */}
+      <section className="pt-32 pb-16 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-heading font-bold text-light-100 mb-6">
+                Datenschutz<span className="text-primary-500">erklärung</span>
+              </h1>
+              <p className="text-light-300 text-lg">
+                Stand: <span className="text-primary-500 font-bold">Januar 2026</span>
+              </p>
+            </motion.div>
           </div>
         </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Datenverarbeitung auf dieser Website</h2>
-          
-          <h3 className="text-lg font-mono text-primary-400 mb-3">Welche Daten erfassen wir?</h3>
-          <ul className="list-disc pl-6 mb-6">
-            <li className="text-light-100 mb-2">
-              Daten, die Sie uns mitteilen (z. B. über Kontaktformulare): Name, E-Mail-Adresse, Telefonnummer, Inhalte Ihrer Nachricht
-            </li>
-            <li className="text-light-100 mb-2">
-              Technische Daten: IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs, Referrer-URL
-            </li>
-          </ul>
-          
-          <h3 className="text-lg font-mono text-primary-400 mb-3">Wie erfassen wir Ihre Daten?</h3>
-          <ul className="list-disc pl-6 mb-6">
-            <li className="text-light-100 mb-2">
-              Durch Ihre aktive Mitteilung (z. B. über Kontaktformular oder Chatbot)
-            </li>
-            <li className="text-light-100 mb-2">
-              Automatisch beim Besuch der Website durch unsere IT-Systeme
-            </li>
-          </ul>
-          
-          <h3 className="text-lg font-mono text-primary-400 mb-3">Zwecke der Verarbeitung:</h3>
-          <ul className="list-disc pl-6 mb-6">
-            <li className="text-light-100 mb-2">Bearbeitung von Anfragen und Kommunikation</li>
-            <li className="text-light-100 mb-2">Erfüllung vertraglicher oder vorvertraglicher Pflichten</li>
-            <li className="text-light-100 mb-2">Optimierung und Sicherheit der Website</li>
-            <li className="text-light-100 mb-2">Analyse des Nutzerverhaltens (statistisch, nicht personenbezogen)</li>
-          </ul>
+      </section>
+
+      {/* CONTENT SECTIONS */}
+      <section className="py-16 bg-dark-500">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {sections.map((section, index) => (
+              <motion.div
+                key={section.id}
+                className="bg-dark-400 border border-dark-100 p-8 hover:border-primary-500/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true, margin: "-50px" }}
+              >
+                <div className="flex items-start mb-6">
+                  <div className="text-primary-500 mr-4 flex-shrink-0 mt-1">
+                    {section.icon}
+                  </div>
+                  <h2 className="text-2xl font-heading font-bold text-light-100">
+                    {section.title}
+                  </h2>
+                </div>
+                <div className="pl-0 md:pl-12">
+                  {section.content}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Rechtsgrundlagen der Verarbeitung</h2>
-          <ul className="list-disc pl-6 mb-4">
-            <li className="text-light-100 mb-2">Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
-            <li className="text-light-100 mb-2">Art. 6 Abs. 1 lit. b DSGVO (Vertrag oder vorvertragliche Maßnahmen)</li>
-            <li className="text-light-100 mb-2">Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, z. B. technische Sicherheit)</li>
-          </ul>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Speicherdauer</h2>
-          <ul className="list-disc pl-6 mb-4">
-            <li className="text-light-100 mb-2">Kontaktanfragen: max. 12 Monate</li>
-            <li className="text-light-100 mb-2">Vertrags- und Projektdaten: gem. gesetzlicher Aufbewahrungspflichten (z. B. 6–10 Jahre)</li>
-          </ul>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Weitergabe von Daten</h2>
-          <p className="text-light-100 mb-4">
-            Eine Übermittlung an Dritte erfolgt nur, wenn dies gesetzlich erlaubt ist, zur Vertragsabwicklung erforderlich ist oder Sie ausdrücklich eingewilligt haben. Eine Datenübertragung in Drittstaaten erfolgt nur, wenn ein angemessenes Datenschutzniveau besteht oder geeignete Garantien vorliegen (z. B. EU-Standardvertragsklauseln).
-          </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Ihre Rechte als betroffene Person</h2>
-          <p className="text-light-100 mb-4">Sie haben jederzeit das Recht auf:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li className="text-light-100 mb-2">Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
-            <li className="text-light-100 mb-2">Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-            <li className="text-light-100 mb-2">Löschung Ihrer Daten (Art. 17 DSGVO)</li>
-            <li className="text-light-100 mb-2">Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-            <li className="text-light-100 mb-2">Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
-            <li className="text-light-100 mb-2">Datenübertragbarkeit (Art. 20 DSGVO)</li>
-          </ul>
-          <p className="text-light-100 mb-4">
-            Bitte wenden Sie sich dazu per E-Mail an: 
-            <a href="mailto:kontakt@pixelkraftwerk-ai.com" className="text-primary-500 hover:text-primary-400 transition-colors ml-1">
-              kontakt@pixelkraftwerk-ai.com
-            </a>
-          </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Widerruf von Einwilligungen</h2>
-          <p className="text-light-100 mb-4">
-            Einwilligungen zur Datenverarbeitung können jederzeit mit Wirkung für die Zukunft widerrufen werden. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt.
-          </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Beschwerderecht bei der Aufsichtsbehörde</h2>
-          <p className="text-light-100 mb-4">
-            Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten rechtswidrig erfolgt.
-          </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Hosting</h2>
-          <p className="text-light-100 mb-4">Unsere Website wird bereitgestellt durch:</p>
-          <p className="text-light-100 mb-1">Netlify, Inc.</p>
-          <p className="text-light-100 mb-4">2325 3rd Street, Suite 296, San Francisco, CA 94107, USA</p>
-          <p className="text-light-100 mb-4">
-            Netlify verarbeitet personenbezogene Daten (z. B. IP-Adressen) in unserem Auftrag. Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer sicheren, stabilen und schnellen Bereitstellung der Website gemäß Art. 6 Abs. 1 lit. f DSGVO.
-          </p>
-          <p className="text-light-100">
-            Mehr Informationen: 
-            <a 
-              href="https://www.netlify.com/privacy/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-500 hover:text-primary-400 transition-colors ml-1"
+      </section>
+
+      {/* FOOTER CTA */}
+      <section className="py-16 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              https://www.netlify.com/privacy/
-            </a>
-          </p>
+              <p className="text-light-200 text-lg mb-6 leading-relaxed">
+                Bei Fragen zum Datenschutz stehen wir Ihnen gerne zur Verfügung.
+              </p>
+              <a
+                href="mailto:kontakt@pixelkraftwerk-ai.com"
+                className="inline-flex items-center px-8 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 transition-colors duration-300"
+              >
+                <Mail className="mr-2" size={20} />
+                Kontakt aufnehmen
+              </a>
+            </motion.div>
+          </div>
         </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Cookies</h2>
-          <p className="text-light-100 mb-4">
-            Unsere Website verwendet Cookies. Dabei handelt es sich um kleine Textdateien, die auf Ihrem Endgerät gespeichert werden.
-          </p>
-          <ul className="list-disc pl-6 mb-4">
-            <li className="text-light-100 mb-2">Session-Cookies: werden nach dem Besuch automatisch gelöscht</li>
-            <li className="text-light-100 mb-2">Dauerhafte Cookies: bleiben gespeichert, bis Sie diese löschen</li>
-            <li className="text-light-100 mb-2">Drittanbieter-Cookies: z. B. von eingebundenen Diensten wie Analyse-Tools</li>
-          </ul>
-          <p className="text-light-100 mb-4">
-            Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden, Cookies nur im Einzelfall erlauben oder generell ausschließen.
-          </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Kontaktformulare</h2>
-          <p className="text-light-100 mb-4">
-            Wenn Sie uns über ein Formular kontaktieren, speichern wir Ihre Angaben zur Bearbeitung Ihrer Anfrage und für Anschlussfragen. Eine Weitergabe an Dritte erfolgt nicht ohne Ihre Zustimmung.
-          </p>
-          <p className="text-light-100 mb-2">Rechtsgrundlage:</p>
-          <ul className="list-disc pl-6 mb-4">
-            <li className="text-light-100 mb-2">Bei vertraglichem Zusammenhang: Art. 6 Abs. 1 lit. b DSGVO</li>
-            <li className="text-light-100 mb-2">Andernfalls: berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO oder Ihre Einwilligung</li>
-          </ul>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100 mb-8">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Soziale Medien</h2>
-          
-          <h3 className="text-lg font-mono text-primary-400 mb-3">X (ehemals Twitter)</h3>
-          <p className="text-light-100 mb-4">
-            Funktionen des Dienstes X (X Corp., 1355 Market Street, San Francisco, CA 94103, USA) sind eingebunden. Dabei kann es zur Übertragung personenbezogener Daten in die USA kommen.
-          </p>
-          
-          <h3 className="text-lg font-mono text-primary-400 mb-3">Instagram</h3>
-          <p className="text-light-100 mb-4">
-            Funktionen von Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland) sind eingebunden. Es gelten die Datenschutzrichtlinien von Meta.
-          </p>
-        </div>
-        
-        <div className="max-w-3xl bg-dark-500 p-8 border border-dark-100">
-          <h2 className="text-xl font-mono text-primary-500 mb-4">Änderungen dieser Datenschutzerklärung</h2>
-          <p className="text-light-100 mb-4">
-            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, z. B. bei rechtlichen Änderungen oder Erweiterung unserer Dienste. Es gilt die jeweils aktuelle Version.
-          </p>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
