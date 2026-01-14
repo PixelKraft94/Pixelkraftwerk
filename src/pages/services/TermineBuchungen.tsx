@@ -132,7 +132,7 @@ const TermineBuchungen: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Buchungssysteme, mit künstlicher Intelligenz, die Verfügbarkeiten automatisch verwalten, Termine koordinieren und Kunden selbstständig bestätigen sowie erinnern.
+              Planungs- und Buchungssysteme, mit künstlicher Intelligenz, die Verfügbarkeiten automatisch verwalten, Termine koordinieren und Kunden selbstständig bestätigen sowie erinnern.
             </motion.p>
 
             <motion.button
