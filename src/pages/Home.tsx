@@ -132,7 +132,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit intelligenten KI-Systemen, die Kundenanfragen, Terminplanung und interne Prozesse selbstständig steuern.
+              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit künstlicher Intelligenz, die Kundenanfragen, Terminplanung und interne Prozesse selbstständig steuern.
             </motion.p>
 
             <motion.p
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit intelligenten KI-Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe spürbar vereinfachen.
+              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit künstlicher Intelligenz, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe spürbar vereinfachen.
             </motion.p>
 
             <motion.div
