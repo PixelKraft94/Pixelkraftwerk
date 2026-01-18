@@ -129,7 +129,7 @@ const ContactForm: React.FC = () => {
               
               <div>
                 <label htmlFor="tasksToAutomate" className="block text-light-100 font-heading mb-2">
-                  Welche Aufgaben möchten Sie am liebsten automatisieren? <span className="text-red-500">*</span>
+                  Wobei können wir Sie unterstützen? <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="tasksToAutomate"
