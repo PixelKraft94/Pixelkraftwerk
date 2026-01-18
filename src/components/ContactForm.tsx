@@ -140,7 +140,7 @@ const ContactForm: React.FC = () => {
                   maxLength={300}
                   rows={3}
                   className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200 resize-vertical"
-                  placeholder="Nennen Sie konkrete Aufgaben oder Bereiche, die Sie gerne automatisieren möchten..."
+                  placeholder="Hier können Sie alles eintragen, wobei Sie Unterstützung benötigen – von Automatisierung über Online-Marketing bis hin zu Websites oder individuellen Softwarelösungen."
                 />
                 <p className="text-light-300 text-xs mt-1">
                   {formData.tasksToAutomate.length}/300 Zeichen
