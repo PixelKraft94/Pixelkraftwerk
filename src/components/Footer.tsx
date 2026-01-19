@@ -93,6 +93,51 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
+
+      <noscript>
+        <a
+          href="https://www.provenexpert.com/pixel-kraftwerk-ki-automatisierungen/?utm_source=seals&utm_campaign=proseal&utm_medium=profile&utm_content=09229aa6-aa11-40d2-80b2-a7579d7f6df5"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Customer reviews & experiences for Pixel Kraftwerk | KI - Automatisierungen"
+          className="pe-pro-seal-more-infos"
+        >
+          More info
+        </a>
+      </noscript>
+      <script
+        id="proSeal"
+        dangerouslySetInnerHTML={{
+          __html: `
+      window.loadProSeal = function(){
+          window.provenExpert.proSeal({
+            widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
+            language:"de-DE",
+            usePageLanguage: false,
+            bannerColor: "#097E92",
+            textColor: "#FFFFFF",
+            showReviews: true,
+            hideDate: true,
+            hideName: false,
+            hideOnMobile: false,
+            bottom: "0px",
+            stickyToSide: "left",
+            googleStars: true,
+            zIndex: "9999",
+            displayReviewerLastName: false,
+          })
+      };
+          `
+        }}
+      />
+      <script
+        src="https://s.provenexpert.net/seals/proseal-v2.js"
+        onLoad={() => {
+          if (typeof window !== 'undefined' && (window as any).loadProSeal) {
+            (window as any).loadProSeal();
+          }
+        }}
+      />
     </footer>
   );
 };
