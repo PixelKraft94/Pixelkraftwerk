@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, MessageSquare, Phone, Calendar, Target, Globe, Video } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Calendar, Target, Globe, Video, Settings } from 'lucide-react';
 import Logo from './Logo';
 import { NavItem } from '../types';
 
@@ -146,6 +146,16 @@ const Header: React.FC = () => {
                 </a>
               </li>
             ))}
+
+            <li>
+              <a
+                href="/privacy-settings"
+                className="text-light-100 hover:text-primary-400 transition-colors duration-200"
+                aria-label="Cookie-Einstellungen"
+              >
+                <Settings size={20} />
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -221,6 +231,17 @@ const Header: React.FC = () => {
                 </a>
               </li>
             ))}
+
+            <li>
+              <a
+                href="/privacy-settings"
+                className="flex items-center text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
+                onClick={toggleMenu}
+              >
+                <Settings size={20} className="mr-2" />
+                Cookie-Einstellungen
+              </a>
+            </li>
           </ul>
         </nav>
       )}

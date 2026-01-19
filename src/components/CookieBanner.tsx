@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Check, Info, Settings } from 'lucide-react';
+import { X, Check, Info } from 'lucide-react';
 
 type CookieConsent = {
   necessary: boolean; // Always true
@@ -128,20 +128,8 @@ const CookieBanner: React.FC = () => {
     setShowSettings(false);
   };
 
-  const openManageConsent = () => {
-    setShowBanner(true);
-  };
-
   if (!showBanner) {
-    return (
-      <button
-        onClick={openManageConsent}
-        className="fixed bottom-4 left-4 z-50 bg-dark-400 text-light-100 p-2 rounded-full hover:bg-dark-300 transition-colors duration-200"
-        aria-label="Cookie-Einstellungen verwalten"
-      >
-        <Settings size={20} />
-      </button>
-    );
+    return null;
   }
 
   return (
