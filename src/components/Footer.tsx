@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 import NAPInfo from './NAPInfo';
@@ -38,7 +38,53 @@ const getSocialIcon = (icon: string) => {
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const loadProvenExpertScript = () => {
+      const existingScript = document.getElementById('proven-expert-script');
+      if (existingScript) return;
+
+      const script = document.createElement('script');
+      script.id = 'proven-expert-script';
+      script.src = 'https://s.provenexpert.net/seals/proseal-v2.js';
+      script.async = true;
+
+      script.onload = () => {
+        if ((window as any).provenExpert && (window as any).provenExpert.proSeal) {
+          (window as any).provenExpert.proSeal({
+            widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
+            language: "de-DE",
+            usePageLanguage: false,
+            bannerColor: "#097E92",
+            textColor: "#FFFFFF",
+            showReviews: true,
+            hideDate: true,
+            hideName: false,
+            hideOnMobile: false,
+            bottom: "0px",
+            stickyToSide: "left",
+            googleStars: true,
+            zIndex: "9999",
+            displayReviewerLastName: false,
+          });
+        }
+      };
+
+      document.body.appendChild(script);
+    };
+
+    loadProvenExpertScript();
+
+    return () => {
+      const script = document.getElementById('proven-expert-script');
+      if (script) {
+        script.remove();
+      }
+    };
+  }, []);
+
   return (
     <footer className="bg-dark-400 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -49,7 +95,7 @@ const Footer: React.FC = () => {
               Intelligente Automatisierungslösungen für zukunftsorientierte Unternehmen.
             </p>
           </div>
-          
+
           <div>
             <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Navigation</h2>
             <nav>
@@ -86,7 +132,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-dark-100 pt-8 text-center">
           <p className="text-light-400 text-sm">
             &copy; {currentYear} PIXEL_KRAFTWERK. Alle Rechte vorbehalten.
@@ -105,39 +151,6 @@ const Footer: React.FC = () => {
           More info
         </a>
       </noscript>
-      <script
-        id="proSeal"
-        dangerouslySetInnerHTML={{
-          __html: `
-      window.loadProSeal = function(){
-          window.provenExpert.proSeal({
-            widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
-            language:"de-DE",
-            usePageLanguage: false,
-            bannerColor: "#097E92",
-            textColor: "#FFFFFF",
-            showReviews: true,
-            hideDate: true,
-            hideName: false,
-            hideOnMobile: false,
-            bottom: "0px",
-            stickyToSide: "left",
-            googleStars: true,
-            zIndex: "9999",
-            displayReviewerLastName: false,
-          })
-      };
-          `
-        }}
-      />
-      <script
-        src="https://s.provenexpert.net/seals/proseal-v2.js"
-        onLoad={() => {
-          if (typeof window !== 'undefined' && (window as any).loadProSeal) {
-            (window as any).loadProSeal();
-          }
-        }}
-      />
     </footer>
   );
 };
