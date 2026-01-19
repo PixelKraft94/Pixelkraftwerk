@@ -235,10 +235,9 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="/privacy-settings"
-                className="flex items-center text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
+                className="block text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
                 onClick={toggleMenu}
               >
-                <Settings size={20} className="mr-2" />
                 Cookie-Einstellungen
               </a>
             </li>
