@@ -40,20 +40,56 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://www.provenexpert.com/widget/landing_pixel-kraftwerk-ki-automatisierungen.js?feedback=1&avatar=0&competence=0&style=white';
+    (window as any).loadProSeal = function() {
+      if ((window as any).provenExpert) {
+        (window as any).provenExpert.proSeal({
+          widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
+          language: "de-DE",
+          usePageLanguage: false,
+          bannerColor: "#097E92",
+          textColor: "#FFFFFF",
+          showReviews: true,
+          hideDate: true,
+          hideName: false,
+          hideOnMobile: false,
+          googleStars: true,
+          zIndex: "9999",
+          displayReviewerLastName: false,
+        });
 
-    const container = document.getElementById('proven-expert-widget');
-    if (container) {
-      container.appendChild(script);
-    }
+        setTimeout(() => {
+          const proSealElement = document.querySelector('.pe-pro-seal') as HTMLElement;
+          const container = document.getElementById('proven-expert-widget');
+
+          if (proSealElement && container) {
+            proSealElement.style.position = 'static';
+            proSealElement.style.transform = 'none';
+            proSealElement.style.bottom = 'auto';
+            proSealElement.style.left = 'auto';
+            proSealElement.style.width = 'auto';
+            proSealElement.style.maxWidth = '300px';
+            container.appendChild(proSealElement);
+          }
+        }, 500);
+      }
+    };
+
+    const script = document.createElement('script');
+    script.id = 'proSeal';
+    script.src = 'https://s.provenexpert.net/seals/proseal-v2.js';
+    script.async = true;
+    script.onload = () => {
+      if ((window as any).loadProSeal) {
+        (window as any).loadProSeal();
+      }
+    };
+    document.body.appendChild(script);
 
     return () => {
       if (script.parentNode) {
         script.parentNode.removeChild(script);
       }
+      delete (window as any).loadProSeal;
     };
   }, []);
 
@@ -112,6 +148,18 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
+
+      <noscript>
+        <a
+          href="https://www.provenexpert.com/pixel-kraftwerk-ki-automatisierungen/?utm_source=seals&utm_campaign=proseal&utm_medium=profile&utm_content=09229aa6-aa11-40d2-80b2-a7579d7f6df5"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Customer reviews & experiences for Pixel Kraftwerk | KI - Automatisierungen"
+          className="pe-pro-seal-more-infos"
+        >
+          More info
+        </a>
+      </noscript>
     </footer>
   );
 };
