@@ -52,6 +52,8 @@ const Footer: React.FC = () => {
           hideDate: true,
           hideName: false,
           hideOnMobile: false,
+          bottom: "77px",
+          stickyToSide: "left",
           googleStars: true,
           zIndex: "9999",
           displayReviewerLastName: false,
@@ -67,7 +69,7 @@ const Footer: React.FC = () => {
             proSealElement.style.bottom = 'auto';
             proSealElement.style.left = 'auto';
             proSealElement.style.width = 'auto';
-            proSealElement.style.maxWidth = '300px';
+            proSealElement.style.maxWidth = '280px';
             container.appendChild(proSealElement);
           }
         }, 500);
@@ -96,15 +98,14 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-dark-400 pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <Logo />
             <p className="text-light-300 mt-4 max-w-md">
               Intelligente Automatisierungslösungen für zukunftsorientierte Unternehmen.
             </p>
-            <div id="proven-expert-widget" className="mt-6"></div>
           </div>
-          
+
           <div>
             <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Navigation</h2>
             <nav>
@@ -139,6 +140,10 @@ const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
+          </div>
+
+          <div className="flex items-start justify-center lg:justify-end">
+            <div id="proven-expert-widget"></div>
           </div>
         </div>
         
