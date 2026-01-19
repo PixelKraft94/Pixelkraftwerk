@@ -160,20 +160,20 @@ const CookieBanner: React.FC = () => {
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-3">
-              <button 
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button
                 onClick={acceptAllCookies}
                 className="px-4 py-2 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-200"
               >
                 Alle akzeptieren
               </button>
-              <button 
+              <button
                 onClick={acceptNecessaryCookies}
                 className="px-4 py-2 bg-dark-300 text-light-100 font-heading hover:bg-dark-200 transition-colors duration-200"
               >
                 Nur notwendige akzeptieren
               </button>
-              <button 
+              <button
                 onClick={openSettings}
                 className="px-4 py-2 border border-primary-500 text-primary-500 font-heading hover:bg-primary-500 hover:text-dark-500 transition-colors duration-200"
               >
