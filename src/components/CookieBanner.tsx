@@ -55,19 +55,22 @@ const CookieBanner: React.FC = () => {
   useEffect(() => {
     if (consentState.consented) {
       localStorage.setItem('cookieConsent', JSON.stringify(consentState));
-      
+
+      // Trigger custom event for same-tab updates
+      window.dispatchEvent(new Event('cookieConsentChanged'));
+
       // Here you would activate the respective cookies based on user consent
       // This is a placeholder for actual cookie activation logic
       if (consentState.preferences.analytics) {
         // Enable analytics cookies
         console.log('Analytics cookies enabled');
       }
-      
+
       if (consentState.preferences.marketing) {
         // Enable marketing cookies
         console.log('Marketing cookies enabled');
       }
-      
+
       if (consentState.preferences.preferences) {
         // Enable preferences cookies
         console.log('Preferences cookies enabled');
@@ -128,6 +131,15 @@ const CookieBanner: React.FC = () => {
     setShowSettings(false);
   };
 
+  const closeBanner = () => {
+    setConsentState({
+      consented: true,
+      preferences: initialConsent,
+      timestamp: new Date().toISOString(),
+    });
+    setShowBanner(false);
+  };
+
   if (!showBanner) {
     return null;
   }
@@ -142,8 +154,8 @@ const CookieBanner: React.FC = () => {
                 <Info size={20} className="mr-2" />
                 Cookie-Einstellungen
               </h2>
-              <button 
-                onClick={() => setShowBanner(false)} 
+              <button
+                onClick={closeBanner}
                 className="text-light-300 hover:text-light-100 transition-colors duration-200"
                 aria-label="Schließen"
               >
@@ -187,8 +199,8 @@ const CookieBanner: React.FC = () => {
               <h2 className="text-xl font-heading font-bold text-primary-500">
                 Cookie-Einstellungen anpassen
               </h2>
-              <button 
-                onClick={closeSettings} 
+              <button
+                onClick={closeBanner}
                 className="text-light-300 hover:text-light-100 transition-colors duration-200"
                 aria-label="Schließen"
               >

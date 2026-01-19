@@ -20,6 +20,7 @@ import CrmLeadManagement from './pages/services/CrmLeadManagement';
 import WebsiteSeo from './pages/services/WebsiteSeo';
 import ContentVideo from './pages/services/ContentVideo';
 import CookieBanner from './components/CookieBanner';
+import VoiceflowChat from './components/VoiceflowChat';
 
 function App() {
   const [currentPath, setCurrentPath] = useState<string>(window.location.pathname);
@@ -107,6 +108,7 @@ function App() {
       </main>
       <Footer />
       <CookieBanner />
+      <VoiceflowChat />
     </div>
   );
 }

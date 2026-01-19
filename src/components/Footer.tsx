@@ -3,6 +3,7 @@ import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 import NAPInfo from './NAPInfo';
 import { NavItem, SocialLink } from '../types';
+import { useCookieConsent } from '../hooks/useCookieConsent';
 
 const navItems: NavItem[] = [
   { title: 'Startseite', path: '/' },
@@ -38,9 +39,10 @@ const getSocialIcon = (icon: string) => {
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { hasConsent } = useCookieConsent();
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !hasConsent) return;
 
     const loadProvenExpertScript = () => {
       const existingScript = document.getElementById('proven-expert-script');
@@ -83,7 +85,7 @@ const Footer: React.FC = () => {
         script.remove();
       }
     };
-  }, []);
+  }, [hasConsent]);
 
   return (
     <footer className="bg-dark-400 pt-16 pb-8">
