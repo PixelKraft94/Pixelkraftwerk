@@ -4,6 +4,7 @@ import { ChevronDown, CheckCircle, ArrowRight, Calendar, MessageCircle, Target, 
 import { BackgroundPaths } from '../components/ui/background-paths';
 import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
+import ProvenExpertSection from '../components/ProvenExpertSection';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import WebSiteSchema from '../components/WebSiteSchema';
 import SEOHead from '../components/SEOHead';
@@ -752,6 +753,9 @@ const Home: React.FC = () => {
 
       {/* GOOGLE MAPS */}
       <GoogleMapsSection />
+
+      {/* PROVENEXPERT SECTION */}
+      <ProvenExpertSection />
     </div>
   );
 };
