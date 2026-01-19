@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Award } from 'lucide-react';
 
 const ProvenExpertSection: React.FC = () => {
   useEffect(() => {
@@ -32,12 +34,12 @@ const ProvenExpertSection: React.FC = () => {
             proSealElement.style.left = 'auto';
             proSealElement.style.right = 'auto';
             proSealElement.style.width = '100%';
-            proSealElement.style.maxWidth = '280px';
+            proSealElement.style.maxWidth = '500px';
             proSealElement.style.margin = '0 auto';
             proSealElement.style.overflow = 'hidden';
             container.appendChild(proSealElement);
           }
-        }, 500);
+        }, 1000);
       }
     };
 
@@ -61,23 +63,47 @@ const ProvenExpertSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-dark-300 py-20 md:py-24 overflow-hidden">
+    <section className="bg-dark-400 py-24 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <div className="flex justify-center items-center">
-          <div id="proven-expert-widget" className="max-w-full"></div>
-        </div>
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex items-center justify-center mb-4">
+            <Award className="text-primary-500 mr-3" size={40} />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-light-100">
+              Kundenbewertungen
+            </h2>
+          </div>
+          <p className="text-lg text-light-200">
+            Vertrauen Sie auf die Erfahrungen unserer zufriedenen Kunden
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="flex justify-center items-center min-h-[400px]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div id="proven-expert-widget" className="w-full max-w-full flex justify-center"></div>
+        </motion.div>
       </div>
 
       <noscript>
-        <div className="text-center">
+        <div className="text-center mt-8">
           <a
             href="https://www.provenexpert.com/pixel-kraftwerk-ki-automatisierungen/?utm_source=seals&utm_campaign=proseal&utm_medium=profile&utm_content=09229aa6-aa11-40d2-80b2-a7579d7f6df5"
             target="_blank"
             rel="noopener noreferrer"
             title="Customer reviews & experiences for Pixel Kraftwerk | KI - Automatisierungen"
-            className="text-primary-400 hover:text-primary-300 transition-colors"
+            className="text-primary-400 hover:text-primary-300 transition-colors underline"
           >
-            More info
+            Unsere Bewertungen auf ProvenExpert ansehen
           </a>
         </div>
       </noscript>
