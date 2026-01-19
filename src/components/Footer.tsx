@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 import NAPInfo from './NAPInfo';
@@ -38,7 +38,46 @@ const getSocialIcon = (icon: string) => {
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
+  useEffect(() => {
+    (window as any).loadProSeal = function() {
+      if ((window as any).provenExpert) {
+        (window as any).provenExpert.proSeal({
+          widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
+          language: "de-DE",
+          usePageLanguage: false,
+          bannerColor: "#097E92",
+          textColor: "#FFFFFF",
+          showReviews: true,
+          hideDate: true,
+          hideName: false,
+          hideOnMobile: false,
+          bottom: "0px",
+          stickyToSide: "left",
+          googleStars: true,
+          zIndex: "9999",
+          displayReviewerLastName: false,
+        });
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = 'https://s.provenexpert.net/seals/proseal-v2.js';
+    script.async = true;
+    script.onload = () => {
+      if ((window as any).loadProSeal) {
+        (window as any).loadProSeal();
+      }
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <footer className="bg-dark-400 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -105,39 +144,6 @@ const Footer: React.FC = () => {
           More info
         </a>
       </noscript>
-      <script
-        id="proSeal"
-        dangerouslySetInnerHTML={{
-          __html: `
-      window.loadProSeal = function(){
-          window.provenExpert.proSeal({
-            widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
-            language:"de-DE",
-            usePageLanguage: false,
-            bannerColor: "#097E92",
-            textColor: "#FFFFFF",
-            showReviews: true,
-            hideDate: true,
-            hideName: false,
-            hideOnMobile: false,
-            bottom: "0px",
-            stickyToSide: "left",
-            googleStars: true,
-            zIndex: "9999",
-            displayReviewerLastName: false,
-          })
-      };
-          `
-        }}
-      />
-      <script
-        src="https://s.provenexpert.net/seals/proseal-v2.js"
-        onLoad={() => {
-          if (typeof window !== 'undefined' && (window as any).loadProSeal) {
-            (window as any).loadProSeal();
-          }
-        }}
-      />
     </footer>
   );
 };
