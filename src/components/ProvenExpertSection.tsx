@@ -31,9 +31,10 @@ const ProvenExpertSection: React.FC = () => {
             proSealElement.style.bottom = 'auto';
             proSealElement.style.left = 'auto';
             proSealElement.style.right = 'auto';
-            proSealElement.style.width = 'auto';
-            proSealElement.style.maxWidth = '320px';
-            proSealElement.style.margin = '0';
+            proSealElement.style.width = '100%';
+            proSealElement.style.maxWidth = '280px';
+            proSealElement.style.margin = '0 auto';
+            proSealElement.style.overflow = 'hidden';
             container.appendChild(proSealElement);
           }
         }, 500);
@@ -60,10 +61,10 @@ const ProvenExpertSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-dark-300 py-20 md:py-24">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="flex justify-center md:justify-end items-center max-w-7xl mx-auto">
-          <div id="proven-expert-widget" className="w-full md:w-auto flex justify-center md:justify-end"></div>
+    <section className="bg-dark-300 py-20 md:py-24 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div className="flex justify-center items-center">
+          <div id="proven-expert-widget" className="max-w-full"></div>
         </div>
       </div>
 
