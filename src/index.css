@@ -42,3 +42,12 @@ input, select, textarea {
 .cursor-blink {
   @apply animate-cursor-blink;
 }
+
+@media (min-width: 768px) {
+  #pe-proseal-container,
+  .pe-pro-seal,
+  [id^="pe-proseal"] {
+    transform: scale(0.7);
+    transform-origin: bottom left;
+  }
+}
