@@ -43,22 +43,11 @@ input, select, textarea {
   @apply animate-cursor-blink;
 }
 
-#pe-proseal-container,
-.pe-pro-seal,
-[id^="pe-proseal"] {
-  position: static !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  top: auto !important;
-  transform: scale(0.35) !important;
-  transform-origin: top left !important;
-  filter: invert(1) !important;
-  z-index: 1 !important;
-}
-
-.proven-expert-footer-container {
-  height: 120px;
-  margin-top: 1.5rem;
-  overflow: visible;
+@media (min-width: 768px) {
+  #pe-proseal-container,
+  .pe-pro-seal,
+  [id^="pe-proseal"] {
+    transform: scale(0.7);
+    transform-origin: bottom left;
+  }
 }

@@ -44,19 +44,6 @@ const Footer: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !hasConsent) return;
 
-    let observer: MutationObserver | null = null;
-
-    const moveWidgetToContainer = () => {
-      const container = document.getElementById('proven-expert-footer-container');
-      const widget = document.querySelector('[id^="pe-proseal"]') as HTMLElement;
-
-      if (container && widget && !container.contains(widget)) {
-        container.appendChild(widget);
-        return true;
-      }
-      return false;
-    };
-
     const loadProvenExpertScript = () => {
       const existingScript = document.getElementById('proven-expert-script');
       if (existingScript) return;
@@ -79,23 +66,11 @@ const Footer: React.FC = () => {
             hideName: false,
             hideOnMobile: false,
             bottom: "0px",
-            stickyToSide: "none",
+            stickyToSide: "left",
             googleStars: true,
-            zIndex: "1",
+            zIndex: "9999",
             displayReviewerLastName: false,
           });
-
-          observer = new MutationObserver(() => {
-            if (moveWidgetToContainer()) {
-              observer?.disconnect();
-            }
-          });
-
-          observer.observe(document.body, { childList: true, subtree: true });
-
-          setTimeout(() => {
-            moveWidgetToContainer();
-          }, 500);
         }
       };
 
@@ -105,7 +80,6 @@ const Footer: React.FC = () => {
     loadProvenExpertScript();
 
     return () => {
-      observer?.disconnect();
       const script = document.getElementById('proven-expert-script');
       if (script) {
         script.remove();
@@ -122,10 +96,6 @@ const Footer: React.FC = () => {
             <p className="text-light-300 mt-4 max-w-md">
               Intelligente Automatisierungslösungen für zukunftsorientierte Unternehmen.
             </p>
-            <div
-              id="proven-expert-footer-container"
-              className="proven-expert-footer-container"
-            />
           </div>
 
           <div>
