@@ -121,7 +121,7 @@ Configured to:
 
 1. **Claim Your Business**
    - Visit [Google Business Profile](https://www.google.com/business/)
-   - Verify using the phone number: +49 178 5844460
+   - Verify using the phone number: +491785844460
    - Use the exact NAP from `businessInfo.ts`
 
 2. **Complete Your Profile**
@@ -180,7 +180,7 @@ Configured to:
 **Important**: Use EXACT NAP from `businessInfo.ts` for all listings:
 - Name: Pixel Kraftwerk – Franke & Brause GbR
 - Address: Neuer Weg 9a, 04539 Groitzsch, Deutschland
-- Phone: +49 178 5844460
+- Phone: +491785844460
 - Email: kontakt@pixelkraftwerk-ai.com
 
 ## 8. Location-Specific Content Strategy
@@ -282,7 +282,7 @@ Configured to:
 
 **Address**: Neuer Weg 9a, 04539 Groitzsch, Deutschland
 
-**Phone**: +49 178 5844460
+**Phone**: +491785844460
 
 **Email**: kontakt@pixelkraftwerk-ai.com
 

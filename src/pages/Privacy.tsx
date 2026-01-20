@@ -14,7 +14,7 @@ const Privacy: React.FC = () => {
           <p className="text-light-100 font-bold mb-2">Pixel Kraftwerk – Franke & Brause GbR</p>
           <p className="text-light-200 mb-1">Neuer Weg 9a</p>
           <p className="text-light-200 mb-1">04539 Groitzsch</p>
-          <p className="text-light-200 mb-1">Telefon: 0178 5844460</p>
+          <p className="text-light-200 mb-1">Telefon: +491785844460</p>
           <p className="text-light-200">
             E-Mail: <a href="mailto:kontakt@pixelkraftwerk-ai.com" className="text-primary-500 hover:text-primary-400 transition-colors">kontakt@pixelkraftwerk-ai.com</a>
           </p>
