@@ -47,7 +47,7 @@ input, select, textarea {
   #pe-proseal-container,
   .pe-pro-seal,
   [id^="pe-proseal"] {
-    transform: scale(0.7);
+    transform: scale(0.455);
     transform-origin: bottom left;
   }
 }
