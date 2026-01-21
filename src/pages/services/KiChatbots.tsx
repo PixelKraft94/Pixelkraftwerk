@@ -4,11 +4,6 @@ import {
   MessageSquare,
   ArrowRight,
   CheckCircle,
-  Clock,
-  Users,
-  Zap,
-  Shield,
-  HeadphonesIcon,
   Building2,
   Stethoscope,
   ShoppingBag,
@@ -27,65 +22,58 @@ const KiChatbots: React.FC = () => {
   };
 
   const problems = [
-    'Website-Besucher verlassen Ihre Seite, ohne Kontakt aufzunehmen?',
-    'Ihr Team beantwortet immer wieder dieselben Fragen per E-Mail oder Telefon?',
-    'Potenzielle Kunden warten zu lange auf eine Antwort und wenden sich an die Konkurrenz?',
-    'Außerhalb der Geschäftszeiten gehen wertvolle Anfragen verloren?'
+    'Website-Besucher keine schnelle Antwort erhalten',
+    'Ihr Team immer wieder dieselben Fragen beantworten muss',
+    'Anfragen außerhalb der Geschäftszeiten unbeantwortet bleiben',
+    'Interessenten zur Konkurrenz wechseln, weil es dort schneller geht'
   ];
 
   const processSteps = [
     {
       step: '01',
-      title: 'Analyse Ihrer Kommunikation',
-      description: 'Wir analysieren Ihre häufigsten Kundenanfragen, Ihre Branche und Ihre spezifischen Anforderungen.'
+      title: 'Live-Demo erleben',
+      description: 'Testen Sie den Chatbot direkt auf unserer Website.'
     },
     {
       step: '02',
-      title: 'Training des Chatbots',
-      description: 'Der Chatbot wird mit Ihren Inhalten, FAQs und Unternehmensinfos trainiert und lernt Ihre Sprache.'
+      title: 'Unverbindliches Gespräch',
+      description: 'Wir besprechen kurz Ihre Anforderungen und Ziele.'
     },
     {
       step: '03',
-      title: 'Integration in Ihre Website',
-      description: 'Nahtlose Einbindung in Ihre Website mit passendem Design und optimaler Platzierung.'
+      title: 'Individuelle Einrichtung',
+      description: 'Der KI-Chatbot wird speziell auf Ihr Unternehmen angepasst.'
     },
     {
       step: '04',
-      title: 'Test und Optimierung',
-      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gesprächen.'
-    },
-    {
-      step: '05',
-      title: 'Dauerhafter Betrieb',
-      description: 'Ihr Chatbot arbeitet zuverlässig rund um die Uhr – wir überwachen und optimieren fortlaufend.'
+      title: 'Live-Schaltung & Optimierung',
+      description: 'Wir begleiten den laufenden Betrieb und optimieren kontinuierlich.'
     }
   ];
 
-  const benefits = [
-    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Chatbot ist jederzeit ansprechbar – auch nachts, am Wochenende und an Feiertagen.' },
-    { icon: <Zap size={24} />, title: 'Sofortige Reaktion', text: 'Besucher erhalten innerhalb von Sekunden qualifizierte Antworten auf ihre Fragen.' },
-    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Bis zu 80% weniger Routineanfragen, die Ihr Team beantworten muss.' },
-    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Besucher erhält dieselbe professionelle Betreuung – unabhängig von Tageszeit oder Auslastung.' },
-    { icon: <HeadphonesIcon size={24} />, title: 'Mehrsprachig möglich', text: 'Bedienen Sie internationale Kunden in ihrer Muttersprache ohne zusätzliches Personal.' },
-    { icon: <MessageSquare size={24} />, title: 'Lernfähiges System', text: 'Der Chatbot wird mit jeder Interaktion besser und passt sich Ihren Bedürfnissen an.' }
-  ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Für alle, die viele gleichartige Anfragen erhalten und schnelle Reaktionszeiten benötigen.' },
-    { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlasten Sie Ihr Empfangsteam und bieten Sie Patienten/Mandanten rund um die Uhr Service.' },
-    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Produktfragen, Lieferstatus und Rückgabeanfragen automatisch.' },
-    { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Verpassen Sie keine Anfrage mehr und qualifizieren Sie Leads automatisch vor.' }
+    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: '' },
+    { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: '' },
+    { icon: <Stethoscope size={28} />, title: 'Praxen, Kanzleien & Beratungen', description: '' },
+    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Service-Websites', description: '' }
+  ];
+
+  const targetAudienceCriteria = [
+    'regelmäßig wiederkehrende Anfragen erhalten',
+    'zeitlich stark ausgelastet sind',
+    'online sichtbar sind, aber zu wenig Anfragen erhalten',
+    'ihre Erreichbarkeit verbessern möchten'
   ];
 
   const features = [
     'Automatische Begrüßung von Website-Besuchern',
-    'Beantwortung häufiger Fragen (FAQs)',
-    'Qualifizierung von Leads und Interessenten',
-    'Direkte Terminbuchung im Chat',
-    'Weiterleitung komplexer Anfragen an Ihr Team',
+    'Beantwortung häufig gestellter Fragen',
+    'Vorqualifizierung von Anfragen',
     'Erfassung von Kontaktdaten und Anliegen',
-    'Integration mit Ihrem CRM-System',
-    'Mehrsprachige Unterstützung'
+    'Weiterleitung relevanter Anfragen an Ihr Team',
+    'Termin- und Anfrageerfassung nach definierten Regeln',
+    'Optional mehrsprachig einsetzbar'
   ];
 
   return (
@@ -120,18 +108,39 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              KI-Chatbots
-              <span className="block text-primary-500 mt-2">für Ihre Website</span>
+              KI-Chatbots für Ihre Website
             </motion.h1>
 
+            <motion.h2
+              className="text-2xl md:text-3xl font-heading font-bold text-primary-500 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              Kundenanfragen automatisch beantworten – rund um die Uhr
+            </motion.h2>
+
             <motion.p
-              className="text-xl text-light-200 mb-8 max-w-3xl mx-auto"
+              className="text-xl text-light-200 mb-6 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Ein KI-Chatbot ist ein intelligentes System, welches mit Hilfe von künstlicher Intelligenz natürliche Sprache versteht, Kundenanfragen selbstständig beantwortet oder aber auch Termine verwalten kann - direkt auf Ihrer Website
+              <strong>Ihre Website kann mehr, als nur informieren.</strong><br />
+              Unser KI-Chatbot übernimmt Kundenanfragen, beantwortet häufige Fragen und erfasst Termine oder Anliegen – <strong>automatisch, zuverlässig und 24/7</strong>.
             </motion.p>
+
+            <motion.div
+              className="bg-primary-500/10 border border-primary-500/30 p-4 mb-8 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <p className="text-light-200">
+                👉 <strong>Erleben Sie den KI-Chatbot live</strong> – direkt hier auf der Website.<br />
+                <em className="text-light-300 text-sm">Hinweis: Der Chatbot auf dieser Seite ist eine Live-Demo unseres Systems.</em>
+              </p>
+            </motion.div>
 
             <motion.button
               onClick={scrollToContact}
@@ -140,8 +149,8 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <ArrowRight className="mr-2" size={24} />
-              Kostenlose Beratung anfordern
+              Individuelle Demo anfragen
+              <ArrowRight className="ml-2" size={24} />
             </motion.button>
           </div>
         </div>
@@ -158,8 +167,11 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Kennen Sie <span className="text-primary-500">diese Situation?</span>
+                Das Problem: <span className="text-primary-500">Anfragen kommen – aber nicht an</span>
               </h2>
+              <p className="text-light-200 mb-8">
+                Jeden Tag gehen potenzielle Kunden verloren, weil:
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,20 +184,137 @@ const KiChatbots: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-primary-500 mr-4 mt-1 flex-shrink-0">?</span>
+                  <span className="text-primary-500 mr-4 mt-1 flex-shrink-0 text-xl">•</span>
                   <p className="text-light-200">{problem}</p>
                 </motion.div>
               ))}
             </div>
 
             <motion.p
-              className="text-center text-light-100 mt-10 text-lg"
+              className="text-center text-light-100 mt-10 text-lg font-bold"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Chatbot genau die richtige Lösung für Sie.</strong>
+              Das kostet Zeit, Geld und Nerven.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                Die Lösung: <span className="text-primary-500">Ein KI-Chatbot, der für Sie arbeitet</span>
+              </h2>
+              <p className="text-light-200 max-w-3xl mx-auto mb-8">
+                Unser KI-Chatbot übernimmt die erste Kommunikation mit Ihren Website-Besuchern – <strong>ohne zusätzliches Personal</strong>.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-dark-400 p-8 border border-primary-500/30 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-heading font-bold text-light-100 mb-4">In der Praxis bedeutet das:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Besucher werden aktiv angesprochen</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Standardfragen werden selbstständig beantwortet</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Termine und Anfragen werden strukturiert erfasst</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Nur relevante Anliegen landen bei Ihrem Team</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.p
+              className="text-center text-primary-500 text-lg font-bold"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              ➡️ Weniger Unterbrechungen. Mehr qualifizierte Anfragen.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                Erleben Sie den <span className="text-primary-500">Chatbot live</span>
+              </h2>
+              <p className="text-light-200 max-w-3xl mx-auto mb-8">
+                Der Chatbot auf dieser Website zeigt Ihnen <strong>live</strong>, wie ein KI-Assistent arbeitet.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-dark-500 p-8 border border-dark-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg font-heading font-bold text-light-100 mb-4">Sie können:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-3 flex-shrink-0">•</span>
+                  <span className="text-light-200">typische Kundenfragen stellen</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-3 flex-shrink-0">•</span>
+                  <span className="text-light-200">Abläufe testen</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary-500 mr-3 flex-shrink-0">•</span>
+                  <span className="text-light-200">sehen, wie Anfragen strukturiert aufgenommen werden</span>
+                </li>
+              </ul>
+              <p className="text-light-200 mt-6">
+                <strong>So würde der Chatbot auch bei Ihnen funktionieren</strong> – angepasst auf Ihr Unternehmen.
+              </p>
+            </motion.div>
+
+            <motion.p
+              className="text-center text-primary-500 text-lg font-bold mt-8"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              ➡️ Starten Sie die Live-Demo direkt im Chat.
             </motion.p>
           </div>
         </div>
@@ -202,30 +331,142 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Was Ihr <span className="text-primary-500">Chatbot leistet</span>
+                Was unser KI-Chatbot <span className="text-primary-500">konkret leistet</span>
               </h2>
-              <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Chatbot ist ein intelligentes System, das natürliche Sprache versteht und
-                Kundenanfragen selbstständig beantwortet – direkt auf Ihrer Website.
-              </p>
             </motion.div>
 
             <div className="bg-dark-400 p-8 border border-dark-100">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-3">
                 {features.map((feature, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center"
+                    className="flex items-start"
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     viewport={{ once: true }}
                   >
-                    <CheckCircle className="text-primary-500 mr-3 flex-shrink-0" size={18} />
+                    <span className="text-primary-500 mr-3 flex-shrink-0">•</span>
                     <span className="text-light-100">{feature}</span>
                   </motion.div>
                 ))}
               </div>
+
+              <div className="mt-8 pt-8 border-t border-dark-100">
+                <p className="text-light-200 text-center">
+                  <strong>Wichtig:</strong> Der Chatbot ersetzt kein Fachpersonal – er <strong>entlastet</strong>, filtert und strukturiert die Kommunikation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                Mieten statt kaufen – <span className="text-primary-500">volle Transparenz</span>
+              </h2>
+              <p className="text-light-200 max-w-3xl mx-auto mb-8">
+                Unsere KI-Chatbots werden <strong>monatlich gemietet</strong>, nicht verkauft.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-dark-500 p-8 border border-primary-500/30"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-heading font-bold text-light-100 mb-6">Das bedeutet für Sie:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Keine hohen Einmalkosten</span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200"><strong>Keine Mindestlaufzeit</strong></span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Kündigungsfrist: <strong>3 Monate zum Monatsende</strong></span>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                  <span className="text-light-200">Betrieb, Wartung und laufende Optimierung inklusive</span>
+                </div>
+              </div>
+              <p className="text-light-200 mt-6 text-center">
+                Sie bleiben flexibel – wir sorgen dafür, dass der Chatbot dauerhaft Mehrwert liefert.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                Für welche Unternehmen <span className="text-primary-500">ist das sinnvoll?</span>
+              </h2>
+              <p className="text-light-200 mb-8">
+                Der KI-Chatbot eignet sich besonders für Unternehmen, die:
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-dark-400 p-8 border border-dark-100 mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {targetAudienceCriteria.map((criteria, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="text-primary-500 mr-3 flex-shrink-0 mt-1" size={20} />
+                    <span className="text-light-200">{criteria}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <div className="text-center mb-8">
+              <h3 className="text-xl font-heading font-bold text-light-100">Typische Einsatzbereiche:</h3>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {targetAudiences.map((audience, index) => (
+                <motion.div
+                  key={index}
+                  className="flex flex-col items-center text-center bg-dark-400 p-6 border border-dark-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="text-primary-500 mb-4">{audience.icon}</div>
+                  <h3 className="text-sm font-heading font-bold text-light-100">{audience.title}</h3>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
@@ -242,11 +483,8 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                So entsteht <span className="text-primary-500">Ihr KI-Chatbot</span>
+                So starten wir <span className="text-primary-500">gemeinsam</span>
               </h2>
-              <p className="text-light-200">
-                Von der ersten Analyse bis zum laufenden Betrieb – unser bewährter Prozess.
-              </p>
             </motion.div>
 
             <div className="space-y-6">
@@ -265,79 +503,6 @@ const KiChatbots: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-heading font-bold text-light-100 mb-2">{step.title}</h3>
                     <p className="text-light-300">{step.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-dark-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ihre <span className="text-primary-500">Vorteile</span>
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-dark-400 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -4 }}
-                >
-                  <div className="text-primary-500 mb-4">{benefit.icon}</div>
-                  <h3 className="text-lg font-heading font-bold text-light-100 mb-2">{benefit.title}</h3>
-                  <p className="text-light-300 text-sm">{benefit.text}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-dark-400">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ideal für <span className="text-primary-500">diese Branchen</span>
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {targetAudiences.map((audience, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start bg-dark-500 p-6 border border-dark-100"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-primary-500 mr-4 flex-shrink-0">{audience.icon}</div>
-                  <div>
-                    <h3 className="text-lg font-heading font-bold text-light-100 mb-2">{audience.title}</h3>
-                    <p className="text-light-300 text-sm">{audience.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -395,7 +560,7 @@ const KiChatbots: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit für <span className="text-primary-500">bessere Kundenbetreuung?</span>
+              Bereit für <span className="text-primary-500">bessere Kundenkommunikation?</span>
             </motion.h2>
             <motion.p
               className="text-light-200 mb-8"
@@ -404,8 +569,53 @@ const KiChatbots: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns gemeinsam herausfinden, wie ein KI-Chatbot Ihr Unternehmen entlasten kann.
+              Wenn Sie möchten, zeigen wir Ihnen <strong>individuell</strong>,<br />
+              wie ein KI-Chatbot in Ihrem Unternehmen eingesetzt werden kann.
             </motion.p>
+            <motion.div
+              className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <button
+                onClick={scrollToContact}
+                className="inline-flex items-center px-8 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 transition-colors duration-300"
+              >
+                Individuelle Demo anfragen
+                <ArrowRight className="ml-2" size={20} />
+              </button>
+            </motion.div>
+            <motion.p
+              className="text-light-300 text-sm"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Ohne Testzugang. Ohne Verpflichtung. Mit klarer Erwartung.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              className="bg-dark-500/50 border border-primary-500/20 p-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg font-heading font-bold text-primary-500 mb-2">Hinweis</h3>
+              <p className="text-light-300 text-sm">
+                Der Chatbot auf dieser Website dient als Demo.<br />
+                Jeder Kunden-Chatbot wird individuell eingerichtet und angepasst.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
