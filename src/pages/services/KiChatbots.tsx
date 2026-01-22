@@ -117,7 +117,7 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              Kundenanfragen automatisch beantworten – rund um die Uhr
+              Kundenanfragen automatisch beantworten – rund um die Uhr, dank künstlicher Intelligenz
             </motion.h2>
 
             <motion.p
