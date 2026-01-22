@@ -149,7 +149,7 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Individuelle Demo anfragen
+              Jetzt kostenloses Erstgespräch sichern
               <ArrowRight className="ml-2" size={24} />
             </motion.button>
           </div>
@@ -583,7 +583,7 @@ const KiChatbots: React.FC = () => {
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 transition-colors duration-300"
               >
-                Individuelle Demo anfragen
+                Jetzt kostenloses Erstgespräch sichern
                 <ArrowRight className="ml-2" size={20} />
               </button>
             </motion.div>
