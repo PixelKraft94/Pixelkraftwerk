@@ -60,10 +60,10 @@ const KiChatbots: React.FC = () => {
   ];
 
   const targetAudienceCriteria = [
-    'regelmäßig wiederkehrende Anfragen erhalten',
-    'zeitlich stark ausgelastet sind',
-    'online sichtbar sind, aber zu wenig Anfragen erhalten',
-    'ihre Erreichbarkeit verbessern möchten'
+    'regelmäßig Kundenanfragen erhalten',
+    'einen hohen Kommunikationsaufwand haben',
+    'Anfragen strukturierter erfassen möchten',
+    'ihre Erreichbarkeit über die Website verbessern wollen'
   ];
 
   const features = [
