@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useCookieConsent } from '../hooks/useCookieConsent';
 
 declare global {
   interface Window {
@@ -12,10 +11,8 @@ declare global {
 }
 
 const VoiceflowChat: React.FC = () => {
-  const { hasConsent } = useCookieConsent();
-
   useEffect(() => {
-    if (typeof window === 'undefined' || !hasConsent) return;
+    if (typeof window === 'undefined') return;
 
     const loadVoiceflowChat = () => {
       const existingScript = document.getElementById('voiceflow-chat-script');
@@ -51,7 +48,7 @@ const VoiceflowChat: React.FC = () => {
         script.remove();
       }
     };
-  }, [hasConsent]);
+  }, []);
 
   return null;
 };

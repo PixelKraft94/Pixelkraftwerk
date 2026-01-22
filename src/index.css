@@ -51,3 +51,11 @@ input, select, textarea {
     transform-origin: bottom left;
   }
 }
+
+/* Ensure Voiceflow chat widget stays behind cookie banner */
+#voiceflow-chat,
+[class*="vfrc"],
+[id*="voiceflow"],
+iframe[src*="voiceflow"] {
+  z-index: 40 !important;
+}
