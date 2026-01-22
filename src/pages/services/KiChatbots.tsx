@@ -525,11 +525,10 @@ const KiChatbots: React.FC = () => {
                 <Phone size={24} className="text-primary-500 mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-heading font-bold text-light-100 mb-2">
-                    Sie möchten auch telefonisch erreichbar sein?
+                    Viele Anfragen kommen auch per Telefon.
                   </h3>
                   <p className="text-light-300 mb-4">
-                    Ergänzen Sie Ihren Website-Chatbot mit einem KI-Telefonassistenten und bieten Sie
-                    Ihren Kunden auf allen Kanälen professionellen Service.
+                    Unser Telefonassistent nimmt Anrufe entgegen, beantwortet häufige Fragen und erfasst Anliegen automatisch.
                   </p>
                   <a
                     href="/telefonassistenten"
