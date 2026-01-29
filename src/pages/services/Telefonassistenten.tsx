@@ -120,17 +120,25 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              KI-Telefonassistenten
-              <span className="block text-primary-500 mt-2">für Ihr Unternehmen</span>
+              KI-Telefonassistenten für Ihr Unternehmen
             </motion.h1>
 
             <motion.p
-              className="text-xl text-light-200 mb-8 max-w-3xl mx-auto"
+              className="text-xl font-bold text-light-100 mb-4 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Ein KI-Telefonassistent nimmt Anrufe automatisch entgegen, beantwortet häufige Fragen und erfasst Anliegen zuverlässig – professionell, rund um die Uhr und ohne Warteschleifen.
+              Telefonate und Termine automatisch annehmen – rund um die Uhr
+            </motion.p>
+
+            <motion.p
+              className="text-lg text-light-200 mb-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              Unsere KI-Telefonassistenten nehmen Anrufe entgegen, beantworten Fragen, verwalten Termine und erfassen Anliegen zuverlässig – automatisiert, professionell und 24/7 durch künstliche Intelligenz.
             </motion.p>
 
             <motion.button
