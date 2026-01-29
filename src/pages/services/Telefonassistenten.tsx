@@ -28,65 +28,64 @@ const Telefonassistenten: React.FC = () => {
   };
 
   const problems = [
-    'Verpasste Anrufe kosten Sie regelmäßig potenzielle Aufträge?',
-    'Ihr Team wird ständig durch Telefonanrufe bei der Arbeit unterbrochen?',
-    'Außerhalb der Geschäftszeiten sind Sie telefonisch nicht erreichbar?',
-    'Die Qualität der Anrufannahme schwankt je nach Auslastung?'
+    'Verpasste Anrufe führen regelmäßig zu verlorenen Aufträgen?',
+    'Ihr Team wird ständig durch Telefonate aus dem Arbeitsfluss gerissen?',
+    'Außerhalb der Geschäftszeiten ist niemand erreichbar?',
+    'Die Qualität der Anrufannahme hängt von Auslastung und Tageszeit ab?'
   ];
 
   const processSteps = [
     {
       step: '01',
-      title: 'Analyse Ihrer Telefonie',
-      description: 'Wir analysieren Ihre häufigsten Anrufgründe, Ihre Branche und Ihre spezifischen Anforderungen.'
+      title: 'Analyse Ihrer Telefonkommunikation',
+      description: 'Wir analysieren typische Anrufgründe, Abläufe und Anforderungen Ihres Unternehmens.'
     },
     {
       step: '02',
       title: 'Training des Assistenten',
-      description: 'Der Telefonassistent wird mit Ihren Inhalten, FAQs und Unternehmensinfos trainiert.'
+      description: 'Der Telefonassistent wird mit Ihren Inhalten, Abläufen und Informationen trainiert.'
     },
     {
       step: '03',
-      title: 'Eigene Rufnummer einrichten',
-      description: 'Sie erhalten eine dedizierte Telefonnummer für Ihren Assistenten, die Sie flexibel einsetzen können.'
+      title: 'Einrichtung der Rufnummer',
+      description: 'Sie erhalten eine dedizierte Telefonnummer für den Einsatz des Assistenten.'
     },
     {
       step: '04',
-      title: 'Test und Optimierung',
-      description: 'Gemeinsame Testphase mit kontinuierlicher Verbesserung basierend auf echten Gesprächen.'
+      title: 'Test & Optimierung',
+      description: 'Gemeinsame Testphase mit Anpassungen auf Basis realer Gespräche.'
     },
     {
       step: '05',
       title: 'Dauerhafter Betrieb',
-      description: 'Ihr Telefonassistent arbeitet zuverlässig rund um die Uhr – wir überwachen und optimieren fortlaufend.'
+      description: 'Der Assistent arbeitet zuverlässig im Hintergrund – wir überwachen und optimieren laufend.'
     }
   ];
 
   const benefits = [
-    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit telefonisch erreichbar – auch nachts, am Wochenende und an Feiertagen.' },
-    { icon: <PhoneCall size={24} />, title: 'Keine verpassten Anrufe', text: 'Jeder Anruf wird angenommen und professionell bearbeitet – kein Kunde hört mehr das Besetztzeichen.' },
-    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Ihr Team kann konzentriert arbeiten, während der Assistent Routineanrufe bearbeitet.' },
-    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Anrufer erhält dieselbe professionelle Betreuung – unabhängig von Tageszeit oder Auslastung.' },
-    { icon: <PhoneForwarded size={24} />, title: 'Intelligente Weiterleitung', text: 'Dringende Anrufe werden sofort an die richtige Person weitergeleitet.' },
-    { icon: <HeadphonesIcon size={24} />, title: 'Natürliche Gespräche', text: 'Moderne Sprachverarbeitung ermöglicht natürliche, flüssige Gespräche.' }
+    { icon: <Clock size={24} />, title: '24/7 Erreichbarkeit', text: 'Ihr Unternehmen ist jederzeit telefonisch erreichbar – auch außerhalb der Geschäftszeiten.' },
+    { icon: <PhoneCall size={24} />, title: 'Keine verpassten Anrufe', text: 'Jeder Anruf wird entgegengenommen und professionell bearbeitet.' },
+    { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Routineanrufe werden automatisch übernommen – Ihr Team gewinnt Zeit.' },
+    { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Anrufer erhält dieselbe strukturierte Betreuung.' },
+    { icon: <PhoneForwarded size={24} />, title: 'Intelligente Weiterleitung', text: 'Dringende Anliegen gelangen direkt zur richtigen Ansprechperson.' },
+    { icon: <HeadphonesIcon size={24} />, title: 'Natürliche Gespräche', text: 'Moderne Sprachverarbeitung sorgt für flüssige, verständliche Dialoge.' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Für alle, die viele gleichartige Anrufe erhalten und schnelle Reaktionszeiten benötigen.' },
-    { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlasten Sie Ihr Empfangsteam und bieten Sie Patienten/Mandanten rund um die Uhr Service.' },
-    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Beantworten Sie Bestellstatus, Lieferfragen und Reklamationen automatisch.' },
-    { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Verpassen Sie keine Anfrage mehr und qualifizieren Sie Leads automatisch vor.' }
+    { icon: <Building2 size={28} />, title: 'Dienstleister & Agenturen', description: 'Strukturierte Annahme vieler gleichartiger Anrufe.' },
+    { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Entlastung des Empfangs und konstante Erreichbarkeit.' },
+    { icon: <ShoppingBag size={28} />, title: 'E-Commerce & Handel', description: 'Automatische Bearbeitung von Status-, Liefer- und Serviceanfragen.' },
+    { icon: <Briefcase size={28} />, title: 'Handwerk & lokale Betriebe', description: 'Keine Anfrage geht verloren – auch bei hoher Auslastung.' }
   ];
 
   const features = [
-    'Eingehende Anrufe annehmen',
-    'Ausgehende Anrufe tätigen',
-    'Natürliche Sprachverarbeitung und Sprachausgabe',
+    'Annahme eingehender Anrufe',
     'Beantwortung häufiger Fragen',
     'Terminvereinbarung und Kalenderintegration',
     'Erfassung von Rückrufwünschen',
-    'Mehrsprachige Unterstützung',
-    'Integration mit Ihrem CRM-System'
+    'Weiterleitung dringender Anliegen',
+    'Mehrsprachige Kommunikation',
+    'Integration in bestehende CRM-Systeme'
   ];
 
   return (
@@ -131,7 +130,7 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              KI-Systeme, die Anrufe entgegennehmen und tätigen, Anliegen verstehen und professionell bearbeiten – dank künstlicher Intelligenz mit natürlicher Sprachausgabe und rund um die Uhr verfügbar.
+              Ein KI-Telefonassistent nimmt Anrufe automatisch entgegen, beantwortet häufige Fragen und erfasst Anliegen zuverlässig – professionell, rund um die Uhr und ohne Warteschleifen.
             </motion.p>
 
             <motion.button
@@ -142,7 +141,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <ArrowRight className="mr-2" size={24} />
-              Kostenlose Beratung anfordern
+              Individuelle Beratung anfordern
             </motion.button>
           </div>
         </div>
@@ -186,7 +185,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Telefonassistent genau die richtige Lösung für Sie.</strong>
+              <strong>Dann ist ein KI-Telefonassistent die passende Lösung.</strong>
             </motion.p>
           </div>
         </div>
@@ -206,8 +205,7 @@ const Telefonassistenten: React.FC = () => {
                 Was Ihr <span className="text-primary-500">Telefonassistent leistet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Ein KI-Telefonassistent ist ein intelligentes System, das natürliche Sprache versteht,
-                Kundenanfragen selbstständig beantwortet und auch ausgehende Anrufe für Sie tätigt.
+                Der KI-Telefonassistent versteht natürliche Sprache und bearbeitet Anrufe selbstständig – zuverlässig und strukturiert.
               </p>
             </motion.div>
 
@@ -246,7 +244,7 @@ const Telefonassistenten: React.FC = () => {
                 So entsteht <span className="text-primary-500">Ihr Telefonassistent</span>
               </h2>
               <p className="text-light-200">
-                Von der ersten Analyse bis zum laufenden Betrieb – unser bewährter Prozess.
+                Von der ersten Analyse bis zum laufenden Betrieb – ein klarer, erprobter Prozess.
               </p>
             </motion.div>
 
@@ -361,11 +359,10 @@ const Telefonassistenten: React.FC = () => {
                 <MessageSquare size={24} className="text-primary-500 mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-heading font-bold text-light-100 mb-2">
-                    Sie möchten auch auf Ihrer Website erreichbar sein?
+                    Auch über die Website erreichbar sein?
                   </h3>
                   <p className="text-light-300 mb-4">
-                    Ergänzen Sie Ihren Telefonassistenten mit einem KI-Chatbot und bieten Sie
-                    Ihren Kunden auf allen Kanälen professionellen Service.
+                    Viele Kunden nehmen zuerst über die Website Kontakt auf. Ein KI-Chatbot beantwortet Anfragen direkt online und erfasst Anliegen strukturiert.
                   </p>
                   <a
                     href="/ki-chatbots"
@@ -405,7 +402,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns gemeinsam herausfinden, wie ein Telefonassistent Ihr Unternehmen entlasten kann.
+              Lassen Sie uns gemeinsam besprechen, wie ein KI-Telefonassistent Ihr Unternehmen entlasten kann.
             </motion.p>
           </div>
         </div>
