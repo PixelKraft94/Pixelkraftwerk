@@ -67,7 +67,7 @@ const Telefonassistenten: React.FC = () => {
     { icon: <PhoneCall size={24} />, title: 'Keine verpassten Anrufe', text: 'Jeder Anruf wird entgegengenommen und professionell bearbeitet.' },
     { icon: <Users size={24} />, title: 'Entlastung des Teams', text: 'Routineanrufe werden automatisch übernommen – Ihr Team gewinnt Zeit.' },
     { icon: <Shield size={24} />, title: 'Gleichbleibende Qualität', text: 'Jeder Anrufer erhält dieselbe strukturierte Betreuung.' },
-    { icon: <PhoneForwarded size={24} />, title: 'Intelligente Weiterleitung', text: 'Dringende Anliegen gelangen direkt zur richtigen Ansprechperson.' },
+    { icon: <PhoneForwarded size={24} />, title: 'Strukturierte Anrufannahme', text: 'Anliegen werden erfasst, dokumentiert und übersichtlich weitergegeben.' },
     { icon: <HeadphonesIcon size={24} />, title: 'Natürliche Gespräche', text: 'Moderne Sprachverarbeitung sorgt für flüssige, verständliche Dialoge.' }
   ];
 
