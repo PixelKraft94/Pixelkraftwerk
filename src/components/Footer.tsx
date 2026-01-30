@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
           <div>
             <Logo />
             <p className="text-light-300 mt-4 max-w-md">
-              Intelligente Automatisierungslösungen für zukunftsorientierte Unternehmen.
+              Zukunft. Automatisiert. Jetzt.
             </p>
           </div>
 
