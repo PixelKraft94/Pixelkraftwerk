@@ -7,7 +7,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Imprint from './pages/Imprint';
 import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
 import Agb from './pages/Agb';
 import PrivacySettings from './pages/PrivacySettings';
 import Features from './pages/Features';
@@ -71,8 +70,6 @@ function App() {
         return <Imprint />;
       case '/privacy':
         return <Privacy />;
-      case '/terms':
-        return <Terms />;
       case '/agb':
         return <Agb />;
       case '/privacy-settings':

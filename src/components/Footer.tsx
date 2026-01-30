@@ -13,7 +13,6 @@ const navItems: NavItem[] = [
   { title: 'FAQ', path: '/faq' },
   { title: 'AGBs', path: '/agb' },
   { title: 'Datenschutzerklärung', path: '/privacy' },
-  { title: 'Nutzungsbedingungen', path: '/terms' },
   { title: 'Impressum', path: '/imprint' },
   { title: 'Datenschutz-Einstellungen', path: '/privacy-settings' },
 ];
