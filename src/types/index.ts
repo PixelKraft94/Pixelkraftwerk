@@ -34,6 +34,7 @@ export interface ContactFormData {
   email: string;
   company: string;
   tasksToAutomate: string;
+  privacyAccepted: boolean;
 }
 
 export type CookieType = 'necessary' | 'analytics' | 'marketing' | 'preferences';

@@ -6,7 +6,8 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    tasksToAutomate: ''
+    tasksToAutomate: '',
+    privacyAccepted: false
   });
   
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -14,8 +15,12 @@ const ContactForm: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -49,7 +54,8 @@ const ContactForm: React.FC = () => {
         name: '',
         email: '',
         company: '',
-        tasksToAutomate: ''
+        tasksToAutomate: '',
+        privacyAccepted: false
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -147,12 +153,36 @@ const ContactForm: React.FC = () => {
                 </p>
               </div>
 
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="privacyAccepted"
+                  name="privacyAccepted"
+                  checked={formData.privacyAccepted}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 w-4 h-4 bg-dark-300 border border-dark-100 text-primary-500 focus:ring-primary-500 focus:ring-2 cursor-pointer"
+                />
+                <label htmlFor="privacyAccepted" className="text-light-200 text-sm">
+                  Ich habe die{' '}
+                  <a
+                    href="/datenschutz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-400 hover:text-primary-300 underline"
+                  >
+                    Datenschutzerklärung
+                  </a>{' '}
+                  gelesen und akzeptiert <span className="text-red-500">*</span>
+                </label>
+              </div>
+
               <div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !formData.privacyAccepted}
                   className={`w-full py-4 px-6 bg-primary-500 text-dark-500 font-heading font-bold text-lg transition-colors duration-300 ${
-                    isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-400'
+                    isSubmitting || !formData.privacyAccepted ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-400'
                   }`}
                 >
                   {isSubmitting ? 'Wird gesendet...' : 'Lösungsmöglichkeiten anfordern'}
