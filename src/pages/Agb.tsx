@@ -160,13 +160,53 @@ const Agb: React.FC = () => {
       content: (
         <>
           <p className="text-light-200 mb-4 leading-relaxed">
-            Pixel Kraftwerk räumt dem Kunden ein einfaches, nicht übertragbares Nutzungsrecht für die Vertragslaufzeit ein.
+            Pixel Kraftwerk stellt sämtliche Leistungen ausschließlich zur zeitlich begrenzten Nutzung im Rahmen des jeweiligen Vertragsverhältnisses zur Verfügung.
           </p>
           <p className="text-light-200 mb-4 leading-relaxed">
-            Quellcodes, Systemzugänge und Konfigurationsrechte verbleiben bei Pixel Kraftwerk.
+            Der Kunde erhält für die Dauer der Vertragslaufzeit ein einfaches, nicht übertragbares und nicht unterlizenzierbares Nutzungsrecht an den bereitgestellten Leistungen.
           </p>
+          <p className="text-light-200 mb-4 leading-relaxed">
+            Eine Übertragung von Eigentums-, Urheber- oder sonstigen Verwertungsrechten findet nicht statt.
+          </p>
+          <p className="text-light-200 mb-2 leading-relaxed">
+            Insbesondere erfolgt keine Herausgabe von:
+          </p>
+          <ul className="space-y-2 mb-4">
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Quellcodes</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Systemzugängen</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Konfigurationsdateien</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>KI-Logiken</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Automatisierungen</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Workflows</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>Trainingsdaten</span>
+            </li>
+            <li className="text-light-200 flex items-start">
+              <span className="text-primary-500 mr-2">•</span>
+              <span>technischen Dokumentationen</span>
+            </li>
+          </ul>
           <p className="text-light-200 leading-relaxed">
-            Mit Vertragsende erlischt jedes Nutzungsrecht vollständig.
+            Mit Beendigung des Vertragsverhältnisses erlischt das Nutzungsrecht vollständig, und sämtliche bereitgestellten Leistungen werden eingestellt.
           </p>
         </>
       )
