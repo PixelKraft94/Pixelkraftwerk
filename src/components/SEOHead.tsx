@@ -51,6 +51,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     updateOrCreateMeta('og:type', ogType, true);
     updateOrCreateMeta('og:url', url, true);
     updateOrCreateMeta('og:image', businessInfo.logo, true);
+    updateOrCreateMeta('og:image:width', '1200', true);
+    updateOrCreateMeta('og:image:height', '630', true);
     updateOrCreateMeta('og:locale', 'de_DE', true);
     updateOrCreateMeta('og:site_name', businessInfo.name, true);
 

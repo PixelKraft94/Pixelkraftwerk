@@ -23,8 +23,8 @@ export const businessInfo = {
   },
 
   url: "https://pixelkraftwerk-ai.com",
-  logo: "https://pixelkraftwerk-ai.com/pixelkraftwerk-logo-quadrat.png",
-  image: "https://pixelkraftwerk-ai.com/pixelkraftwerk-logo-quadrat.png",
+  logo: "https://pixelkraftwerk-ai.com/pixel_kraftwerk_leipzig_groitzsch_titelbild_logo.png",
+  image: "https://pixelkraftwerk-ai.com/pixel_kraftwerk_leipzig_groitzsch_titelbild_logo.png",
 
   founders: [
     { name: "Lukas Franke" },
