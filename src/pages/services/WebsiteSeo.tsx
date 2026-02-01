@@ -5,18 +5,22 @@ import {
   ArrowRight,
   CheckCircle,
   Search,
-  Smartphone,
-  Zap,
-  BarChart3,
+  TrendingUp,
+  DollarSign,
+  Target,
   Shield,
-  Palette,
+  Clock,
   Building2,
   Briefcase,
   Store,
   Stethoscope,
-  Clock,
   Wrench,
-  HeadphonesIcon
+  HeadphonesIcon,
+  Zap,
+  Award,
+  BarChart3,
+  Users,
+  XCircle
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
@@ -30,94 +34,99 @@ const WebsiteSeo: React.FC = () => {
   };
 
   const problems = [
-    'Ihre aktuelle Website wirkt veraltet und repräsentiert Ihr Unternehmen nicht mehr?',
-    'Potenzielle Kunden finden Sie bei Google nicht oder erst auf Seite 5?',
-    'Ihre Website ist langsam und auf dem Smartphone kaum benutzbar?',
-    'Sie möchten online neue Kunden gewinnen, wissen aber nicht wie?'
+    'Kunden suchen bei Google nach Ihrer Leistung – und landen bei Ihrer Konkurrenz',
+    'Ihre Website ist online, bringt aber kaum Anfragen',
+    'Andere Betriebe wirken moderner, sichtbarer, präsenter',
+    'Jeden Monat gehen potenzielle Kunden verloren, ohne dass Sie es direkt merken'
   ];
 
-  const processSteps = [
+  const websiteProcessSteps = [
     {
       step: '01',
-      title: 'Analyse & Strategie',
-      description: 'Wir analysieren Ihre Zielgruppe, Wettbewerber und Keywords für eine fundierte Strategie.'
+      title: 'Analyse',
+      description: 'Analyse Ihres aktuellen Auftritts und Ihrer Zielgruppe'
     },
     {
       step: '02',
-      title: 'Design-Konzept',
-      description: 'Entwicklung eines modernen Designs, das Ihre Marke widerspiegelt und Besucher überzeugt.'
+      title: 'Design',
+      description: 'Modernes Design, abgestimmt auf Ihr Unternehmen'
     },
     {
       step: '03',
-      title: 'Entwicklung',
-      description: 'Technisch einwandfreie Umsetzung mit schnellen Ladezeiten und perfekter Mobil-Optimierung.'
+      title: 'Umsetzung',
+      description: 'Technische Umsetzung (schnell, sicher, mobiloptimiert)'
     },
     {
       step: '04',
-      title: 'SEO-Optimierung',
-      description: 'On-Page SEO, technische Optimierung und Einrichtung für lokale Suchmaschinenoptimierung.'
+      title: 'Livegang',
+      description: 'Livegang Ihrer neuen Website'
     },
     {
       step: '05',
-      title: 'Launch & Betreuung',
-      description: 'Go-Live mit laufender Betreuung, Überwachung und kontinuierlicher Optimierung.'
+      title: 'Betreuung',
+      description: 'Laufende Betreuung, Pflege und Anpassungen im Mietmodell'
     }
   ];
 
-  const benefits = [
-    { icon: <Search size={24} />, title: 'Bessere Google-Rankings', text: 'Strukturierte SEO-Optimierung für mehr Sichtbarkeit bei relevanten Suchanfragen.' },
-    { icon: <Zap size={24} />, title: 'Blitzschnelle Ladezeiten', text: 'Optimierte Performance für beste Nutzererfahrung und bessere Rankings.' },
-    { icon: <Smartphone size={24} />, title: 'Perfekt auf allen Geräten', text: 'Responsive Design, das auf Desktop, Tablet und Smartphone überzeugt.' },
-    { icon: <Palette size={24} />, title: 'Modernes Design', text: 'Professionelle Optik, die Vertrauen schafft und Ihre Marke stärkt.' },
-    { icon: <Shield size={24} />, title: 'Sicher & zuverlässig', text: 'SSL-Verschlüsselung, sichere Hosting-Infrastruktur und regelmäßige Updates.' },
-    { icon: <BarChart3 size={24} />, title: 'Messbare Ergebnisse', text: 'Verständliche Berichte zeigen Ihnen genau, wie Ihre Website performt.' }
+  const seoProcessSteps = [
+    {
+      step: '01',
+      title: 'SEO-Analyse',
+      description: 'Kostenlose SEO-Analyse & Wettbewerbsvergleich'
+    },
+    {
+      step: '02',
+      title: 'Keyword-Auswahl',
+      description: 'Auswahl der Suchbegriffe, die wirklich Kunden bringen'
+    },
+    {
+      step: '03',
+      title: 'Optimierung',
+      description: 'Optimierung Ihrer Website & Inhalte'
+    },
+    {
+      step: '04',
+      title: 'Rankings',
+      description: 'Verbesserung Ihrer Google- & Maps-Positionen'
+    },
+    {
+      step: '05',
+      title: 'Monitoring',
+      description: 'Laufende Optimierung, Monitoring und Berichte'
+    }
+  ];
+
+  const rentalModelBenefits = [
+    { icon: <DollarSign size={24} />, title: 'Keine hohen Startkosten', text: 'Statt mehrere tausend Euro auf einmal zahlen Sie einen planbaren monatlichen Betrag.' },
+    { icon: <HeadphonesIcon size={24} />, title: 'Full-Service inklusive', text: 'Design, Technik, Hosting, Sicherheit, SEO, Anpassungen – alles erledigt.' },
+    { icon: <Clock size={24} />, title: 'Änderungen in 48 Stunden', text: 'Ihr Angebot ändert sich? Wir passen Ihre Website an – schnell und unkompliziert.' },
+    { icon: <Shield size={24} />, title: 'Keine Technik, keine Verantwortung', text: 'Updates, Performance, Sicherheit, Backups – nicht Ihr Problem.' }
+  ];
+
+  const concreteAdvantages = [
+    { icon: <Target size={24} />, title: 'Sie werden bei Google gefunden', text: 'Kunden landen bei Ihnen, nicht bei der Konkurrenz' },
+    { icon: <TrendingUp size={24} />, title: 'Ihre Website arbeitet dauerhaft für Sie', text: 'Mehr Anfragen ohne mehr Arbeit' },
+    { icon: <DollarSign size={24} />, title: 'Planbare monatliche Kosten', text: 'Keine versteckten Kosten oder Überraschungen' },
+    { icon: <BarChart3 size={24} />, title: 'Messbare Ergebnisse', text: 'Transparente Berichte über Ihre Sichtbarkeit' },
+    { icon: <Users size={24} />, title: 'Mehr Anfragen', text: 'Qualifizierte Kundenanfragen durch bessere Sichtbarkeit' },
+    { icon: <Award size={24} />, title: 'Professioneller Auftritt', text: 'Modernes Design schafft Vertrauen' }
   ];
 
   const targetAudiences = [
-    { icon: <Building2 size={28} />, title: 'Lokale Unternehmen', description: 'Sichtbarkeit in der Region steigern und lokale Kunden online erreichen.' },
-    { icon: <Briefcase size={28} />, title: 'Dienstleister & Berater', description: 'Expertise präsentieren und qualifizierte Anfragen generieren.' },
-    { icon: <Store size={28} />, title: 'Handwerk & Gewerbe', description: 'Online gefunden werden und Vertrauen bei potenziellen Kunden aufbauen.' },
-    { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Professioneller Auftritt mit Fokus auf lokale Patienten und Mandanten.' }
-  ];
-
-  const seoFeatures = [
-    'Analyse der wichtigsten Suchbegriffe, die Ihre Kunden tatsächlich verwenden',
-    'Strukturierung und Optimierung Ihrer Website für bessere Google-Platzierungen',
-    'Optimierung von Texten, Seiteninhalten und Überschriften',
-    'Verbesserung Ihrer lokalen Sichtbarkeit in Ihrer Region',
-    'Professionelle Betreuung und Optimierung Ihres Google Business Profils',
-    'Technische Optimierung für schnelle Ladezeiten und stabile Performance',
-    'Anpassung für optimale Darstellung auf allen Endgeräten',
-    'Kontinuierliche inhaltliche Weiterentwicklung Ihrer Website',
-    'Aufbau einer nachhaltigen Online-Autorität durch externe Verlinkungen',
-    'Regelmäßige Überwachung der Ergebnisse sowie verständliche Berichte über den Fortschritt'
-  ];
-
-  const websiteFeatures = [
-    'Individuelles, markengerechtes Design',
-    'Responsive für alle Bildschirmgrößen',
-    'Schnelle Ladezeiten (unter 3 Sekunden)',
-    'Intuitive Navigation und Benutzerführung',
-    'SSL-Zertifikat und DSGVO-konform',
-    'Integration von Social Media',
-    'Erweiterbar durch Automatisierungen'
-  ];
-
-  const rentalBenefits = [
-    { icon: <HeadphonesIcon size={24} />, title: 'Full-Service-Betreuung', text: 'Wir kümmern uns um alles – Sie müssen sich um nichts kümmern.' },
-    { icon: <Clock size={24} />, title: 'Änderungen in 48 Stunden', text: 'Alle Ihre Änderungswünsche werden innerhalb von 48 Stunden umgesetzt.' },
-    { icon: <Wrench size={24} />, title: 'Komplette technische Betreuung', text: 'Updates, Sicherheit, Hosting – alles inklusive und in unserer Verantwortung.' },
-    { icon: <Shield size={24} />, title: 'Keine technischen Sorgen', text: 'Sie konzentrieren sich auf Ihr Geschäft, wir auf Ihre Website.' }
+    { icon: <Building2 size={28} />, title: 'Lokale Unternehmen', description: 'Mehr Sichtbarkeit in Ihrer Region – mehr Kunden vor Ort.' },
+    { icon: <Briefcase size={28} />, title: 'Dienstleister & Berater', description: 'Gezielte Anfragen statt unqualifizierter Kontakte.' },
+    { icon: <Wrench size={28} />, title: 'Handwerk & Gewerbe', description: 'Online gefunden werden, wenn Kunden akuten Bedarf haben.' },
+    { icon: <Stethoscope size={28} />, title: 'Praxen & Kanzleien', description: 'Professioneller Auftritt mit Fokus auf lokale Mandanten und Patienten.' }
   ];
 
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="Website-Entwicklung & SEO"
-        description="Moderne Websites mit Suchmaschinenoptimierung. Professionelles Webdesign und SEO für mehr Sichtbarkeit bei Google und mehr Kundenanfragen."
-        keywords={['Website erstellen', 'Webdesign', 'SEO Optimierung', 'Suchmaschinenoptimierung', 'Lokale SEO']}
+        title="Websites & SEO, die Ihnen Kunden bringen – nicht Ihrer Konkurrenz"
+        description="Website & SEO im Mietmodell. Kostenlose Analyse · Top-5 bei Google in 90 Tagen – sonst Geld zurück. Keine hohen Startkosten, Full-Service inklusive."
+        keywords={['Website Mietmodell', 'SEO Garantie', 'Website mieten', 'Lokale SEO', 'Google Top 5']}
       />
-      <BreadcrumbSchema serviceName="Website-Entwicklung & SEO" serviceUrl="https://pixelkraftwerk-ai.com/website-seo" />
+      <BreadcrumbSchema serviceName="Websites & SEO" serviceUrl="https://pixelkraftwerk-ai.com/website-seo" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -142,18 +151,18 @@ const WebsiteSeo: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Websites & SEO
-              <span className="block text-primary-500 mt-2">die Kunden bringen</span>
+              Websites & SEO, die Ihnen Kunden bringen
+              <span className="block text-primary-500 mt-2">– nicht Ihrer Konkurrenz</span>
             </motion.h1>
 
             <motion.p
-              className="text-xl text-light-200 mb-4 max-w-3xl mx-auto"
+              className="text-xl text-light-200 mb-6 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Moderne, schnelle Websites mit Suchmaschinenoptimierung – damit potenzielle Kunden
-              Sie finden und von Ihrem Angebot überzeugt werden.
+              Wenn Kunden nach Ihrer Dienstleistung suchen, sollen sie <strong>Sie finden</strong> –<br />
+              nicht den Betrieb zwei Straßen weiter.
             </motion.p>
 
             <motion.p
@@ -162,7 +171,8 @@ const WebsiteSeo: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Beide Leistungen sind auch einzeln buchbar – je nach Ihren Bedürfnissen.
+              <strong>Kostenlose Analyse · Umsetzung komplett durch uns ·<br />
+              Top-5 bei Google in 90 Tagen – sonst Geld zurück</strong>
             </motion.p>
 
             <motion.button
@@ -173,7 +183,7 @@ const WebsiteSeo: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <ArrowRight className="mr-2" size={24} />
-              Beratung anfordern
+              Kostenlose Analyse anfordern
             </motion.button>
           </div>
         </div>
@@ -204,21 +214,130 @@ const WebsiteSeo: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-primary-500 mr-4 mt-1 flex-shrink-0">?</span>
+                  <XCircle className="text-red-400 mr-4 mt-1 flex-shrink-0" size={20} />
                   <p className="text-light-200">{problem}</p>
                 </motion.div>
               ))}
             </div>
 
-            <motion.p
-              className="text-center text-light-100 mt-10 text-lg"
+            <motion.div
+              className="text-center mt-10 bg-dark-500 border border-primary-500/30 p-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Eine professionelle Website mit SEO ist die Lösung.</strong>
+              <p className="text-light-100 text-lg">
+                <strong className="text-primary-400">Klartext:</strong><br />
+                <span className="text-light-200">Was online nicht gefunden wird, <strong>verkauft nicht</strong>.</span>
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-dark-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h2
+              className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Genau das <span className="text-primary-500">ändern wir.</span>
+            </motion.h2>
+            <motion.p
+              className="text-light-200 text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              Wir sorgen dafür, dass Ihr Unternehmen bei Google dort erscheint,<br />
+              <strong className="text-primary-400">wo Kunden klicken</strong> – auf der ersten Seite, im Fokus, vor Ihrer Konkurrenz.
             </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                Unsere Lösung: <span className="text-primary-500">Website & SEO im Mietmodell</span>
+              </h2>
+              <p className="text-light-200 max-w-3xl mx-auto mb-6">
+                Sie investieren <strong>keine hohen Einmalkosten</strong><br />
+                und kaufen <strong>keine Website, um sich danach selbst kümmern zu müssen</strong>.
+              </p>
+              <p className="text-light-100 text-lg">
+                Bei uns <strong className="text-primary-400">mieten</strong> Sie Ihre Website:
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              <motion.div
+                className="bg-dark-500 p-6 border border-dark-100 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <DollarSign size={32} className="text-primary-500 mx-auto mb-3" />
+                <p className="text-light-200">fester monatlicher Betrag</p>
+              </motion.div>
+              <motion.div
+                className="bg-dark-500 p-6 border border-dark-100 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <HeadphonesIcon size={32} className="text-primary-500 mx-auto mb-3" />
+                <p className="text-light-200">volle Betreuung inklusive</p>
+              </motion.div>
+              <motion.div
+                className="bg-dark-500 p-6 border border-dark-100 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Zap size={32} className="text-primary-500 mx-auto mb-3" />
+                <p className="text-light-200">jederzeit anpassbar</p>
+              </motion.div>
+              <motion.div
+                className="bg-dark-500 p-6 border border-dark-100 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Shield size={32} className="text-primary-500 mx-auto mb-3" />
+                <p className="text-light-200">technisch immer aktuell</p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="bg-primary-500/10 border border-primary-500/30 p-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-100 text-lg">
+                <strong className="text-primary-400">Sie zahlen monatlich – wir liefern dauerhaft Ergebnisse.</strong>
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -234,16 +353,12 @@ const WebsiteSeo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Unser <span className="text-primary-500">Website-Mietmodell</span>
+                Was das <span className="text-primary-500">für Sie bedeutet</span>
               </h2>
-              <p className="text-light-200 max-w-3xl mx-auto">
-                Bei uns mieten Sie Ihre Website – mit Rundum-Betreuung und ohne technische Sorgen.
-                Sie bekommen eine professionelle Online-Präsenz, wir kümmern uns um alles Weitere.
-              </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {rentalBenefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {rentalModelBenefits.map((benefit, index) => (
                 <motion.div
                   key={index}
                   className="bg-dark-400 p-6 border border-dark-100"
@@ -253,32 +368,15 @@ const WebsiteSeo: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   <div className="flex items-start">
-                    <div className="text-primary-500 mr-4 flex-shrink-0">{benefit.icon}</div>
+                    <div className="text-primary-500 mr-4 flex-shrink-0 mt-1">{benefit.icon}</div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-light-100 mb-2">{benefit.title}</h3>
-                      <p className="text-light-300 text-sm">{benefit.text}</p>
+                      <p className="text-light-300">{benefit.text}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
-
-            <motion.div
-              className="bg-dark-400/50 border border-primary-500/30 p-6 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-light-100">
-                <strong className="text-primary-400">Keine Übergabe, keine Eigenverantwortung:</strong>
-                <br />
-                <span className="text-light-200">
-                  Ihre Website bleibt in unserer Betreuung. Sie müssen sich nie um technische Details kümmern –
-                  wir halten alles aktuell, sicher und performant.
-                </span>
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -294,11 +392,8 @@ const WebsiteSeo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Unsere <span className="text-primary-500">Leistungen</span>
+                Was wir konkret <span className="text-primary-500">für Sie umsetzen</span>
               </h2>
-              <p className="text-light-200 max-w-3xl mx-auto">
-                Website-Entwicklung und SEO – beide Leistungen auch einzeln buchbar.
-              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -310,17 +405,13 @@ const WebsiteSeo: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
-                  <Globe size={32} className="text-primary-500 mr-4" />
-                  <h3 className="text-xl font-heading font-bold text-light-100">Website-Entwicklung</h3>
+                  <Globe size={40} className="text-primary-500 mr-4" />
+                  <h3 className="text-2xl font-heading font-bold text-light-100">Website</h3>
                 </div>
-                <ul className="space-y-3">
-                  {websiteFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                      <span className="text-light-200 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-light-200 mb-6">
+                  Eine moderne, professionelle Website,<br />
+                  die Vertrauen schafft und Besucher <strong className="text-primary-400">zu Kunden macht</strong>.
+                </p>
               </motion.div>
 
               <motion.div
@@ -331,19 +422,157 @@ const WebsiteSeo: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
-                  <Search size={32} className="text-primary-500 mr-4" />
-                  <h3 className="text-xl font-heading font-bold text-light-100">Suchmaschinenoptimierung (SEO)</h3>
+                  <Search size={40} className="text-primary-500 mr-4" />
+                  <h3 className="text-2xl font-heading font-bold text-light-100">SEO</h3>
                 </div>
-                <ul className="space-y-3">
-                  {seoFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="text-primary-500 mr-3 mt-0.5 flex-shrink-0" size={16} />
-                      <span className="text-light-200 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-light-200 mb-6">
+                  Wir sorgen dafür, dass Sie bei Google sichtbar sind,<br />
+                  wenn Kunden <strong className="text-primary-400">aktiv nach Ihrer Leistung suchen</strong>.
+                </p>
               </motion.div>
             </div>
+
+            <motion.div
+              className="bg-primary-500/10 border border-primary-500/30 p-6 text-center mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-100 text-lg">
+                <strong className="text-primary-400">Beides einzeln buchbar –<br />
+                zusammen maximaler Umsatzhebel.</strong>
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-6">
+                Warum SEO <span className="text-primary-500">bares Geld bedeutet</span>
+              </h2>
+              <p className="text-light-200 text-lg mb-8">
+                Wenn jemand bei Google nach Ihrer Dienstleistung sucht,<br />
+                entscheidet Google, <strong className="text-primary-400">wer den Auftrag bekommt</strong>.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              <motion.div
+                className="bg-dark-400 p-6 border border-green-500/30"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center">
+                  <CheckCircle className="text-green-400 mr-3" size={24} />
+                  <p className="text-light-100 text-lg"><strong>Seite 1 = Anfragen</strong></p>
+                </div>
+              </motion.div>
+              <motion.div
+                className="bg-dark-400 p-6 border border-red-500/30"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center">
+                  <XCircle className="text-red-400 mr-3" size={24} />
+                  <p className="text-light-100 text-lg"><strong>Seite 2 = unsichtbar</strong></p>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="bg-primary-500/10 border-2 border-primary-500 p-8 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Award size={48} className="text-primary-500 mx-auto mb-4" />
+              <h3 className="text-xl font-heading font-bold text-light-100 mb-4">Unser Ziel:</h3>
+              <p className="text-light-200 text-lg mb-4">
+                Ihr Unternehmen innerhalb von <strong className="text-primary-400">90 Tagen unter die Top-5</strong> zu bringen.
+              </p>
+              <p className="text-light-100 text-lg">
+                <strong className="text-primary-400">Mit Garantie:</strong><br />
+                <span className="text-light-200">Schaffen wir das nicht, <strong>erhalten Sie Ihr Geld zurück</strong>.</span>
+              </p>
+            </motion.div>
+
+            <motion.p
+              className="text-center text-light-300 mt-8"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              Vorab prüfen wir kostenlos, ob SEO für Ihr Unternehmen sinnvoll ist –<br />
+              oder ob es sich <strong>nicht lohnt</strong>.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-dark-400">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
+                So läuft die Zusammenarbeit – <span className="text-primary-500">Website</span>
+              </h2>
+            </motion.div>
+
+            <div className="space-y-6">
+              {websiteProcessSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-colors duration-300"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <span className="text-3xl font-heading font-bold text-primary-500 mr-6 flex-shrink-0">
+                    {step.step}
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-heading font-bold text-light-100 mb-2">{step.title}</h3>
+                    <p className="text-light-300">{step.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              className="bg-primary-500/10 border border-primary-500/30 p-6 text-center mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-100">
+                <strong className="text-primary-400">Keine Übergabe. Keine Eigenverantwortung. Kein Technik-Stress.</strong>
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -359,12 +588,12 @@ const WebsiteSeo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Der Weg zu <span className="text-primary-500">Ihrer neuen Website</span>
+                So läuft die Zusammenarbeit – <span className="text-primary-500">SEO</span>
               </h2>
             </motion.div>
 
             <div className="space-y-6">
-              {processSteps.map((step, index) => (
+              {seoProcessSteps.map((step, index) => (
                 <motion.div
                   key={index}
                   className="flex items-start bg-dark-400 p-6 border border-dark-100 hover:border-primary-500/50 transition-colors duration-300"
@@ -383,6 +612,19 @@ const WebsiteSeo: React.FC = () => {
                 </motion.div>
               ))}
             </div>
+
+            <motion.div
+              className="bg-primary-500/10 border border-primary-500/30 p-6 text-center mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-100">
+                <strong className="text-primary-400">Ziel:</strong><br />
+                <span className="text-light-200">Mehr Sichtbarkeit → mehr Anfragen → mehr Umsatz.</span>
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -398,12 +640,12 @@ const WebsiteSeo: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Ihre <span className="text-primary-500">Vorteile</span>
+                Ihr konkreter <span className="text-primary-500">Vorteil</span>
               </h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+              {concreteAdvantages.map((benefit, index) => (
                 <motion.div
                   key={index}
                   className="bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
@@ -475,17 +717,37 @@ const WebsiteSeo: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Bereit für <span className="text-primary-500">mehr Online-Sichtbarkeit?</span>
+              Wie viele Kunden verlieren Sie aktuell <span className="text-primary-500">an Ihre Konkurrenz?</span>
             </motion.h2>
             <motion.p
-              className="text-light-200 mb-8"
+              className="text-light-200 mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns besprechen, wie eine neue Website Ihr Unternehmen nach vorne bringt.
+              Lassen Sie uns das kostenlos prüfen.
             </motion.p>
+            <motion.p
+              className="text-light-300 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              Ehrlich. Klar. Ohne Verpflichtung.
+            </motion.p>
+            <motion.button
+              onClick={scrollToContact}
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 transition-colors duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <ArrowRight className="mr-2" size={24} />
+              Kostenlose Analyse anfordern
+            </motion.button>
           </div>
         </div>
       </section>
