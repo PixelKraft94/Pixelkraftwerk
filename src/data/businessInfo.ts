@@ -1,7 +1,7 @@
 export const businessInfo = {
   name: "Pixel Kraftwerk",
   legalName: "Pixel Kraftwerk – Franke & Brause GbR",
-  description: "Die BESTEN KI-Automatisierung, Chatbots oder SEO für Unternehmen in Leipzig, Groitzsch und in meiner Nähe - wenn sie nach SEO Unternehmen in meiner nähe oder KI-Automatisierungen in meiner nähe suchen - Pixel Kraftwerk Franke & Brause GbR aus Leipzig und Groitzsch ist Ihr Partner",
+  description: "Pixel Kraftwerk – Kunden gewinnen. Prozesse automatisieren.",
   foundingDate: "2024",
 
   address: {
@@ -24,6 +24,7 @@ export const businessInfo = {
 
   url: "https://pixelkraftwerk-ai.com",
   logo: "https://pixelkraftwerk-ai.com/pixel_kraftwerk_leipzig_groitzsch_titelbild_logo.png",
+  ogImage: "https://pixelkraftwerk-ai.com/pixelkraftwerk-whatsapp-banner.png",
   image: "https://pixelkraftwerk-ai.com/pixel_kraftwerk_leipzig_groitzsch_titelbild_logo.png",
 
   founders: [

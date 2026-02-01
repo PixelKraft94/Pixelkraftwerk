@@ -50,16 +50,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     updateOrCreateMeta('og:description', metaDescription, true);
     updateOrCreateMeta('og:type', ogType, true);
     updateOrCreateMeta('og:url', url, true);
-    updateOrCreateMeta('og:image', businessInfo.logo, true);
-    updateOrCreateMeta('og:image:width', '8139', true);
-    updateOrCreateMeta('og:image:height', '2396', true);
+    updateOrCreateMeta('og:image', businessInfo.ogImage || businessInfo.logo, true);
+    updateOrCreateMeta('og:image:width', '1200', true);
+    updateOrCreateMeta('og:image:height', '600', true);
     updateOrCreateMeta('og:locale', 'de_DE', true);
     updateOrCreateMeta('og:site_name', businessInfo.name, true);
 
     updateOrCreateMeta('twitter:card', 'summary_large_image');
     updateOrCreateMeta('twitter:title', fullTitle);
     updateOrCreateMeta('twitter:description', metaDescription);
-    updateOrCreateMeta('twitter:image', businessInfo.logo);
+    updateOrCreateMeta('twitter:image', businessInfo.ogImage || businessInfo.logo);
 
     updateOrCreateMeta('geo.region', 'DE-SN');
     updateOrCreateMeta('geo.placename', businessInfo.address.addressLocality);
