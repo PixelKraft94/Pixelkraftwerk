@@ -173,8 +173,100 @@ const Home: React.FC = () => {
         </motion.button>
       </section>
 
+      {/* PROBLEM SECTION */}
+      <section id="problem-section" className="py-32 bg-dark-400">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-light-100">
+                Der Alltag vieler Unternehmen sieht <span className="text-primary-500">heute so aus:</span>
+              </h2>
+
+              <div className="space-y-4 text-left max-w-2xl mx-auto mb-12">
+                {[
+                  "Kundenanfragen kommen unregelmäßig und ungeordnet rein.",
+                  "Termine müssen ständig manuell abgestimmt werden.",
+                  "E-Mails, Telefonate und Rückfragen unterbrechen die Arbeit.",
+                  "Viele Aufgaben bleiben direkt beim Inhaber hängen.",
+                  "Organisation und Marketing fühlen sich chaotisch an."
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <span className="text-red-400 mr-3 mt-1 flex-shrink-0">-</span>
+                    <p className="text-light-200 text-lg">{item}</p>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.p
+                className="text-xl md:text-2xl text-light-100 font-bold"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                Das kostet <span className="text-red-400">Zeit, Geld und Nerven.</span>
+              </motion.p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* FUTURE SECTION */}
+      <section className="py-32 bg-dark-500">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-light-100">
+                So arbeitet ein <span className="text-primary-500">sauber automatisierter</span> Betrieb:
+              </h2>
+
+              <div className="space-y-4 text-left max-w-2xl mx-auto">
+                {[
+                  "Kundenanfragen werden automatisch entgegengenommen und beantwortet.",
+                  "Termine werden selbstständig gebucht, bestätigt und erinnert.",
+                  "Mitarbeiter arbeiten mit klaren, verlässlichen Abläufen.",
+                  "Der Betrieb läuft ruhiger, strukturierter und planbarer.",
+                  "Der Inhaber gewinnt Zeit und Fokus für das Kerngeschäft zurück."
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <CheckCircle className="text-primary-500 mr-3 mt-1 flex-shrink-0" size={20} />
+                    <p className="text-light-200 text-lg">{item}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES HUB SECTION */}
-      <section className="py-24 bg-dark-400">
+      <section className="py-32 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -352,122 +444,6 @@ const Home: React.FC = () => {
                 Alle Leistungen im Detail
                 <ArrowRight className="ml-2" size={24} />
               </a>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROBLEM SECTION */}
-      <section id="problem-section" className="py-32 bg-dark-400">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-light-100">
-                Der Alltag vieler Unternehmen sieht <span className="text-primary-500">heute so aus:</span>
-              </h2>
-
-              <div className="space-y-4 text-left max-w-2xl mx-auto mb-12">
-                {[
-                  "Kundenanfragen kommen unregelmäßig und ungeordnet rein.",
-                  "Termine müssen ständig manuell abgestimmt werden.",
-                  "E-Mails, Telefonate und Rückfragen unterbrechen die Arbeit.",
-                  "Viele Aufgaben bleiben direkt beim Inhaber hängen.",
-                  "Organisation und Marketing fühlen sich chaotisch an."
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <span className="text-red-400 mr-3 mt-1 flex-shrink-0">-</span>
-                    <p className="text-light-200 text-lg">{item}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.p
-                className="text-xl md:text-2xl text-light-100 font-bold"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                Das kostet <span className="text-red-400">Zeit, Geld und Nerven.</span>
-              </motion.p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* FUTURE SECTION */}
-      <section className="py-32 bg-dark-500">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-light-100">
-                So arbeitet ein <span className="text-primary-500">sauber automatisierter</span> Betrieb:
-              </h2>
-
-              <div className="space-y-4 text-left max-w-2xl mx-auto">
-                {[
-                  "Kundenanfragen werden automatisch entgegengenommen und beantwortet.",
-                  "Termine werden selbstständig gebucht, bestätigt und erinnert.",
-                  "Mitarbeiter arbeiten mit klaren, verlässlichen Abläufen.",
-                  "Der Betrieb läuft ruhiger, strukturierter und planbarer.",
-                  "Der Inhaber gewinnt Zeit und Fokus für das Kerngeschäft zurück."
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <CheckCircle className="text-primary-500 mr-3 mt-1 flex-shrink-0" size={20} />
-                    <p className="text-light-200 text-lg">{item}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* POSITIONING SECTION */}
-      <section className="py-32 bg-dark-400">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-light-100">
-                Unsere <span className="text-primary-500">Lösungen</span>
-              </h2>
-              <p className="text-lg md:text-xl text-light-200 leading-relaxed mb-6">
-                Wir entwickeln individuelle Automatisierungslösungen, die exakt zu Ihrem Unternehmen passen.
-              </p>
-              <p className="text-lg md:text-xl text-light-100 font-bold leading-relaxed">
-                Nicht theoretisch – sondern so, dass sie im Alltag wirklich funktionieren und entlasten.
-              </p>
             </motion.div>
           </div>
         </div>
