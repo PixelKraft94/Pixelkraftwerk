@@ -31,55 +31,55 @@ const Home: React.FC = () => {
 
   const practiceExamples = [
     {
-      icon: <Calendar size={32} strokeWidth={1.5} />,
-      title: "Termin-Handling",
-      vorher: "E-Mail-Chaos, Doppelbuchungen, ständiges Nachfragen. Termine mussten manuell koordiniert werden, Erinnerungen wurden vergessen.",
-      nachher: "Ein automatisiertes System erkennt freie Zeiten in Echtzeit, vergibt Termine selbstständig und versendet Bestätigungen sowie Erinnerungen per E-Mail oder SMS.",
-      ergebnis: "Kein Koordinationsstress mehr. Keine verpassten Termine. Im Schnitt 10 Stunden Zeitersparnis pro Woche und ein deutlich ruhigerer Arbeitsalltag."
-    },
-    {
       icon: <MessageCircle size={32} strokeWidth={1.5} />,
-      title: "Kundenkommunikation",
-      vorher: "Täglich dieselben Fragen per Telefon, E-Mail oder vor Ort. Hoher Zeitverlust durch einfache, wiederkehrende Anfragen.",
-      nachher: "Ein KI-gestützter Chatbot und Telefonassistent beantwortet bis zu 80 % aller Anfragen automatisch – 24/7.",
-      ergebnis: "Ihr Team wird spürbar entlastet. Kunden erhalten sofort Antworten – ohne Wartezeit."
-    },
-    {
-      icon: <Target size={32} strokeWidth={1.5} />,
-      title: "Lead-Qualifizierung",
-      vorher: "Jede Anfrage musste manuell geprüft werden. Wertvolle Kontakte gingen verloren oder wurden zu spät bearbeitet.",
-      nachher: "Das System analysiert automatisch jede Anfrage und leitet nur qualifizierte Interessenten an den Vertrieb weiter.",
-      ergebnis: "Der Vertrieb arbeitet effizienter. Mehr Abschlüsse bei weniger Zeitaufwand."
+      title: "Digitale Kundenassistenz",
+      vorher: "Kunden stellen immer wieder dieselben Fragen per Website, E-Mail oder Social Media. Außerhalb der Öffnungszeiten bleiben Anfragen unbeantwortet.",
+      nachher: "Die digitale Kundenassistenz beantwortet Fragen automatisch, nimmt Anliegen auf und reagiert individuell auf Nachrichten – rund um die Uhr.",
+      ergebnis: "Schnellere Antworten für Kunden. Weniger Unterbrechungen im Arbeitsalltag."
     },
     {
       icon: <Workflow size={32} strokeWidth={1.5} />,
-      title: "Interne Abläufe",
-      vorher: "Mehrfache Dateneingaben, Fehler, unnötige Doppelarbeit, unklare Zuständigkeiten.",
-      nachher: "Alle Systeme sind intelligent miteinander verbunden. Informationen werden einmal erfasst und überall automatisch bereitgestellt.",
-      ergebnis: "Reibungslose Abläufe, weniger Fehler, volle Transparenz."
+      title: "Telefonische Kundenassistenz",
+      vorher: "Anrufe gehen verloren oder unterbrechen ständig die Arbeit. Außerhalb der Geschäftszeiten ist niemand erreichbar.",
+      nachher: "Die telefonische Kundenassistenz nimmt Anrufe entgegen, beantwortet Fragen und nimmt Termine automatisch an.",
+      ergebnis: "Keine verpassten Anrufe mehr. Ruhigerer Arbeitsalltag."
+    },
+    {
+      icon: <Calendar size={32} strokeWidth={1.5} />,
+      title: "Terminplanung & Buchungssysteme",
+      vorher: "Ständiges Hin- und Her bei der Terminabstimmung. Doppelbuchungen und vergessene Termine.",
+      nachher: "Ein automatisches System vergibt Termine selbstständig, bestätigt sie und erinnert Kunden rechtzeitig.",
+      ergebnis: "Kein Terminchaos mehr. Bis zu 10 Stunden Zeitersparnis pro Woche."
+    },
+    {
+      icon: <Target size={32} strokeWidth={1.5} />,
+      title: "Lead-Management & CRM",
+      vorher: "Anfragen kommen über verschiedene Kanäle rein und werden unübersichtlich verwaltet.",
+      nachher: "Alle Anfragen werden automatisch gesammelt, geordnet und übersichtlich dargestellt.",
+      ergebnis: "Mehr Überblick. Weniger verlorene Kontakte."
     },
     {
       icon: <Globe size={32} strokeWidth={1.5} />,
-      title: "Website-Erstellung",
-      vorher: "Langsame Agenturprozesse, Wochen bis zur fertigen Website, keine Integration in bestehende Abläufe.",
-      nachher: "Moderne, blitzschnelle Websites mit integrierten Chatbots, Terminbuchung, CRM-Anbindung und On-Site-SEO.",
-      ergebnis: "Mehr Sichtbarkeit, mehr Anfragen, weniger Aufwand."
+      title: "Websites & SEO",
+      vorher: "Die Website ist online, bringt aber kaum Anfragen. Viele Kunden finden das Unternehmen nicht.",
+      nachher: "Eine moderne Website, die verständlich aufgebaut ist und bei Suchmaschinen besser sichtbar wird.",
+      ergebnis: "Mehr Besucher. Mehr Anfragen."
     },
     {
       icon: <Video size={32} strokeWidth={1.5} />,
-      title: "KI-Videogenerierung",
-      vorher: "Teure Produktionen, lange Wartezeiten, hoher Abstimmungsaufwand.",
-      nachher: "Automatisierte Erstellung hochwertiger KI-Videos in Minuten – perfekt auf Marke und Zielgruppe abgestimmt.",
-      ergebnis: "Mehr Reichweite, starke Markenwirkung, deutlich geringere Kosten."
+      title: "Content-Produktion & KI-Videos",
+      vorher: "Texte und Videos kosten Zeit und bleiben im Alltag oft liegen.",
+      nachher: "Inhalte werden regelmäßig erstellt und direkt für Website und Social Media genutzt.",
+      ergebnis: "Mehr Sichtbarkeit. Weniger Aufwand."
     }
   ];
 
   const services = [
-    "KI-Automatisierung von Geschäftsprozessen",
-    "Automatisierte Kundenkommunikation",
+    "Digitale Kundenassistenz",
+    "Telefonische Kundenassistenz",
     "Terminplanung & Buchungssysteme",
-    "Lead-Management & CRM-Automatisierung",
-    "Websites mit integrierter Automatisierung & SEO",
+    "Lead-Management & CRM",
+    "Websites & SEO",
     "Content-Produktion & KI-Videos"
   ];
 
@@ -87,7 +87,7 @@ const Home: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="KI-Automatisierung für Unternehmen"
-        description="Wir automatisieren Unternehmen in Groitzsch, Leipzig und ganz Sachsen mit intelligenten KI-Systemen. Klare Abläufe, mehr Anfragen, weniger Stress."
+        description="Wir automatisieren Unternehmen in Groitzsch, Leipzig und ganz Sachsen mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen."
         keywords={['KI Automatisierung', 'Prozessautomatisierung Leipzig', 'Chatbot', 'Terminbuchung automatisch', 'Lead Management']}
       />
       <LocalBusinessSchema pageType="homepage" />
@@ -132,7 +132,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit künstlicher Intelligenz, die Kundenanfragen, Terminplanung und interne Prozesse selbstständig steuern.
+              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen.
             </motion.p>
 
             <motion.p
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
             >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit künstlicher Intelligenz, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe spürbar vereinfachen.
+              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen.
             </motion.p>
 
             <motion.div
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
                 Unsere <span className="text-primary-500">Leistungen</span>
               </h2>
               <p className="text-lg text-light-200 max-w-3xl mx-auto">
-                Digitale Lösungen, die Ihr Unternehmen entlasten und Ihre Prozesse automatisieren.
+                Digitale Lösungen, die Ihr Unternehmen entlasten und den Arbeitsalltag deutlich vereinfachen.
               </p>
             </motion.div>
 
@@ -206,10 +206,10 @@ const Home: React.FC = () => {
                   <MessageCircle size={32} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  KI-Chatbots
+                  Digitale Kundenassistenz
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Intelligente Chatbots für Ihre Website. Automatische Kundenbetreuung rund um die Uhr.
+                  Eine digitale Assistenz, die Kundenanfragen beantwortet, Nachrichten entgegennimmt und Anliegen automatisch verarbeitet – auf Ihrer Website und in sozialen Netzwerken, rund um die Uhr.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -230,10 +230,10 @@ const Home: React.FC = () => {
                   <Workflow size={32} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  KI-Telefonassistenten
+                  Telefonische Kundenassistenz
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Dank künstlicher Intelligenz mit natürlicher Sprachausgabe und rund um die Uhr verfügbar. Automatische Anrufannahme und professionelle Kundenbetreuung am Telefon.
+                  Eine telefonische Assistenz, die für Sie ans Telefon geht, Fragen beantwortet und Termine annimmt – auch dann, wenn gerade niemand erreichbar ist.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -254,10 +254,10 @@ const Home: React.FC = () => {
                   <Calendar size={32} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Terminplanung & Buchungen
+                  Terminplanung & Buchungssysteme
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Online-Terminbuchung mit automatischer Kalenderplanung und Erinnerungen.
+                  Ein System, das Termine automatisch vergibt, bestätigt und erinnert – ohne ständiges Hin- und Her per Telefon oder E-Mail.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -278,10 +278,10 @@ const Home: React.FC = () => {
                   <Target size={32} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  CRM & Lead-Management
+                  Lead-Management & CRM
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Strukturierte Kundenverwaltung mit automatischer Lead-Erfassung und Follow-ups.
+                  Alle Kundenanfragen werden automatisch gesammelt, übersichtlich gespeichert und richtig zugeordnet – nichts geht mehr verloren.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -302,10 +302,10 @@ const Home: React.FC = () => {
                   <Globe size={32} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Website & SEO
+                  Websites & SEO
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Moderne Websites mit Suchmaschinenoptimierung für mehr Sichtbarkeit.
+                  Moderne Websites, die leicht verständlich sind und bei Suchmaschinen sichtbar werden, damit Kunden Sie schneller finden und direkt Kontakt aufnehmen können.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -326,10 +326,10 @@ const Home: React.FC = () => {
                   <Video size={32} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Content & KI-Videos
+                  Content-Produktion & KI-Videos
                 </h3>
                 <p className="text-light-300 text-sm mb-4">
-                  Professionelle Content-Produktion mit moderner KI-Technologie.
+                  Texte, Bilder und Videos für Ihr Unternehmen – professionell erstellt, regelmäßig verfügbar und passend für Website und Social Media.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -374,11 +374,11 @@ const Home: React.FC = () => {
 
               <div className="space-y-4 text-left max-w-2xl mx-auto mb-12">
                 {[
-                  "Unregelmäßige Kundenanfragen.",
-                  "Ständiges Hin- und Her bei der Terminabstimmung.",
-                  "E-Mails, Telefon und Rückfragen unterbrechen permanent den Arbeitsfluss.",
-                  "Zu viele Aufgaben hängen direkt am Inhaber.",
-                  "Marketing und Organisation fühlen sich chaotisch und unübersichtlich an."
+                  "Kundenanfragen kommen unregelmäßig und ungeordnet rein.",
+                  "Termine müssen ständig manuell abgestimmt werden.",
+                  "E-Mails, Telefonate und Rückfragen unterbrechen die Arbeit.",
+                  "Viele Aufgaben bleiben direkt beim Inhaber hängen.",
+                  "Organisation und Marketing fühlen sich chaotisch an."
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -426,10 +426,10 @@ const Home: React.FC = () => {
               <div className="space-y-4 text-left max-w-2xl mx-auto">
                 {[
                   "Kundenanfragen werden automatisch entgegengenommen und beantwortet.",
-                  "Termine werden ohne manuelles Eingreifen gebucht, bestätigt und erinnert.",
+                  "Termine werden selbstständig gebucht, bestätigt und erinnert.",
                   "Mitarbeiter arbeiten mit klaren, verlässlichen Abläufen.",
                   "Der Betrieb läuft ruhiger, strukturierter und planbarer.",
-                  "Der Inhaber gewinnt Zeit, Kontrolle und Fokus auf das Kerngeschäft zurück."
+                  "Der Inhaber gewinnt Zeit und Fokus für das Kerngeschäft zurück."
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -459,11 +459,14 @@ const Home: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-light-100">
+                Unsere <span className="text-primary-500">Lösungen</span>
+              </h2>
               <p className="text-lg md:text-xl text-light-200 leading-relaxed mb-6">
-                Wir entwickeln individuelle KI-Automatisierungssysteme, die exakt an die Abläufe Ihres Unternehmens angepasst werden.
+                Wir entwickeln individuelle Automatisierungslösungen, die exakt zu Ihrem Unternehmen passen.
               </p>
               <p className="text-lg md:text-xl text-light-100 font-bold leading-relaxed">
-                Nicht theoretisch – sondern so, dass sie im Alltag funktionieren, entlasten und messbare Ergebnisse liefern.
+                Nicht theoretisch – sondern so, dass sie im Alltag wirklich funktionieren und entlasten.
               </p>
             </motion.div>
           </div>
@@ -597,7 +600,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Von unserem Standort in Groitzsch betreuen wir Unternehmen in Leipzig, ganz Sachsen und deutschlandweit. Wir verbinden regionale Nähe mit moderner KI-Technologie und entwickeln individuelle Automatisierungslösungen für nachhaltiges Wachstum.
+              Von unserem Standort in Groitzsch betreuen wir Unternehmen in Leipzig, ganz Sachsen und deutschlandweit. Wir verbinden regionale Nähe mit moderner Technologie und entwickeln Lösungen für nachhaltiges Wachstum.
             </motion.p>
 
             <motion.div
@@ -644,10 +647,10 @@ const Home: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               {[
-                { num: "01", title: "Erstgespräch", desc: "Ziele & Potenziale klären" },
+                { num: "01", title: "Erstgespräch", desc: "Ziele und Potenziale klären" },
                 { num: "02", title: "Planung", desc: "Individuelles Konzept entwickeln" },
                 { num: "03", title: "Umsetzung", desc: "Saubere technische Integration" },
-                { num: "04", title: "Support", desc: "Langfristige Betreuung" }
+                { num: "04", title: "Betreuung", desc: "Langfristige Unterstützung" }
               ].map((step, index) => (
                 <motion.div
                   key={index}
@@ -680,45 +683,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SOCIAL PROOF SECTION */}
-      <section className="py-32 bg-dark-500">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-4xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-heading font-bold mb-16 text-light-100 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-primary-500">Das sagen unsere Kunden</span>
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                `„Seit der Automatisierung sparen wir jede Woche mehrere Stunden Zeit."`,
-                `„Die Terminplanung läuft jetzt vollständig ohne Chaos."`,
-                `„Unser Team ist deutlich entlastet."`
-              ].map((quote, index) => (
-                <motion.blockquote
-                  key={index}
-                  className="border-l-4 border-primary-500 pl-6 py-4"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ x: 8 }}
-                >
-                  <p className="text-light-200 text-base italic leading-relaxed">{quote}</p>
-                </motion.blockquote>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FINAL CTA SECTION */}
-      <section className="py-32 bg-dark-400">
+      <section className="py-32 bg-dark-500">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2
@@ -728,7 +694,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns Ihren Betrieb <span className="text-primary-500">automatisieren.</span>
+              Lassen Sie uns Ihren Betrieb <span className="text-primary-500">entlasten.</span>
             </motion.h2>
 
             <motion.button
