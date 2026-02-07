@@ -101,26 +101,20 @@ const Header: React.FC = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <a
-                href="/services"
+              <button
                 className="flex items-center text-light-100 hover:text-primary-400 font-heading transition-colors duration-200"
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
                 Unsere Leistungen
                 <ChevronDown
                   size={16}
                   className={`ml-1 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
                 />
-              </a>
+              </button>
 
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-dark-400 border border-dark-100 shadow-xl animate-fade-in">
                   <div className="py-2">
-                    <a
-                      href="/services"
-                      className="block px-4 py-3 text-primary-400 hover:bg-dark-300 font-heading text-sm border-b border-dark-100"
-                    >
-                      Alle Leistungen
-                    </a>
                     {serviceLinks.map((service) => (
                       <a
                         key={service.path}
@@ -195,15 +189,6 @@ const Header: React.FC = () => {
 
               {isMobileServicesOpen && (
                 <ul className="ml-4 mt-2 space-y-1 border-l-2 border-primary-500/30 animate-fade-in">
-                  <li>
-                    <a
-                      href="/services"
-                      className="block py-2 pl-4 text-primary-400 font-heading text-sm"
-                      onClick={toggleMenu}
-                    >
-                      Alle Leistungen
-                    </a>
-                  </li>
                   {serviceLinks.map((service) => (
                     <li key={service.path}>
                       <a

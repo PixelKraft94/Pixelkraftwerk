@@ -11,7 +11,7 @@ import Agb from './pages/Agb';
 import PrivacySettings from './pages/PrivacySettings';
 import Features from './pages/Features';
 import Faq from './pages/Faq';
-import Services from './pages/Services';
+
 import KiChatbots from './pages/services/KiChatbots';
 import Telefonassistenten from './pages/services/Telefonassistenten';
 import TermineBuchungen from './pages/services/TermineBuchungen';
@@ -78,8 +78,6 @@ function App() {
         return <Features />;
       case '/faq':
         return <Faq />;
-      case '/services':
-        return <Services />;
       case '/ki-chatbots':
         return <KiChatbots />;
       case '/telefonassistenten':

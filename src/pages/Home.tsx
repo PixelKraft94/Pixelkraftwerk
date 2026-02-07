@@ -430,21 +430,6 @@ const Home: React.FC = () => {
               </motion.a>
             </div>
 
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-dark-500 border-2 border-primary-500 text-primary-500 font-heading font-bold text-lg hover:bg-primary-500 hover:text-dark-500 transition-all duration-300"
-              >
-                Alle Leistungen im Detail
-                <ArrowRight className="ml-2" size={24} />
-              </a>
-            </motion.div>
           </div>
         </div>
       </section>
