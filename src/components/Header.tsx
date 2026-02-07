@@ -10,8 +10,8 @@ interface ServiceLink {
 }
 
 const serviceLinks: ServiceLink[] = [
-  { title: 'KI-Chatbots', path: '/ki-chatbots', icon: <MessageSquare size={18} /> },
-  { title: 'Telefonassistenten', path: '/telefonassistenten', icon: <Phone size={18} /> },
+  { title: 'Digitale Kundenassistenz', path: '/ki-chatbots', icon: <MessageSquare size={18} /> },
+  { title: 'Telefonische Kundenassistenz', path: '/telefonassistenten', icon: <Phone size={18} /> },
   { title: 'Terminplanung & Buchungssysteme', path: '/termine-buchungen', icon: <Calendar size={18} /> },
   { title: 'Lead-Management & CRM', path: '/crm-lead-management', icon: <Target size={18} /> },
   { title: 'Websites & SEO', path: '/website-seo', icon: <Globe size={18} /> },
