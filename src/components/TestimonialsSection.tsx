@@ -9,12 +9,12 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    content: "Der KI-Chatbot von Pixel Kraftwerk hat unseren Kundenservice enorm verbessert. Er beantwortet rund um die Uhr Anfragen, entlastet unser Team und sorgt für eine schnellere Bearbeitung. Unsere Kunden sind zufriedener, und wir sparen wertvolle Arbeitszeit!",
+    content: "Die digitale Kundenassistenz von Pixel Kraftwerk hat unseren Kundenservice enorm verbessert. Sie beantwortet rund um die Uhr Anfragen, entlastet unser Team und sorgt für eine schnellere Bearbeitung. Unsere Kunden sind zufriedener, und wir sparen wertvolle Arbeitszeit!",
     author: "Andrej P.",
     company: "Restaurant Lindenhof am See"
   },
   {
-    content: "Die KI-Lösungen von Pixel Kraftwerk haben unseren Immobilienvertrieb auf ein neues Level gehoben. Der KI-gestützte Chatbot und Telefonagent beantworten Anfragen sofort, sparen uns täglich Stunden und verbessern die Kundenzufriedenheit erheblich. Wir sind rundum zufrieden, die Zusammenarbeit läuft hervorragend, alles klappt einwandfrei und spart viel Zeit. Jederzeit gerne wieder!",
+    content: "Die KI-Lösungen von Pixel Kraftwerk haben unseren Immobilienvertrieb auf ein neues Level gehoben. Die digitale und telefonische Kundenassistenz beantworten Anfragen sofort, sparen uns täglich Stunden und verbessern die Kundenzufriedenheit erheblich. Wir sind rundum zufrieden, die Zusammenarbeit läuft hervorragend, alles klappt einwandfrei und spart viel Zeit. Jederzeit gerne wieder!",
     author: "Michael L.",
     company: "ProHaus Immobilien GmbH"
   },

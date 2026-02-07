@@ -88,7 +88,7 @@ const Home: React.FC = () => {
       <SEOHead
         title="KI-Automatisierung für Unternehmen"
         description="Wir automatisieren Unternehmen in Groitzsch, Leipzig und ganz Sachsen mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen."
-        keywords={['KI Automatisierung', 'Prozessautomatisierung Leipzig', 'Chatbot', 'Terminbuchung automatisch', 'Lead Management']}
+        keywords={['KI Automatisierung', 'Prozessautomatisierung Leipzig', 'Digitale Kundenassistenz', 'Terminbuchung automatisch', 'Lead Management']}
       />
       <LocalBusinessSchema pageType="homepage" />
       <WebSiteSchema />

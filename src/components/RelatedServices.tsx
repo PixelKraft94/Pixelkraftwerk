@@ -12,14 +12,14 @@ interface ServiceInfo {
 const allServices: ServiceInfo[] = [
   {
     slug: 'ki-chatbots',
-    title: 'KI-Chatbots',
-    shortDescription: 'Intelligente Chatbots für Ihre Website, die Besucher beraten und Leads qualifizieren.',
+    title: 'Digitale Kundenassistenz',
+    shortDescription: 'Digitale Kundenassistenz für Ihre Website, die Besucher berät und Anfragen qualifiziert.',
     icon: <MessageSquare size={32} strokeWidth={1.5} />
   },
   {
     slug: 'telefonassistenten',
-    title: 'Telefonassistenten',
-    shortDescription: 'KI-Telefonassistenten, die Anrufe entgegennehmen und professionell bearbeiten.',
+    title: 'Telefonische Kundenassistenz',
+    shortDescription: 'Telefonische Kundenassistenz, die Anrufe entgegennimmt und professionell bearbeitet.',
     icon: <Phone size={32} strokeWidth={1.5} />
   },
   {

@@ -32,7 +32,7 @@ const KiChatbots: React.FC = () => {
     {
       step: '01',
       title: 'Live-Demo erleben',
-      description: 'Testen Sie den Chatbot direkt auf unserer Website.'
+      description: 'Testen Sie die digitale Kundenassistenz direkt auf unserer Website.'
     },
     {
       step: '02',
@@ -42,7 +42,7 @@ const KiChatbots: React.FC = () => {
     {
       step: '03',
       title: 'Individuelle Einrichtung',
-      description: 'Der KI-Chatbot wird speziell auf Ihr Unternehmen angepasst.'
+      description: 'Die digitale Kundenassistenz wird speziell auf Ihr Unternehmen angepasst.'
     },
     {
       step: '04',
@@ -79,11 +79,11 @@ const KiChatbots: React.FC = () => {
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="KI-Chatbots für Ihre Website"
-        description="Intelligente Website-Chatbots für automatische Kundenbetreuung. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
-        keywords={['KI-Chatbot', 'Website Chatbot', 'Chatbot Unternehmen', 'Kundenservice Automatisierung', 'Live Chat KI']}
+        title="Digitale Kundenassistenz für Ihre Website"
+        description="Digitale Kundenassistenz für automatische Kundenbetreuung auf Ihrer Website. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
+        keywords={['Digitale Kundenassistenz', 'Website Kundenassistenz', 'Kundenservice Automatisierung', 'Automatische Kundenbetreuung']}
       />
-      <BreadcrumbSchema serviceName="KI-Chatbots" serviceUrl="https://pixelkraftwerk-ai.com/ki-chatbots" />
+      <BreadcrumbSchema serviceName="Digitale Kundenassistenz" serviceUrl="https://pixelkraftwerk-ai.com/ki-chatbots" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -108,7 +108,7 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              KI-Chatbots für Ihre Website
+              Digitale Kundenassistenz für Ihre Website
             </motion.h1>
 
             <motion.h2
@@ -117,7 +117,7 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              Kundenanfragen automatisch beantworten – rund um die Uhr, dank künstlicher Intelligenz
+              Ihre Website kann mehr, als nur informieren
             </motion.h2>
 
             <motion.p
@@ -126,8 +126,7 @@ const KiChatbots: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <strong>Ihre Website kann mehr, als nur informieren.</strong><br />
-              Unser KI-Chatbot übernimmt Kundenanfragen, beantwortet häufige Fragen und erfasst Termine oder Anliegen – <strong>automatisch, zuverlässig und 24/7</strong>.
+              Unsere digitale Kundenassistenz übernimmt Kundenanfragen, beantwortet häufige Fragen und erfasst Termine oder Anliegen – <strong>automatisch, zuverlässig und 24/7</strong>.
             </motion.p>
 
             <motion.div
@@ -137,8 +136,8 @@ const KiChatbots: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <p className="text-light-200">
-                👉 <strong>Erleben Sie den KI-Chatbot live</strong> – direkt hier auf der Website.<br />
-                <em className="text-light-300 text-sm">Hinweis: Der Chatbot auf dieser Seite ist eine Live-Demo unseres Systems.</em>
+                👉 <strong>Erleben Sie die digitale Kundenassistenz live</strong> – direkt hier auf der Website.<br />
+                <em className="text-light-300 text-sm">Hinweis: Die Assistenz auf dieser Seite ist eine Live-Demo unseres Systems.</em>
               </p>
             </motion.div>
 
@@ -214,10 +213,10 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Die Lösung: <span className="text-primary-500">Ein KI-Chatbot, der für Sie arbeitet</span>
+                Die Lösung: <span className="text-primary-500">Eine Kundenassistenz, die für Sie arbeitet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto mb-8">
-                Unser KI-Chatbot übernimmt die erste Kommunikation mit Ihren Website-Besuchern – <strong>ohne zusätzliches Personal</strong>.
+                Unsere digitale Kundenassistenz übernimmt die erste Kommunikation mit Ihren Website-Besuchern – <strong>ohne zusätzliches Personal</strong>.
               </p>
             </motion.div>
 
@@ -273,10 +272,10 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Erleben Sie den <span className="text-primary-500">Chatbot live</span>
+                Erleben Sie die <span className="text-primary-500">Kundenassistenz live</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto mb-8">
-                Der Chatbot auf dieser Website zeigt Ihnen <strong>live</strong>, wie ein KI-Assistent arbeitet.
+                Die Kundenassistenz auf dieser Website zeigt Ihnen <strong>live</strong>, wie das System arbeitet.
               </p>
             </motion.div>
 
@@ -303,7 +302,7 @@ const KiChatbots: React.FC = () => {
                 </li>
               </ul>
               <p className="text-light-200 mt-6">
-                <strong>So würde der Chatbot auch bei Ihnen funktionieren</strong> – angepasst auf Ihr Unternehmen.
+                <strong>So würde die Kundenassistenz auch bei Ihnen funktionieren</strong> – angepasst auf Ihr Unternehmen.
               </p>
             </motion.div>
 
@@ -331,7 +330,7 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Was unser KI-Chatbot <span className="text-primary-500">konkret leistet</span>
+                Was unsere digitale Kundenassistenz <span className="text-primary-500">leistet</span>
               </h2>
             </motion.div>
 
@@ -354,7 +353,7 @@ const KiChatbots: React.FC = () => {
 
               <div className="mt-8 pt-8 border-t border-dark-100">
                 <p className="text-light-200 text-center">
-                  <strong>Wichtig:</strong> Der Chatbot ersetzt kein Fachpersonal – er <strong>entlastet</strong>, filtert und strukturiert die Kommunikation.
+                  <strong>Wichtig:</strong> Die digitale Kundenassistenz ersetzt kein Fachpersonal – sie <strong>entlastet</strong>, filtert und strukturiert die Kommunikation.
                 </p>
               </div>
             </div>
@@ -376,7 +375,7 @@ const KiChatbots: React.FC = () => {
                 Mieten statt kaufen – <span className="text-primary-500">volle Transparenz</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto mb-8">
-                Unsere KI-Chatbots werden <strong>monatlich gemietet</strong>, nicht verkauft.
+                Unsere digitale Kundenassistenz wird <strong>monatlich gemietet</strong>, nicht verkauft.
               </p>
             </motion.div>
 
@@ -407,7 +406,7 @@ const KiChatbots: React.FC = () => {
                 </div>
               </div>
               <p className="text-light-200 mt-6 text-center">
-                Sie bleiben flexibel – wir sorgen dafür, dass der Chatbot dauerhaft Mehrwert liefert.
+                Sie bleiben flexibel – wir sorgen dafür, dass die Kundenassistenz dauerhaft Mehrwert liefert.
               </p>
             </motion.div>
           </div>
@@ -428,7 +427,7 @@ const KiChatbots: React.FC = () => {
                 Für welche Unternehmen <span className="text-primary-500">ist das sinnvoll?</span>
               </h2>
               <p className="text-light-200 mb-8">
-                Der KI-Chatbot eignet sich besonders für Unternehmen, die:
+                Die digitale Kundenassistenz eignet sich besonders für Unternehmen, die:
               </p>
             </motion.div>
 
@@ -528,13 +527,13 @@ const KiChatbots: React.FC = () => {
                     Viele Anfragen kommen auch per Telefon.
                   </h3>
                   <p className="text-light-300 mb-4">
-                    Unser Telefonassistent nimmt Anrufe entgegen, beantwortet häufige Fragen und erfasst Anliegen automatisch.
+                    Unsere telefonische Kundenassistenz nimmt Anrufe entgegen, beantwortet häufige Fragen und erfasst Anliegen automatisch.
                   </p>
                   <a
                     href="/telefonassistenten"
                     className="inline-flex items-center text-primary-500 font-heading font-bold hover:text-primary-400 transition-colors duration-200"
                   >
-                    Mehr zu Telefonassistenten
+                    Mehr zur telefonischen Kundenassistenz
                     <ArrowRight size={18} className="ml-2" />
                   </a>
                 </div>
@@ -569,7 +568,7 @@ const KiChatbots: React.FC = () => {
               viewport={{ once: true }}
             >
               Wenn Sie möchten, zeigen wir Ihnen <strong>individuell</strong>,<br />
-              wie ein KI-Chatbot in Ihrem Unternehmen eingesetzt werden kann.
+              wie die digitale Kundenassistenz in Ihrem Unternehmen eingesetzt werden kann.
             </motion.p>
             <motion.div
               className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6"
@@ -611,8 +610,8 @@ const KiChatbots: React.FC = () => {
             >
               <h3 className="text-lg font-heading font-bold text-primary-500 mb-2">Hinweis</h3>
               <p className="text-light-300 text-sm">
-                Der Chatbot auf dieser Website dient als Demo.<br />
-                Jeder Kunden-Chatbot wird individuell eingerichtet und angepasst.
+                Die Kundenassistenz auf dieser Website dient als Demo.<br />
+                Jede digitale Kundenassistenz wird individuell eingerichtet und angepasst.
               </p>
             </motion.div>
           </div>

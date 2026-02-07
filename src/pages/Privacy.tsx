@@ -110,7 +110,7 @@ const Privacy: React.FC = () => {
     {
       id: 'chatbot',
       icon: <FileText size={28} strokeWidth={1.5} />,
-      title: '5. KI-gestützter Website-Chatbot',
+      title: '5. Digitale Kundenassistenz auf der Website',
       content: (
         <>
           <p className="text-light-200 mb-4 leading-relaxed">

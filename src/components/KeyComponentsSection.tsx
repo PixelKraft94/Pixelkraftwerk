@@ -22,7 +22,7 @@ const KeyComponentsSection: React.FC = () => {
                   <MessageCircle size={24} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-primary-500">
-                  KI-Chatbots
+                  Digitale Kundenassistenz
                 </h3>
               </div>
               
@@ -49,7 +49,7 @@ const KeyComponentsSection: React.FC = () => {
                   <Phone size={24} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-primary-500">
-                  KI-Telefonagenten
+                  Telefonische Kundenassistenz
                 </h3>
               </div>
               

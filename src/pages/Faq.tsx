@@ -164,7 +164,7 @@ const Faq: React.FC = () => {
                 </h3>
                 <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                   <p itemProp="text" className="text-light-200">
-                    Die Dauer hängt vom Umfang ab: Websites sind meist innerhalb von 3 Tagen fertig, KI-Chatbots und KI-Telefonagenten benötigen in der Regel 1–2 Wochen. Die Implementierung in CRM-Systeme dauert ähnlich lang. Die genannten Zeiten sind Durchschnittswerte.
+                    Die Dauer hängt vom Umfang ab: Websites sind meist innerhalb von 3 Tagen fertig, die digitale und telefonische Kundenassistenz benötigen in der Regel 1–2 Wochen. Die Implementierung in CRM-Systeme dauert ähnlich lang. Die genannten Zeiten sind Durchschnittswerte.
                   </p>
                 </div>
               </div>

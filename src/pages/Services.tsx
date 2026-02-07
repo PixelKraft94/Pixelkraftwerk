@@ -37,8 +37,8 @@ const Services: React.FC = () => {
   };
 
   const coreServices = [
-    { icon: <MessageSquare size={24} />, title: "KI-Chatbots für Ihre Website", slug: "ki-chatbots" },
-    { icon: <Phone size={24} />, title: "KI-Telefonassistenten", slug: "telefonassistenten" },
+    { icon: <MessageSquare size={24} />, title: "Digitale Kundenassistenz für Ihre Website", slug: "ki-chatbots" },
+    { icon: <Phone size={24} />, title: "Telefonische Kundenassistenz", slug: "telefonassistenten" },
     { icon: <Calendar size={24} />, title: "Terminplanung & Buchungssysteme", slug: "termine-buchungen" },
     { icon: <Target size={24} />, title: "Lead-Management & CRM-Automatisierung", slug: "crm-lead-management" },
     { icon: <Globe size={24} />, title: "Websites mit integrierter Automatisierung & SEO", slug: "website-seo" },
@@ -48,8 +48,8 @@ const Services: React.FC = () => {
   const serviceDetails: ServiceDetail[] = [
     {
       icon: <MessageSquare size={40} strokeWidth={1.5} />,
-      title: "KI-Chatbots",
-      description: "Wir entwickeln intelligente Chatbots für Ihre Website, die Besucher begrüßen, Fragen beantworten und Leads qualifizieren. Die Systeme lernen aus Ihren Inhalten und führen Gespräche strukturiert und freundlich.",
+      title: "Digitale Kundenassistenz",
+      description: "Unsere digitale Kundenassistenz für Ihre Website begrüßt Besucher, beantwortet Fragen und qualifiziert Anfragen. Das System lernt aus Ihren Inhalten und führt Gespräche strukturiert und freundlich.",
       benefits: [
         "Deutlich weniger Routineanfragen für Ihr Team",
         "Sofortige Antworten für Ihre Website-Besucher – rund um die Uhr",
@@ -59,8 +59,8 @@ const Services: React.FC = () => {
     },
     {
       icon: <Phone size={40} strokeWidth={1.5} />,
-      title: "KI-Telefonassistenten",
-      description: "Wir entwickeln KI-Telefonassistenten, die Anrufe entgegennehmen, Anliegen verstehen und professionell bearbeiten. Nie wieder verpasste Anrufe – Ihr Unternehmen ist immer erreichbar.",
+      title: "Telefonische Kundenassistenz",
+      description: "Unsere telefonische Kundenassistenz nimmt Anrufe entgegen, versteht Anliegen und bearbeitet sie professionell. Nie wieder verpasste Anrufe – Ihr Unternehmen ist immer erreichbar.",
       benefits: [
         "Keine verpassten Anrufe mehr",
         "Entlastung Ihres Teams von Routineanrufen",
@@ -126,8 +126,8 @@ const Services: React.FC = () => {
     <div className="bg-dark-500">
       <SEOHead
         title="Unsere Leistungen – Digitale Lösungen für Ihr Unternehmen"
-        description="KI-Chatbots, Terminplanung, Lead-Management, Websites mit SEO, Workflow-Automatisierung und KI-Videos. Wir entwickeln intelligente Systeme, die Ihr Unternehmen entlasten."
-        keywords={['KI-Chatbot', 'Terminbuchung', 'Lead-Management', 'Website SEO', 'Workflow-Automatisierung', 'KI-Videos']}
+        description="Digitale Kundenassistenz, Terminplanung, Lead-Management, Websites mit SEO, Workflow-Automatisierung und KI-Videos. Wir entwickeln intelligente Systeme, die Ihr Unternehmen entlasten."
+        keywords={['Digitale Kundenassistenz', 'Telefonische Kundenassistenz', 'Terminbuchung', 'Lead-Management', 'Website SEO', 'KI-Videos']}
       />
       <ServiceItemListSchema />
 

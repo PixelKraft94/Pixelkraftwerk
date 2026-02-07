@@ -43,7 +43,7 @@ const Telefonassistenten: React.FC = () => {
     {
       step: '02',
       title: 'Training des Assistenten',
-      description: 'Der Telefonassistent wird mit Ihren Inhalten, Abläufen und Informationen trainiert.'
+      description: 'Die telefonische Kundenassistenz wird mit Ihren Inhalten, Abläufen und Informationen trainiert.'
     },
     {
       step: '03',
@@ -91,11 +91,11 @@ const Telefonassistenten: React.FC = () => {
   return (
     <div className="bg-dark-500">
       <SEOHead
-        title="KI-Telefonassistenten"
-        description="Intelligente Telefonassistenten für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
-        keywords={['Telefonassistent KI', 'Automatische Anrufannahme', 'KI Telefon', 'Virtuelle Telefonzentrale', 'Telefon Automatisierung']}
+        title="Telefonische Kundenassistenz"
+        description="Telefonische Kundenassistenz für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
+        keywords={['Telefonische Kundenassistenz', 'Automatische Anrufannahme', 'Telefon Kundenservice', 'Professionelle Anrufannahme']}
       />
-      <BreadcrumbSchema serviceName="KI-Telefonassistenten" serviceUrl="https://pixelkraftwerk-ai.com/telefonassistenten" />
+      <BreadcrumbSchema serviceName="Telefonische Kundenassistenz" serviceUrl="https://pixelkraftwerk-ai.com/telefonassistenten" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -120,7 +120,7 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              KI-Telefonassistenten für Ihr Unternehmen
+              Telefonische Kundenassistenz für Ihr Unternehmen
             </motion.h1>
 
             <motion.h2
@@ -138,7 +138,7 @@ const Telefonassistenten: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Unsere KI-Telefonassistenten nehmen Anrufe entgegen, beantworten Fragen, verwalten Termine und erfassen Anliegen zuverlässig – automatisiert, professionell und 24/7 durch künstliche Intelligenz.
+              Unsere telefonische Kundenassistenz nimmt Anrufe entgegen, beantwortet Fragen, verwaltet Termine und erfasst Anliegen zuverlässig – automatisiert, professionell und 24/7.
             </motion.p>
 
             <motion.button
@@ -193,7 +193,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <strong>Dann ist ein KI-Telefonassistent die passende Lösung.</strong>
+              <strong>Dann ist unsere telefonische Kundenassistenz die passende Lösung.</strong>
             </motion.p>
           </div>
         </div>
@@ -210,10 +210,10 @@ const Telefonassistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                Was Ihr <span className="text-primary-500">Telefonassistent leistet</span>
+                Was Ihre <span className="text-primary-500">telefonische Kundenassistenz leistet</span>
               </h2>
               <p className="text-light-200 max-w-3xl mx-auto">
-                Der KI-Telefonassistent versteht natürliche Sprache und bearbeitet Anrufe selbstständig – zuverlässig und strukturiert.
+                Die telefonische Kundenassistenz versteht natürliche Sprache und bearbeitet Anrufe selbstständig – zuverlässig und strukturiert.
               </p>
             </motion.div>
 
@@ -249,7 +249,7 @@ const Telefonassistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-4">
-                So entsteht <span className="text-primary-500">Ihr Telefonassistent</span>
+                So entsteht <span className="text-primary-500">Ihre telefonische Kundenassistenz</span>
               </h2>
               <p className="text-light-200">
                 Von der ersten Analyse bis zum laufenden Betrieb – ein klarer, erprobter Prozess.
@@ -370,13 +370,13 @@ const Telefonassistenten: React.FC = () => {
                     Auch über die Website erreichbar sein?
                   </h3>
                   <p className="text-light-300 mb-4">
-                    Viele Kunden nehmen zuerst über die Website Kontakt auf. Ein KI-Chatbot beantwortet Anfragen direkt online und erfasst Anliegen strukturiert.
+                    Viele Kunden nehmen zuerst über die Website Kontakt auf. Unsere digitale Kundenassistenz beantwortet Anfragen direkt online und erfasst Anliegen strukturiert.
                   </p>
                   <a
                     href="/ki-chatbots"
                     className="inline-flex items-center text-primary-500 font-heading font-bold hover:text-primary-400 transition-colors duration-200"
                   >
-                    Mehr zu KI-Chatbots
+                    Mehr zur digitalen Kundenassistenz
                     <ArrowRight size={18} className="ml-2" />
                   </a>
                 </div>
@@ -410,7 +410,7 @@ const Telefonassistenten: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Lassen Sie uns gemeinsam besprechen, wie ein KI-Telefonassistent Ihr Unternehmen entlasten kann.
+              Lassen Sie uns gemeinsam besprechen, wie die telefonische Kundenassistenz Ihr Unternehmen entlasten kann.
             </motion.p>
           </div>
         </div>

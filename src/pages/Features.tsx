@@ -14,27 +14,27 @@ const Features: React.FC = () => {
             Unsere Schwerpunkte liegen auf:
           </p>
           
-          {/* KI-Chatbots Section */}
+          {/* Digitale Kundenassistenz Section */}
           <section className="mb-16 bg-dark-400 p-8 border border-dark-100">
             <div className="flex items-start mb-6">
               <CheckCircle className="text-primary-500 mr-3 flex-shrink-0" size={24} />
               <h2 className="text-2xl font-heading font-bold text-primary-500">
-                KI-Chatbots für Webseiten & Messenger
+                Digitale Kundenassistenz für Webseiten & Messenger
               </h2>
             </div>
             
             <div className="ml-9 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center">
                 <MessageCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">KI-Chatbot erstellen lassen</p>
+                <p className="text-light-200">Digitale Kundenassistenz erstellen lassen</p>
               </div>
               <div className="flex items-center">
                 <MessageCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">GPT-Chatbot mit Kontextverständnis</p>
+                <p className="text-light-200">KI-Assistenz mit Kontextverständnis</p>
               </div>
               <div className="flex items-center">
                 <MessageCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">Chatbot für Kundenservice und Leadgenerierung</p>
+                <p className="text-light-200">Kundenassistenz für Kundenservice und Leadgenerierung</p>
               </div>
               <div className="flex items-center">
                 <MessageCircle className="text-primary-500 mr-2 flex-shrink-0" size={16} />
@@ -47,23 +47,23 @@ const Features: React.FC = () => {
             </div>
           </section>
           
-          {/* KI-Telefonagenten Section */}
+          {/* Telefonische Kundenassistenz Section */}
           <section className="mb-16 bg-dark-400 p-8 border border-dark-100">
             <div className="flex items-start mb-6">
               <CheckCircle className="text-primary-500 mr-3 flex-shrink-0" size={24} />
               <h2 className="text-2xl font-heading font-bold text-primary-500">
-                KI-Telefonagenten
+                Telefonische Kundenassistenz
               </h2>
             </div>
             
             <div className="ml-9 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex items-center">
                 <Phone className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">Telefonagent mit künstlicher Intelligenz</p>
+                <p className="text-light-200">Telefonische Kundenassistenz mit künstlicher Intelligenz</p>
               </div>
               <div className="flex items-center">
                 <Phone className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">GPT-basierte Telefonassistenz für Unternehmen</p>
+                <p className="text-light-200">KI-basierte Telefonassistenz für Unternehmen</p>
               </div>
               <div className="flex items-center">
                 <Phone className="text-primary-500 mr-2 flex-shrink-0" size={16} />
@@ -192,11 +192,11 @@ const Features: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <ArrowRight className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">Chatbot Agentur Leipzig</p>
+                <p className="text-light-200">Kundenassistenz Agentur Leipzig</p>
               </div>
               <div className="flex items-center">
                 <ArrowRight className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">GPT Telefonassistent</p>
+                <p className="text-light-200">Telefonische Kundenassistenz</p>
               </div>
               <div className="flex items-center">
                 <ArrowRight className="text-primary-500 mr-2 flex-shrink-0" size={16} />
@@ -216,7 +216,7 @@ const Features: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <ArrowRight className="text-primary-500 mr-2 flex-shrink-0" size={16} />
-                <p className="text-light-200">Website mit Chatbot</p>
+                <p className="text-light-200">Website mit digitaler Kundenassistenz</p>
               </div>
               <div className="flex items-center">
                 <ArrowRight className="text-primary-500 mr-2 flex-shrink-0" size={16} />

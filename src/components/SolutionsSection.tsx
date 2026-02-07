@@ -15,7 +15,7 @@ const SolutionsSection: React.FC = () => {
     {
       id: 1,
       icon: <MessageCircle size={24} />,
-      title: '1. KI-Chatbots – Rund-um-die-Uhr-Service ohne Personalkosten',
+      title: '1. Digitale Kundenassistenz – Rund-um-die-Uhr-Service ohne Personalkosten',
       items: [
         'Automatische Beantwortung von häufigen Fragen',
         'Direkte Terminbuchung über Website oder Messenger',
@@ -26,7 +26,7 @@ const SolutionsSection: React.FC = () => {
     {
       id: 2,
       icon: <Phone size={24} />,
-      title: '2. KI-Telefonagenten – Nie wieder verpasste Anrufe',
+      title: '2. Telefonische Kundenassistenz – Nie wieder verpasste Anrufe',
       items: [
         'Gehen automatisch ans Telefon – 24/7, auch nachts',
         'Erkennen Anfragen, buchen Termine, beantworten Wiederholer-Fragen',
@@ -122,7 +122,7 @@ const SolutionsSection: React.FC = () => {
                   <MessageCircle size={24} />
                 </div>
                 <h3 className="text-2xl font-heading font-bold text-primary-500">
-                  1. KI-Chatbots – Rund-um-die-Uhr-Service ohne Personalkosten
+                  1. Digitale Kundenassistenz – Rund-um-die-Uhr-Service ohne Personalkosten
                 </h3>
               </div>
 
@@ -153,7 +153,7 @@ const SolutionsSection: React.FC = () => {
                   <Phone size={24} />
                 </div>
                 <h3 className="text-2xl font-heading font-bold text-primary-500">
-                  2. KI-Telefonagenten – Nie wieder verpasste Anrufe
+                  2. Telefonische Kundenassistenz – Nie wieder verpasste Anrufe
                 </h3>
               </div>
 
@@ -245,7 +245,7 @@ const SolutionsSection: React.FC = () => {
               Sie wählen. Wir liefern.
             </h3>
             <p className="text-light-200 mb-8">
-              Ob Sie nur einen KI-Chatbot brauchen, nur einen Telefonagenten – oder gleich alles in einem Paket wollen: 
+              Ob Sie nur eine digitale Kundenassistenz brauchen, nur eine telefonische Kundenassistenz – oder gleich alles in einem Paket wollen:
               Wir liefern exakt das, was Ihnen Zeit spart und Geld bringt.
             </p>
             <a 

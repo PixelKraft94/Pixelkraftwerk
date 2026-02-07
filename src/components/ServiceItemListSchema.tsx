@@ -3,14 +3,14 @@ import React from 'react';
 const ServiceItemListSchema: React.FC = () => {
   const services = [
     {
-      name: "KI-Chatbots für Ihre Website",
+      name: "Digitale Kundenassistenz für Ihre Website",
       url: "https://pixelkraftwerk-ai.com/ki-chatbots",
-      description: "Intelligente Website-Chatbots für automatische Kundenbetreuung. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
+      description: "Digitale Kundenassistenz für automatische Kundenbetreuung auf Ihrer Website. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
     },
     {
-      name: "KI-Telefonassistenten",
+      name: "Telefonische Kundenassistenz",
       url: "https://pixelkraftwerk-ai.com/telefonassistenten",
-      description: "Intelligente Telefonassistenten für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
+      description: "Telefonische Kundenassistenz für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
     },
     {
       name: "Terminplanung & Buchungssysteme",
