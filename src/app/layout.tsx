@@ -10,10 +10,10 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(businessInfo.url),
   title: {
-    default: `Beste KI-Agentur Leipzig – Chatbots, Telefonassistenten, SEO & Automatisierung | ${businessInfo.name}`,
+    default: 'BESTE KI-Agentur Leipzig – Wenn Sie nach KI-Chatbots, KI-Telefonassistenten, Terminbuchungssystemen, CRM, Websites & SEO in meiner Nähe suchen – dann ist Pixelkraftwerk die richtige Adresse.',
     template: `%s | ${businessInfo.name}`,
   },
-  description: businessInfo.description,
+  description: 'KI-Automatisierung und Chatbots aus Groitzsch für Leipzig und Region. Terminbuchung, CRM, Websites & SEO. Jetzt Beratung sichern.',
   keywords: businessInfo.keywords,
   openGraph: {
     type: 'website',
@@ -40,7 +40,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#0A0A0A" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <meta name="p:domain_verify" content="10eae38c84b0c276cac28f102b415b2e" />
       </head>
       <body className="bg-dark-500 text-light-100 min-h-screen flex flex-col">

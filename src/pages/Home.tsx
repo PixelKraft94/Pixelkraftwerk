@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, CheckCircle, ArrowRight, Calendar, MessageCircle, Target, Workflow, Globe, Video } from 'lucide-react';
+import { ChevronDown, CheckCircle, Minus, ArrowRight, Calendar, MessageCircle, Target, Workflow, Globe, Video } from 'lucide-react';
 import { BackgroundPaths } from '../components/ui/background-paths';
 import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import WebSiteSchema from '../components/WebSiteSchema';
+import { LEISTUNGSGEBIETE_CITIES } from '../data/leistungsgebiete';
 
 const Home: React.FC = () => {
   const [openExample, setOpenExample] = React.useState<number | null>(null);
@@ -92,60 +93,46 @@ const Home: React.FC = () => {
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center bg-dark-500 overflow-hidden">
         <BackgroundPaths />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dark-500/80 z-[1]" aria-hidden />
 
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl text-light-100 font-heading font-bold mb-4 -mt-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-light-100 font-heading font-extrabold tracking-tight mb-4 -mt-8 drop-shadow-[0_0_24px_rgba(0,230,212,0.15)]">
               <motion.span
                 className="block"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease: "easeOut", delay: 0.3 }}
               >
-                KI-Agentur Leipzig – Automatisierung, Chatbots & SEO aus Groitzsch
+                KI-Agentur Leipzig
               </motion.span>
             </h1>
-            <p className="space-y-1 text-xl md:text-2xl lg:text-3xl text-light-200 font-heading mb-8">
+            <h2 className="sr-only">
+              Chatbots, Telefonassistenten, Terminbuchung, CRM, Websites &amp; SEO – KI-Automatisierung für Leipzig und Region
+            </h2>
+            <p className="space-y-1 text-xl md:text-2xl lg:text-3xl text-light-200 font-heading mb-6">
               <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>Klare Abläufe.</motion.span>
               <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>Mehr Anfragen.</motion.span>
               <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>Weniger Stress.</motion.span>
             </p>
             <motion.p
-              className="text-sm text-light-300 mb-6"
+              className="text-lg md:text-xl text-light-200 max-w-2xl mx-auto mb-8 leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.6 }}
             >
-              Pixel Kraftwerk – Franke & Brause GbR · Neuer Weg 9a · 04539 Groitzsch · <a href="tel:+491785844460" className="text-primary-400 hover:underline">+49 178 5844460</a>
-            </motion.p>
-
-            <motion.p
-              className="block md:hidden text-lg text-light-200 mb-8 max-w-3xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
-            >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen.
-            </motion.p>
-
-            <motion.p
-              className="hidden md:block text-xl text-light-200 mb-8 max-w-3xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
-            >
-              Wir automatisieren Unternehmen in <strong>Groitzsch</strong>, <strong>Leipzig</strong> und ganz <strong>Sachsen</strong> mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen.
+              Wir automatisieren Unternehmen in Leipzig und Region mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen.
             </motion.p>
 
             <motion.div
               className="mt-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 2.2 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 1.8 }}
             >
               <button
                 onClick={scrollToContactForm}
-                className="inline-flex items-center px-8 py-3 bg-primary-500 text-dark-500 font-heading font-bold hover:bg-primary-400 transition-colors duration-300"
+                className="inline-flex items-center px-8 py-3.5 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold shadow-lg shadow-primary-500/20 hover:bg-primary-400 hover:shadow-primary-glow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500"
               >
                 <ArrowRight className="mr-2" size={20} />
                 Kostenloses Erstgespräch sichern
@@ -156,18 +143,19 @@ const Home: React.FC = () => {
 
         <motion.button
           onClick={scrollToNextSection}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary-500 hover:text-primary-400 transition-colors duration-300 animate-bounce"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 text-primary-500 hover:text-primary-400 transition-colors duration-300 animate-bounce focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg py-2"
           aria-label="Nach unten scrollen"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 2.8 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 2.4 }}
         >
-          <ChevronDown size={32} />
+          <span className="text-xs font-heading font-medium text-light-300">Scroll</span>
+          <ChevronDown size={24} />
         </motion.button>
       </section>
 
       {/* PROBLEM SECTION */}
-      <section id="problem-section" className="py-32 bg-dark-400">
+      <section id="problem-section" className="section-padding bg-dark-400 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -197,7 +185,7 @@ const Home: React.FC = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <span className="text-red-400 mr-3 mt-1 flex-shrink-0">-</span>
+                    <Minus className="text-red-400 mr-3 mt-1 flex-shrink-0" size={20} strokeWidth={2.5} />
                     <p className="text-light-200 text-lg">{item}</p>
                   </motion.div>
                 ))}
@@ -218,7 +206,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* FUTURE SECTION */}
-      <section className="py-32 bg-dark-500">
+      <section className="section-padding bg-dark-500 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -259,7 +247,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* SERVICES HUB SECTION */}
-      <section className="py-32 bg-dark-400">
+      <section className="section-padding bg-dark-400 border-t border-dark-200/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -276,22 +264,22 @@ const Home: React.FC = () => {
                 Digitale Lösungen, die Ihr Unternehmen entlasten und den Arbeitsalltag deutlich vereinfachen.
               </p>
               <p className="text-light-300 text-sm">
-                <a href="/leistungsgebiete" className="text-primary-400 hover:underline">Leistungsgebiete: Groitzsch, Leipzig, Sachsen</a>
+                <a href="/leistungsgebiete" className="text-primary-400 hover:underline">Leistungsgebiete: Leipzig, Markkleeberg, Zwenkau, Borna, Böhlen, Rötha, Neukieritzsch, Pegau, Lucka, Meuselwitz, Regis-Breitingen, Elstertrebnitz, Groitzsch</a>
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <motion.a
                 href="/ki-chatbots"
-                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-primary-500 mb-4">
-                  <MessageCircle size={32} strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-400 text-primary-500 mb-4">
+                  <MessageCircle size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Digitale Kundenassistenz
@@ -307,15 +295,15 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/telefonassistenten"
-                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-primary-500 mb-4">
-                  <Workflow size={32} strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-400 text-primary-500 mb-4">
+                  <Workflow size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Telefonische Kundenassistenz
@@ -331,15 +319,15 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/termine-buchungen"
-                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-primary-500 mb-4">
-                  <Calendar size={32} strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-400 text-primary-500 mb-4">
+                  <Calendar size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Terminplanung & Buchungssysteme
@@ -355,15 +343,15 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/crm-lead-management"
-                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-primary-500 mb-4">
-                  <Target size={32} strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-400 text-primary-500 mb-4">
+                  <Target size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Lead-Management & CRM
@@ -379,15 +367,15 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/website-seo"
-                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-primary-500 mb-4">
-                  <Globe size={32} strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-400 text-primary-500 mb-4">
+                  <Globe size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Websites & SEO
@@ -403,15 +391,15 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/content-video"
-                className="group bg-dark-500 p-6 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
               >
-                <div className="text-primary-500 mb-4">
-                  <Video size={32} strokeWidth={1.5} />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-dark-400 text-primary-500 mb-4">
+                  <Video size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Content-Produktion & KI-Videos
@@ -431,7 +419,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* PRACTICE EXAMPLES SECTION */}
-      <section className="py-32 bg-dark-500">
+      <section className="section-padding bg-dark-500 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <motion.h2
@@ -456,7 +444,7 @@ const Home: React.FC = () => {
                 >
                   <motion.button
                     onClick={() => toggleExample(index)}
-                    className="w-full flex items-center justify-between py-5 text-left border-b border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                    className="w-full flex items-center justify-between py-5 text-left border-b border-dark-200 hover:border-primary-500/50 transition-all duration-300 rounded-lg"
                     whileHover={{ x: 8 }}
                   >
                     <span className="text-lg font-heading font-bold text-light-100 flex items-center">
@@ -503,7 +491,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* SERVICES SECTION */}
-      <section className="py-32 bg-dark-400">
+      <section className="section-padding bg-dark-400 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <motion.h2
@@ -520,7 +508,7 @@ const Home: React.FC = () => {
               {services.map((service, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center bg-dark-500 p-5 border border-dark-100 hover:border-primary-500/50 transition-all duration-300"
+                  className="flex items-center rounded-xl bg-dark-500/90 p-5 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -536,8 +524,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* REGION SEO SECTION */}
-      <section className="py-32 bg-dark-500">
+      {/* REGION SEO SECTION – Gebiete, die wir bedienen */}
+      <section className="section-padding bg-dark-500 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
@@ -547,7 +535,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="text-primary-500">KI-Automatisierung</span> aus Groitzsch – für Unternehmen in <span className="text-primary-500">Leipzig</span>, <span className="text-primary-500">Sachsen</span> & ganz <span className="text-primary-500">Deutschland</span>
+              <span className="text-primary-500">Gebiete, die wir bedienen</span> – KI-Automatisierung aus Groitzsch für Leipzig & Region
             </motion.h2>
 
             <motion.p
@@ -557,39 +545,38 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Von unserem Standort in Groitzsch betreuen wir Unternehmen in Leipzig, ganz Sachsen und deutschlandweit. Wir verbinden regionale Nähe mit moderner Technologie und entwickeln Lösungen für nachhaltiges Wachstum.
+              Von unserem Standort in Groitzsch betreuen wir Unternehmen in Leipzig, Markkleeberg, Zwenkau, Borna, Böhlen, Rötha, Neukieritzsch, Pegau, Lucka, Meuselwitz, Regis-Breitingen, Elstertrebnitz und der gesamten Region. Wir verbinden lokale Nähe mit moderner Technologie.
             </motion.p>
 
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <div className="bg-dark-400 p-5 border border-dark-100">
-                <p className="text-primary-500 font-bold mb-1">Groitzsch</p>
-                <p className="text-light-300 text-sm">Hauptsitz</p>
-              </div>
-              <div className="bg-dark-400 p-5 border border-dark-100">
-                <p className="text-primary-500 font-bold mb-1">Leipzig</p>
-                <p className="text-light-300 text-sm">Metropolregion</p>
-              </div>
-              <div className="bg-dark-400 p-5 border border-dark-100">
-                <p className="text-primary-500 font-bold mb-1">Sachsen</p>
-                <p className="text-light-300 text-sm">Regional</p>
-              </div>
-              <div className="bg-dark-400 p-5 border border-dark-100">
-                <p className="text-primary-500 font-bold mb-1">Deutschland</p>
-                <p className="text-light-300 text-sm">Bundesweit</p>
-              </div>
+              {LEISTUNGSGEBIETE_CITIES.map((city) => (
+                <a
+                  key={city.slug}
+                  href={`/leistungsgebiete/${city.slug}`}
+                  className="rounded-xl bg-dark-400/90 p-4 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-300 transition-all duration-300 text-left block"
+                >
+                  <p className="text-primary-500 font-bold mb-0.5">{city.name}</p>
+                  <p className="text-light-300 text-xs">{city.subtitle}</p>
+                </a>
+              ))}
             </motion.div>
+            <p className="mt-6 text-light-300 text-sm">
+              <a href="/leistungsgebiete" className="text-primary-400 hover:underline font-heading font-bold">Alle Leistungsgebiete ansehen</a>
+              {' · '}
+              <a href="/services" className="text-primary-400 hover:underline font-heading font-bold">Unsere Leistungen</a>
+            </p>
           </div>
         </div>
       </section>
 
       {/* PROCESS SECTION */}
-      <section className="py-32 bg-dark-400">
+      <section className="section-padding bg-dark-400 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
             <motion.h2
@@ -641,7 +628,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-32 bg-dark-500">
+      <section className="section-padding bg-dark-500 border-t border-dark-200/30">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h2
@@ -656,7 +643,7 @@ const Home: React.FC = () => {
 
             <motion.button
               onClick={scrollToContactForm}
-              className="inline-flex items-center px-10 py-4 bg-primary-500 text-dark-500 font-heading font-bold text-lg hover:bg-primary-400 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center px-10 py-4 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold text-lg shadow-lg shadow-primary-500/20 hover:bg-primary-400 hover:shadow-primary-glow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}

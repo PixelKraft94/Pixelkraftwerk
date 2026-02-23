@@ -1,38 +1,25 @@
 import type { Metadata } from 'next';
 import RegionPage from '@/pages/RegionPage';
+import { getRegionContent, getValidRegionSlug } from '@/data/regionContent';
+import { LEISTUNGSGEBIETE_SLUGS } from '@/data/leistungsgebiete';
 
-const REGIONS: Record<string, { title: string; description: string }> = {
-  leipzig: {
-    title: 'KI-Automatisierung & Chatbots in Leipzig',
-    description: 'KI-Automatisierung und Chatbots für Unternehmen in Leipzig. Pixel Kraftwerk – Ihr Partner für digitale Prozesse.',
-  },
-  groitzsch: {
-    title: 'KI-Automatisierung & Chatbots in Groitzsch – Ihr Partner vor Ort',
-    description: 'KI-Lösungen aus Groitzsch für die Region. Pixel Kraftwerk – Automatisierung, Chatbots und SEO.',
-  },
-  sachsen: {
-    title: 'KI-Automatisierung & Chatbots in Sachsen',
-    description: 'KI-Automatisierung für Unternehmen in Sachsen. Pixel Kraftwerk – Leipzig, Dresden, Chemnitz und Umgebung.',
-  },
-};
+const baseUrl = 'https://pixelkraftwerk-ai.com';
 
 type Props = { params: Promise<{ region: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { region } = await params;
-  const content = REGIONS[region];
-  if (!content) {
-    return { title: 'Leistungsgebiete' };
-  }
+  const slug = getValidRegionSlug(region);
+  const content = getRegionContent(slug);
   return {
     title: content.title,
-    description: content.description,
-    alternates: { canonical: `https://pixelkraftwerk-ai.com/leistungsgebiete/${region}` },
+    description: content.metaDescription,
+    alternates: { canonical: `${baseUrl}/leistungsgebiete/${slug}` },
   };
 }
 
 export async function generateStaticParams() {
-  return [{ region: 'leipzig' }, { region: 'groitzsch' }, { region: 'sachsen' }];
+  return LEISTUNGSGEBIETE_SLUGS.map((region) => ({ region }));
 }
 
 export default async function Page({ params }: Props) {

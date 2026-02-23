@@ -20,6 +20,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
+import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const CrmLeadManagement: React.FC = () => {
@@ -366,6 +367,7 @@ const CrmLeadManagement: React.FC = () => {
             >
               Lassen Sie uns gemeinsam herausfinden, wie ein CRM-System Ihren Vertrieb optimieren kann.
             </motion.p>
+            <ServicedRegionsBlock />
           </div>
         </div>
       </section>

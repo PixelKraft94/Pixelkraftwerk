@@ -26,6 +26,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
+import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const WebsiteSeo: React.FC = () => {
@@ -743,6 +744,7 @@ const WebsiteSeo: React.FC = () => {
               <ArrowRight className="mr-2" size={24} />
               Kostenlose Analyse anfordern
             </motion.button>
+            <ServicedRegionsBlock />
           </div>
         </div>
       </section>

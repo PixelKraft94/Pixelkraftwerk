@@ -80,19 +80,19 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-dark-500/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-dark-500/95 backdrop-blur-sm shadow-lg border-b border-dark-200/50' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Logo />
 
         <nav className="hidden md:block">
-          <ul className="flex space-x-8 items-center">
+          <ul className="flex space-x-6 md:space-x-8 items-center">
             <li>
               <a
                 href="/"
-                className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200"
+                className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg"
               >
                 Startseite
               </a>
@@ -106,7 +106,7 @@ const Header: React.FC = () => {
             >
               <a
                 href="/services"
-                className="flex items-center text-light-100 hover:text-primary-400 font-heading transition-colors duration-200"
+                className="flex items-center text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg"
               >
                 Unsere Leistungen
                 <ChevronDown size={16} className="ml-1" />
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
               <li key={item.path}>
                 <a
                   href={item.path}
-                  className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200"
+                  className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg"
                 >
                   {item.title}
                 </a>
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="/privacy-settings"
-                className="text-light-100 hover:text-primary-400 transition-colors duration-200"
+                className="text-light-100 hover:text-primary-400 transition-colors duration-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500"
                 aria-label="Cookie-Einstellungen"
               >
                 <Settings size={20} />
@@ -163,11 +163,11 @@ const Header: React.FC = () => {
 
       {isMenuOpen && (
         <nav className="md:hidden bg-dark-400 animate-fade-in">
-          <ul className="container mx-auto px-4 py-4 flex flex-col space-y-2">
+          <ul className="container mx-auto px-4 py-4 flex flex-col space-y-1">
             <li>
               <a
                 href="/"
-                className="block text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
+                className="block text-light-100 hover:text-primary-400 font-heading py-3 px-3 rounded-lg transition-colors duration-200 min-h-[44px] flex items-center"
                 onClick={toggleMenu}
               >
                 Startseite
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
             <li>
               <button
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className="flex items-center justify-between w-full text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
+                className="flex items-center justify-between w-full text-light-100 hover:text-primary-400 font-heading py-3 px-3 rounded-lg transition-colors duration-200 min-h-[44px]"
               >
                 Unsere Leistungen
                 <ChevronDown
@@ -192,7 +192,7 @@ const Header: React.FC = () => {
                     <li key={service.path}>
                       <a
                         href={service.path}
-                        className="flex items-center py-2 pl-4 text-light-200 hover:text-primary-400 transition-colors duration-200"
+                        className="flex items-center py-3 pl-4 text-light-200 hover:text-primary-400 transition-colors duration-200 min-h-[44px]"
                         onClick={toggleMenu}
                       >
                         <span className="text-primary-500 mr-2">{service.icon}</span>
@@ -208,7 +208,7 @@ const Header: React.FC = () => {
               <li key={item.path}>
                 <a
                   href={item.path}
-                  className="block text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
+                  className="block text-light-100 hover:text-primary-400 font-heading py-3 px-3 rounded-lg transition-colors duration-200 min-h-[44px] flex items-center"
                   onClick={toggleMenu}
                 >
                   {item.title}
@@ -219,7 +219,7 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="/privacy-settings"
-                className="block text-light-100 hover:text-primary-400 font-heading py-2 transition-colors duration-200"
+                className="block text-light-100 hover:text-primary-400 font-heading py-3 px-3 rounded-lg transition-colors duration-200 min-h-[44px] flex items-center"
                 onClick={toggleMenu}
               >
                 Cookie-Einstellungen

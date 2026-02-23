@@ -4,37 +4,38 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, MessageCircle, Phone, Calendar, Target, Globe, Video } from 'lucide-react';
 import { businessInfo } from '../data/businessInfo';
+import { LEISTUNGSGEBIETE_CITIES } from '../data/leistungsgebiete';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import GoogleMapsSection from '../components/GoogleMapsSection';
 
-const regions = [
-  {
-    slug: 'leipzig',
-    name: 'Leipzig',
-    subtitle: 'Metropolregion',
-    description: 'KI-Automatisierung, Chatbots, Telefonassistenten, Terminbuchung, CRM, Websites & SEO für Unternehmen in Leipzig und Umgebung.',
-    path: '/leistungsgebiete/leipzig',
-  },
-  {
-    slug: 'groitzsch',
-    name: 'Groitzsch',
-    subtitle: 'Hauptsitz',
-    description: 'Von unserem Standort in Groitzsch aus entwickeln wir KI-Lösungen für die Region – mit kurzen Wegen und persönlicher Betreuung.',
-    path: '/leistungsgebiete/groitzsch',
-  },
-  {
-    slug: 'sachsen',
-    name: 'Sachsen',
-    subtitle: 'Regional',
-    description: 'Wir betreuen Unternehmen in ganz Sachsen – von Dresden über Chemnitz bis Leipzig – mit digitaler Kundenassistenz, Terminbuchung und SEO.',
-    path: '/leistungsgebiete/sachsen',
-  },
-];
+const regionDescriptions: Record<string, string> = {
+  leipzig: 'KI-Automatisierung, Chatbots, Telefonassistenten, Terminbuchung, CRM, Websites & SEO für Unternehmen in Leipzig und Umgebung.',
+  groitzsch: 'Von unserem Standort in Groitzsch aus entwickeln wir KI-Lösungen für die Region – mit kurzen Wegen und persönlicher Betreuung.',
+  markkleeberg: 'KI-Lösungen für Unternehmen in Markkleeberg und der Region Leipzig – Chatbots, Terminbuchung, CRM, SEO.',
+  zwenkau: 'KI-Automatisierung und Chatbots für Unternehmen in Zwenkau und Umgebung. Pixel Kraftwerk aus Groitzsch.',
+  borna: 'KI-Chatbots, Telefonassistenten, Terminbuchung und SEO für Unternehmen in Borna und dem Landkreis Leipzig.',
+  boehlen: 'Digitale Kundenassistenz und Automatisierung für Unternehmen in Böhlen und der Region.',
+  roetha: 'KI-Lösungen für Rötha und Umgebung – Terminbuchung, CRM, Websites & SEO.',
+  neukieritzsch: 'KI-Automatisierung für Neukieritzsch und den Landkreis Leipzig.',
+  pegau: 'Chatbots, Telefonassistenten und SEO für Unternehmen in Pegau und Umgebung.',
+  lucka: 'KI-Automatisierung für Lucka und das Altenburger Land.',
+  meuselwitz: 'KI-Lösungen für Meuselwitz und die Region – aus Groitzsch für Ihre Prozesse.',
+  'regis-breitingen': 'KI-Chatbots, Terminbuchung und CRM für Regis-Breitingen und den Landkreis Leipzig.',
+  elstertrebnitz: 'Digitale Kundenassistenz und Automatisierung für Elstertrebnitz und Umgebung.',
+};
+
+const regions = LEISTUNGSGEBIETE_CITIES.map(({ slug, name, subtitle }) => ({
+  slug,
+  name,
+  subtitle,
+  description: regionDescriptions[slug] ?? `KI-Automatisierung, Chatbots, Terminbuchung, CRM und SEO für Unternehmen in ${name}.`,
+  path: `/leistungsgebiete/${slug}`,
+}));
 
 const Leistungsgebiete: React.FC = () => {
   return (
     <div className="bg-dark-500">
-      <LocalBusinessSchema pageType="homepage" customDescription="KI-Automatisierung und Chatbots für Unternehmen in Leipzig, Groitzsch und Sachsen." />
+      <LocalBusinessSchema pageType="homepage" customDescription="KI-Automatisierung und Chatbots für Unternehmen in Leipzig, Markkleeberg, Zwenkau, Borna, Böhlen, Rötha, Neukieritzsch, Pegau, Lucka, Meuselwitz, Regis-Breitingen, Elstertrebnitz und Groitzsch." />
 
       <section className="relative pt-32 pb-24 bg-dark-500 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
@@ -53,7 +54,7 @@ const Leistungsgebiete: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Wir bedienen <strong>Groitzsch</strong>, <strong>Leipzig</strong>, <strong>Sachsen</strong> und darüber hinaus – mit KI-Automatisierung, Chatbots, Terminbuchung, CRM, Websites & SEO.
+              Wir bedienen <strong>Leipzig</strong>, <strong>Markkleeberg</strong>, <strong>Zwenkau</strong>, <strong>Borna</strong>, <strong>Böhlen</strong>, <strong>Rötha</strong>, <strong>Neukieritzsch</strong>, <strong>Pegau</strong>, <strong>Lucka</strong>, <strong>Meuselwitz</strong>, <strong>Regis-Breitingen</strong>, <strong>Elstertrebnitz</strong> und <strong>Groitzsch</strong> (Hauptsitz) – mit KI-Automatisierung, Chatbots, Terminbuchung, CRM, Websites & SEO.
             </motion.p>
             <motion.p
               className="text-light-300 max-w-2xl mx-auto"
@@ -75,7 +76,7 @@ const Leistungsgebiete: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-12 text-center">
               Regionen, die wir bedienen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {regions.map((region, index) => (
                 <motion.a
                   key={region.slug}

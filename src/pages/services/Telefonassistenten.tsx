@@ -21,6 +21,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
+import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const Telefonassistenten: React.FC = () => {
@@ -408,6 +409,7 @@ const Telefonassistenten: React.FC = () => {
             >
               Lassen Sie uns gemeinsam besprechen, wie die telefonische Kundenassistenz Ihr Unternehmen entlasten kann.
             </motion.p>
+            <ServicedRegionsBlock />
           </div>
         </div>
       </section>

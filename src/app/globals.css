@@ -4,18 +4,30 @@
 
 @layer base {
   body {
-    @apply bg-dark-500 font-sans;
+    @apply bg-dark-500 font-sans text-body;
     scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight; }
+  h2 { @apply text-3xl md:text-4xl font-bold tracking-tight; }
+  h3 { @apply text-xl md:text-2xl font-bold; }
 }
 
 @layer utilities {
   .font-heading {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500;
   }
 }
 
@@ -37,6 +49,10 @@
 
 input, select, textarea {
   @apply transition-all duration-200;
+}
+
+input:focus, select:focus, textarea:focus {
+  @apply outline-none;
 }
 
 .cursor-blink {

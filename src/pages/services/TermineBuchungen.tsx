@@ -20,6 +20,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
+import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const TermineBuchungen: React.FC = () => {
@@ -367,6 +368,7 @@ const TermineBuchungen: React.FC = () => {
             >
               Lassen Sie uns besprechen, wie ein Buchungssystem Ihren Alltag vereinfachen kann.
             </motion.p>
+            <ServicedRegionsBlock />
           </div>
         </div>
       </section>

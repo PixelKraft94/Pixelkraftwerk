@@ -36,11 +36,21 @@ export const businessInfo = {
 
   priceRange: "€€",
 
+  /** 12 Leistungsgebiete + Groitzsch (Hauptsitz) – für Schema areaServed und NAP-Konsistenz */
   serviceArea: [
-    "Groitzsch",
     "Leipzig",
-    "Sachsen",
-    "Deutschland"
+    "Markkleeberg",
+    "Zwenkau",
+    "Borna",
+    "Böhlen",
+    "Rötha",
+    "Neukieritzsch",
+    "Pegau",
+    "Lucka",
+    "Meuselwitz",
+    "Regis-Breitingen",
+    "Elstertrebnitz",
+    "Groitzsch"
   ],
 
   services: [

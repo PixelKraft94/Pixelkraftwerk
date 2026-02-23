@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
   }, [hasConsent]);
 
   return (
-    <footer className="bg-dark-400 pt-16 pb-8">
+    <footer className="bg-dark-400 border-t border-dark-200 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                   key={link.platform}
                   href={link.url}
                   aria-label={link.platform}
-                  className="text-light-100 hover:text-primary-400 transition-colors duration-200"
+                  className="text-light-100 hover:text-primary-400 hover:scale-110 transition-all duration-200 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-400"
                 >
                   {getSocialIcon(link.icon)}
                 </a>
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-dark-100 pt-8 text-center">
+        <div className="border-t border-dark-200 pt-10 md:pt-12 text-center">
           <p className="text-light-400 text-sm">
             &copy; {currentYear} PIXEL_KRAFTWERK. Alle Rechte vorbehalten.
           </p>

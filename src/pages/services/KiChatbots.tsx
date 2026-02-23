@@ -15,6 +15,7 @@ import {
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
+import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const KiChatbots: React.FC = () => {
@@ -590,6 +591,7 @@ const KiChatbots: React.FC = () => {
             >
               Ohne Testzugang. Ohne Verpflichtung. Mit klarer Erwartung.
             </motion.p>
+            <ServicedRegionsBlock />
           </div>
         </div>
       </section>

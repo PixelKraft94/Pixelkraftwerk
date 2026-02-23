@@ -45,7 +45,17 @@ export default {
       fontFamily: {
         mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
         sans: ['Open Sans', 'system-ui', 'sans-serif'],
-        heading: ['Lato', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'sans-serif'],
+      },
+      fontSize: {
+        'body': ['1.0625rem', { lineHeight: '1.75' }],   // 17px, leading-relaxed
+        'body-lg': ['1.125rem', { lineHeight: '1.75' }], // 18px
+      },
+      boxShadow: {
+        'primary-glow': '0 0 20px -2px rgba(0, 230, 212, 0.35)',
+        'primary-glow-lg': '0 0 30px -4px rgba(0, 230, 212, 0.4)',
+        'card': '0 4px 24px -4px rgba(0, 0, 0, 0.4)',
+        'card-hover': '0 8px 32px -4px rgba(0, 0, 0, 0.5), 0 0 20px -4px rgba(0, 230, 212, 0.15)',
       },
       animation: {
         'cursor-blink': 'blink 1s step-start infinite',

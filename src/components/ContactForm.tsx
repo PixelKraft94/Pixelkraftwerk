@@ -69,21 +69,21 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-500">
+    <section id="contact" className="section-padding bg-dark-500 border-t border-dark-200/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary-500">
             Jetzt starten_
           </h2>
-          <p className="text-light-200 mb-8">
+          <p className="text-light-200 mb-8 leading-relaxed">
             <strong>Lassen Sie uns gemeinsam besprechen, wie wir Ihr Unternehmen gezielt entlasten können.</strong><br />
             Einfach kurz ausfüllen – wir melden uns zeitnah mit konkreten Vorschlägen.
           </p>
 
           {submitSuccess === true ? (
-            <div className="p-6 border border-primary-500 bg-primary-500/10 animate-fade-in">
+            <div className="p-6 rounded-xl border border-primary-500/50 bg-primary-500/10 animate-fade-in">
               <h3 className="text-xl font-heading font-bold text-primary-400 mb-2">Vielen Dank!</h3>
-              <p className="text-light-100">
+              <p className="text-light-100 leading-relaxed">
                 Ihre Anfrage wurde erfolgreich übermittelt. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.
               </p>
             </div>
@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-light-100 font-heading mb-2">
+                  <label htmlFor="name" className="block text-light-100 font-heading font-medium mb-2 text-sm">
                     Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -101,11 +101,11 @@ const ContactForm: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
+                    className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-light-100 font-heading mb-2">
+                  <label htmlFor="email" className="block text-light-100 font-heading font-medium mb-2 text-sm">
                     E-Mail <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -115,13 +115,13 @@ const ContactForm: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
+                    className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-light-100 font-heading mb-2">
+                <label htmlFor="company" className="block text-light-100 font-heading font-medium mb-2 text-sm">
                   Unternehmen <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -131,12 +131,12 @@ const ContactForm: React.FC = () => {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200"
+                  className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
                 />
               </div>
               
               <div>
-                <label htmlFor="tasksToAutomate" className="block text-light-100 font-heading mb-2">
+                <label htmlFor="tasksToAutomate" className="block text-light-100 font-heading font-medium mb-2 text-sm">
                   Wobei können wir Sie unterstützen? <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -147,7 +147,7 @@ const ContactForm: React.FC = () => {
                   required
                   maxLength={300}
                   rows={3}
-                  className="w-full bg-dark-300 border border-dark-100 text-light-100 p-3 focus:border-primary-500 focus:outline-none transition-colors duration-200 resize-vertical"
+                  className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200 resize-vertical"
                   placeholder="Hier können Sie alles eintragen, wobei Sie Unterstützung benötigen – von Automatisierung über Online-Marketing bis hin zu Websites oder individuellen Softwarelösungen."
                 />
                 <p className="text-light-300 text-xs mt-1">
@@ -163,7 +163,7 @@ const ContactForm: React.FC = () => {
                   checked={formData.privacyAccepted}
                   onChange={handleChange}
                   required
-                  className="mt-1 w-4 h-4 bg-dark-300 border border-dark-100 text-primary-500 focus:ring-primary-500 focus:ring-2 cursor-pointer"
+                  className="mt-1 w-4 h-4 rounded bg-dark-300 border border-dark-200 text-primary-500 focus:ring-2 focus:ring-primary-500/50 cursor-pointer"
                 />
                 <label htmlFor="privacyAccepted" className="text-light-200 text-sm">
                   Ich habe die{' '}
@@ -183,8 +183,8 @@ const ContactForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting || !formData.privacyAccepted}
-                  className={`w-full py-4 px-6 bg-primary-500 text-dark-500 font-heading font-bold text-lg transition-colors duration-300 ${
-                    isSubmitting || !formData.privacyAccepted ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-400'
+                  className={`w-full py-4 px-6 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold text-lg shadow-lg shadow-primary-500/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 ${
+                    isSubmitting || !formData.privacyAccepted ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-400 hover:shadow-primary-glow'
                   }`}
                 >
                   {isSubmitting ? 'Wird gesendet...' : 'Lösungsmöglichkeiten anfordern'}
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {
               </div>
               
               {submitSuccess === false && (
-                <div className="p-4 bg-red-500/20 border border-red-500 text-red-300">
+                <div className="p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-300">
                   {errorMessage || 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.'}
                 </div>
               )}
