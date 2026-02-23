@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 import Logo from './Logo';
@@ -8,6 +10,8 @@ import { useCookieConsent } from '../hooks/useCookieConsent';
 const navItems: NavItem[] = [
   { title: 'Startseite', path: '/' },
   { title: 'Über uns', path: '/about' },
+  { title: 'Leistungen', path: '/services' },
+  { title: 'Leistungsgebiete', path: '/leistungsgebiete' },
   { title: 'Kontakt', path: '/contact' },
   { title: 'Features', path: '/features' },
   { title: 'FAQ', path: '/faq' },
@@ -53,8 +57,9 @@ const Footer: React.FC = () => {
       script.async = true;
 
       script.onload = () => {
-        if ((window as any).provenExpert && (window as any).provenExpert.proSeal) {
-          (window as any).provenExpert.proSeal({
+        const pe = (window as Window & { provenExpert?: { proSeal: (opts: object) => void } }).provenExpert;
+        if (pe?.proSeal) {
+          pe.proSeal({
             widgetId: "09229aa6-aa11-40d2-80b2-a7579d7f6df5",
             language: "de-DE",
             usePageLanguage: false,

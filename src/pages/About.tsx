@@ -2,16 +2,10 @@ import React from 'react';
 import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
-import SEOHead from '../components/SEOHead';
 
 const About: React.FC = () => {
   return (
     <div className="pt-24 bg-dark-500 min-h-screen">
-      <SEOHead
-        title="Über uns"
-        description="Pixel Kraftwerk - Ihr Partner für KI-gestützte Automatisierung in Groitzsch und Leipzig. Effizienz neu gedacht mit maßgeschneiderten Lösungen."
-        keywords={['Über Pixel Kraftwerk', 'KI Experten Leipzig', 'Automatisierung Sachsen']}
-      />
       <LocalBusinessSchema pageType="about" />
       <div className="container mx-auto px-6 md:px-12 py-24">
         <h1 className="text-3xl md:text-4xl text-light-100 font-heading font-bold mb-6 text-center">

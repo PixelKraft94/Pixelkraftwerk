@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-500 font-sans;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-400;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-600 hover:bg-primary-500 transition-colors duration-200;
+}
+
+::selection {
+  @apply bg-primary-500 text-dark-500;
+}
+
+input, select, textarea {
+  @apply transition-all duration-200;
+}
+
+.cursor-blink {
+  @apply animate-cursor-blink;
+}
+
+@media (min-width: 768px) {
+  #pe-proseal-container,
+  .pe-pro-seal,
+  [id^="pe-proseal"] {
+    transform: scale(0.455);
+    transform-origin: bottom left;
+  }
+}
+
+#voiceflow-chat,
+[class*="vfrc"],
+[id*="voiceflow"],
+iframe[src*="voiceflow"] {
+  z-index: 40 !important;
+}

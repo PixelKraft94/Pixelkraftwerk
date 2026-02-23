@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +19,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
-import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
@@ -90,11 +91,6 @@ const CrmLeadManagement: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Lead-Management & CRM-Automatisierung"
-        description="Intelligentes CRM-System für strukturierte Kundenverwaltung. Automatische Lead-Erfassung, Qualifizierung und Follow-ups für mehr Abschlüsse."
-        keywords={['CRM System', 'Lead Management', 'Vertriebsautomatisierung', 'Kundenverwaltung', 'Sales Pipeline']}
-      />
       <BreadcrumbSchema serviceName="Lead-Management & CRM-Automatisierung" serviceUrl="https://pixelkraftwerk-ai.com/crm-lead-management" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">

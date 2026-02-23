@@ -1,8 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, FileText, Users, Calendar, AlertCircle, Mail } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
 const Privacy: React.FC = () => {
   const sections = [
     {
@@ -259,11 +259,6 @@ const Privacy: React.FC = () => {
 
   return (
     <div className="bg-dark-500 min-h-screen">
-      <SEOHead
-        title="Datenschutzerklärung"
-        description="Datenschutzerklärung von Pixel Kraftwerk – Franke & Brause GbR. Informationen zum Schutz Ihrer personenbezogenen Daten gemäß DSGVO."
-        keywords={['Datenschutz', 'DSGVO', 'Datenschutzerklärung', 'Privacy Policy']}
-      />
 
       {/* HEADER */}
       <section className="pt-32 pb-16 bg-dark-400">

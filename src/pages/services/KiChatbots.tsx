@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -12,7 +14,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
-import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
@@ -78,11 +79,6 @@ const KiChatbots: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Digitale Kundenassistenz für Ihre Website"
-        description="Digitale Kundenassistenz für automatische Kundenbetreuung auf Ihrer Website. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
-        keywords={['Digitale Kundenassistenz', 'Website Kundenassistenz', 'Kundenservice Automatisierung', 'Automatische Kundenbetreuung']}
-      />
       <BreadcrumbSchema serviceName="Digitale Kundenassistenz" serviceUrl="https://pixelkraftwerk-ai.com/ki-chatbots" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">

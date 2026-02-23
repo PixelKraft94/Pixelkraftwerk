@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +19,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
-import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
@@ -117,11 +118,6 @@ const ContentVideo: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Content-Produktion & KI-Videos"
-        description="Professionelle Texte, Bilder und Videos. Bilder und Videos mit KI-Technologie, Texte von erfahrenen Redakteuren. Schnelle Content-Erstellung für Social Media und Marketing."
-        keywords={['KI Content', 'KI Video', 'Content Produktion', 'Social Media Content', 'Video Produktion']}
-      />
       <BreadcrumbSchema serviceName="Content-Produktion & KI-Videos" serviceUrl="https://pixelkraftwerk-ai.com/content-video" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">

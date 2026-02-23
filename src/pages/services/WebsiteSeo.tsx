@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -12,7 +14,6 @@ import {
   Clock,
   Building2,
   Briefcase,
-  Store,
   Stethoscope,
   Wrench,
   HeadphonesIcon,
@@ -24,7 +25,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
-import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
@@ -121,11 +121,6 @@ const WebsiteSeo: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Websites & SEO, die Ihnen Kunden bringen – nicht Ihrer Konkurrenz"
-        description="Website & SEO im Mietmodell. Kostenlose Analyse · Top-5 bei Google in 90 Tagen – sonst Geld zurück. Keine hohen Startkosten, Full-Service inklusive."
-        keywords={['Website Mietmodell', 'SEO Garantie', 'Website mieten', 'Lokale SEO', 'Google Top 5']}
-      />
       <BreadcrumbSchema serviceName="Websites & SEO" serviceUrl="https://pixelkraftwerk-ai.com/website-seo" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">

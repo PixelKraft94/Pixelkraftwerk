@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
 declare global {
   interface Window {
     voiceflow?: {
       chat?: {
-        load: (config: any) => void;
+        load: (config: { verify: { projectID: string }; url: string; versionID: string; voice: { url: string } }) => void;
       };
     };
   }

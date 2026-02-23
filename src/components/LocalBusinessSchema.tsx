@@ -7,10 +7,10 @@ interface LocalBusinessSchemaProps {
 }
 
 const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
-  pageType = 'homepage',
   customDescription
 }) => {
-  const schema = {
+  const sameAs = Object.values(businessInfo.socialMedia).filter(url => url);
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": businessInfo.businessType,
     "@id": `${businessInfo.url}/#organization`,
@@ -63,12 +63,9 @@ const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({
         },
         "position": index + 1
       }))
-    }
+    },
+    ...(sameAs.length > 0 && { sameAs }),
   };
-
-  if (businessInfo.socialMedia.facebook) {
-    schema["sameAs"] = Object.values(businessInfo.socialMedia).filter(url => url);
-  }
 
   return (
     <script

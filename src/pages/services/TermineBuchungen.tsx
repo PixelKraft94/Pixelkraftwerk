@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +19,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
-import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
@@ -92,11 +93,6 @@ const TermineBuchungen: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Terminplanung & Buchungssysteme"
-        description="Intelligente Online-Terminbuchung für Ihr Unternehmen. Automatische Kalenderplanung, Erinnerungen und Kundenverwaltung – ohne Telefonmarathon."
-        keywords={['Online Terminbuchung', 'Buchungssystem', 'Terminplanung Software', 'Kalender Automatisierung', 'Terminverwaltung']}
-      />
       <BreadcrumbSchema serviceName="Terminplanung & Buchungssysteme" serviceUrl="https://pixelkraftwerk-ai.com/termine-buchungen" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">

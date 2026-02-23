@@ -1,16 +1,12 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Cookie, Info } from 'lucide-react';
 import CookieSettings from '../components/CookieSettings';
-import SEOHead from '../components/SEOHead';
-
 const PrivacySettings: React.FC = () => {
   return (
     <div className="bg-dark-500 min-h-screen">
-      <SEOHead
-        title="Cookie-Einstellungen"
-        description="Verwalten Sie Ihre Cookie-Einstellungen und Datenschutzpräferenzen bei Pixel Kraftwerk."
-      />
 
       <section className="pt-32 pb-20 bg-dark-400">
         <div className="container mx-auto px-4">

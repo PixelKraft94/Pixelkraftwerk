@@ -70,7 +70,7 @@ export const businessInfo = {
     }
   ],
 
-  businessType: "ProfessionalService, SoftwareService, IT-Service, Webdesign",
+  businessType: "ProfessionalService",
 
   keywords: [
   "KI Automatisierung",

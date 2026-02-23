@@ -16,7 +16,7 @@ type CookieOptions = {
  * Set a cookie with the given name and value
  */
 export const setCookie = (name: string, value: string, options: CookieOptions = {}): void => {
-  const cookieConsent = getConsentState();
+  getConsentState();
   
   // Check if the cookie type is consented to
   const cookieType = getCookieType(name);
@@ -50,7 +50,7 @@ export const setCookie = (name: string, value: string, options: CookieOptions = 
  * Get a cookie by name
  */
 export const getCookie = (name: string): string | null => {
-  const cookieConsent = getConsentState();
+  getConsentState();
   
   // Check if the cookie type is consented to for reading
   const cookieType = getCookieType(name);

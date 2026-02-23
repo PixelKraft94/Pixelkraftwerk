@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +19,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
-import SEOHead from '../components/SEOHead';
 import ServiceItemListSchema from '../components/ServiceItemListSchema';
 
 interface ServiceDetail {
@@ -124,11 +125,6 @@ const Services: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Unsere Leistungen – Digitale Lösungen für Ihr Unternehmen"
-        description="Digitale Kundenassistenz, Terminplanung, Lead-Management, Websites mit SEO, Workflow-Automatisierung und KI-Videos. Wir entwickeln intelligente Systeme, die Ihr Unternehmen entlasten."
-        keywords={['Digitale Kundenassistenz', 'Telefonische Kundenassistenz', 'Terminbuchung', 'Lead-Management', 'Website SEO', 'KI-Videos']}
-      />
       <ServiceItemListSchema />
 
       {/* HERO SECTION */}
@@ -146,7 +142,7 @@ const Services: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Unsere Leistungen – <span className="text-primary-500">Digitale Lösungen,</span> die Ihr Unternehmen entlasten
+              Leistungen – KI-Automatisierung, Chatbots & SEO in Leipzig und Sachsen
             </motion.h1>
 
             <motion.p
@@ -167,6 +163,9 @@ const Services: React.FC = () => {
               Unsere Lösungen helfen Unternehmen dabei, wiederkehrende Aufgaben zu automatisieren, Abläufe zu strukturieren und Kunden professionell zu betreuen – ohne komplizierte Technik und ohne Fachchinesisch.
               <br /><br />
               <strong className="text-light-100">Sie sagen uns, wo es hakt – wir bauen das System, das es löst.</strong>
+            </motion.p>
+            <motion.p className="text-light-300 text-sm mb-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+              <a href="/leistungsgebiete" className="text-primary-400 hover:underline">Leistungsgebiete: Groitzsch, Leipzig, Sachsen</a>
             </motion.p>
 
             <motion.button

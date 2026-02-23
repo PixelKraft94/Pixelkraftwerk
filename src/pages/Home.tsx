@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, CheckCircle, ArrowRight, Calendar, MessageCircle, Target, Workflow, Globe, Video } from 'lucide-react';
@@ -6,7 +8,6 @@ import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import WebSiteSchema from '../components/WebSiteSchema';
-import SEOHead from '../components/SEOHead';
 
 const Home: React.FC = () => {
   const [openExample, setOpenExample] = React.useState<number | null>(null);
@@ -85,11 +86,6 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="KI-Automatisierung für Unternehmen"
-        description="Wir automatisieren Unternehmen in Groitzsch, Leipzig und ganz Sachsen mit Systemen, die Kundenanfragen automatisch bearbeiten, Termine selbstständig koordinieren und interne Abläufe dank künstlicher Intelligenz spürbar vereinfachen."
-        keywords={['KI Automatisierung', 'Prozessautomatisierung Leipzig', 'Digitale Kundenassistenz', 'Terminbuchung automatisch', 'Lead Management']}
-      />
       <LocalBusinessSchema pageType="homepage" />
       <WebSiteSchema />
 
@@ -99,32 +95,29 @@ const Home: React.FC = () => {
 
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="space-y-2 mb-8 -mt-8">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-light-100 font-heading font-bold mb-4 -mt-8">
               <motion.span
-                className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
+                className="block"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.3 }}
               >
-                Klare Abläufe.
-              </motion.span>
-              <motion.span
-                className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
-              >
-                Mehr Anfragen.
-              </motion.span>
-              <motion.span
-                className="block text-3xl md:text-4xl lg:text-5xl text-light-100 font-heading"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeOut", delay: 1.3 }}
-              >
-                Weniger Stress.
+                KI-Agentur Leipzig – Automatisierung, Chatbots & SEO aus Groitzsch
               </motion.span>
             </h1>
+            <p className="space-y-1 text-xl md:text-2xl lg:text-3xl text-light-200 font-heading mb-8">
+              <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>Klare Abläufe.</motion.span>
+              <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>Mehr Anfragen.</motion.span>
+              <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>Weniger Stress.</motion.span>
+            </p>
+            <motion.p
+              className="text-sm text-light-300 mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.6 }}
+            >
+              Pixel Kraftwerk – Franke & Brause GbR · Neuer Weg 9a · 04539 Groitzsch · <a href="tel:+491785844460" className="text-primary-400 hover:underline">+49 178 5844460</a>
+            </motion.p>
 
             <motion.p
               className="block md:hidden text-lg text-light-200 mb-8 max-w-3xl mx-auto"
@@ -277,10 +270,13 @@ const Home: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-light-100 mb-4">
-                Unsere <span className="text-primary-500">Leistungen</span>
+                Unsere Leistungen – KI-Automatisierung, Chatbots & SEO in Leipzig und Sachsen
               </h2>
-              <p className="text-lg text-light-200 max-w-3xl mx-auto">
+              <p className="text-lg text-light-200 max-w-3xl mx-auto mb-4">
                 Digitale Lösungen, die Ihr Unternehmen entlasten und den Arbeitsalltag deutlich vereinfachen.
+              </p>
+              <p className="text-light-300 text-sm">
+                <a href="/leistungsgebiete" className="text-primary-400 hover:underline">Leistungsgebiete: Groitzsch, Leipzig, Sachsen</a>
               </p>
             </motion.div>
 

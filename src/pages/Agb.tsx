@@ -1,8 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, CheckCircle, Briefcase, DollarSign, Clock, Users, ClipboardCheck, Key, ShieldAlert, Database, Scale, FileCheck } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
 const Agb: React.FC = () => {
   const sections = [
     {
@@ -281,11 +281,6 @@ const Agb: React.FC = () => {
 
   return (
     <div className="bg-dark-500 min-h-screen">
-      <SEOHead
-        title="AGB – Allgemeine Geschäftsbedingungen"
-        description="Allgemeine Geschäftsbedingungen von Pixel Kraftwerk – Franke & Brause GbR. Vertragsbedingungen für unsere KI-Dienstleistungen."
-        keywords={['AGB', 'Geschäftsbedingungen', 'Vertragsbedingungen', 'Terms and Conditions']}
-      />
 
       {/* HEADER */}
       <section className="pt-32 pb-16 bg-dark-400">

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, MessageSquare, Phone, Calendar, Target, Globe, Video, Settings } from 'lucide-react';
 import Logo from './Logo';
@@ -21,6 +23,7 @@ const serviceLinks: ServiceLink[] = [
 const navItems: NavItem[] = [
   { title: 'Startseite', path: '/' },
   { title: 'Über uns', path: '/about' },
+  { title: 'Leistungsgebiete', path: '/leistungsgebiete' },
   { title: 'FAQ', path: '/faq' },
   { title: 'Kontakt', path: '/contact' },
   { title: 'Impressum', path: '/imprint' },
@@ -31,7 +34,7 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState<boolean>(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLLIElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -101,17 +104,13 @@ const Header: React.FC = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button
+              <a
+                href="/services"
                 className="flex items-center text-light-100 hover:text-primary-400 font-heading transition-colors duration-200"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
                 Unsere Leistungen
-                <ChevronDown
-                  size={16}
-                  className={`ml-1 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
-
+                <ChevronDown size={16} className="ml-1" />
+              </a>
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-dark-400 border border-dark-100 shadow-xl animate-fade-in">
                   <div className="py-2">

@@ -30,9 +30,69 @@
   </url>
   <url>
     <loc>https://pixelkraftwerk-ai.com/services</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/ki-chatbots</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/telefonassistenten</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/termine-buchungen</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/crm-lead-management</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/website-seo</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/content-video</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/leistungsgebiete</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/leistungsgebiete/leipzig</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/leistungsgebiete/groitzsch</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pixelkraftwerk-ai.com/leistungsgebiete/sachsen</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pixelkraftwerk-ai.com/faq</loc>
@@ -48,12 +108,6 @@
   </url>
   <url>
     <loc>https://pixelkraftwerk-ai.com/agb</loc>
-    <lastmod>2025-05-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://pixelkraftwerk-ai.com/terms</loc>
     <lastmod>2025-05-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

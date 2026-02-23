@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -18,7 +20,6 @@ import {
 } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
-import SEOHead from '../../components/SEOHead';
 import RelatedServices from '../../components/RelatedServices';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
@@ -90,11 +91,6 @@ const Telefonassistenten: React.FC = () => {
 
   return (
     <div className="bg-dark-500">
-      <SEOHead
-        title="Telefonische Kundenassistenz"
-        description="Telefonische Kundenassistenz für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
-        keywords={['Telefonische Kundenassistenz', 'Automatische Anrufannahme', 'Telefon Kundenservice', 'Professionelle Anrufannahme']}
-      />
       <BreadcrumbSchema serviceName="Telefonische Kundenassistenz" serviceUrl="https://pixelkraftwerk-ai.com/telefonassistenten" />
 
       <section className="relative pt-32 pb-20 bg-dark-500 overflow-hidden">
