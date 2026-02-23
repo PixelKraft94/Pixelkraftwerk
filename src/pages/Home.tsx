@@ -258,7 +258,7 @@ const Home: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-light-100 mb-4">
-                Unsere Leistungen – KI-Automatisierung, Chatbots & SEO in Leipzig und Sachsen
+                Unsere Leistungen im Überblick
               </h2>
               <p className="text-lg text-light-200 max-w-3xl mx-auto mb-4">
                 Digitale Lösungen, die Ihr Unternehmen entlasten und den Arbeitsalltag deutlich vereinfachen.

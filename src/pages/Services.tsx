@@ -142,7 +142,7 @@ const Services: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Leistungen – KI-Automatisierung, Chatbots & SEO in Leipzig und Sachsen
+              Unsere Leistungen im Überblick
             </motion.h1>
 
             <motion.p
