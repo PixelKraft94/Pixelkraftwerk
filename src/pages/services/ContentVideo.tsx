@@ -21,6 +21,7 @@ import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
 import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
+import RegionServiceLinksBlock from '../../components/RegionServiceLinksBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const ContentVideo: React.FC = () => {
@@ -401,6 +402,7 @@ const ContentVideo: React.FC = () => {
               Lassen Sie uns besprechen, welche Content-Formate Ihr Unternehmen voranbringen.
             </motion.p>
             <ServicedRegionsBlock />
+            <RegionServiceLinksBlock serviceSlug="content-video" title="Content & KI-Videos in Ihrem Gebiet" />
           </div>
         </div>
       </section>

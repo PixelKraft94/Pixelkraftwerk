@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, MessageCircle, Phone, Calendar, Target, Globe, Video } from 'lucide-react';
 import { businessInfo } from '../data/businessInfo';
 import { LEISTUNGSGEBIETE_CITIES } from '../data/leistungsgebiete';
+import { getRegionServiceLinkText } from '../data/services';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import GoogleMapsSection from '../components/GoogleMapsSection';
 
@@ -107,24 +108,27 @@ const Leistungsgebiete: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-light-100 mb-8">
-              Leistungen in allen Gebieten
+              Leistungen nach Region – Beispiele
             </h2>
+            <p className="text-light-200 mb-8 max-w-2xl mx-auto">
+              Hier finden Sie eine Auswahl unserer Leistungen in ausgewählten Gebieten – mit variierendem Linktext und thematisch passend.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
               {[
-                { icon: <MessageCircle size={20} />, label: 'KI-Chatbots & digitale Kundenassistenz', path: '/ki-chatbots' },
-                { icon: <Phone size={20} />, label: 'Telefonassistenten & Anrufannahme', path: '/telefonassistenten' },
-                { icon: <Calendar size={20} />, label: 'Terminbuchung & Buchungssysteme', path: '/termine-buchungen' },
-                { icon: <Target size={20} />, label: 'Lead-Management & CRM', path: '/crm-lead-management' },
-                { icon: <Globe size={20} />, label: 'Websites & SEO', path: '/website-seo' },
-                { icon: <Video size={20} />, label: 'Content & KI-Videos', path: '/content-video' },
+                { icon: <MessageCircle size={20} />, regionSlug: 'leipzig', regionName: 'Leipzig', serviceSlug: 'ki-chatbots' as const, variant: 0 },
+                { icon: <Phone size={20} />, regionSlug: 'groitzsch', regionName: 'Groitzsch', serviceSlug: 'telefonassistenten' as const, variant: 1 },
+                { icon: <Calendar size={20} />, regionSlug: 'meuselwitz', regionName: 'Meuselwitz', serviceSlug: 'termine-buchungen' as const, variant: 0 },
+                { icon: <Target size={20} />, regionSlug: 'borna', regionName: 'Borna', serviceSlug: 'crm-lead-management' as const, variant: 1 },
+                { icon: <Globe size={20} />, regionSlug: 'markkleeberg', regionName: 'Markkleeberg', serviceSlug: 'website-seo' as const, variant: 0 },
+                { icon: <Video size={20} />, regionSlug: 'zwenkau', regionName: 'Zwenkau', serviceSlug: 'content-video' as const, variant: 1 },
               ].map((item, i) => (
                 <a
-                  key={i}
-                  href={item.path}
+                  key={`${item.regionSlug}-${item.serviceSlug}`}
+                  href={`/leistungsgebiete/${item.regionSlug}/${item.serviceSlug}`}
                   className="flex items-center gap-3 p-4 bg-dark-400 border border-dark-100 hover:border-primary-500/50 transition-colors text-light-100 font-heading"
                 >
                   <span className="text-primary-500 flex-shrink-0">{item.icon}</span>
-                  <span className="text-sm">{item.label}</span>
+                  <span className="text-sm">{getRegionServiceLinkText(item.serviceSlug, item.regionName, item.variant)}</span>
                 </a>
               ))}
             </div>

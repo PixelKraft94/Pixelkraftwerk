@@ -27,6 +27,7 @@ import ContactForm from '../../components/ContactForm';
 import GoogleMapsSection from '../../components/GoogleMapsSection';
 import RelatedServices from '../../components/RelatedServices';
 import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
+import RegionServiceLinksBlock from '../../components/RegionServiceLinksBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 
 const WebsiteSeo: React.FC = () => {
@@ -745,6 +746,7 @@ const WebsiteSeo: React.FC = () => {
               Kostenlose Analyse anfordern
             </motion.button>
             <ServicedRegionsBlock />
+            <RegionServiceLinksBlock serviceSlug="website-seo" title="Websites & SEO in Ihrem Gebiet" />
           </div>
         </div>
       </section>

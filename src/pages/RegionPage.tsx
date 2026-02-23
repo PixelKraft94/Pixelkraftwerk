@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 import { businessInfo } from '../data/businessInfo';
 import { getRegionContent, getValidRegionSlug } from '../data/regionContent';
+import { SERVICES, getRegionServiceLinkText } from '../data/services';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
@@ -92,12 +93,16 @@ const RegionPage: React.FC<{ region: string }> = ({ region }) => {
             </ul>
             <p className="mt-6 text-light-200 text-sm mb-4">Leistungen, die wir hier anbieten:</p>
             <ul className="flex flex-wrap gap-2 text-sm">
-              <li><a href="/ki-chatbots" className="text-primary-400 hover:underline">KI-Chatbots</a></li>
-              <li><a href="/telefonassistenten" className="text-primary-400 hover:underline">Telefonassistenten</a></li>
-              <li><a href="/termine-buchungen" className="text-primary-400 hover:underline">Terminbuchung</a></li>
-              <li><a href="/crm-lead-management" className="text-primary-400 hover:underline">CRM & Lead-Management</a></li>
-              <li><a href="/website-seo" className="text-primary-400 hover:underline">Website & SEO</a></li>
-              <li><a href="/content-video" className="text-primary-400 hover:underline">Content & KI-Videos</a></li>
+              {SERVICES.map((s, i) => (
+                <li key={s.slug}>
+                  <a
+                    href={`/leistungsgebiete/${slug}/${s.slug}`}
+                    className="text-primary-400 hover:underline"
+                  >
+                    {getRegionServiceLinkText(s.slug, content.name, i)}
+                  </a>
+                </li>
+              ))}
             </ul>
             <p className="mt-8">
               <a href="/services" className="inline-flex items-center text-primary-500 font-heading font-bold hover:text-primary-400">
