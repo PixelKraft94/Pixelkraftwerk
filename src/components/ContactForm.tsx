@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
+                    className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ const ContactForm: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
+                    className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 transition-all duration-200"
                   />
                 </div>
               </div>
@@ -131,7 +131,7 @@ const ContactForm: React.FC = () => {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200"
+                  className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 transition-all duration-200"
                 />
               </div>
               
@@ -147,7 +147,7 @@ const ContactForm: React.FC = () => {
                   required
                   maxLength={300}
                   rows={3}
-                  className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200 resize-vertical"
+                  className="w-full rounded-lg bg-dark-300 border border-dark-200 text-light-100 p-3.5 focus:border-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 transition-all duration-200 resize-vertical"
                   placeholder="Hier können Sie alles eintragen, wobei Sie Unterstützung benötigen – von Automatisierung über Online-Marketing bis hin zu Websites oder individuellen Softwarelösungen."
                 />
                 <p className="text-light-300 text-xs mt-1">
@@ -168,7 +168,7 @@ const ContactForm: React.FC = () => {
                 <label htmlFor="privacyAccepted" className="text-light-200 text-sm">
                   Ich habe die{' '}
                   <a
-                    href="/datenschutz"
+                    href="/privacy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-400 hover:text-primary-300 underline"
@@ -183,7 +183,7 @@ const ContactForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting || !formData.privacyAccepted}
-                  className={`w-full py-4 px-6 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold text-lg shadow-lg shadow-primary-500/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 ${
+                  className={`w-full py-4 px-6 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold text-lg shadow-lg shadow-primary-500/20 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 min-h-[44px] ${
                     isSubmitting || !formData.privacyAccepted ? 'opacity-70 cursor-not-allowed' : 'hover:bg-primary-400 hover:shadow-primary-glow'
                   }`}
                 >

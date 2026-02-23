@@ -92,7 +92,7 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="/"
-                className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg"
+                className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 rounded-lg"
               >
                 Startseite
               </a>
@@ -106,7 +106,7 @@ const Header: React.FC = () => {
             >
               <a
                 href="/services"
-                className="flex items-center text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg"
+                className="flex items-center text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 rounded-lg"
               >
                 Unsere Leistungen
                 <ChevronDown size={16} className="ml-1" />
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
                       <a
                         key={service.path}
                         href={service.path}
-                        className="flex items-center px-4 py-3 text-light-100 hover:text-primary-400 hover:bg-dark-300 transition-colors duration-200"
+                        className="flex items-center px-4 py-3 text-light-100 hover:text-primary-400 hover:bg-dark-300 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-inset"
                       >
                         <span className="text-primary-500 mr-3">{service.icon}</span>
                         <span className="text-sm">{service.title}</span>
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
               <li key={item.path}>
                 <a
                   href={item.path}
-                  className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg"
+                  className="text-light-100 hover:text-primary-400 font-heading transition-colors duration-200 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 rounded-lg"
                 >
                   {item.title}
                 </a>
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
             <li>
               <a
                 href="/privacy-settings"
-                className="text-light-100 hover:text-primary-400 transition-colors duration-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500"
+                className="text-light-100 hover:text-primary-400 transition-colors duration-200 p-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 aria-label="Cookie-Einstellungen"
               >
                 <Settings size={20} />
@@ -153,7 +153,7 @@ const Header: React.FC = () => {
         </nav>
 
         <button
-          className="md:hidden text-light-100 hover:text-primary-400 transition-colors duration-200"
+          className="md:hidden text-light-100 hover:text-primary-400 transition-colors duration-200 p-2 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
             <li>
               <button
                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className="flex items-center justify-between w-full text-light-100 hover:text-primary-400 font-heading py-3 px-3 rounded-lg transition-colors duration-200 min-h-[44px]"
+                className="flex items-center justify-between w-full text-light-100 hover:text-primary-400 font-heading py-3 px-3 rounded-lg transition-colors duration-200 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400"
               >
                 Unsere Leistungen
                 <ChevronDown

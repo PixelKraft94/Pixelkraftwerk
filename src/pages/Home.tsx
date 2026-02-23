@@ -132,7 +132,7 @@ const Home: React.FC = () => {
             >
               <button
                 onClick={scrollToContactForm}
-                className="inline-flex items-center px-8 py-3.5 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold shadow-lg shadow-primary-500/20 hover:bg-primary-400 hover:shadow-primary-glow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500"
+                className="inline-flex items-center px-8 py-3.5 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold shadow-lg shadow-primary-500/20 hover:bg-primary-400 hover:shadow-primary-glow transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 min-h-[44px]"
               >
                 <ArrowRight className="mr-2" size={20} />
                 Kostenloses Erstgespräch sichern
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
 
         <motion.button
           onClick={scrollToNextSection}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 text-primary-500 hover:text-primary-400 transition-colors duration-300 animate-bounce focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500 rounded-lg py-2"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 text-primary-500 hover:text-primary-400 transition-colors duration-300 animate-bounce focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 rounded-lg py-2 min-h-[44px]"
           aria-label="Nach unten scrollen"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -271,7 +271,7 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <motion.a
                 href="/ki-chatbots"
-                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
@@ -284,7 +284,7 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Digitale Kundenassistenz
                 </h3>
-                <p className="text-light-300 text-sm mb-4">
+                <p className="text-light-300 text-base leading-relaxed mb-4">
                   Eine digitale Assistenz, die Kundenanfragen beantwortet, Nachrichten entgegennimmt und Anliegen automatisch verarbeitet – auf Ihrer Website und in sozialen Netzwerken, rund um die Uhr.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
@@ -295,7 +295,7 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/telefonassistenten"
-                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -308,7 +308,7 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Telefonische Kundenassistenz
                 </h3>
-                <p className="text-light-300 text-sm mb-4">
+                <p className="text-light-300 text-base leading-relaxed mb-4">
                   Eine telefonische Assistenz, die für Sie ans Telefon geht, Fragen beantwortet und Termine annimmt – auch dann, wenn gerade niemand erreichbar ist.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
@@ -319,7 +319,7 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/termine-buchungen"
-                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -332,7 +332,7 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Terminplanung & Buchungssysteme
                 </h3>
-                <p className="text-light-300 text-sm mb-4">
+                <p className="text-light-300 text-base leading-relaxed mb-4">
                   Ein System, das Termine automatisch vergibt, bestätigt und erinnert – ohne ständiges Hin- und Her per Telefon oder E-Mail.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
@@ -343,7 +343,7 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/crm-lead-management"
-                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -356,7 +356,7 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Lead-Management & CRM
                 </h3>
-                <p className="text-light-300 text-sm mb-4">
+                <p className="text-light-300 text-base leading-relaxed mb-4">
                   Alle Kundenanfragen werden automatisch gesammelt, übersichtlich gespeichert und richtig zugeordnet – nichts geht mehr verloren.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
@@ -367,7 +367,7 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/website-seo"
-                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
@@ -380,7 +380,7 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Websites & SEO
                 </h3>
-                <p className="text-light-300 text-sm mb-4">
+                <p className="text-light-300 text-base leading-relaxed mb-4">
                   Moderne Websites, die leicht verständlich sind und bei Suchmaschinen sichtbar werden, damit Kunden Sie schneller finden und direkt Kontakt aufnehmen können.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
@@ -391,7 +391,7 @@ const Home: React.FC = () => {
 
               <motion.a
                 href="/content-video"
-                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300"
+                className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -404,7 +404,7 @@ const Home: React.FC = () => {
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
                   Content-Produktion & KI-Videos
                 </h3>
-                <p className="text-light-300 text-sm mb-4">
+                <p className="text-light-300 text-base leading-relaxed mb-4">
                   Texte, Bilder und Videos für Ihr Unternehmen – professionell erstellt, regelmäßig verfügbar und passend für Website und Social Media.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
@@ -643,7 +643,7 @@ const Home: React.FC = () => {
 
             <motion.button
               onClick={scrollToContactForm}
-              className="inline-flex items-center px-10 py-4 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold text-lg shadow-lg shadow-primary-500/20 hover:bg-primary-400 hover:shadow-primary-glow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-500"
+              className="inline-flex items-center px-10 py-4 rounded-xl bg-primary-500 text-dark-500 font-heading font-bold text-lg shadow-lg shadow-primary-500/20 hover:bg-primary-400 hover:shadow-primary-glow transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500 min-h-[44px]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}

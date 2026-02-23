@@ -12,9 +12,12 @@ const navItems: NavItem[] = [
   { title: 'Über uns', path: '/about' },
   { title: 'Leistungen', path: '/services' },
   { title: 'Leistungsgebiete', path: '/leistungsgebiete' },
-  { title: 'Kontakt', path: '/contact' },
   { title: 'Features', path: '/features' },
   { title: 'FAQ', path: '/faq' },
+  { title: 'Kontakt', path: '/contact' },
+];
+
+const legalItems: NavItem[] = [
   { title: 'AGBs', path: '/agb' },
   { title: 'Datenschutzerklärung', path: '/privacy' },
   { title: 'Impressum', path: '/imprint' },
@@ -94,7 +97,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-dark-400 border-t border-dark-200 pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <Logo />
             <p className="text-light-300 mt-4 max-w-md">
@@ -103,14 +106,32 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Navigation</h2>
-            <nav>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Seiten</h2>
+            <nav aria-label="Seitennavigation">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
                 {navItems.map((item) => (
                   <li key={item.path}>
                     <a
                       href={item.path}
-                      className="text-light-100 hover:text-primary-400 transition-colors duration-200"
+                      className="text-light-100 hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <div>
+            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Rechtliches</h2>
+            <nav aria-label="Rechtliche Informationen">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
+                {legalItems.map((item) => (
+                  <li key={item.path}>
+                    <a
+                      href={item.path}
+                      className="text-light-100 hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
                     >
                       {item.title}
                     </a>
@@ -130,7 +151,7 @@ const Footer: React.FC = () => {
                   key={link.platform}
                   href={link.url}
                   aria-label={link.platform}
-                  className="text-light-100 hover:text-primary-400 hover:scale-110 transition-all duration-200 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-dark-400"
+                  className="text-light-100 hover:text-primary-400 hover:scale-110 transition-all duration-200 p-1 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400"
                 >
                   {getSocialIcon(link.icon)}
                 </a>

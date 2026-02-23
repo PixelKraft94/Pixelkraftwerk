@@ -10,7 +10,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(businessInfo.url),
   title: {
-    default: 'BESTE KI-Agentur Leipzig – Wenn Sie nach KI-Chatbots, KI-Telefonassistenten, Terminbuchungssystemen, CRM, Websites & SEO in meiner Nähe suchen – dann ist Pixelkraftwerk die richtige Adresse.',
+    default: 'BESTE KI-Agentur Leipzig – Wenn Sie nach KI-Chatbots, KI-Telefonassistenten, Terminbuchungssystemen, CRM, Websites & SEO in meiner Nähe suchen – dann ist Pixel Kraftwerk  die richtige Adresse.',
     template: `%s | ${businessInfo.name}`,
   },
   description: 'KI-Automatisierung und Chatbots aus Groitzsch für Leipzig und Region. Terminbuchung, CRM, Websites & SEO. Jetzt Beratung sichern.',
@@ -44,6 +44,12 @@ export default function RootLayout({
         <meta name="p:domain_verify" content="10eae38c84b0c276cac28f102b415b2e" />
       </head>
       <body className="bg-dark-500 text-light-100 min-h-screen flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-3 focus:bg-primary-500 focus:text-dark-500 focus:font-heading focus:font-bold focus:rounded-lg focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-dark-500"
+        >
+          Zum Inhalt springen
+        </a>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-882P0WZ1GB" strategy="afterInteractive" />
         <Script id="gtag" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-882P0WZ1GB');`}
@@ -53,7 +59,7 @@ export default function RootLayout({
         </Script>
         <noscript><img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=724323713697647&ev=PageView&noscript=1" alt="" /></noscript>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main id="main" className="flex-grow">{children}</main>
         <Footer />
         <CookieBanner />
         <VoiceflowChat />

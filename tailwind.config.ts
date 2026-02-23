@@ -49,6 +49,14 @@ const config: Config = {
         sans: ['Open Sans', 'system-ui', 'sans-serif'],
         heading: ['Lato', 'sans-serif'],
       },
+      fontSize: {
+        body: ['1.0625rem', { lineHeight: '1.625' }],
+      },
+      boxShadow: {
+        'primary-glow': '0 0 20px -2px rgba(0, 230, 212, 0.35)',
+        'card': '0 4px 24px -4px rgba(0, 0, 0, 0.4)',
+        'card-hover': '0 8px 32px -4px rgba(0, 0, 0, 0.5), 0 0 20px -4px rgba(0, 230, 212, 0.15)',
+      },
       animation: {
         'cursor-blink': 'blink 1s step-start infinite',
         'fade-in': 'fadeIn 0.5s ease-in-out',
