@@ -75,9 +75,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   }
 }
 
+/* Voiceflow-Chat über Navigation (z-50), unter Cookie-Banner – geöffnet als vorrangiges Fenster */
 #voiceflow-chat,
 [class*="vfrc"],
 [id*="voiceflow"],
 iframe[src*="voiceflow"] {
-  z-index: 40 !important;
+  z-index: 9998 !important;
 }

@@ -1,8 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Coins, TrendingUp } from 'lucide-react';
+
+const IMG_VORHER = '/images/seo-vorher-karte.png';
+const IMG_NACHHER = '/images/seo-nachher-karte.png';
 
 const KPI_VORHER = [
   { label: 'Ø Ranking', value: '86' },
@@ -36,6 +39,19 @@ const VorherNachherSection: React.FC = () => {
     vorher: false,
     nachher: false,
   });
+
+  // Beide Bilder beim Mount vorladen, damit beim ersten Besuch sofort die echten Karten sichtbar sind
+  useEffect(() => {
+    const preload = (src: string, tab: TabId) => {
+      const img = new Image();
+      img.onload = () => setImageLoaded((prev) => ({ ...prev, [tab]: true }));
+      img.onerror = () => setImageError((prev) => ({ ...prev, [tab]: true }));
+      img.src = src;
+    };
+    preload(IMG_VORHER, 'vorher');
+    preload(IMG_NACHHER, 'nachher');
+  }, []);
+
   const showPlaceholder = !imageLoaded[activeTab] || imageError[activeTab];
 
   const kpis = activeTab === 'vorher' ? KPI_VORHER : KPI_NACHHER;
@@ -160,11 +176,7 @@ const VorherNachherSection: React.FC = () => {
               {/* Rechte Spalte: Karte – vollständig sichtbar, object-contain, keine Filter (Original-Assets: Not_Top_3 / Top_3) */}
               <div className="rounded-lg border border-dark-100 bg-dark-400 min-h-[260px] lg:min-h-[320px] relative flex items-center justify-center w-full">
                 <img
-                  src={
-                    activeTab === 'vorher'
-                      ? '/images/seo-vorher-karte.png'
-                      : '/images/seo-nachher-karte.png'
-                  }
+                  src={activeTab === 'vorher' ? IMG_VORHER : IMG_NACHHER}
                   alt={mapAlt}
                   className={`w-full h-full object-contain absolute inset-0 ${showPlaceholder ? 'opacity-0' : 'opacity-100'}`}
                   style={{ maxHeight: 'min(70vh, 480px)' }}

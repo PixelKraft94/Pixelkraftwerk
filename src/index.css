@@ -52,10 +52,10 @@ input, select, textarea {
   }
 }
 
-/* Ensure Voiceflow chat widget stays behind cookie banner */
+/* Voiceflow-Chat über Navigation, unter Cookie-Banner – geöffnet als vorrangiges Fenster */
 #voiceflow-chat,
 [class*="vfrc"],
 [id*="voiceflow"],
 iframe[src*="voiceflow"] {
-  z-index: 40 !important;
+  z-index: 9998 !important;
 }
