@@ -10,7 +10,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(businessInfo.url),
   title: {
-    default: 'BESTE KI-Agentur Leipzig – Wenn Sie nach KI-Chatbots, KI-Telefonassistenten, Terminbuchungssystemen, CRM, Websites & SEO in meiner Nähe suchen – dann ist Pixel Kraftwerk  die richtige Adresse.',
+    default: 'BESTE KI-Agentur Groitzsch – Pixel Kraftwerk – KI-Chatbots, Telefonassistenten, Websites & SEO in meiner Nähe',
     template: `%s | ${businessInfo.name}`,
   },
   description: 'KI-Automatisierung und Chatbots aus Groitzsch für Leipzig und Region. Terminbuchung, CRM, Websites & SEO. Jetzt Beratung sichern.',
