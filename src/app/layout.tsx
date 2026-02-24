@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { businessInfo } from '@/data/businessInfo';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -63,6 +64,7 @@ export default function RootLayout({
         <Footer />
         <CookieBanner />
         <VoiceflowChat />
+        <SpeedInsights />
       </body>
     </html>
   );
