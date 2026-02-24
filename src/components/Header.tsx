@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, MessageSquare, Phone, Calendar, Target, Globe, Video, Settings } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare, Phone, Calendar, Target, Globe, Video, Settings, Search } from 'lucide-react';
 import Logo from './Logo';
 import { NavItem } from '../types';
 
@@ -16,7 +16,8 @@ const serviceLinks: ServiceLink[] = [
   { title: 'Telefonische Kundenassistenz', path: '/telefonassistenten', icon: <Phone size={18} /> },
   { title: 'Terminplanung & Buchungssysteme', path: '/termine-buchungen', icon: <Calendar size={18} /> },
   { title: 'Lead-Management & CRM', path: '/crm-lead-management', icon: <Target size={18} /> },
-  { title: 'Websites & SEO', path: '/website-seo', icon: <Globe size={18} /> },
+  { title: 'Webseiten im Mietmodell', path: '/webseite', icon: <Globe size={18} /> },
+  { title: 'SEO: Top 3 in Google', path: '/seo-top-3-in-google', icon: <Search size={18} /> },
   { title: 'Content-Produktion & KI-Videos', path: '/content-video', icon: <Video size={18} /> },
 ];
 

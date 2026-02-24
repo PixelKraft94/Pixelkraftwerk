@@ -103,6 +103,11 @@ const RegionPage: React.FC<{ region: string }> = ({ region }) => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a href="/seo-top-3-in-google" className="text-primary-400 hover:underline">
+                  SEO: Top 3 in Google
+                </a>
+              </li>
             </ul>
             <p className="mt-8">
               <a href="/services" className="inline-flex items-center text-primary-500 font-heading font-bold hover:text-primary-400">

@@ -11,6 +11,8 @@ const navItems: NavItem[] = [
   { title: 'Startseite', path: '/' },
   { title: 'Über uns', path: '/about' },
   { title: 'Leistungen', path: '/services' },
+  { title: 'Webseiten', path: '/webseite' },
+  { title: 'SEO: Top 3 in Google', path: '/seo-top-3-in-google' },
   { title: 'Leistungsgebiete', path: '/leistungsgebiete' },
   { title: 'Features', path: '/features' },
   { title: 'FAQ', path: '/faq' },

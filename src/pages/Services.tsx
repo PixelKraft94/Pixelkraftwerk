@@ -15,7 +15,8 @@ import {
   TrendingUp,
   Users,
   Heart,
-  DollarSign
+  DollarSign,
+  Search,
 } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import GoogleMapsSection from '../components/GoogleMapsSection';
@@ -42,7 +43,8 @@ const Services: React.FC = () => {
     { icon: <Phone size={24} />, title: "Telefonische Kundenassistenz", slug: "telefonassistenten" },
     { icon: <Calendar size={24} />, title: "Terminplanung & Buchungssysteme", slug: "termine-buchungen" },
     { icon: <Target size={24} />, title: "Lead-Management & CRM-Automatisierung", slug: "crm-lead-management" },
-    { icon: <Globe size={24} />, title: "Websites mit integrierter Automatisierung & SEO", slug: "website-seo" },
+    { icon: <Globe size={24} />, title: "Webseiten im Mietmodell", slug: "webseite" },
+    { icon: <Search size={24} />, title: "SEO: Top 3 in Google", slug: "seo-top-3-in-google" },
     { icon: <Video size={24} />, title: "Content-Produktion & KI-Videos", slug: "content-video" },
   ];
 
@@ -93,14 +95,25 @@ const Services: React.FC = () => {
     },
     {
       icon: <Globe size={40} strokeWidth={1.5} />,
-      title: "Website-Entwicklung & SEO",
-      description: "Wir entwickeln moderne, schnelle Websites im Mietmodell – mit Rundum-Betreuung und ohne technische Sorgen. Auf Wunsch können diese Websites gezielt mit SEO, Automatisierung und digitaler Kundenkommunikation erweitert werden.",
+      title: "Website-Entwicklung im Mietmodell",
+      description: "Wir entwickeln moderne, schnelle Websites im Mietmodell – mit Rundum-Betreuung und ohne technische Sorgen. Auf Wunsch können diese Websites gezielt mit Automatisierung und digitaler Kundenkommunikation erweitert werden.",
       benefits: [
         "Starke Außenwirkung und klare Positionierung",
-        "Mehr Sichtbarkeit bei Google durch strukturierte Suchmaschinenoptimierung",
+        "Zeitgemäßer Auftritt für Ihr Unternehmen – auch auf dem Smartphone",
         "Full-Service-Betreuung mit Änderungen in 48 Stunden"
       ],
-      slug: "website-seo"
+      slug: "webseite"
+    },
+    {
+      icon: <Search size={40} strokeWidth={1.5} />,
+      title: "SEO: Top 3 in Google",
+      description: "Wir sorgen dafür, dass Ihr Unternehmen bei Google dort erscheint, wo Kunden klicken – mit Fokus auf die Suchbegriffe, die wirklich Aufträge bringen.",
+      benefits: [
+        "Bessere Platzierungen für Ihre wichtigsten Keywords",
+        "Mehr qualifizierte Anfragen aus Ihrer Region",
+        "Transparente Strategie und verständliche Auswertungen"
+      ],
+      slug: "seo-top-3-in-google"
     },
     {
       icon: <Video size={40} strokeWidth={1.5} />,

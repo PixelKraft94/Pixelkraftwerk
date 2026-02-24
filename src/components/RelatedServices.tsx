@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, Phone, Calendar, Target, Globe, Video } from 'lucide-react';
+import { ArrowRight, MessageSquare, Phone, Calendar, Target, Globe, Video, Search } from 'lucide-react';
 
 interface ServiceInfo {
   slug: string;
@@ -14,38 +14,44 @@ const allServices: ServiceInfo[] = [
     slug: 'ki-chatbots',
     title: 'Digitale Kundenassistenz',
     shortDescription: 'Digitale Kundenassistenz für Ihre Website, die Besucher berät und Anfragen qualifiziert.',
-    icon: <MessageSquare size={32} strokeWidth={1.5} />
+    icon: <MessageSquare size={32} strokeWidth={1.5} />,
   },
   {
     slug: 'telefonassistenten',
     title: 'Telefonische Kundenassistenz',
     shortDescription: 'Telefonische Kundenassistenz, die Anrufe entgegennimmt und professionell bearbeitet.',
-    icon: <Phone size={32} strokeWidth={1.5} />
+    icon: <Phone size={32} strokeWidth={1.5} />,
   },
   {
     slug: 'termine-buchungen',
     title: 'Terminplanung & Buchungssysteme',
     shortDescription: 'Intelligente Buchungssysteme, die Ihren Kalender automatisch organisieren.',
-    icon: <Calendar size={32} strokeWidth={1.5} />
+    icon: <Calendar size={32} strokeWidth={1.5} />,
   },
   {
     slug: 'crm-lead-management',
     title: 'Lead-Management & CRM',
     shortDescription: 'Strukturierte Kundenverwaltung und automatisierte Vertriebsprozesse.',
-    icon: <Target size={32} strokeWidth={1.5} />
+    icon: <Target size={32} strokeWidth={1.5} />,
   },
   {
-    slug: 'website-seo',
-    title: 'Websites & SEO',
-    shortDescription: 'Moderne Websites mit Suchmaschinenoptimierung für mehr Sichtbarkeit.',
-    icon: <Globe size={32} strokeWidth={1.5} />
+    slug: 'webseite',
+    title: 'Webseiten im Mietmodell',
+    shortDescription: 'Moderne, schnelle Websites im Mietmodell – mit Rundum-Betreuung.',
+    icon: <Globe size={32} strokeWidth={1.5} />,
+  },
+  {
+    slug: 'seo-top-3-in-google',
+    title: 'SEO: Top 3 in Google',
+    shortDescription: 'Lokales SEO-Angebot mit Fokus auf Top-Platzierungen für Ihre wichtigsten Suchbegriffe.',
+    icon: <Search size={32} strokeWidth={1.5} />,
   },
   {
     slug: 'content-video',
     title: 'Content-Produktion & KI-Videos',
     shortDescription: 'Professionelle Texte, Bilder und Videos mit moderner KI-Technologie.',
-    icon: <Video size={32} strokeWidth={1.5} />
-  }
+    icon: <Video size={32} strokeWidth={1.5} />,
+  },
 ];
 
 interface RelatedServicesProps {
