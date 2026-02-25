@@ -20,6 +20,7 @@ import GoogleMapsSection from '../../components/GoogleMapsSection';
 import ServicedRegionsBlock from '../../components/ServicedRegionsBlock';
 import RegionServiceLinksBlock from '../../components/RegionServiceLinksBlock';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
+import RelatedServices from '../../components/RelatedServices';
 
 const Website: React.FC = () => {
   const scrollToContact = () => {
