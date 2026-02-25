@@ -105,73 +105,35 @@ const Footer: React.FC = () => {
   }, [hasConsent]);
 
   return (
-    <footer className="bg-dark-400 border-t border-dark-200 pt-16 pb-8">
+    <footer className="bg-dark-400 border-t border-dark-200 pt-10 pb-6 md:pt-12 md:pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            <Logo />
-            <p className="text-light-300 mt-4 max-w-md">
-              Zukunft. Automatisiert. Jetzt.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 md:mb-10">
+          {/* Kontakt + Leistungen – höchste Priorität */}
+          <div className="lg:col-span-2">
+            <h2 className="text-primary-500 font-heading font-bold mb-3 text-base">Kontakt</h2>
+            <div className="flex flex-col sm:flex-row sm:items-start sm:gap-10">
+              <NAPInfo variant="minimal" showIcons={false} className="mb-4 sm:mb-0" />
 
-          <div>
-            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Seiten</h2>
-            <nav aria-label="Seitennavigation">
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
-                {navItems.map((item) => (
-                  <li key={item.path}>
-                    <a
-                      href={item.path}
-                      className="text-light-100 hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+              <div className="mt-2 sm:mt-0">
+                <h3 className="text-light-400 font-heading font-semibold mb-2 text-[11px] uppercase tracking-wide">
+                  Leistungen
+                </h3>
+                <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  {serviceLinks.map((service) => (
+                    <li key={service.path}>
+                      <a
+                        href={service.path}
+                        className="text-light-300 hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
+                      >
+                        {service.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-            <div className="mt-8">
-              <h3 className="text-light-200 font-heading font-semibold mb-3 text-sm">Leistungen</h3>
-              <ul className="space-y-2">
-                {serviceLinks.map((service) => (
-                  <li key={service.path}>
-                    <a
-                      href={service.path}
-                      className="text-light-300 hover:text-primary-400 text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
-                    >
-                      {service.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-
-          <div>
-            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Rechtliches</h2>
-            <nav aria-label="Rechtliche Informationen">
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
-                {legalItems.map((item) => (
-                  <li key={item.path}>
-                    <a
-                      href={item.path}
-                      className="text-light-100 hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-
-          <div>
-            <h2 className="text-primary-500 font-heading font-bold mb-4 text-lg">Kontakt</h2>
-            <NAPInfo variant="minimal" showIcons={false} className="mb-6" />
-
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4 mt-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.platform}
@@ -184,9 +146,55 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
+
+          {/* Seiten */}
+          <div>
+            <h2 className="text-primary-500 font-heading font-bold mb-3 text-base">Seiten</h2>
+            <nav aria-label="Seitennavigation">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+                {navItems.map((item) => (
+                  <li key={item.path}>
+                    <a
+                      href={item.path}
+                      className="text-light-100 text-sm hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          {/* Logo / Claim */}
+          <div className="hidden lg:block text-right">
+            <Logo />
+            <p className="text-light-300 mt-4">
+              Zukunft. Automatisiert. Jetzt.
+            </p>
+          </div>
+
+          {/* Rechtliches – rutscht bei kleineren Screens unter Kontakt/Seiten */}
+          <div className="lg:col-span-4 md:col-span-2 lg:mt-2">
+            <h2 className="text-primary-500 font-heading font-bold mb-3 text-base">Rechtliches</h2>
+            <nav aria-label="Rechtliche Informationen">
+              <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                {legalItems.map((item) => (
+                  <li key={item.path}>
+                    <a
+                      href={item.path}
+                      className="text-light-100 text-sm hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
 
-        <div className="border-t border-dark-200 pt-10 md:pt-12 text-center">
+        <div className="border-t border-dark-200 pt-6 md:pt-8 text-center">
           <p className="text-light-400 text-sm">
             &copy; {currentYear} PIXEL_KRAFTWERK. Alle Rechte vorbehalten.
           </p>

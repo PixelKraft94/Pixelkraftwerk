@@ -1,0 +1,2 @@
+Lokaler Test
+Diese Datei wurde als einfacher Test hinzugefügt.
