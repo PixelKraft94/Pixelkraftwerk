@@ -3,34 +3,39 @@ import React from 'react';
 const ServiceItemListSchema: React.FC = () => {
   const services = [
     {
-      name: "Digitale Kundenassistenz für Ihre Website",
+      name: "KI-Chatbots – Digitale Kundenassistenz",
       url: "https://pixelkraftwerk-ai.com/ki-chatbots",
-      description: "Digitale Kundenassistenz für automatische Kundenbetreuung auf Ihrer Website. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
+      description: "KI-Chatbots als digitale Kundenassistenz für automatische Kundenbetreuung auf Ihrer Website. Beantworten Sie Anfragen rund um die Uhr und entlasten Sie Ihr Team."
     },
     {
-      name: "Telefonische Kundenassistenz",
+      name: "KI-Telefonassistent",
       url: "https://pixelkraftwerk-ai.com/telefonassistenten",
-      description: "Telefonische Kundenassistenz für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
+      description: "KI-Telefonassistent für automatische Anrufannahme. Nie wieder verpasste Anrufe – professioneller Service rund um die Uhr."
     },
     {
-      name: "Terminplanung & Buchungssysteme",
+      name: "Terminbuchungssysteme",
       url: "https://pixelkraftwerk-ai.com/termine-buchungen",
-      description: "Intelligente Online-Terminbuchung für Ihr Unternehmen. Automatische Kalenderplanung, Erinnerungen und Kundenverwaltung – ohne Telefonmarathon."
+      description: "Terminbuchungssysteme mit intelligenter Online-Terminvergabe für Ihr Unternehmen. Automatische Kalenderplanung, Erinnerungen und Kundenverwaltung – ohne Telefonmarathon."
     },
     {
-      name: "Lead-Management & CRM-Automatisierung",
+      name: "CRM / Lead-Management",
       url: "https://pixelkraftwerk-ai.com/crm-lead-management",
-      description: "Intelligentes CRM-System für strukturierte Kundenverwaltung. Automatische Lead-Erfassung, Qualifizierung und Follow-ups für mehr Abschlüsse."
+      description: "CRM- und Lead-Management-Lösungen für strukturierte Kundenverwaltung. Automatische Lead-Erfassung, Qualifizierung und Follow-ups für mehr Abschlüsse."
     },
     {
-      name: "Website-Entwicklung & SEO",
-      url: "https://pixelkraftwerk-ai.com/website-seo",
-      description: "Moderne Websites mit Suchmaschinenoptimierung. Professionelles Webdesign und SEO für mehr Sichtbarkeit bei Google und mehr Kundenanfragen."
+      name: "Webseiten",
+      url: "https://pixelkraftwerk-ai.com/webseite",
+      description: "Moderne Webseiten im Mietmodell. Professioneller Webauftritt für lokale Unternehmen mit klarer Struktur und laufender Betreuung."
     },
     {
-      name: "Content-Produktion & KI-Videos",
+      name: "SEO: Top 3 in Google",
+      url: "https://pixelkraftwerk-ai.com/seo-top-3-in-google",
+      description: "SEO-Angebot mit Fokus auf Top-3-Platzierungen bei Google für Suchbegriffe, die wirklich Kunden bringen – speziell für Leipzig, Groitzsch und Region."
+    },
+    {
+      name: "Content & KI-Videos",
       url: "https://pixelkraftwerk-ai.com/content-video",
-      description: "Professionelle Texte, Bilder und Videos mit KI-Technologie. Schnelle Content-Erstellung für Social Media und Marketing."
+      description: "Content-Produktion und KI-Videos mit professionellen Texten, Bildern und Videos. Schnelle Content-Erstellung für Website, Social Media und Marketing."
     }
   ];
 

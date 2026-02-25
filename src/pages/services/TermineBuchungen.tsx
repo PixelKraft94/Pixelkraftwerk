@@ -125,6 +125,21 @@ const TermineBuchungen: React.FC = () => {
             </motion.h1>
 
             <motion.p
+              className="text-sm text-light-300 mb-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <a href="/" className="text-primary-400 hover:underline">
+                Zurück zur Startseite
+              </a>
+              {' · '}
+              <a href="/ki-chatbots" className="text-primary-400 hover:underline">
+                Mehr zu unseren KI-Chatbots
+              </a>
+            </motion.p>
+
+            <motion.p
               className="text-xl text-light-200 mb-8 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -345,7 +360,7 @@ const TermineBuchungen: React.FC = () => {
 
       <RelatedServices
         currentSlug="termine-buchungen"
-        relatedSlugs={['ki-chatbots', 'telefonassistenten', 'crm-lead-management']}
+        relatedSlugs={['ki-chatbots', 'telefonassistenten', 'crm-lead-management', 'webseite', 'seo-top-3-in-google']}
       />
 
       <section className="py-20 bg-dark-500">

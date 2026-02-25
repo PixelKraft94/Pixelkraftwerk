@@ -12,13 +12,13 @@ interface ServiceLink {
 }
 
 const serviceLinks: ServiceLink[] = [
-  { title: 'Digitale Kundenassistenz', path: '/ki-chatbots', icon: <MessageSquare size={18} /> },
-  { title: 'Telefonische Kundenassistenz', path: '/telefonassistenten', icon: <Phone size={18} /> },
-  { title: 'Terminplanung & Buchungssysteme', path: '/termine-buchungen', icon: <Calendar size={18} /> },
-  { title: 'Lead-Management & CRM', path: '/crm-lead-management', icon: <Target size={18} /> },
-  { title: 'Webseiten im Mietmodell', path: '/webseite', icon: <Globe size={18} /> },
+  { title: 'KI-Chatbots', path: '/ki-chatbots', icon: <MessageSquare size={18} /> },
+  { title: 'KI-Telefonassistent', path: '/telefonassistenten', icon: <Phone size={18} /> },
+  { title: 'Terminbuchungssysteme', path: '/termine-buchungen', icon: <Calendar size={18} /> },
+  { title: 'CRM / Lead-Management', path: '/crm-lead-management', icon: <Target size={18} /> },
+  { title: 'Webseiten', path: '/webseite', icon: <Globe size={18} /> },
   { title: 'SEO: Top 3 in Google', path: '/seo-top-3-in-google', icon: <Search size={18} /> },
-  { title: 'Content-Produktion & KI-Videos', path: '/content-video', icon: <Video size={18} /> },
+  { title: 'Content & KI-Videos', path: '/content-video', icon: <Video size={18} /> },
 ];
 
 const navItems: NavItem[] = [

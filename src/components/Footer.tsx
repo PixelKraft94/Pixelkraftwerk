@@ -17,6 +17,16 @@ const navItems: NavItem[] = [
   { title: 'Kontakt', path: '/contact' },
 ];
 
+const serviceLinks = [
+  { title: 'KI-Chatbots', path: '/ki-chatbots' },
+  { title: 'KI-Telefonassistent', path: '/telefonassistenten' },
+  { title: 'Terminbuchungssysteme', path: '/termine-buchungen' },
+  { title: 'CRM / Lead-Management', path: '/crm-lead-management' },
+  { title: 'Webseiten', path: '/webseite' },
+  { title: 'SEO: Top 3 in Google', path: '/seo-top-3-in-google' },
+  { title: 'Content & KI-Videos', path: '/content-video' },
+];
+
 const legalItems: NavItem[] = [
   { title: 'AGBs', path: '/agb' },
   { title: 'Datenschutzerklärung', path: '/privacy' },
@@ -116,6 +126,22 @@ const Footer: React.FC = () => {
                       className="text-light-100 hover:text-primary-400 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
                     >
                       {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div className="mt-8">
+              <h3 className="text-light-200 font-heading font-semibold mb-3 text-sm">Leistungen</h3>
+              <ul className="space-y-2">
+                {serviceLinks.map((service) => (
+                  <li key={service.path}>
+                    <a
+                      href={service.path}
+                      className="text-light-300 hover:text-primary-400 text-sm transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-400 rounded"
+                    >
+                      {service.title}
                     </a>
                   </li>
                 ))}

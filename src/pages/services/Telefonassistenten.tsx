@@ -121,6 +121,21 @@ const Telefonassistenten: React.FC = () => {
               Telefonische Kundenassistenz für Ihr Unternehmen
             </motion.h1>
 
+            <motion.p
+              className="text-sm text-light-300 mb-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <a href="/" className="text-primary-400 hover:underline">
+                Zurück zur Startseite
+              </a>
+              {' · '}
+              <a href="/ki-chatbots" className="text-primary-400 hover:underline">
+                Mehr zu unseren KI-Chatbots
+              </a>
+            </motion.p>
+
             <motion.h2
               className="text-2xl md:text-3xl font-heading font-bold text-primary-500 mb-6"
               initial={{ opacity: 0, y: 20 }}
@@ -386,7 +401,7 @@ const Telefonassistenten: React.FC = () => {
 
       <RelatedServices
         currentSlug="telefonassistenten"
-        relatedSlugs={['ki-chatbots', 'termine-buchungen', 'crm-lead-management']}
+        relatedSlugs={['ki-chatbots', 'termine-buchungen', 'crm-lead-management', 'webseite', 'seo-top-3-in-google']}
       />
 
       <section className="py-20 bg-dark-500">
@@ -409,6 +424,19 @@ const Telefonassistenten: React.FC = () => {
               viewport={{ once: true }}
             >
               Lassen Sie uns gemeinsam besprechen, wie die telefonische Kundenassistenz Ihr Unternehmen entlasten kann.
+            </motion.p>
+            <motion.p
+              className="text-light-300 text-sm mt-4"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              Noch Fragen? Viele Antworten finden Sie in unseren{' '}
+              <a href="/faq" className="text-primary-400 hover:underline">
+                FAQ
+              </a>
+              .
             </motion.p>
             <ServicedRegionsBlock />
             <RegionServiceLinksBlock serviceSlug="telefonassistenten" title="Telefonassistenten in Ihrem Gebiet" />

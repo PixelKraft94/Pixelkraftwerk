@@ -25,12 +25,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl + '/contact', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.9 },
     { url: baseUrl + '/features', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.9 },
     { url: baseUrl + '/services', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.9 },
+    // Kernleistungen in gewünschter Reihenfolge
     { url: baseUrl + '/ki-chatbots', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: baseUrl + '/telefonassistenten', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: baseUrl + '/termine-buchungen', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: baseUrl + '/crm-lead-management', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
-    { url: baseUrl + '/website-seo', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
+    { url: baseUrl + '/webseite', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
+    { url: baseUrl + '/seo-top-3-in-google', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: baseUrl + '/content-video', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
+    // Kombi-Angebot Websites & SEO bleibt bestehen
+    { url: baseUrl + '/website-seo', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: baseUrl + '/leistungsgebiete', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     ...LEISTUNGSGEBIETE_SLUGS.map((slug) => ({
       url: baseUrl + `/leistungsgebiete/${slug}`,
@@ -39,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
     ...regionServiceEntries,
+    // FAQ bewusst nach den Services
     { url: baseUrl + '/faq', lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: baseUrl + '/imprint', lastModified: lastMod, changeFrequency: 'yearly', priority: 0.5 },
     { url: baseUrl + '/agb', lastModified: lastMod, changeFrequency: 'yearly', priority: 0.5 },

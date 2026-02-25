@@ -77,12 +77,12 @@ const Home: React.FC = () => {
   ];
 
   const services = [
-    "Digitale Kundenassistenz",
-    "Telefonische Kundenassistenz",
-    "Terminplanung & Buchungssysteme",
-    "Lead-Management & CRM",
-    "Websites & SEO",
-    "Content-Produktion & KI-Videos"
+    "KI-Chatbots (digitale Kundenassistenz)",
+    "KI-Telefonassistent",
+    "Terminbuchungssysteme",
+    "CRM / Lead-Management",
+    "Webseiten",
+    "Content & KI-Videos"
   ];
 
   return (
@@ -282,7 +282,7 @@ const Home: React.FC = () => {
                   <MessageCircle size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Digitale Kundenassistenz
+                  KI-Chatbots
                 </h3>
                 <p className="text-light-300 text-base leading-relaxed mb-4">
                   Eine digitale Assistenz, die Kundenanfragen beantwortet, Nachrichten entgegennimmt und Anliegen automatisch verarbeitet – auf Ihrer Website und in sozialen Netzwerken, rund um die Uhr.
@@ -306,7 +306,7 @@ const Home: React.FC = () => {
                   <Workflow size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Telefonische Kundenassistenz
+                  KI-Telefonassistent
                 </h3>
                 <p className="text-light-300 text-base leading-relaxed mb-4">
                   Eine telefonische Assistenz, die für Sie ans Telefon geht, Fragen beantwortet und Termine annimmt – auch dann, wenn gerade niemand erreichbar ist.
@@ -330,7 +330,7 @@ const Home: React.FC = () => {
                   <Calendar size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Terminplanung & Buchungssysteme
+                  Terminbuchungssysteme
                 </h3>
                 <p className="text-light-300 text-base leading-relaxed mb-4">
                   Ein System, das Termine automatisch vergibt, bestätigt und erinnert – ohne ständiges Hin- und Her per Telefon oder E-Mail.
@@ -354,7 +354,7 @@ const Home: React.FC = () => {
                   <Target size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Lead-Management & CRM
+                  CRM / Lead-Management
                 </h3>
                 <p className="text-light-300 text-base leading-relaxed mb-4">
                   Alle Kundenanfragen werden automatisch gesammelt, übersichtlich gespeichert und richtig zugeordnet – nichts geht mehr verloren.
@@ -366,7 +366,7 @@ const Home: React.FC = () => {
               </motion.a>
 
               <motion.a
-                href="/website-seo"
+                href="/webseite"
                 className="group block rounded-xl bg-dark-500/90 p-6 border border-dark-200 shadow-card hover:border-primary-500/50 hover:bg-dark-400 hover:shadow-card-hover transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -378,10 +378,10 @@ const Home: React.FC = () => {
                   <Globe size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Websites & SEO
+                  Webseiten
                 </h3>
                 <p className="text-light-300 text-base leading-relaxed mb-4">
-                  Moderne Websites, die leicht verständlich sind und bei Suchmaschinen sichtbar werden, damit Kunden Sie schneller finden und direkt Kontakt aufnehmen können.
+                  Moderne Webseiten, die leicht verständlich sind und bei Suchmaschinen sichtbar werden, damit Kunden Sie schneller finden und direkt Kontakt aufnehmen können.
                 </p>
                 <div className="flex items-center text-primary-500 text-sm font-heading font-bold group-hover:text-primary-400 transition-colors duration-200">
                   Mehr erfahren
@@ -402,7 +402,7 @@ const Home: React.FC = () => {
                   <Video size={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-light-100 mb-2 group-hover:text-primary-400 transition-colors duration-200">
-                  Content-Produktion & KI-Videos
+                  Content & KI-Videos
                 </h3>
                 <p className="text-light-300 text-base leading-relaxed mb-4">
                   Texte, Bilder und Videos für Ihr Unternehmen – professionell erstellt, regelmäßig verfügbar und passend für Website und Social Media.
@@ -412,6 +412,79 @@ const Home: React.FC = () => {
                   <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </div>
               </motion.a>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-lg font-heading font-bold text-light-100 mb-4 text-center md:text-left">
+                Schnell zu unseren Leistungen
+              </h3>
+              <nav aria-label="Leistungen">
+                <ul className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <li>
+                    <a
+                      href="/ki-chatbots"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      KI-Chatbots
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/telefonassistenten"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      KI-Telefonassistent
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/termine-buchungen"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      Terminbuchungssysteme
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/crm-lead-management"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      CRM / Lead-Management
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/webseite"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      Webseiten
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/seo-top-3-in-google"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      SEO: Top 3 in Google
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/content-video"
+                      className="px-4 py-2 rounded-full border border-dark-200 text-sm text-light-200 hover:border-primary-500 hover:text-primary-400 transition-colors duration-200"
+                    >
+                      Content & KI-Videos
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <p className="mt-4 text-sm text-light-300 text-center md:text-left">
+                Noch Fragen? Viele Antworten finden Sie in unseren{' '}
+                <a href="/faq" className="text-primary-400 hover:underline">
+                  FAQ
+                </a>
+                .
+              </p>
             </div>
 
           </div>

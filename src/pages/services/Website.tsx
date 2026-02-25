@@ -132,6 +132,21 @@ const Website: React.FC = () => {
             </motion.h1>
 
             <motion.p
+              className="text-sm text-light-300 mb-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <a href="/" className="text-primary-400 hover:underline">
+                Zurück zur Startseite
+              </a>
+              {' · '}
+              <a href="/seo-top-3-in-google" className="text-primary-400 hover:underline">
+                Mehr zu unserem SEO-Angebot „Top 3 in Google“
+              </a>
+            </motion.p>
+
+            <motion.p
               className="text-xl text-light-200 mb-6 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -366,6 +381,11 @@ const Website: React.FC = () => {
       <ContactForm />
 
       <GoogleMapsSection />
+
+      <RelatedServices
+        currentSlug="webseite"
+        relatedSlugs={['ki-chatbots', 'telefonassistenten', 'termine-buchungen', 'seo-top-3-in-google', 'content-video']}
+      />
     </div>
   );
 };
