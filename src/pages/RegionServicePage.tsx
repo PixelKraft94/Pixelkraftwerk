@@ -9,6 +9,7 @@ import {
   getRegionServiceLinkText,
   type ServiceSlug,
 } from '@/data/services';
+import { getRegionServiceContent } from '@/data/regionServiceContent';
 import BreadcrumbSchemaRegionService from '@/components/BreadcrumbSchemaRegionService';
 import ContactForm from '@/components/ContactForm';
 import GoogleMapsSection from '@/components/GoogleMapsSection';
@@ -51,6 +52,8 @@ export default function RegionServicePage({
   const globalServiceUrl = `/${serviceSlug}`;
   const regionUrl = `/leistungsgebiete/${regionSlug}`;
   const currentPageUrl = `${baseUrl}/leistungsgebiete/${regionSlug}/${serviceSlug}`;
+
+  const content = getRegionServiceContent(regionSlug as any, regionName, serviceSlug, serviceLabel);
 
   const otherRegions = LEISTUNGSGEBIETE_CITIES.filter((c) => c.slug !== regionSlug);
   const linksToShow = otherRegions.slice(0, OTHER_REGION_SERVICE_LINKS);
@@ -97,7 +100,7 @@ export default function RegionServicePage({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Für Unternehmen in {regionName} und Umgebung: {SERVICE_INTROS[serviceSlug]}
+              {content.intro || `Für Unternehmen in ${regionName} und Umgebung: ${SERVICE_INTROS[serviceSlug]}`}
             </motion.p>
           </div>
         </div>
@@ -106,29 +109,28 @@ export default function RegionServicePage({
       <section className="py-16 bg-dark-400">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto prose prose-invert">
-            <motion.p
-              className="text-light-200 text-lg leading-relaxed mb-6"
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Von unserem Sitz in Groitzsch aus betreuen wir Kunden in {regionName} und der gesamten Region – mit kurzen Wegen und individueller Beratung. Ob KI-Chatbots, Telefonassistenten, Terminbuchung, CRM, Websites oder Content: Wir passen die Lösung an Ihre Prozesse an.
-            </motion.p>
-            <ul className="space-y-2 text-light-200">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                Persönliche Beratung vor Ort oder per Video
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                Individuelle Einrichtung auf Ihr Unternehmen
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                Laufende Betreuung und Optimierung
-              </li>
-            </ul>
+            {content.paragraphs.map((p, i) => (
+              <motion.p
+                key={i}
+                className="text-light-200 text-lg leading-relaxed mb-6"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {p}
+              </motion.p>
+            ))}
+            {content.highlights.length > 0 && (
+              <ul className="space-y-2 text-light-200 mt-4">
+                {content.highlights.map((h, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </section>
@@ -210,6 +212,28 @@ export default function RegionServicePage({
           </a>
         </div>
       </section>
+
+      {content.faqs.length > 0 && (
+        <section className="py-16 bg-dark-400">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-heading font-bold text-light-100 mb-8">
+                Häufige Fragen zu {serviceLabel} in {regionName}
+              </h2>
+              <div className="space-y-6">
+                {content.faqs.map((faq, i) => (
+                  <div key={i} className="border-b border-dark-100 pb-6">
+                    <h3 className="text-lg font-heading font-bold text-light-100 mb-2">
+                      {faq.q}
+                    </h3>
+                    <p className="text-light-200">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <ContactForm />
       <GoogleMapsSection />
